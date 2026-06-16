@@ -1,0 +1,488 @@
+[
+  {
+    "id": "gen_crisis_hurricane",
+    "category": "crisis",
+    "title": "Hurricane Slams the Coast",
+    "briefing": "A Category 5 storm makes landfall, flattening two coastal cities and stranding tens of thousands on rooftops. The governor is begging for federal help on live television. You can flood the zone now or wait for damage assessments to avoid wasting resources.",
+    "source": "FEMA Administrator",
+    "minDay": 0,
+    "weight": 2,
+    "choices": [
+      {
+        "id": "surge",
+        "label": "Order a massive federal surge immediately",
+        "detail": "Mobilize the Guard, Coast Guard, and FEMA before the water recedes.",
+        "cost": 2,
+        "bold": true,
+        "effects": { "approval": 8, "stability": 4, "economy": -5 },
+        "result": "Helicopters are pulling people off roofs within hours, and the visible scramble of federal power reassures a terrified region.",
+        "news": [
+          { "outlet": "beacon", "headline": "President orders full federal surge as storm hits", "tone": "positive" },
+          { "outlet": "tribune", "headline": "Rescue first, count costs later — the right call", "tone": "positive" },
+          { "outlet": "ledger", "headline": "Decisive, but watch the open-ended price tag", "tone": "neutral" },
+          { "outlet": "buzz", "headline": "PREZ SENDS THE CAVALRY AS MONSTER STORM ROARS 🌀", "tone": "positive" }
+        ],
+        "social": [
+          { "handle": "@rooftop_ray", "text": "guard chopper just got my grandma off the roof. crying. thank you.", "sentiment": "positive", "clout": "320k" }
+        ],
+        "advisor": "Speed saves lives and your numbers. The Treasury will scream later — that's fine.",
+        "setFlags": { "hurricane_surge": true }
+      },
+      {
+        "id": "measured",
+        "label": "Wait for damage assessments first",
+        "detail": "Hold federal assets until the scope is clear to avoid waste.",
+        "cost": 1,
+        "effects": { "approval": -7, "economy": 2, "stability": -3 },
+        "result": "The dollars are spent wisely, but the twelve-hour delay becomes the only story as stranded families wait in the dark.",
+        "news": [
+          { "outlet": "tribune", "headline": "Why did help wait while families clung to roofs?", "tone": "negative" },
+          { "outlet": "beacon", "headline": "Federal response deliberate as storm toll climbs", "tone": "negative" },
+          { "outlet": "ledger", "headline": "Fiscal caution understandable, optics brutal", "tone": "neutral" },
+          { "outlet": "buzz", "headline": "POTUS HITS PAUSE AS CITIES DROWN — WHERE'S THE HELP?! 😡", "tone": "negative" }
+        ],
+        "social": [
+          { "handle": "@stranded_sam", "text": "12 hours on a roof and the president wants a 'damage assessment'. unreal.", "sentiment": "negative", "clout": "188k" }
+        ],
+        "advisor": "Every saved dollar is costing us a point of approval. The clock is the enemy here."
+      },
+      {
+        "id": "delegate",
+        "label": "Hand command to the governors",
+        "detail": "Let states lead, with federal funds backing them quietly.",
+        "cost": 1,
+        "effects": { "approval": -3, "stability": 2, "world": -2 },
+        "result": "States take the wheel and respond unevenly; you avoid blame for missteps but also miss the credit for the saves.",
+        "news": [
+          { "outlet": "ledger", "headline": "President defers to states in storm response", "tone": "positive" },
+          { "outlet": "beacon", "headline": "Patchwork recovery as Washington steps back", "tone": "neutral" },
+          { "outlet": "tribune", "headline": "Passing the buck while a region suffers", "tone": "negative" },
+          { "outlet": "buzz", "headline": "PREZ TO GOVERNORS: YOU GOT THIS? 🤷", "tone": "neutral" }
+        ],
+        "social": [
+          { "handle": "@gulf_gail", "text": "feels like nobody's actually in charge of this thing.", "sentiment": "negative", "clout": "54k" }
+        ],
+        "advisor": "Less risk, less reward. In a crisis, absence reads as weakness."
+      }
+    ]
+  },
+  {
+    "id": "gen_crisis_earthquake",
+    "category": "crisis",
+    "title": "The Ground Splits Open",
+    "briefing": "A magnitude 7.9 quake levels a major metro, collapsing overpasses and trapping thousands in rubble. The first 72 hours are the difference between life and death for the buried. You can throw everything at search-and-rescue or hold reserves for the inevitable aftershocks.",
+    "source": "Homeland Security Secretary",
+    "minDay": 0,
+    "choices": [
+      {
+        "id": "allin",
+        "label": "All-in on the 72-hour rescue window",
+        "detail": "Every urban search team, every dog, every dollar — now.",
+        "cost": 3,
+        "bold": true,
+        "effects": { "approval": 9, "stability": 3, "economy": -6 },
+        "result": "Crews pull survivors from the rubble around the clock and the nation watches, riveted, as your name becomes shorthand for the rescue.",
+        "news": [
+          { "outlet": "beacon", "headline": "President throws full weight behind 72-hour rescue", "tone": "positive" },
+          { "outlet": "tribune", "headline": "No hesitation while lives hang in the balance", "tone": "positive" },
+          { "outlet": "ledger", "headline": "Right instinct — now manage the reserves carefully", "tone": "neutral" },
+          { "outlet": "buzz", "headline": "MIRACLE PULLS AS PREZ GOES ALL-IN ON THE RUBBLE 🐕", "tone": "positive" }
+        ],
+        "social": [
+          { "handle": "@rubble_rosa", "text": "they found my brother on hour 60. i will never forget this response.", "sentiment": "positive", "clout": "410k" }
+        ],
+        "advisor": "The window is closing by the minute. Spend it all — history rewards the rescue."
+      },
+      {
+        "id": "reserve",
+        "label": "Hold reserves for aftershocks",
+        "detail": "Commit half now, keep half for the next collapse.",
+        "cost": 2,
+        "effects": { "approval": -4, "stability": 5, "economy": -3 },
+        "result": "When a brutal aftershock hits, your held reserves prevent a second catastrophe — but families counting hours felt the holdback as abandonment.",
+        "news": [
+          { "outlet": "ledger", "headline": "Prudent reserves blunt deadly aftershock", "tone": "positive" },
+          { "outlet": "beacon", "headline": "Measured response praised by planners, panned by families", "tone": "neutral" },
+          { "outlet": "tribune", "headline": "Holding back help when minutes mattered", "tone": "negative" },
+          { "outlet": "buzz", "headline": "PREZ PLAYS IT SAFE AS CLOCK TICKS ⏳", "tone": "neutral" }
+        ],
+        "social": [
+          { "handle": "@aftershock_al", "text": "the second quake proved him right. but the first day was agony.", "sentiment": "neutral", "clout": "96k" }
+        ],
+        "advisor": "You traded approval for resilience. The aftershock vindicated you — but slowly."
+      }
+    ]
+  },
+  {
+    "id": "gen_crisis_wildfire",
+    "category": "crisis",
+    "title": "Firestorm at the Capital",
+    "briefing": "A wind-driven wildfire jumps every containment line and is now bearing down on a million-person metro and the national archives. Air tankers are grounded by smoke. You can order a sweeping evacuation that will cause chaos, or hold and gamble that the lines hold.",
+    "source": "Interior Secretary",
+    "minDay": 300,
+    "weight": 2,
+    "choices": [
+      {
+        "id": "evacuate",
+        "label": "Order a sweeping mandatory evacuation",
+        "detail": "Empty the city now, gridlock be damned.",
+        "cost": 2,
+        "bold": true,
+        "effects": { "approval": 6, "stability": -3, "economy": -4 },
+        "result": "The freeways become parking lots and tempers flare, but when the fire takes whole neighborhoods, the streets are empty and no one dies.",
+        "news": [
+          { "outlet": "beacon", "headline": "Mass evacuation ordered as firestorm nears metro", "tone": "positive" },
+          { "outlet": "tribune", "headline": "Bold call empties the city ahead of the flames", "tone": "positive" },
+          { "outlet": "ledger", "headline": "Chaos on the freeways, but lives over property", "tone": "neutral" },
+          { "outlet": "buzz", "headline": "GET OUT NOW: PREZ EMPTIES A CITY AS WALL OF FIRE LOOMS 🔥", "tone": "neutral" }
+        ],
+        "social": [
+          { "handle": "@smoke_steph", "text": "stuck in traffic 6 hours but my whole block burned. worth it. we're alive.", "sentiment": "positive", "clout": "270k" }
+        ],
+        "advisor": "Evacuation chaos is survivable. A mass-casualty fire is not. Pull the trigger."
+      },
+      {
+        "id": "hold",
+        "label": "Hold the lines, avoid panic",
+        "detail": "Trust the firefighters and keep the city calm.",
+        "cost": 1,
+        "effects": { "approval": -9, "stability": -4, "economy": 2 },
+        "result": "The lines break overnight, the fire sweeps a district before anyone can flee, and your gamble becomes a body count.",
+        "news": [
+          { "outlet": "tribune", "headline": "President's gamble fails as fire breaches the city", "tone": "negative" },
+          { "outlet": "beacon", "headline": "Evacuation delay under scrutiny as toll rises", "tone": "negative" },
+          { "outlet": "ledger", "headline": "Hope is not a containment strategy", "tone": "negative" },
+          { "outlet": "buzz", "headline": "TOO LATE! PREZ WAITED AND THE CITY BURNED 💀", "tone": "negative" }
+        ],
+        "social": [
+          { "handle": "@ash_andre", "text": "no evac order until the flames were on our street. unforgivable.", "sentiment": "negative", "clout": "340k" }
+        ],
+        "advisor": "We bet against the fire and lost. There's no spinning a preventable death toll."
+      }
+    ]
+  },
+  {
+    "id": "gen_crisis_pandemic",
+    "category": "crisis",
+    "title": "A New Virus Emerges",
+    "briefing": "A novel respiratory virus with a frightening fatality rate is spreading across three states and doubling every four days. Scientists want an immediate travel clampdown; business leaders warn it will tank the economy. You have one shot to set the tone.",
+    "source": "Surgeon General",
+    "minDay": 200,
+    "weight": 2,
+    "choices": [
+      {
+        "id": "lockdown",
+        "label": "Move hard and fast on containment",
+        "detail": "Restrict travel, surge testing, brief the nation nightly.",
+        "cost": 3,
+        "bold": true,
+        "effects": { "approval": 5, "stability": 4, "economy": -8, "world": 2 },
+        "result": "The curve bends and other nations follow your lead, but shuttered businesses and a spooked market make the price painfully visible.",
+        "news": [
+          { "outlet": "beacon", "headline": "President acts early as new virus spreads", "tone": "positive" },
+          { "outlet": "tribune", "headline": "Science-led response could save thousands", "tone": "positive" },
+          { "outlet": "ledger", "headline": "Containment works — but the economic cost is real", "tone": "neutral" },
+          { "outlet": "buzz", "headline": "PREZ SLAMS THE BRAKES ON A KILLER BUG 🦠", "tone": "neutral" }
+        ],
+        "social": [
+          { "handle": "@nurse_nadia", "text": "early action means my ICU isn't overrun. thank you for not waiting.", "sentiment": "positive", "clout": "230k" }
+        ],
+        "advisor": "Acting early is unpopular until the bodies you prevented never appear. Hold the line.",
+        "setFlags": { "pandemic_lockdown": true }
+      },
+      {
+        "id": "wait",
+        "label": "Keep the economy open, monitor closely",
+        "detail": "Avoid panic, let the data come in before acting.",
+        "cost": 1,
+        "effects": { "approval": -6, "economy": 4, "stability": -5, "world": -3 },
+        "result": "Markets steady for a week, then the case count explodes and hospitals buckle, turning your caution into the story of the outbreak.",
+        "news": [
+          { "outlet": "tribune", "headline": "Delay lets virus spiral, hospitals warn", "tone": "negative" },
+          { "outlet": "ledger", "headline": "Economy spared for now, but health system strains", "tone": "neutral" },
+          { "outlet": "beacon", "headline": "Critics question wait-and-see virus strategy", "tone": "negative" },
+          { "outlet": "buzz", "headline": "PREZ GAMBLES WITH A PLAGUE AND LOSES?! 😷", "tone": "negative" }
+        ],
+        "social": [
+          { "handle": "@dr_devon", "text": "we told them to act a week ago. now we're rationing beds.", "sentiment": "negative", "clout": "180k" }
+        ],
+        "advisor": "We saved the quarter and lost control of the spread. The economy won't stay open if hospitals fail."
+      },
+      {
+        "id": "states",
+        "label": "Issue guidance, let states decide",
+        "detail": "Publish recommendations and fund a state-led patchwork.",
+        "cost": 2,
+        "effects": { "approval": -2, "economy": -2, "stability": -3 },
+        "result": "A confusing patchwork of rules emerges; some states crush the curve, others ignore it, and the inconsistency erodes trust everywhere.",
+        "news": [
+          { "outlet": "ledger", "headline": "President leaves virus calls to the states", "tone": "neutral" },
+          { "outlet": "beacon", "headline": "Patchwork pandemic response sows confusion", "tone": "negative" },
+          { "outlet": "tribune", "headline": "Where is the national plan?", "tone": "negative" },
+          { "outlet": "buzz", "headline": "50 STATES, 50 RULES, ZERO CLARITY 🤯", "tone": "negative" }
+        ],
+        "social": [
+          { "handle": "@border_bri", "text": "rules change the second i cross a state line. nobody knows what's going on.", "sentiment": "negative", "clout": "112k" }
+        ],
+        "advisor": "Splitting the difference satisfies no one and leaves you owning the chaos without owning the credit."
+      }
+    ]
+  },
+  {
+    "id": "gen_crisis_blackout",
+    "category": "crisis",
+    "title": "The Grid Goes Dark",
+    "briefing": "A cascading failure cuts power to a third of the country during a July heat wave. Hospitals are on generators, traffic is chaos, and no one can say when it ends. The utilities want to be left alone; the public wants to see you in command.",
+    "source": "Energy Secretary",
+    "minDay": 0,
+    "weight": 2,
+    "choices": [
+      {
+        "id": "emergency",
+        "label": "Declare a national emergency, take command",
+        "detail": "Commandeer resources and brief the nation hourly.",
+        "cost": 2,
+        "bold": true,
+        "effects": { "approval": 7, "stability": 3, "economy": -4 },
+        "result": "You commandeer crews and generators and brief the country hourly; the sheer optics of command steady a jittery, sweltering public.",
+        "news": [
+          { "outlet": "beacon", "headline": "President takes charge as grid emergency declared", "tone": "positive" },
+          { "outlet": "ledger", "headline": "Decisive federal response to the blackout", "tone": "positive" },
+          { "outlet": "tribune", "headline": "Leadership in the dark — but why was the grid this fragile?", "tone": "neutral" },
+          { "outlet": "buzz", "headline": "POTUS VS THE BLACKOUT — LIGHTS COMING BACK?! 💡", "tone": "neutral" }
+        ],
+        "social": [
+          { "handle": "@heatwave_hank", "text": "hourly updates kept us sane. respect.", "sentiment": "positive", "clout": "47k" }
+        ],
+        "advisor": "Command presence is everything now. The economic hit buys steadiness."
+      },
+      {
+        "id": "private",
+        "label": "Let the utilities handle it, stay hands-off",
+        "detail": "Trust the grid operators to restore power on their own.",
+        "cost": 1,
+        "effects": { "approval": -8, "stability": -3, "economy": -2 },
+        "result": "Restoration drags for days, anger boils over in the heat, and your absence becomes the only story.",
+        "news": [
+          { "outlet": "tribune", "headline": "Where is the president while millions swelter?", "tone": "negative" },
+          { "outlet": "beacon", "headline": "Federal response muted as outages persist", "tone": "negative" },
+          { "outlet": "ledger", "headline": "Right to let the private sector lead — if it's fast", "tone": "neutral" },
+          { "outlet": "buzz", "headline": "POTUS GHOSTS THE BLACKOUT AS NATION BAKES 🥵", "tone": "negative" }
+        ],
+        "social": [
+          { "handle": "@no_ac_amy", "text": "third day no power, third day no president.", "sentiment": "negative", "clout": "210k" }
+        ],
+        "advisor": "Invisible reads as incompetent. We're bleeding approval hourly."
+      }
+    ]
+  },
+  {
+    "id": "gen_crisis_market_crash",
+    "category": "crisis",
+    "title": "Markets in Freefall",
+    "briefing": "The stock market sheds a fifth of its value in two hours as a major bank teeters on collapse. Trading is halted, retirement accounts are evaporating, and panic is feeding panic. Your advisors are split between a massive bailout and letting the reckless fail.",
+    "source": "Treasury Secretary",
+    "minDay": 200,
+    "weight": 2,
+    "choices": [
+      {
+        "id": "bailout",
+        "label": "Engineer an emergency backstop",
+        "detail": "Guarantee deposits and inject liquidity overnight.",
+        "cost": 3,
+        "bold": true,
+        "effects": { "approval": 4, "economy": 7, "stability": 5, "world": -2 },
+        "result": "The backstop halts the bleeding and markets claw back by morning, but the rescue of a reckless bank leaves a sour taste with voters.",
+        "news": [
+          { "outlet": "ledger", "headline": "President's backstop steadies a panicked market", "tone": "positive" },
+          { "outlet": "beacon", "headline": "Emergency liquidity halts the slide", "tone": "positive" },
+          { "outlet": "tribune", "headline": "Wall Street rescued again while Main Street watches", "tone": "negative" },
+          { "outlet": "buzz", "headline": "PREZ CATCHES THE MARKET MID-FALL 📉➡️📈", "tone": "neutral" }
+        ],
+        "social": [
+          { "handle": "@retire_rhonda", "text": "my 401k stopped bleeding overnight. i can sleep again.", "sentiment": "positive", "clout": "140k" }
+        ],
+        "advisor": "Contagion is the real threat. Stop it now, eat the 'bailout' headlines later."
+      },
+      {
+        "id": "let_fail",
+        "label": "Let the reckless bank fail",
+        "detail": "No bailout for bad bets; protect only insured depositors.",
+        "cost": 2,
+        "effects": { "approval": 3, "economy": -9, "stability": -4 },
+        "result": "Voters cheer the populist stand, but the failure cascades through the system and the broader economy takes a deep, lasting hit.",
+        "news": [
+          { "outlet": "tribune", "headline": "President refuses to rescue reckless bank", "tone": "positive" },
+          { "outlet": "ledger", "headline": "Moral hazard avoided — at a steep economic cost", "tone": "neutral" },
+          { "outlet": "beacon", "headline": "Bank failure ripples through markets", "tone": "negative" },
+          { "outlet": "buzz", "headline": "PREZ LETS THE BIG BANK BURN 🔥💰", "tone": "neutral" }
+        ],
+        "social": [
+          { "handle": "@main_st_marco", "text": "finally someone lets them face consequences. brutal but right.", "sentiment": "positive", "clout": "260k" }
+        ],
+        "advisor": "It's principled and popular, but the contagion you allowed will haunt the economy for quarters."
+      }
+    ]
+  },
+  {
+    "id": "gen_crisis_terror_attack",
+    "category": "crisis",
+    "title": "Attack on the Homeland",
+    "briefing": "A coordinated attack strikes a crowded transit hub in the capital during rush hour, killing dozens. The perpetrators are still at large and the nation is frozen in fear. You must address a grieving, frightened country within the hour and decide how hard to come down.",
+    "source": "FBI Director",
+    "minDay": 400,
+    "weight": 2,
+    "choices": [
+      {
+        "id": "resolve",
+        "label": "Project calm resolve, lead the mourning",
+        "detail": "Address the nation, vow justice, refuse to feed the panic.",
+        "cost": 2,
+        "bold": true,
+        "effects": { "approval": 8, "stability": 6, "world": 2 },
+        "result": "Your steady, unifying address becomes a defining moment; a frightened country exhales and rallies behind you.",
+        "news": [
+          { "outlet": "beacon", "headline": "President steadies a shaken nation", "tone": "positive" },
+          { "outlet": "ledger", "headline": "Strength and calm in the face of terror", "tone": "positive" },
+          { "outlet": "tribune", "headline": "A unifying voice when the country needed one", "tone": "positive" },
+          { "outlet": "buzz", "headline": "PREZ STANDS TALL AS THE NATION GRIEVES 🕯️", "tone": "positive" }
+        ],
+        "social": [
+          { "handle": "@commuter_carl", "text": "i was three trains away. that speech is the only reason i slept tonight.", "sentiment": "positive", "clout": "490k" }
+        ],
+        "advisor": "The country needs a steady hand, not a clenched fist. Calm resolve is your strongest move."
+      },
+      {
+        "id": "crackdown",
+        "label": "Launch a sweeping security crackdown",
+        "detail": "Expanded surveillance, checkpoints, emergency powers.",
+        "cost": 3,
+        "effects": { "approval": 5, "stability": 4, "world": -5 },
+        "result": "The show of force reassures a frightened public, but the civil-liberties overreach draws fierce backlash at home and abroad.",
+        "news": [
+          { "outlet": "ledger", "headline": "President moves decisively to harden security", "tone": "positive" },
+          { "outlet": "beacon", "headline": "Sweeping powers reassure some, alarm others", "tone": "neutral" },
+          { "outlet": "tribune", "headline": "Fear becomes a license to overreach", "tone": "negative" },
+          { "outlet": "buzz", "headline": "LOCKDOWN NATION: PREZ CRACKS DOWN HARD 🚨", "tone": "neutral" }
+        ],
+        "social": [
+          { "handle": "@liberty_lena", "text": "checkpoints on my commute now. is this the country we wanted?", "sentiment": "negative", "clout": "175k" }
+        ],
+        "advisor": "Force is popular in the moment, but the overreach abroad and the backlash at home will compound."
+      },
+      {
+        "id": "investigate",
+        "label": "Stay quiet, focus on the manhunt",
+        "detail": "Let investigators work without a prime-time address.",
+        "cost": 1,
+        "effects": { "approval": -6, "stability": -3, "world": 1 },
+        "result": "The investigation moves fast, but your silence in the nation's most frightened hour reads as absence and leadership vacuum.",
+        "news": [
+          { "outlet": "tribune", "headline": "President silent as a shaken nation waits", "tone": "negative" },
+          { "outlet": "beacon", "headline": "No address as manhunt unfolds behind the scenes", "tone": "negative" },
+          { "outlet": "ledger", "headline": "Where is the commander-in-chief?", "tone": "negative" },
+          { "outlet": "buzz", "headline": "DEAFENING SILENCE FROM THE TOP AFTER ATTACK 😶", "tone": "negative" }
+        ],
+        "social": [
+          { "handle": "@scared_sienna", "text": "we needed to hear from our president today. nothing. just nothing.", "sentiment": "negative", "clout": "205k" }
+        ],
+        "advisor": "Letting the pros work is sound policy, but a leadership vacuum in a moment of fear is unforgivable to voters."
+      }
+    ]
+  },
+  {
+    "id": "gen_crisis_nuclear_scare",
+    "category": "crisis",
+    "title": "Meltdown Warning",
+    "briefing": "A cooling system fails at a nuclear plant near a major city, and engineers cannot rule out a partial meltdown. Radiation readings are climbing slowly and the wind is shifting toward downtown. You can order a preemptive evacuation now or wait for confirmation to avoid mass panic.",
+    "source": "Nuclear Regulatory Chair",
+    "minDay": 500,
+    "choices": [
+      {
+        "id": "evacuate",
+        "label": "Order a preemptive evacuation",
+        "detail": "Clear the radius now, before readings confirm danger.",
+        "cost": 3,
+        "bold": true,
+        "effects": { "approval": 4, "stability": -4, "world": 3 },
+        "result": "The evacuation is chaotic and the meltdown is ultimately contained, leaving you open to 'overreaction' jabs — but no one was exposed.",
+        "news": [
+          { "outlet": "beacon", "headline": "President evacuates city as plant teeters", "tone": "positive" },
+          { "outlet": "tribune", "headline": "Better safe than irradiated — the right instinct", "tone": "positive" },
+          { "outlet": "ledger", "headline": "Costly evacuation as crisis is contained", "tone": "neutral" },
+          { "outlet": "buzz", "headline": "RUN! PREZ EMPTIES A CITY OVER MELTDOWN FEARS ☢️", "tone": "neutral" }
+        ],
+        "social": [
+          { "handle": "@reactor_rae", "text": "they say it was overkill. i say i'd rather be safe than glowing. thank you.", "sentiment": "positive", "clout": "160k" }
+        ],
+        "advisor": "Radiation is unforgiving. An 'overreaction' you can survive — a public exposure event you cannot."
+      },
+      {
+        "id": "wait",
+        "label": "Wait for confirmed readings",
+        "detail": "Avoid panic; evacuate only if the meltdown is real.",
+        "cost": 1,
+        "effects": { "approval": -7, "stability": -5, "world": -2 },
+        "result": "You avoid a needless panic, but the delay means that if exposure occurs, the blame is entirely yours — and the public never forgives the gamble.",
+        "news": [
+          { "outlet": "tribune", "headline": "President gambles with a city's safety", "tone": "negative" },
+          { "outlet": "beacon", "headline": "Evacuation delayed as readings climb", "tone": "negative" },
+          { "outlet": "ledger", "headline": "Caution or recklessness? The wind decides", "tone": "neutral" },
+          { "outlet": "buzz", "headline": "PREZ WAITS AS THE NEEDLE CLIMBS — TICK TICK ☢️", "tone": "negative" }
+        ],
+        "social": [
+          { "handle": "@glow_gary", "text": "wind is shifting toward us and the president is 'waiting for data'. terrifying.", "sentiment": "negative", "clout": "230k" }
+        ],
+        "advisor": "Avoiding panic is worthless if the gamble fails. With radiation, the downside is unthinkable."
+      }
+    ]
+  },
+  {
+    "id": "gen_crisis_cyberattack",
+    "category": "crisis",
+    "title": "Pipelines Under Siege",
+    "briefing": "A cyberattack cripples the nation's fuel pipelines and water systems, with attackers demanding a ransom and hinting at foreign backing. Gas lines are forming and panic-buying has begun. You can pay to restore service fast, or refuse and ride out the disruption on principle.",
+    "source": "Cyber Director",
+    "minDay": 600,
+    "weight": 2,
+    "choices": [
+      {
+        "id": "counter",
+        "label": "Refuse ransom, go on the offensive",
+        "detail": "Deploy cyber teams to restore systems and strike back.",
+        "cost": 3,
+        "bold": true,
+        "effects": { "approval": 5, "stability": -3, "economy": -5, "world": 4 },
+        "result": "Restoration is slow and painful at the pump, but refusing to pay and counter-striking projects strength that allies and rivals both notice.",
+        "news": [
+          { "outlet": "ledger", "headline": "President refuses ransom, strikes back", "tone": "positive" },
+          { "outlet": "beacon", "headline": "Hard line on hackers means slow recovery", "tone": "neutral" },
+          { "outlet": "tribune", "headline": "Principled stand — but the lines at the pump are real", "tone": "neutral" },
+          { "outlet": "buzz", "headline": "PREZ TO HACKERS: NOT ONE DIME 💻🚫", "tone": "positive" }
+        ],
+        "social": [
+          { "handle": "@pump_pete", "text": "two hours for gas but i'm glad we didn't pay these criminals.", "sentiment": "positive", "clout": "190k" }
+        ],
+        "advisor": "Paying invites the next attack. The pain is real, but strength here pays dividends abroad."
+      },
+      {
+        "id": "pay",
+        "label": "Quietly pay to restore service fast",
+        "detail": "End the disruption now, deal with the precedent later.",
+        "cost": 2,
+        "effects": { "approval": -3, "stability": 5, "economy": 4, "world": -6 },
+        "result": "Fuel and water flow again within a day and daily life resumes, but word leaks that you paid, and rivals smell weakness.",
+        "news": [
+          { "outlet": "beacon", "headline": "Services restored fast after quiet settlement", "tone": "neutral" },
+          { "outlet": "tribune", "headline": "Relief at the pump, unease about the precedent", "tone": "neutral" },
+          { "outlet": "ledger", "headline": "President pays the hackers — a dangerous signal", "tone": "negative" },
+          { "outlet": "buzz", "headline": "PREZ PAID THE RANSOM?! HACKERS CASH IN 💸", "tone": "negative" }
+        ],
+        "social": [
+          { "handle": "@grid_gwen", "text": "water's back on, which i'm grateful for. but paying them? we'll regret this.", "sentiment": "neutral", "clout": "120k" }
+        ],
+        "advisor": "It fixes today and mortgages tomorrow. Every adversary now knows the price of crippling us."
+      }
+    ]
+  }
+]

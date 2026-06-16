@@ -1,0 +1,441 @@
+[
+  {
+    "id": "gen_economy_inflation",
+    "category": "economy",
+    "title": "The Price of Everything",
+    "briefing": "Inflation just hit a 40-year high and grocery receipts are going viral. You can pressure the Fed to slam the brakes with rate hikes, or roll out price relief checks that critics say will pour gas on the fire. The kitchen-table panic is real.",
+    "source": "Treasury Secretary",
+    "minDay": 0,
+    "weight": 2,
+    "choices": [
+      {
+        "id": "hike",
+        "label": "Back aggressive rate hikes",
+        "detail": "Crush inflation, risk a slowdown.",
+        "effects": { "economy": 5, "approval": -4, "stability": -2 },
+        "result": "Prices cool over the following months, but borrowing costs spike and homebuyers howl. The medicine works, slowly, and it tastes awful.",
+        "news": [
+          { "outlet": "ledger", "headline": "President finally lets the Fed do its job", "tone": "positive" },
+          { "outlet": "tribune", "headline": "Rate hikes punish workers for a crisis they didn't cause", "tone": "negative" },
+          { "outlet": "beacon", "headline": "White House backs tighter policy as inflation peaks", "tone": "neutral" },
+          { "outlet": "buzz", "headline": "YOUR MORTGAGE JUST GOT SCARIER 😱", "tone": "negative" }
+        ],
+        "social": [
+          { "handle": "@saver_sam", "text": "finally my savings account earns more than a nickel", "sentiment": "positive", "clout": "44k" },
+          { "handle": "@firsthome_fiona", "text": "guess i'm renting forever now. thanks.", "sentiment": "negative" }
+        ],
+        "advisor": "Right move on paper, brutal politics. The pain lands before the relief shows up in polls."
+      },
+      {
+        "id": "checks",
+        "label": "Send inflation relief checks",
+        "detail": "Cash now, consequences later.",
+        "cost": 2,
+        "effects": { "approval": 6, "economy": -5, "stability": -1 },
+        "result": "Families cash the checks and your approval ticks up overnight. Economists warn you've just handed inflation a second wind.",
+        "news": [
+          { "outlet": "tribune", "headline": "President puts money back in working families' pockets", "tone": "positive" },
+          { "outlet": "ledger", "headline": "Stimulus checks will only make prices worse", "tone": "negative" },
+          { "outlet": "beacon", "headline": "Relief payments approved amid inflation debate", "tone": "neutral" },
+          { "outlet": "buzz", "headline": "FREE MONEY DROPS — spend it FAST 💸", "tone": "positive" }
+        ],
+        "social": [
+          { "handle": "@budget_bri", "text": "this check is the only reason rent got paid this month", "sentiment": "positive", "clout": "90k" },
+          { "handle": "@econ_ed", "text": "you cannot spend your way out of inflation. this is textbook.", "sentiment": "negative" }
+        ],
+        "advisor": "Instant approval bump, but you may be writing tomorrow's bad headline today."
+      }
+    ]
+  },
+  {
+    "id": "gen_economy_jobsreport",
+    "category": "economy",
+    "title": "The Jobs Report Bombshell",
+    "briefing": "The monthly jobs numbers just dropped and they're ugly — hiring stalled and unemployment ticked up. Your team wants a splashy public works program, but the deficit hawks are circling. You have one news cycle to shape the story.",
+    "source": "Labor Secretary",
+    "minDay": 0,
+    "weight": 1,
+    "choices": [
+      {
+        "id": "publicworks",
+        "label": "Launch a public works jobs program",
+        "detail": "Roads, bridges, paychecks.",
+        "cost": 2,
+        "effects": { "economy": 4, "approval": 4, "stability": -3 },
+        "result": "Hard hats and ribbon-cuttings dominate the coverage. The deficit balloons and bond markets get nervous about the bill.",
+        "news": [
+          { "outlet": "tribune", "headline": "President puts America back to work", "tone": "positive" },
+          { "outlet": "ledger", "headline": "Another costly government jobs scheme we can't afford", "tone": "negative" },
+          { "outlet": "beacon", "headline": "Administration unveils infrastructure jobs push", "tone": "neutral" },
+          { "outlet": "buzz", "headline": "POTUS HANDS OUT HARD HATS TO AMERICA 👷", "tone": "positive" }
+        ],
+        "social": [
+          { "handle": "@welder_will", "text": "got hired on the bridge project today. real talk this matters.", "sentiment": "positive", "clout": "31k" },
+          { "handle": "@fiscalhawk", "text": "where exactly is this money coming from", "sentiment": "negative" }
+        ],
+        "advisor": "Photogenic and popular. Just know the deficit story will surface in a few weeks."
+      },
+      {
+        "id": "letmarket",
+        "label": "Trust the market to recover",
+        "detail": "No new spending, hold the line.",
+        "effects": { "economy": 2, "approval": -5, "stability": 2 },
+        "result": "You preach patience and fiscal discipline. Wall Street nods approvingly; the unemployed do not.",
+        "news": [
+          { "outlet": "ledger", "headline": "President shows discipline, lets economy heal itself", "tone": "positive" },
+          { "outlet": "tribune", "headline": "Out-of-touch White House tells jobless to wait it out", "tone": "negative" },
+          { "outlet": "beacon", "headline": "President declines new stimulus after weak jobs report", "tone": "neutral" },
+          { "outlet": "buzz", "headline": "PREZ TO UNEMPLOYED: just hang in there 🤷", "tone": "negative" }
+        ],
+        "social": [
+          { "handle": "@laidoff_lena", "text": "'be patient' is wild advice when rent is due friday", "sentiment": "negative", "clout": "78k" },
+          { "handle": "@market_mike", "text": "fiscally responsible for once. respect.", "sentiment": "positive" }
+        ],
+        "advisor": "The bond market loves restraint. Voters with empty pockets won't remember your discipline fondly."
+      }
+    ]
+  },
+  {
+    "id": "gen_economy_strike",
+    "category": "economy",
+    "title": "The Nation Grinds to a Halt",
+    "briefing": "A massive rail and port strike has frozen supply chains coast to coast. You can invoke emergency powers to force workers back, or stand with the unions and let it play out. Store shelves are already thinning and both sides are watching your next move.",
+    "source": "Labor Secretary",
+    "minDay": 0,
+    "weight": 1,
+    "choices": [
+      {
+        "id": "forceback",
+        "label": "Order workers back to the job",
+        "detail": "Invoke emergency powers.",
+        "cost": 3,
+        "bold": true,
+        "effects": { "economy": 6, "approval": -3, "stability": -4, "legacy": -2 },
+        "result": "Trains roll again and the shelves restock, but labor leaders brand you a strikebreaker and vow revenge at the ballot box.",
+        "news": [
+          { "outlet": "ledger", "headline": "President keeps the economy running, ends chaos", "tone": "positive" },
+          { "outlet": "tribune", "headline": "Betrayal: White House crushes the workers' strike", "tone": "negative" },
+          { "outlet": "beacon", "headline": "Emergency order ends national strike, unions outraged", "tone": "neutral" },
+          { "outlet": "buzz", "headline": "PREZ DROPS THE HAMMER ON STRIKERS 🔨", "tone": "neutral" }
+        ],
+        "social": [
+          { "handle": "@union_uri", "text": "we will remember this in november. count on it.", "sentiment": "negative", "clout": "210k" },
+          { "handle": "@shipper_sue", "text": "my business survives another week. thank god.", "sentiment": "positive" }
+        ],
+        "advisor": "Supply chains saved, labor base scorched. This one follows you for years.",
+        "setFlags": ["broke_strike"]
+      },
+      {
+        "id": "sidewithlabor",
+        "label": "Back the unions, broker a deal",
+        "detail": "Side with the workers.",
+        "effects": { "approval": 4, "economy": -6, "stability": -2, "legacy": 2 },
+        "result": "Workers win a historic contract and hail you as a champion. The strike drags on another week first, and the economy takes the hit.",
+        "news": [
+          { "outlet": "tribune", "headline": "President stands with workers, wins them a fair deal", "tone": "positive" },
+          { "outlet": "ledger", "headline": "Caving to unions costs the economy billions", "tone": "negative" },
+          { "outlet": "beacon", "headline": "Negotiated settlement ends strike after costly delay", "tone": "neutral" },
+          { "outlet": "buzz", "headline": "WORKERS WIN BIG — bosses SEETHING 💪", "tone": "positive" }
+        ],
+        "social": [
+          { "handle": "@union_uri", "text": "FINALLY a president who has our backs", "sentiment": "positive", "clout": "210k" },
+          { "handle": "@ceo_carl", "text": "great, now every union will demand the same. lovely.", "sentiment": "negative" }
+        ],
+        "advisor": "You bought loyalty from labor at the cost of a bruised economy. Worth it if the recovery is quick."
+      }
+    ]
+  },
+  {
+    "id": "gen_economy_tradewar",
+    "category": "economy",
+    "title": "Tariffs and Trade War",
+    "briefing": "A rival superpower just slapped tariffs on your exports and your farmers and factories are bleeding. You can retaliate with tariffs of your own, or seek a quiet diplomatic off-ramp. Your domestic industries want blood; your economists want peace.",
+    "source": "Commerce Secretary",
+    "minDay": 0,
+    "weight": 1,
+    "choices": [
+      {
+        "id": "retaliate",
+        "label": "Hit back with tariffs",
+        "detail": "Match them blow for blow.",
+        "bold": true,
+        "effects": { "approval": 5, "economy": -5, "world": -4 },
+        "result": "Domestic industries roar with approval as you defend them. Prices climb at home and the trade war escalates abroad.",
+        "news": [
+          { "outlet": "tribune", "headline": "President defends American workers from foreign dumping", "tone": "positive" },
+          { "outlet": "ledger", "headline": "Tariff tit-for-tat will tax every consumer", "tone": "negative" },
+          { "outlet": "beacon", "headline": "Retaliatory tariffs imposed, trade tensions escalate", "tone": "neutral" },
+          { "outlet": "buzz", "headline": "PREZ GOES TO WAR — over WASHING MACHINES ⚔️", "tone": "neutral" }
+        ],
+        "social": [
+          { "handle": "@steel_steve", "text": "about time someone stood up for our mills", "sentiment": "positive", "clout": "55k" },
+          { "handle": "@import_ivy", "text": "everything in my store is about to cost more. cool cool cool.", "sentiment": "negative" }
+        ],
+        "advisor": "Flag-waving and popular, but trade wars have no winners — just slower losers."
+      },
+      {
+        "id": "negotiate",
+        "label": "Pursue a quiet trade deal",
+        "detail": "Defuse it diplomatically.",
+        "effects": { "world": 5, "economy": 3, "approval": -4 },
+        "result": "You negotiate a truce that steadies markets and reopens exports. Critics call it weakness; CEOs call it relief.",
+        "news": [
+          { "outlet": "ledger", "headline": "Cool-headed deal reopens markets for business", "tone": "positive" },
+          { "outlet": "tribune", "headline": "President blinks first while jobs hang in the balance", "tone": "negative" },
+          { "outlet": "beacon", "headline": "Trade truce reached, tariffs rolled back on both sides", "tone": "neutral" },
+          { "outlet": "buzz", "headline": "POTUS SHAKES HANDS WITH 'THE ENEMY' 🤝", "tone": "neutral" }
+        ],
+        "social": [
+          { "handle": "@export_ellie", "text": "my soybeans can finally ship again. huge.", "sentiment": "positive", "clout": "40k" },
+          { "handle": "@tough_tom", "text": "weak. we should've made them beg.", "sentiment": "negative" }
+        ],
+        "advisor": "Markets reward stability, but 'caving to foreigners' is an easy attack line. Sell it as strength."
+      }
+    ]
+  },
+  {
+    "id": "gen_economy_minimumwage",
+    "category": "economy",
+    "title": "The Minimum Wage Fight",
+    "briefing": "A bill to nearly double the federal minimum wage just landed on your desk. Workers are rallying outside; small business owners are flooding the phone lines. You promised to lift wages, but the timing couldn't be tighter.",
+    "source": "Labor Secretary",
+    "minDay": 0,
+    "weight": 1,
+    "choices": [
+      {
+        "id": "sign",
+        "label": "Sign the wage hike",
+        "detail": "Deliver on the promise.",
+        "effects": { "approval": 6, "economy": -4, "legacy": 4 },
+        "result": "Millions get a raise overnight and your base is ecstatic. Some small businesses warn of cutbacks and a few storefronts go dark.",
+        "news": [
+          { "outlet": "tribune", "headline": "Historic raise: President delivers a living wage", "tone": "positive" },
+          { "outlet": "ledger", "headline": "Wage mandate will shutter the corner store", "tone": "negative" },
+          { "outlet": "beacon", "headline": "Minimum wage increase signed into law", "tone": "neutral" },
+          { "outlet": "buzz", "headline": "EVERYONE'S GETTING A RAISE 🎉 (some aren't)", "tone": "positive" }
+        ],
+        "social": [
+          { "handle": "@barista_bex", "text": "my paycheck just went up 60%. i could cry.", "sentiment": "positive", "clout": "150k" },
+          { "handle": "@diner_dan", "text": "love my staff but i literally cannot afford this. cutting hours.", "sentiment": "negative" }
+        ],
+        "advisor": "Legacy-defining and base-energizing. The 'small biz casualty' stories will be the counterpunch."
+      },
+      {
+        "id": "phasein",
+        "label": "Veto and propose a slow phase-in",
+        "detail": "Split the difference.",
+        "cost": 1,
+        "effects": { "economy": 2, "approval": -3, "stability": 2 },
+        "result": "You pitch a gradual increase to soften the blow. Businesses exhale; activists accuse you of betraying the moment.",
+        "news": [
+          { "outlet": "ledger", "headline": "President shows restraint with phased wage plan", "tone": "positive" },
+          { "outlet": "tribune", "headline": "Half-measure betrays the workers who elected him", "tone": "negative" },
+          { "outlet": "beacon", "headline": "President vetoes wage bill, offers phased alternative", "tone": "neutral" },
+          { "outlet": "buzz", "headline": "POTUS SAYS 'NOT SO FAST' ON RAISES ✋", "tone": "negative" }
+        ],
+        "social": [
+          { "handle": "@barista_bex", "text": "phased in over five years?? i needed the raise YEARS ago", "sentiment": "negative", "clout": "150k" },
+          { "handle": "@diner_dan", "text": "ok THIS i can plan around. thank you.", "sentiment": "positive" }
+        ],
+        "advisor": "The compromise protects the economy but enrages the people who wanted a win today."
+      }
+    ]
+  },
+  {
+    "id": "gen_economy_bankcrisis",
+    "category": "economy",
+    "title": "A Bank on the Brink",
+    "briefing": "The nation's third-largest bank is hours from collapse and depositors are lining up to pull their cash. A federal bailout could stop the panic from spreading — or you could let it fail and send a message about moral hazard. The clock is ticking before markets open.",
+    "source": "Treasury Secretary",
+    "minDay": 200,
+    "weight": 1,
+    "choices": [
+      {
+        "id": "bailout",
+        "label": "Bail out the bank",
+        "detail": "Stop the contagion.",
+        "cost": 3,
+        "bold": true,
+        "effects": { "economy": 7, "stability": 4, "approval": -6 },
+        "result": "You backstop the bank and the panic subsides by lunchtime. The public seethes at another rescue for the powerful.",
+        "news": [
+          { "outlet": "ledger", "headline": "Decisive rescue prevents financial meltdown", "tone": "positive" },
+          { "outlet": "tribune", "headline": "Wall Street wins again while families foot the bill", "tone": "negative" },
+          { "outlet": "beacon", "headline": "Federal backstop halts bank run, averts wider crisis", "tone": "neutral" },
+          { "outlet": "buzz", "headline": "ANOTHER BANK BAILOUT?! who's bailing out US 🏦", "tone": "negative" }
+        ],
+        "social": [
+          { "handle": "@depositor_dee", "text": "my paycheck account is safe. whatever it took, thank you.", "sentiment": "positive", "clout": "62k" },
+          { "handle": "@maintst_marv", "text": "privatize the profits, socialize the losses. same as always.", "sentiment": "negative", "clout": "180k" }
+        ],
+        "advisor": "You stopped the bleeding but bought every 'bailout' attack ad for the next cycle.",
+        "setFlags": ["bank_bailout"]
+      },
+      {
+        "id": "letfail",
+        "label": "Let it fail",
+        "detail": "No more bailouts.",
+        "bold": true,
+        "effects": { "approval": 4, "economy": -8, "stability": -5 },
+        "result": "You stand firm and the bank goes under. The public cheers your spine even as markets convulse and fear spreads to other banks.",
+        "news": [
+          { "outlet": "tribune", "headline": "President finally ends the era of bank bailouts", "tone": "positive" },
+          { "outlet": "ledger", "headline": "Reckless inaction triggers market panic", "tone": "negative" },
+          { "outlet": "beacon", "headline": "Major bank collapses as government declines rescue", "tone": "neutral" },
+          { "outlet": "buzz", "headline": "BANK GOES BOOM 💥 markets in FREEFALL", "tone": "negative" }
+        ],
+        "social": [
+          { "handle": "@maintst_marv", "text": "let them fail like the rest of us would. good.", "sentiment": "positive", "clout": "180k" },
+          { "handle": "@trader_tina", "text": "every bank stock is red. this is how 2008 started.", "sentiment": "negative" }
+        ],
+        "advisor": "Populist gold, economic gamble. If the contagion spreads, this approval bump won't survive it."
+      }
+    ]
+  },
+  {
+    "id": "gen_economy_wealthtax",
+    "category": "economy",
+    "title": "Tax the Billionaires?",
+    "briefing": "A new wealth tax on the ultra-rich could fund your entire domestic agenda. The donor class is threatening to flee the country and your fundraisers are panicking. The public, however, is overwhelmingly on board.",
+    "source": "Treasury Secretary",
+    "minDay": 0,
+    "weight": 1,
+    "choices": [
+      {
+        "id": "taxthem",
+        "label": "Impose the wealth tax",
+        "detail": "Make them pay their share.",
+        "cost": 2,
+        "bold": true,
+        "effects": { "approval": 7, "economy": -3, "world": -2, "legacy": 4 },
+        "result": "The public roars its approval as you fund schools and clinics. A handful of billionaires very loudly announce they're moving abroad.",
+        "news": [
+          { "outlet": "tribune", "headline": "At last, the ultra-rich pay their fair share", "tone": "positive" },
+          { "outlet": "ledger", "headline": "Wealth tax will drive capital and jobs overseas", "tone": "negative" },
+          { "outlet": "beacon", "headline": "Wealth tax enacted; capital-flight concerns raised", "tone": "neutral" },
+          { "outlet": "buzz", "headline": "BILLIONAIRES RAGE-QUIT THE COUNTRY 🛫", "tone": "neutral" }
+        ],
+        "social": [
+          { "handle": "@regular_rosa", "text": "you mean they weren't already paying this?? sign me up", "sentiment": "positive", "clout": "300k" },
+          { "handle": "@yacht_yan", "text": "great, my accountant already booked the flight to monaco", "sentiment": "negative" }
+        ],
+        "advisor": "Wildly popular and legacy-rich. Expect a wave of 'they're fleeing' headlines — get ahead of it."
+      },
+      {
+        "id": "decline",
+        "label": "Drop the tax, court investment",
+        "detail": "Keep capital at home.",
+        "effects": { "economy": 4, "approval": -5, "world": 2 },
+        "result": "You reassure the markets and the donor class breathes easy. Your base accuses you of folding to the wealthy.",
+        "news": [
+          { "outlet": "ledger", "headline": "President protects investment and keeps capital home", "tone": "positive" },
+          { "outlet": "tribune", "headline": "Caving to billionaires over working families", "tone": "negative" },
+          { "outlet": "beacon", "headline": "Wealth tax proposal shelved amid investment concerns", "tone": "neutral" },
+          { "outlet": "buzz", "headline": "PREZ LETS BILLIONAIRES OFF THE HOOK 💰", "tone": "negative" }
+        ],
+        "social": [
+          { "handle": "@regular_rosa", "text": "knew it. always us, never them.", "sentiment": "negative", "clout": "300k" },
+          { "handle": "@invest_ian", "text": "smart. markets reward stability and you just delivered.", "sentiment": "positive" }
+        ],
+        "advisor": "Markets calm, base furious. You traded a popular fight for economic steadiness."
+      }
+    ]
+  },
+  {
+    "id": "gen_economy_housing",
+    "category": "economy",
+    "title": "The Housing Crisis Boils Over",
+    "briefing": "Rents have doubled in five years and a tent encampment just sprang up across from the Capitol. You can push sweeping rent control with a building fund, or unleash developers by gutting regulations. Either way, someone's getting priced out of the conversation.",
+    "source": "Housing Secretary",
+    "minDay": 0,
+    "weight": 1,
+    "choices": [
+      {
+        "id": "rentcontrol",
+        "label": "Cap rents and fund building",
+        "detail": "Protect tenants now.",
+        "cost": 2,
+        "effects": { "approval": 5, "economy": -4, "stability": 2 },
+        "result": "Renters celebrate immediate relief, but landlords pull units off the market and new construction stalls in some cities.",
+        "news": [
+          { "outlet": "tribune", "headline": "President takes on greedy landlords for renters", "tone": "positive" },
+          { "outlet": "ledger", "headline": "Rent caps will dry up housing supply for good", "tone": "negative" },
+          { "outlet": "beacon", "headline": "Rent-control package signed amid supply warnings", "tone": "neutral" },
+          { "outlet": "buzz", "headline": "RENT FROZEN — tenants DANCING in the streets 🏠", "tone": "positive" }
+        ],
+        "social": [
+          { "handle": "@renter_ray", "text": "my landlord can't jack the rent again. i can finally breathe.", "sentiment": "positive", "clout": "120k" },
+          { "handle": "@landlord_liz", "text": "i'm selling and converting. enjoy the shortage.", "sentiment": "negative" }
+        ],
+        "advisor": "Tenants are a huge bloc and they'll love this. Watch for the 'supply collapse' story in six months."
+      },
+      {
+        "id": "deregulate",
+        "label": "Slash rules, let developers build",
+        "detail": "Flood the market with supply.",
+        "effects": { "economy": 5, "approval": -3, "stability": -2 },
+        "result": "Cranes go up across the country and supply expands over time. Communities protest the loss of zoning protections and green space.",
+        "news": [
+          { "outlet": "ledger", "headline": "President unleashes a building boom", "tone": "positive" },
+          { "outlet": "tribune", "headline": "Developer giveaway bulldozes neighborhoods", "tone": "negative" },
+          { "outlet": "beacon", "headline": "Zoning rollback aims to boost housing supply", "tone": "neutral" },
+          { "outlet": "buzz", "headline": "BULLDOZERS INCOMING — say bye to your park 🏗️", "tone": "neutral" }
+        ],
+        "social": [
+          { "handle": "@builder_ben", "text": "we can actually break ground now. game changer.", "sentiment": "positive", "clout": "47k" },
+          { "handle": "@neighbor_nan", "text": "they're putting a 20-story tower next to my house. cool.", "sentiment": "negative" }
+        ],
+        "advisor": "Supply is the long-term fix, but the short-term anger is loud and local. The relief is slow."
+      }
+    ]
+  },
+  {
+    "id": "gen_economy_cryptopanic",
+    "category": "economy",
+    "title": "The Great Crypto Crash",
+    "briefing": "A flagship digital currency just imploded overnight, wiping out billions and dragging the markets down with it. Millions of small investors are wiped out and demanding action. You can launch a sweeping crackdown, or backstop the wreckage to calm the markets.",
+    "source": "SEC Chair",
+    "minDay": 400,
+    "weight": 1,
+    "choices": [
+      {
+        "id": "crackdown",
+        "label": "Launch a sweeping crackdown",
+        "detail": "Regulate the wild west.",
+        "cost": 2,
+        "effects": { "stability": 5, "approval": 3, "economy": -4, "world": -2 },
+        "result": "You bring the hammer down with tough new rules and the worst actors flee. Innovators warn the whole industry will move offshore.",
+        "news": [
+          { "outlet": "tribune", "headline": "President protects everyday investors from crypto cons", "tone": "positive" },
+          { "outlet": "ledger", "headline": "Heavy-handed rules will chase innovation overseas", "tone": "negative" },
+          { "outlet": "beacon", "headline": "Sweeping crypto regulations announced after crash", "tone": "neutral" },
+          { "outlet": "buzz", "headline": "CRYPTO BROS IN SHAMBLES 📉 regulators POUNCE", "tone": "neutral" }
+        ],
+        "social": [
+          { "handle": "@burned_bella", "text": "lost my savings to that scam coin. glad someone's finally acting.", "sentiment": "positive", "clout": "88k" },
+          { "handle": "@hodl_hank", "text": "regulating us to death. we'll just build somewhere else.", "sentiment": "negative" }
+        ],
+        "advisor": "Protective and popular with the burned. The 'killing innovation' line is the predictable counter."
+      },
+      {
+        "id": "backstop",
+        "label": "Backstop the market, stay hands-off",
+        "detail": "Calm the panic, keep it free.",
+        "bold": true,
+        "effects": { "economy": 5, "approval": -5, "stability": -3 },
+        "result": "You inject confidence and the broader markets stabilize. Critics blast you for rescuing a casino and changing nothing about it.",
+        "news": [
+          { "outlet": "ledger", "headline": "President steadies markets without strangling innovation", "tone": "positive" },
+          { "outlet": "tribune", "headline": "Another rescue for speculators, none for their victims", "tone": "negative" },
+          { "outlet": "beacon", "headline": "Government move stabilizes markets after crypto collapse", "tone": "neutral" },
+          { "outlet": "buzz", "headline": "POTUS SAVES THE CRYPTO CASINO 🎰", "tone": "negative" }
+        ],
+        "social": [
+          { "handle": "@trader_tess", "text": "markets stopped bleeding. that's all i needed.", "sentiment": "positive", "clout": "70k" },
+          { "handle": "@burned_bella", "text": "you bailed out the gamblers but not the people they ruined?", "sentiment": "negative", "clout": "88k" }
+        ],
+        "advisor": "Markets steadied, public unconvinced. 'Bailing out the casino' writes itself — have a rebuttal ready."
+      }
+    ]
+  }
+]

@@ -1,0 +1,515 @@
+[
+  {
+    "id": "gen_foreign_buildup",
+    "category": "foreign",
+    "title": "Tanks on the Border",
+    "briefing": "Satellite images show the Republic of Verdania massing armor along the frontier of your treaty ally, Lysmark. Verdania calls it 'routine exercises.' Your ally is begging for a visible show of support before the column moves.",
+    "source": "National Security Advisor",
+    "minDay": 0,
+    "weight": 2,
+    "choices": [
+      {
+        "id": "deploy",
+        "label": "Deploy a carrier group to the region",
+        "bold": true,
+        "effects": { "world": 6, "stability": -3, "economy": -2 },
+        "result": "The carrier arrives within days and Verdania's column halts at the line. The deployment costs billions and rattles markets nervous about war.",
+        "news": [
+          { "outlet": "ledger", "headline": "President draws a line; tyrants blink first", "tone": "positive" },
+          { "outlet": "tribune", "headline": "Gunboat diplomacy risks a war nobody chose", "tone": "negative" },
+          { "outlet": "beacon", "headline": "Carrier group deployed as Verdania halts advance", "tone": "neutral" },
+          { "outlet": "buzz", "headline": "BIG BOAT, BIGGER FLEX — Verdania FREEZES", "tone": "positive" }
+        ],
+        "social": [
+          { "handle": "@hawk_eye", "text": "this is what deterrence looks like. they only respect strength.", "sentiment": "positive", "clout": "112k" },
+          { "handle": "@nomorewars", "text": "one wrong move and we're in a shooting war over a map line.", "sentiment": "negative", "clout": "54k" }
+        ],
+        "advisor": "Steel speaks louder than statements. Just pray nobody twitches a trigger.",
+        "setFlags": ["verdania_tense"]
+      },
+      {
+        "id": "sanction",
+        "label": "Hit Verdania with surprise sanctions",
+        "effects": { "economy": -2, "world": 3, "approval": 1 },
+        "result": "You freeze Verdanian assets and choke their exports overnight. They withdraw some armor but vow retaliation against your own trade.",
+        "news": [
+          { "outlet": "beacon", "headline": "Sweeping sanctions answer Verdanian buildup", "tone": "neutral" },
+          { "outlet": "tribune", "headline": "Pressure without bombs: the smarter path", "tone": "positive" },
+          { "outlet": "ledger", "headline": "Paper sanctions won't stop a tank column", "tone": "negative" },
+          { "outlet": "buzz", "headline": "POTUS FREEZES the BANK — Verdania FUMING", "tone": "neutral" }
+        ],
+        "social": [
+          { "handle": "@policywonk", "text": "sanctions buy time without bloodshed. boring but it works.", "sentiment": "positive", "clout": "31k" }
+        ],
+        "advisor": "Wallets hurt longer than warnings. Expect them to hit our exporters back."
+      },
+      {
+        "id": "diplomacy",
+        "label": "Call Verdania's leader directly",
+        "cost": 1,
+        "effects": { "world": -2, "stability": 2, "approval": -3 },
+        "result": "You open a private channel. Verdania pauses but pockets the concession as weakness; your ally feels abandoned at the table.",
+        "news": [
+          { "outlet": "tribune", "headline": "President chooses talking over troops", "tone": "positive" },
+          { "outlet": "ledger", "headline": "Phone calls won't save Lysmark from invasion", "tone": "negative" },
+          { "outlet": "beacon", "headline": "Leaders open direct talks amid border crisis", "tone": "neutral" },
+          { "outlet": "buzz", "headline": "POTUS DIALS the DICTATOR — allies SWEATING", "tone": "negative" }
+        ],
+        "social": [
+          { "handle": "@lysmark_voice", "text": "we asked for help and got a press release about a phone call.", "sentiment": "negative", "clout": "76k" }
+        ],
+        "advisor": "Cheap and quiet, but our ally just learned what your guarantee is worth."
+      }
+    ]
+  },
+  {
+    "id": "gen_foreign_tradedeal",
+    "category": "foreign",
+    "title": "The Trillion-Dollar Pact",
+    "briefing": "Twelve nations have spent three years drafting a sweeping trade pact, and the pen is finally in your hand. Economists love it; your factory towns are terrified of cheaper imports. Sign and you reshape global commerce, or hesitate and the deal collapses without you.",
+    "source": "Secretary of Commerce",
+    "minDay": 0,
+    "choices": [
+      {
+        "id": "sign",
+        "label": "Sign the pact in full",
+        "bold": true,
+        "effects": { "economy": 6, "world": 4, "approval": -4 },
+        "result": "Markets soar and exporters cheer, but heartland workers see the writing on the wall and they are furious.",
+        "news": [
+          { "outlet": "ledger", "headline": "Historic pact unleashes American commerce", "tone": "positive" },
+          { "outlet": "tribune", "headline": "Wall Street wins, factory floors lose again", "tone": "negative" },
+          { "outlet": "beacon", "headline": "President signs landmark twelve-nation trade pact", "tone": "neutral" },
+          { "outlet": "buzz", "headline": "BILLIONS INBOUND — but is YOUR job NEXT?", "tone": "neutral" }
+        ],
+        "social": [
+          { "handle": "@globaltrader", "text": "this is the deal of the decade. america back at the center of trade.", "sentiment": "positive", "clout": "61k" },
+          { "handle": "@steeltown_dad", "text": "they signed away my plant with a gold pen. thanks for nothing.", "sentiment": "negative", "clout": "203k" }
+        ],
+        "advisor": "Boardrooms toast you tonight. Swing-state lunchrooms won't forget this by November."
+      },
+      {
+        "id": "renegotiate",
+        "label": "Demand worker protections first",
+        "cost": 1,
+        "effects": { "approval": 4, "economy": -2, "world": -2 },
+        "result": "You hold out for labor and tariff carve-outs. Workers cheer; partner nations grumble that you blew up three years of work.",
+        "news": [
+          { "outlet": "tribune", "headline": "President puts workers ahead of the deal", "tone": "positive" },
+          { "outlet": "ledger", "headline": "Eleventh-hour demands jeopardize historic pact", "tone": "negative" },
+          { "outlet": "beacon", "headline": "Trade signing stalls over labor provisions", "tone": "neutral" },
+          { "outlet": "buzz", "headline": "POTUS SLAMS the BRAKES — partners PANIC", "tone": "neutral" }
+        ],
+        "social": [
+          { "handle": "@union_strong", "text": "finally a president who reads the fine print FOR us.", "sentiment": "positive", "clout": "145k" }
+        ],
+        "advisor": "Popular at home, painful abroad. Our partners may walk and find a new anchor."
+      },
+      {
+        "id": "walk",
+        "label": "Walk away from the table",
+        "effects": { "world": -5, "approval": 2, "economy": -1 },
+        "result": "You kill the pact. Heartland populists celebrate, but allies cut their own deal and freeze you out of the new bloc.",
+        "news": [
+          { "outlet": "ledger", "headline": "President protects American jobs, snubs globalists", "tone": "positive" },
+          { "outlet": "tribune", "headline": "Going it alone leaves us on the outside", "tone": "negative" },
+          { "outlet": "beacon", "headline": "President withdraws; eleven nations proceed without US", "tone": "neutral" },
+          { "outlet": "buzz", "headline": "POTUS WALKS — world deals WITHOUT us", "tone": "negative" }
+        ],
+        "social": [
+          { "handle": "@buyamerican", "text": "no more selling out our towns to foreign factories. about time.", "sentiment": "positive", "clout": "98k" }
+        ],
+        "advisor": "You kept a promise to the base and handed the table to your rivals."
+      }
+    ]
+  },
+  {
+    "id": "gen_foreign_summit",
+    "category": "foreign",
+    "title": "The Peace Summit Gambit",
+    "briefing": "After a decade of proxy bloodshed, the warring states of Korvane and Astrega have agreed to sit down on neutral soil, and they want YOU in the middle chair. Broker peace and you make history, or watch it collapse on live television and own the failure.",
+    "source": "Secretary of State",
+    "minDay": 300,
+    "choices": [
+      {
+        "id": "host",
+        "label": "Host and personally broker the talks",
+        "bold": true,
+        "effects": { "world": 7, "approval": 4, "stability": -2 },
+        "result": "After 36 sleepless hours you walk both delegations to a signed ceasefire. Hardliners on every side call it a sellout, but the guns go quiet.",
+        "news": [
+          { "outlet": "beacon", "headline": "President brokers historic Korvane-Astrega ceasefire", "tone": "positive" },
+          { "outlet": "tribune", "headline": "Peace at last: this is what leadership looks like", "tone": "positive" },
+          { "outlet": "ledger", "headline": "Ceasefire rewards aggressors, leaves allies exposed", "tone": "negative" },
+          { "outlet": "buzz", "headline": "POTUS ENDS the WAR — Nobel buzz EXPLODES", "tone": "positive" }
+        ],
+        "social": [
+          { "handle": "@peacenow", "text": "a decade of war ended in a room. i'm actually crying.", "sentiment": "positive", "clout": "412k" }
+        ],
+        "advisor": "Career-defining if it holds. If either side cheats, it's your name on the wreckage.",
+        "setFlags": ["korvane_peace"]
+      },
+      {
+        "id": "envoy",
+        "label": "Send an envoy, keep your distance",
+        "effects": { "world": 2, "stability": 1, "approval": -1 },
+        "result": "Your envoy keeps you insulated from blame and secures a fragile pause. Both sides notice you wouldn't show your own face.",
+        "news": [
+          { "outlet": "beacon", "headline": "US envoy secures tentative pause in Korvane war", "tone": "neutral" },
+          { "outlet": "ledger", "headline": "President too cautious to lead in person", "tone": "negative" },
+          { "outlet": "tribune", "headline": "Quiet diplomacy notches a quiet win", "tone": "positive" },
+          { "outlet": "buzz", "headline": "POTUS SENDS a SUB — too SCARED to show?", "tone": "neutral" }
+        ],
+        "social": [
+          { "handle": "@realpolitik", "text": "smart. you don't bet your legacy on two governments that hate each other.", "sentiment": "neutral", "clout": "44k" }
+        ],
+        "advisor": "Low risk, low reward. Nobody throws a parade for a delegated handshake."
+      },
+      {
+        "id": "decline",
+        "label": "Decline; it's not our war",
+        "effects": { "world": -4, "approval": 1, "stability": 1 },
+        "result": "You stay home. The summit limps on without you and stalls; critics say America abdicated the room it built the table for.",
+        "news": [
+          { "outlet": "tribune", "headline": "President resists the temptation of foreign entanglement", "tone": "positive" },
+          { "outlet": "ledger", "headline": "Abdication: America cedes its seat to rivals", "tone": "negative" },
+          { "outlet": "beacon", "headline": "President declines summit role; talks falter", "tone": "neutral" },
+          { "outlet": "buzz", "headline": "POTUS GHOSTS the SUMMIT — empty chair MOCKED", "tone": "negative" }
+        ],
+        "social": [
+          { "handle": "@bringthemhome", "text": "not our circus, not our monkeys. good. let them solve it.", "sentiment": "positive", "clout": "67k" }
+        ],
+        "advisor": "You dodged the failure and the glory. Someone else will sit in that chair now."
+      }
+    ]
+  },
+  {
+    "id": "gen_foreign_refugees",
+    "category": "foreign",
+    "title": "Tide at the Border",
+    "briefing": "Civil war in Verdania has driven two hundred thousand refugees toward your closest ally, and the ally's camps are overflowing. They're asking you to take in fifty thousand. Humanitarian groups are watching; so are your own anxious voters.",
+    "source": "UN Ambassador",
+    "minDay": 0,
+    "choices": [
+      {
+        "id": "accept",
+        "label": "Accept fifty thousand refugees",
+        "bold": true,
+        "effects": { "world": 5, "approval": -5, "economy": -1 },
+        "result": "Aid groups hail you as a beacon of conscience. Talk radio erupts over jobs, housing, and vetting before the first plane lands.",
+        "news": [
+          { "outlet": "tribune", "headline": "President opens the door, honors our values", "tone": "positive" },
+          { "outlet": "ledger", "headline": "Fifty thousand unvetted: a security gamble", "tone": "negative" },
+          { "outlet": "beacon", "headline": "US to resettle 50,000 Verdanian refugees", "tone": "neutral" },
+          { "outlet": "buzz", "headline": "50K INCOMING — who PAYS, who VETS?", "tone": "neutral" }
+        ],
+        "social": [
+          { "handle": "@welcomehome", "text": "this is the country i was raised to believe in. proud today.", "sentiment": "positive", "clout": "187k" },
+          { "handle": "@borderfirst", "text": "fifty thousand we can't house or check. who asked for this?", "sentiment": "negative", "clout": "221k" }
+        ],
+        "advisor": "Moral high ground, real domestic cost. The vetting story will run for months."
+      },
+      {
+        "id": "aid",
+        "label": "Send aid, keep them in the region",
+        "effects": { "world": 2, "economy": -2, "approval": 2 },
+        "result": "You wire hundreds of millions to the camps and keep the intake on foreign soil. Allies say money is not the same as sharing the burden.",
+        "news": [
+          { "outlet": "beacon", "headline": "US funds regional camps over domestic resettlement", "tone": "neutral" },
+          { "outlet": "ledger", "headline": "President helps without opening the floodgates", "tone": "positive" },
+          { "outlet": "tribune", "headline": "Checkbook compassion dodges our real duty", "tone": "negative" },
+          { "outlet": "buzz", "headline": "POTUS WRITES a CHECK — keeps 'em OVER THERE", "tone": "neutral" }
+        ],
+        "social": [
+          { "handle": "@taxpayer_jane", "text": "help them where they are. that's compassion AND common sense.", "sentiment": "positive", "clout": "73k" }
+        ],
+        "advisor": "Splits the difference. Allies wanted shoulders, not a wire transfer."
+      },
+      {
+        "id": "refuse",
+        "label": "Refuse intake entirely",
+        "effects": { "world": -5, "approval": 3, "stability": -1 },
+        "result": "You close the door. Border hawks celebrate; the ally feels deserted and human-rights groups burn you in editorials worldwide.",
+        "news": [
+          { "outlet": "ledger", "headline": "President puts American security first", "tone": "positive" },
+          { "outlet": "tribune", "headline": "Slamming the door on the desperate", "tone": "negative" },
+          { "outlet": "beacon", "headline": "US declines refugee intake; ally voices dismay", "tone": "neutral" },
+          { "outlet": "buzz", "headline": "POTUS SAYS NO — allies FUMING, base ROARS", "tone": "negative" }
+        ],
+        "social": [
+          { "handle": "@sovereign_us", "text": "our country, our call. not a hotel for the whole world.", "sentiment": "positive", "clout": "156k" }
+        ],
+        "advisor": "The base loves it. Your standing abroad just took a visible hit."
+      }
+    ]
+  },
+  {
+    "id": "gen_foreign_spy",
+    "category": "foreign",
+    "title": "A Spy in the Embassy",
+    "briefing": "Counterintelligence has caught a Verdanian operative running a network out of their embassy, and they've snared one of YOUR diplomats in their capital in return. Verdania floats a quiet swap. Go public and you score a win but torch the back channel forever.",
+    "source": "Director of National Intelligence",
+    "minDay": 0,
+    "choices": [
+      {
+        "id": "swap",
+        "label": "Quietly trade them back",
+        "effects": { "world": 1, "stability": 2, "approval": -2 },
+        "result": "The swap happens at dawn on a foggy bridge. Your diplomat comes home; hawks fume that you let a real spy walk free.",
+        "news": [
+          { "outlet": "beacon", "headline": "Quiet spy swap returns US diplomat home", "tone": "neutral" },
+          { "outlet": "tribune", "headline": "Cool heads bring our diplomat home safely", "tone": "positive" },
+          { "outlet": "ledger", "headline": "We traded our diplomat for their master spy?", "tone": "negative" },
+          { "outlet": "buzz", "headline": "MIDNIGHT BRIDGE SWAP — straight out of a MOVIE", "tone": "neutral" }
+        ],
+        "social": [
+          { "handle": "@spygames", "text": "the swap is the oldest move in the book and it works. our guy is home.", "sentiment": "positive", "clout": "52k" }
+        ],
+        "advisor": "Clean and quiet. The hawks will ask why a confessed spy is on a flight home."
+      },
+      {
+        "id": "expose",
+        "label": "Expose the network publicly",
+        "bold": true,
+        "effects": { "world": 4, "approval": 3, "stability": -3 },
+        "result": "You parade the evidence on every screen and expel a dozen Verdanian officials. The triumph is real, but they retaliate by tightening the screws on your detained diplomat.",
+        "news": [
+          { "outlet": "ledger", "headline": "President exposes enemy spy ring, expels agents", "tone": "positive" },
+          { "outlet": "tribune", "headline": "Grandstanding endangers our own diplomat", "tone": "negative" },
+          { "outlet": "beacon", "headline": "US publicly dismantles Verdanian spy network", "tone": "neutral" },
+          { "outlet": "buzz", "headline": "BUSTED ON LIVE TV — spy ring SHREDDED", "tone": "positive" }
+        ],
+        "social": [
+          { "handle": "@counterintel", "text": "you don't reward espionage with a quiet handshake. you EXPOSE it.", "sentiment": "positive", "clout": "94k" }
+        ],
+        "advisor": "Big public win, real human cost. Your diplomat just got harder to bring home."
+      }
+    ]
+  },
+  {
+    "id": "gen_foreign_nuke",
+    "category": "foreign",
+    "title": "The Enrichment Line",
+    "briefing": "Inspectors confirm the Republic of Verdania is months from a weapon, crossing the red line your predecessor drew. They'll freeze the program in exchange for sanctions relief. Trust them and you might be played; strike and you risk a war across the whole region.",
+    "source": "National Security Advisor",
+    "minDay": 500,
+    "weight": 2,
+    "choices": [
+      {
+        "id": "deal",
+        "label": "Cut a freeze-for-relief deal",
+        "effects": { "world": 3, "stability": 4, "economy": 2 },
+        "result": "Centrifuges halt under camera surveillance and oil prices steady. Skeptics warn Verdania has cheated on every deal it ever signed.",
+        "news": [
+          { "outlet": "tribune", "headline": "Diplomacy pulls the region back from the brink", "tone": "positive" },
+          { "outlet": "ledger", "headline": "A deal with liars is a countdown, not a treaty", "tone": "negative" },
+          { "outlet": "beacon", "headline": "Verdania freezes enrichment under inspection deal", "tone": "neutral" },
+          { "outlet": "buzz", "headline": "BOMB ON HOLD — but can we TRUST 'em?", "tone": "neutral" }
+        ],
+        "social": [
+          { "handle": "@nonukes", "text": "we just stopped a bomb without firing a shot. this is the win.", "sentiment": "positive", "clout": "138k" }
+        ],
+        "advisor": "Markets calm, region exhales. The whole bet rides on inspectors and their honesty."
+      },
+      {
+        "id": "strike",
+        "label": "Order a precision strike on the site",
+        "bold": true,
+        "cost": 2,
+        "effects": { "world": -4, "approval": 2, "stability": -6 },
+        "result": "Bunker-busters bury the program for years. Verdania vows revenge, the region braces for proxies, and oil markets convulse.",
+        "news": [
+          { "outlet": "ledger", "headline": "President eliminates the threat decisively", "tone": "positive" },
+          { "outlet": "tribune", "headline": "We just started a war to prevent one", "tone": "negative" },
+          { "outlet": "beacon", "headline": "US strikes Verdanian nuclear site; region on edge", "tone": "neutral" },
+          { "outlet": "buzz", "headline": "BUNKERS BLOWN — region BRACES for BLOWBACK", "tone": "negative" }
+        ],
+        "social": [
+          { "handle": "@neverabomb", "text": "you don't let a regime like that get the bomb. period. done.", "sentiment": "positive", "clout": "176k" },
+          { "handle": "@warweary", "text": "here we go again. another forever war sold as 'precision.'", "sentiment": "negative", "clout": "204k" }
+        ],
+        "advisor": "Threat erased, hornet's nest kicked. Brace every embassy in the region tonight."
+      },
+      {
+        "id": "wait",
+        "label": "Tighten sanctions and wait",
+        "effects": { "economy": -2, "world": 1, "stability": -2 },
+        "result": "You crank the economic pressure and hold fire. Verdania's economy buckles but the centrifuges keep spinning, and the clock keeps ticking.",
+        "news": [
+          { "outlet": "beacon", "headline": "President escalates sanctions, holds military option", "tone": "neutral" },
+          { "outlet": "tribune", "headline": "Pressure over bombs: the patient path", "tone": "positive" },
+          { "outlet": "ledger", "headline": "Sanctions buy time the enemy is using against us", "tone": "negative" },
+          { "outlet": "buzz", "headline": "POTUS SQUEEZES — but the CLOCK keeps TICKING", "tone": "neutral" }
+        ],
+        "social": [
+          { "handle": "@hardline", "text": "sanctions never stopped a single centrifuge. we're just stalling.", "sentiment": "negative", "clout": "61k" }
+        ],
+        "advisor": "Buys time without bloodshed, but the centrifuges don't care about your patience."
+      }
+    ]
+  },
+  {
+    "id": "gen_foreign_coup",
+    "category": "foreign",
+    "title": "Tanks in the Capital",
+    "briefing": "At 3 a.m. the phone rings: the military has seized power in Astrega, your partner of thirty years, and the elected president is hiding in a bunker. The generals promise to keep your bases open. Recognize them and you betray a democracy; condemn them and you may lose the region.",
+    "source": "Secretary of State",
+    "minDay": 200,
+    "choices": [
+      {
+        "id": "condemn",
+        "label": "Condemn the coup, cut aid",
+        "bold": true,
+        "effects": { "world": 4, "stability": -2, "economy": -2 },
+        "result": "You suspend aid and demand the generals stand down. Democracy advocates cheer; the junta threatens to evict your forces and pivot to Verdania.",
+        "news": [
+          { "outlet": "tribune", "headline": "President stands with democracy, not generals", "tone": "positive" },
+          { "outlet": "ledger", "headline": "Abandoning a partner hands the region to our rivals", "tone": "negative" },
+          { "outlet": "beacon", "headline": "US condemns Astrega coup, suspends assistance", "tone": "neutral" },
+          { "outlet": "buzz", "headline": "POTUS PICKS the PEOPLE — bases at RISK", "tone": "neutral" }
+        ],
+        "social": [
+          { "handle": "@democracy_now", "text": "you don't shake hands with men who roll tanks over ballots.", "sentiment": "positive", "clout": "201k" }
+        ],
+        "advisor": "Principle has a price. Those bases may be a rival's by next month."
+      },
+      {
+        "id": "recognize",
+        "label": "Quietly recognize the junta",
+        "effects": { "stability": 3, "world": -5, "approval": -3 },
+        "result": "You hold your nose and keep the relationship. The bases stay open, the region stays calm, and your democratic credentials take a global beating.",
+        "news": [
+          { "outlet": "ledger", "headline": "Pragmatism keeps America's footprint secure", "tone": "positive" },
+          { "outlet": "tribune", "headline": "President bear-hugs a band of coup plotters", "tone": "negative" },
+          { "outlet": "beacon", "headline": "US maintains ties with Astrega's new military rulers", "tone": "neutral" },
+          { "outlet": "buzz", "headline": "POTUS COZIES UP to the GENERALS", "tone": "negative" }
+        ],
+        "social": [
+          { "handle": "@realworld_pol", "text": "ugly but smart. you don't hand a strategic base to verdania over a tweet.", "sentiment": "neutral", "clout": "48k" }
+        ],
+        "advisor": "Bases secured, conscience mortgaged. This footage will follow you for years."
+      },
+      {
+        "id": "mediate",
+        "label": "Push for a transition deal",
+        "cost": 1,
+        "effects": { "world": 2, "stability": 1, "approval": -1 },
+        "result": "You dangle aid for a return to elections within a year. The generals nod vaguely; nobody knows if the deal is real or a stalling tactic.",
+        "news": [
+          { "outlet": "beacon", "headline": "US brokers tentative Astrega transition framework", "tone": "neutral" },
+          { "outlet": "tribune", "headline": "A pathway back to the ballot box", "tone": "positive" },
+          { "outlet": "ledger", "headline": "Naive deal lets the junta run out the clock", "tone": "negative" },
+          { "outlet": "buzz", "headline": "POTUS GAMBLES on a PROMISE from PLOTTERS", "tone": "neutral" }
+        ],
+        "social": [
+          { "handle": "@watchdog", "text": "a transition deal with generals is worth exactly as much as their word.", "sentiment": "neutral", "clout": "39k" }
+        ],
+        "advisor": "The needle to thread. The junta's signature isn't worth the ink, but it buys cover."
+      }
+    ]
+  },
+  {
+    "id": "gen_foreign_cyber",
+    "category": "foreign",
+    "title": "The Lights Went Out",
+    "briefing": "A cyberattack just dropped the power grid across three states for six hours, and your analysts are 80% sure it traces to Verdania's military. They deny everything. The public wants a name and a punishment; your experts warn that 80% isn't proof.",
+    "source": "Director of National Intelligence",
+    "minDay": 0,
+    "weight": 2,
+    "choices": [
+      {
+        "id": "attribute",
+        "label": "Publicly blame Verdania, retaliate",
+        "bold": true,
+        "effects": { "approval": 5, "world": -3, "stability": -2 },
+        "result": "You name Verdania and answer with your own cyber strike on their networks. The public roars approval; if the attribution was wrong, the escalation is on you.",
+        "news": [
+          { "outlet": "ledger", "headline": "President hits back hard; no attack goes unanswered", "tone": "positive" },
+          { "outlet": "tribune", "headline": "Retaliating on 80% certainty courts disaster", "tone": "negative" },
+          { "outlet": "beacon", "headline": "US blames Verdania for grid attack, launches counter", "tone": "neutral" },
+          { "outlet": "buzz", "headline": "POTUS HACKS 'EM BACK — cyber WAR is ON", "tone": "positive" }
+        ],
+        "social": [
+          { "handle": "@grid_anger", "text": "they turned off our LIGHTS. you bet i want a name and a response.", "sentiment": "positive", "clout": "166k" }
+        ],
+        "advisor": "The crowd is with you. So is every risk if that last twenty percent bites."
+      },
+      {
+        "id": "investigate",
+        "label": "Withhold blame, investigate quietly",
+        "effects": { "approval": -4, "stability": 2, "world": 1 },
+        "result": "You refuse to point fingers without certainty. The public reads caution as weakness, but you avoid a war built on a bad hunch.",
+        "news": [
+          { "outlet": "beacon", "headline": "President urges patience as grid probe continues", "tone": "neutral" },
+          { "outlet": "tribune", "headline": "Restraint before retaliation: the responsible call", "tone": "positive" },
+          { "outlet": "ledger", "headline": "President dithers while the enemy laughs", "tone": "negative" },
+          { "outlet": "buzz", "headline": "LIGHTS OUT, ANSWERS NONE — POTUS STALLS", "tone": "negative" }
+        ],
+        "social": [
+          { "handle": "@measure_twice", "text": "you don't start a war over a maybe. thank you for not doing that.", "sentiment": "positive", "clout": "57k" },
+          { "handle": "@fedup_voter", "text": "six hours in the dark and the answer is 'we're looking into it'??", "sentiment": "negative", "clout": "143k" }
+        ],
+        "advisor": "Right and unpopular is a lonely place. But a wrong war is lonelier."
+      },
+      {
+        "id": "harden",
+        "label": "Stay silent, fund grid defenses",
+        "effects": { "stability": 4, "economy": -2, "approval": -1 },
+        "result": "You skip the blame game and pour billions into hardening the grid. Pundits call it ducking the fight; engineers call it the only thing that matters.",
+        "news": [
+          { "outlet": "beacon", "headline": "President pivots to grid defense over attribution", "tone": "neutral" },
+          { "outlet": "tribune", "headline": "Protecting the people instead of picking a fight", "tone": "positive" },
+          { "outlet": "ledger", "headline": "Playing defense invites the next attack", "tone": "negative" },
+          { "outlet": "buzz", "headline": "POTUS DODGES the BLAME, BUILDS a WALL", "tone": "neutral" }
+        ],
+        "social": [
+          { "handle": "@infra_nerd", "text": "boring answer, correct answer. patch the hole, don't just yell about it.", "sentiment": "positive", "clout": "33k" }
+        ],
+        "advisor": "Quietly the smartest move. Voters wanted a villain, not a maintenance budget."
+      }
+    ]
+  },
+  {
+    "id": "gen_foreign_snub",
+    "category": "foreign",
+    "title": "The Handshake Seen Worldwide",
+    "briefing": "At the global summit, Verdania's leader extends a hand on camera and you have a half-second to decide. Shake it and the base accuses you of legitimizing a thug; refuse and you spark an international incident the cameras will replay forever.",
+    "source": "Chief of Protocol",
+    "minDay": 0,
+    "choices": [
+      {
+        "id": "shake",
+        "label": "Shake the hand, stay diplomatic",
+        "effects": { "world": 3, "approval": -3, "stability": 1 },
+        "result": "You take the hand with a tight smile. Diplomats applaud the maturity; your base detonates over the photo within minutes.",
+        "news": [
+          { "outlet": "beacon", "headline": "Leaders shake hands at tense global summit", "tone": "neutral" },
+          { "outlet": "tribune", "headline": "Adults in the room keep dialogue alive", "tone": "positive" },
+          { "outlet": "ledger", "headline": "A handshake that legitimizes a tyrant", "tone": "negative" },
+          { "outlet": "buzz", "headline": "THE GRIP HEARD 'ROUND the WORLD", "tone": "neutral" }
+        ],
+        "social": [
+          { "handle": "@base_betrayed", "text": "you SHOOK that man's hand? on camera? unbelievable.", "sentiment": "negative", "clout": "188k" }
+        ],
+        "advisor": "The grown-up move that the diehards will never forgive. That photo is forever."
+      },
+      {
+        "id": "snub",
+        "label": "Snub him on camera",
+        "bold": true,
+        "effects": { "approval": 5, "world": -4, "stability": -1 },
+        "result": "You look right past the outstretched hand. The clip goes viral and your base roars; Verdania storms out and freezes a key back channel.",
+        "news": [
+          { "outlet": "ledger", "headline": "President refuses to shake a dictator's hand", "tone": "positive" },
+          { "outlet": "tribune", "headline": "A petty snub torches months of diplomacy", "tone": "negative" },
+          { "outlet": "beacon", "headline": "President declines handshake; Verdania walks out", "tone": "neutral" },
+          { "outlet": "buzz", "headline": "POTUS LEAVES HIM HANGING — INTERNET MELTS", "tone": "positive" }
+        ],
+        "social": [
+          { "handle": "@no_compromise", "text": "THAT is a president with a spine. no handshakes for tyrants.", "sentiment": "positive", "clout": "294k" }
+        ],
+        "advisor": "A viral home-run that just slammed a door we may need to reopen."
+      }
+    ]
+  }
+]

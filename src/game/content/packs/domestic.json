@@ -1,0 +1,544 @@
+[
+  {
+    "id": "gen_domestic_healthcare",
+    "category": "domestic",
+    "title": "The Big Healthcare Bill",
+    "briefing": "Your signature healthcare package finally hits the floor, but it's twenty votes short and the price tag keeps ballooning. You can ram through a sweeping universal plan that delights reformers and terrifies the bond market, or gut it down to a modest fix everyone can swallow. The clock is running and the cameras are on.",
+    "source": "Domestic Policy Council",
+    "minDay": 0,
+    "choices": [
+      {
+        "id": "go_big",
+        "label": "Push the sweeping universal plan",
+        "detail": "Spend the capital, swing for the fences.",
+        "cost": 3,
+        "bold": true,
+        "effects": { "approval": 4, "economy": -4, "stability": -3, "legacy": 6 },
+        "result": "The bill squeaks through after an all-night session. Supporters call it historic; markets wobble at the cost and the deficit hawks circle.",
+        "news": [
+          { "outlet": "tribune", "headline": "A landmark guarantee of care for every citizen", "tone": "positive" },
+          { "outlet": "ledger", "headline": "Reckless spending bill will crush the budget", "tone": "negative" },
+          { "outlet": "beacon", "headline": "Sweeping health law passes after marathon vote", "tone": "neutral" },
+          { "outlet": "buzz", "headline": "POTUS GAMBLES IT ALL on MEGA-HEALTH BILL 😱💸", "tone": "neutral" }
+        ],
+        "social": [
+          { "handle": "@care_for_all", "text": "we actually did it. people won't go bankrupt getting sick anymore. crying.", "sentiment": "positive", "clout": "220k" },
+          { "handle": "@budget_brad", "text": "who is paying for this? oh right, all of us. forever.", "sentiment": "negative", "clout": "61k" }
+        ],
+        "advisor": "Historic on paper, but the markets and the deficit hawks will hammer you for months.",
+        "setFlags": ["passed_big_healthcare"]
+      },
+      {
+        "id": "go_small",
+        "label": "Pass a modest bipartisan fix",
+        "detail": "Trim it down, get something signed.",
+        "effects": { "approval": -1, "stability": 5, "economy": 2, "legacy": 1 },
+        "result": "The slimmed-down bill passes with votes from both aisles. Pragmatists nod; your base mutters that you flinched.",
+        "news": [
+          { "outlet": "beacon", "headline": "Scaled-back health reform clears with bipartisan support", "tone": "positive" },
+          { "outlet": "ledger", "headline": "A sensible, affordable patch to the system", "tone": "positive" },
+          { "outlet": "tribune", "headline": "Half a loaf when millions needed the whole thing", "tone": "negative" },
+          { "outlet": "buzz", "headline": "POTUS PLAYS IT SAFE — base feeling BETRAYED 😤", "tone": "neutral" }
+        ],
+        "social": [
+          { "handle": "@pragmatic_pat", "text": "not glamorous but it'll actually help people next month. i'll take it.", "sentiment": "positive" }
+        ],
+        "advisor": "Durable and cheap. Just brace for the 'you had the votes and choked' chorus."
+      },
+      {
+        "id": "shelve",
+        "label": "Shelve it for now",
+        "detail": "Pull the bill, regroup.",
+        "effects": { "approval": -4, "stability": 2, "capital": 1, "legacy": -3 },
+        "result": "You pull the bill before it can fail. The town breathes easier; your allies feel abandoned and the headline writes itself.",
+        "news": [
+          { "outlet": "tribune", "headline": "President abandons reform; advocates feel betrayed", "tone": "negative" },
+          { "outlet": "ledger", "headline": "A rare outbreak of fiscal sanity", "tone": "positive" },
+          { "outlet": "beacon", "headline": "Healthcare overhaul shelved amid vote shortfall", "tone": "neutral" },
+          { "outlet": "buzz", "headline": "POTUS PULLS THE PLUG on signature bill 🚑❌", "tone": "negative" }
+        ],
+        "social": [
+          { "handle": "@let_down_lena", "text": "campaigned on this for two years. shelved it in two weeks. cool.", "sentiment": "negative", "clout": "88k" }
+        ],
+        "advisor": "Saves face today, costs you a promise. Voters remember the ones you walk away from."
+      }
+    ]
+  },
+  {
+    "id": "gen_domestic_guntragedy",
+    "category": "domestic",
+    "title": "After the Tragedy",
+    "briefing": "A mass shooting has shattered a small town and the nation is grieving and furious in equal measure. Reformers demand sweeping new restrictions; rights groups warn you not to exploit a tragedy. Whatever you say in the next hour gets played on every screen in the country.",
+    "source": "Attorney General",
+    "minDay": 0,
+    "choices": [
+      {
+        "id": "push_reform",
+        "label": "Push sweeping new restrictions",
+        "cost": 2,
+        "bold": true,
+        "effects": { "approval": 2, "stability": -5, "legacy": 4 },
+        "result": "You go to the podium and demand action. Half the country cheers, the other half mobilizes overnight, and the capital braces for a brawl.",
+        "news": [
+          { "outlet": "tribune", "headline": "President answers grief with courage and action", "tone": "positive" },
+          { "outlet": "ledger", "headline": "Exploiting tragedy to trample basic rights", "tone": "negative" },
+          { "outlet": "beacon", "headline": "President calls for sweeping new restrictions", "tone": "neutral" },
+          { "outlet": "buzz", "headline": "POTUS GOES NUCLEAR after horror — nation SPLITS 💥", "tone": "neutral" }
+        ],
+        "social": [
+          { "handle": "@enough_already", "text": "finally someone saying what we've all been screaming for years.", "sentiment": "positive", "clout": "310k" },
+          { "handle": "@cold_dead_hands", "text": "using tragedy as a prop. shameful.", "sentiment": "negative", "clout": "140k" }
+        ],
+        "advisor": "Moral high ground with half the country. The other half just found its rallying cry."
+      },
+      {
+        "id": "narrow_fix",
+        "label": "Propose a narrow, targeted measure",
+        "detail": "Background checks, nothing sweeping.",
+        "effects": { "approval": 1, "stability": 3, "legacy": 1 },
+        "result": "You offer a modest, focused proposal. It pleases almost nobody fully but draws quiet support from the exhausted middle.",
+        "news": [
+          { "outlet": "beacon", "headline": "President threads the needle with narrow proposal", "tone": "neutral" },
+          { "outlet": "ledger", "headline": "A measured response that respects the Constitution", "tone": "positive" },
+          { "outlet": "tribune", "headline": "Too timid for a moment that demanded more", "tone": "negative" },
+          { "outlet": "buzz", "headline": "POTUS picks the SAFE LANE — internet UNDERWHELMED 😐", "tone": "neutral" }
+        ],
+        "social": [
+          { "handle": "@reasonable_ray", "text": "not everything, but a real step that might actually pass. good.", "sentiment": "positive" }
+        ],
+        "advisor": "Lowest-temperature option in the room. Both flanks will call you a coward; the middle won't."
+      },
+      {
+        "id": "mourn_only",
+        "label": "Lead the mourning, defer policy",
+        "detail": "Comfort now, fight later.",
+        "effects": { "approval": -3, "stability": 4, "world": 1, "legacy": -2 },
+        "result": "You visit the town, hold the families, and decline to legislate from grief. Critics on every side accuse you of dodging.",
+        "news": [
+          { "outlet": "beacon", "headline": "President consoles town, holds off on policy", "tone": "neutral" },
+          { "outlet": "tribune", "headline": "Thoughts and prayers, and nothing else", "tone": "negative" },
+          { "outlet": "ledger", "headline": "President resists the rush to legislate", "tone": "positive" },
+          { "outlet": "buzz", "headline": "POTUS HUGS, DUCKS THE FIGHT — fury MOUNTS 😡", "tone": "negative" }
+        ],
+        "social": [
+          { "handle": "@no_more_silence", "text": "another vigil, another nothing. how many more times.", "sentiment": "negative", "clout": "190k" }
+        ],
+        "advisor": "Calms the nation today and gives both flanks a stick to beat you with tomorrow."
+      }
+    ]
+  },
+  {
+    "id": "gen_domestic_border",
+    "category": "domestic",
+    "title": "Pressure at the Border",
+    "briefing": "Crossings have surged to record numbers and the southern facilities are overwhelmed and on every front page. Hardliners want a sweeping crackdown; humanitarian groups warn of a moral catastrophe. The governors are calling and they are not happy.",
+    "source": "Secretary of Homeland Security",
+    "minDay": 2,
+    "choices": [
+      {
+        "id": "crackdown",
+        "label": "Order a hard-line crackdown",
+        "detail": "Surge enforcement, tighten everything.",
+        "cost": 2,
+        "bold": true,
+        "effects": { "approval": 3, "stability": 4, "world": -4, "legacy": -2 },
+        "result": "You flood the border with enforcement and the numbers drop fast. Order-and-security voters cheer; allies abroad and rights groups recoil.",
+        "news": [
+          { "outlet": "ledger", "headline": "President finally restores order at the border", "tone": "positive" },
+          { "outlet": "tribune", "headline": "A cruel crackdown that abandons our values", "tone": "negative" },
+          { "outlet": "beacon", "headline": "President orders sweeping border enforcement surge", "tone": "neutral" },
+          { "outlet": "buzz", "headline": "POTUS SLAMS THE DOOR — numbers PLUMMET overnight 🚧", "tone": "neutral" }
+        ],
+        "social": [
+          { "handle": "@law_and_order_lou", "text": "took long enough. a country with no borders is no country.", "sentiment": "positive", "clout": "175k" },
+          { "handle": "@human_first_hana", "text": "these are families fleeing for their lives. this is who we are now?", "sentiment": "negative", "clout": "130k" }
+        ],
+        "advisor": "Plays great at home, badly abroad. Our partners read this as a values retreat."
+      },
+      {
+        "id": "comprehensive",
+        "label": "Pitch a comprehensive overhaul",
+        "detail": "Enforcement plus a path and more judges.",
+        "cost": 3,
+        "effects": { "approval": -2, "stability": 2, "world": 3, "legacy": 5 },
+        "result": "You unveil a sweeping deal pairing enforcement with legal pathways. The grand bargain wins praise abroad and instant suspicion from both flanks at home.",
+        "news": [
+          { "outlet": "beacon", "headline": "President unveils comprehensive immigration framework", "tone": "neutral" },
+          { "outlet": "tribune", "headline": "A humane, durable plan worth fighting for", "tone": "positive" },
+          { "outlet": "ledger", "headline": "Amnesty by another name, dressed up as reform", "tone": "negative" },
+          { "outlet": "buzz", "headline": "POTUS DROPS GIANT IMMIGRATION DEAL — both sides FUMING 🌎", "tone": "neutral" }
+        ],
+        "social": [
+          { "handle": "@bridge_builder_b", "text": "an actual plan instead of a slogan. shocking. i'm into it.", "sentiment": "positive", "clout": "95k" }
+        ],
+        "advisor": "The legacy play. It earns goodwill abroad and a two-front fight in the capital."
+      },
+      {
+        "id": "states_handle",
+        "label": "Let the states and courts manage it",
+        "detail": "Stay out, fund local efforts.",
+        "effects": { "approval": -3, "stability": -2, "capital": 2, "legacy": -3 },
+        "result": "You hand the problem to the governors with a check and a shrug. They feud, the courts dither, and the crisis simply keeps simmering on the news.",
+        "news": [
+          { "outlet": "ledger", "headline": "President passes the buck on the border", "tone": "negative" },
+          { "outlet": "tribune", "headline": "Federal silence leaves migrants in limbo", "tone": "negative" },
+          { "outlet": "beacon", "headline": "White House defers border response to states", "tone": "neutral" },
+          { "outlet": "buzz", "headline": "POTUS SHRUGS, hands HOT POTATO to governors 🥔", "tone": "negative" }
+        ],
+        "social": [
+          { "handle": "@governor_watch", "text": "the buck stops... somewhere else apparently. great leadership.", "sentiment": "negative", "clout": "72k" }
+        ],
+        "advisor": "Keeps your fingerprints off it, which is exactly what voters will hold against you."
+      }
+    ]
+  },
+  {
+    "id": "gen_domestic_courtseat",
+    "category": "domestic",
+    "title": "A Seat on the High Court",
+    "briefing": "A justice retires, handing you a generational pick that will outlast your presidency by decades. Choose a fiery ideologue who thrills your base, or a moderate who could actually get confirmed without a war. The Senate is already sharpening its knives.",
+    "source": "White House Counsel",
+    "minDay": 150,
+    "choices": [
+      {
+        "id": "firebrand",
+        "label": "Nominate a bold ideological pick",
+        "bold": true,
+        "cost": 2,
+        "effects": { "approval": 3, "stability": -5, "legacy": 4 },
+        "result": "Your base erupts in celebration as the capital descends into a bruising, weeks-long confirmation brawl.",
+        "news": [
+          { "outlet": "ledger", "headline": "A historic, principled nominee for the Court", "tone": "positive" },
+          { "outlet": "tribune", "headline": "An extreme pick that will divide the nation", "tone": "negative" },
+          { "outlet": "beacon", "headline": "President names polarizing nominee; fight looms", "tone": "neutral" },
+          { "outlet": "buzz", "headline": "POTUS drops a BOMBSHELL pick — SENATE in MELTDOWN ⚖️🔥", "tone": "neutral" }
+        ],
+        "social": [
+          { "handle": "@base_believer", "text": "FINALLY a nominee who won't cave. let's go.", "sentiment": "positive", "clout": "150k" }
+        ],
+        "advisor": "Energizes the faithful, torches the middle. This confirmation will eat months."
+      },
+      {
+        "id": "moderate",
+        "label": "Pick a confirmable moderate",
+        "effects": { "stability": 5, "approval": -1, "world": 1, "legacy": 1 },
+        "result": "The nominee sails through on a bipartisan vote. The establishment exhales; your base grumbles about a missed chance.",
+        "news": [
+          { "outlet": "beacon", "headline": "Consensus nominee confirmed with rare bipartisan support", "tone": "positive" },
+          { "outlet": "tribune", "headline": "A safe pick when the moment called for more", "tone": "negative" },
+          { "outlet": "ledger", "headline": "President blinks, picks a forgettable moderate", "tone": "negative" },
+          { "outlet": "buzz", "headline": "POTUS plays it SAFE — base SNOOZING 😴", "tone": "neutral" }
+        ],
+        "social": [
+          { "handle": "@process_paul", "text": "a confirmable nominee in this climate? miracle.", "sentiment": "positive" }
+        ],
+        "advisor": "Drama-free and durable. Just absorb the 'you wasted it' grumbling."
+      }
+    ]
+  },
+  {
+    "id": "gen_domestic_infrastructure",
+    "category": "domestic",
+    "title": "Roads, Rails, and Reckoning",
+    "briefing": "A bridge collapse has put crumbling infrastructure back in the headlines, and your team has a trillion-dollar rebuild plan ready to go. You can swing for a massive, debt-funded package or a leaner one that pays for itself with new fees. The hard hats are watching, and so are the bond traders.",
+    "source": "Secretary of Transportation",
+    "minDay": 0,
+    "choices": [
+      {
+        "id": "massive",
+        "label": "Launch the trillion-dollar rebuild",
+        "detail": "Borrow big, build everywhere.",
+        "cost": 3,
+        "bold": true,
+        "effects": { "approval": 5, "economy": 3, "stability": 2, "legacy": 5 },
+        "result": "Ground breaks coast to coast and the job numbers tick up immediately. The deficit hawks scream, but the cranes are already in the sky.",
+        "news": [
+          { "outlet": "beacon", "headline": "Historic infrastructure package launches nationwide builds", "tone": "positive" },
+          { "outlet": "tribune", "headline": "A generational investment in jobs and communities", "tone": "positive" },
+          { "outlet": "ledger", "headline": "Trillion-dollar spending spree mortgages our future", "tone": "negative" },
+          { "outlet": "buzz", "headline": "POTUS goes BUILD-MODE — CRANES EVERYWHERE 🏗️🇺🇸", "tone": "positive" }
+        ],
+        "social": [
+          { "handle": "@union_jake", "text": "my whole local just got two years of work. thank you.", "sentiment": "positive", "clout": "84k" },
+          { "handle": "@debt_clock_dan", "text": "love the bridges, hate the bill our grandkids inherit.", "sentiment": "negative", "clout": "55k" }
+        ],
+        "advisor": "Huge popularity and real jobs, but the debt becomes a permanent target on your back."
+      },
+      {
+        "id": "lean_funded",
+        "label": "Pass a leaner, self-funded plan",
+        "detail": "User fees and tolls cover the cost.",
+        "effects": { "approval": 1, "economy": 2, "stability": 3, "legacy": 2 },
+        "result": "A disciplined, paid-for package clears with broad support. Fiscal types applaud; commuters grumble about the new tolls.",
+        "news": [
+          { "outlet": "ledger", "headline": "A responsible, fully-funded path to better roads", "tone": "positive" },
+          { "outlet": "beacon", "headline": "Modest infrastructure bill clears with bipartisan votes", "tone": "neutral" },
+          { "outlet": "tribune", "headline": "Tolls on working families to fund the basics", "tone": "negative" },
+          { "outlet": "buzz", "headline": "POTUS fixes roads — but YOUR commute just got PRICIER 💰🛣️", "tone": "neutral" }
+        ],
+        "social": [
+          { "handle": "@fiscal_fran", "text": "fixing things without lighting money on fire? more of this please.", "sentiment": "positive" }
+        ],
+        "advisor": "Clean and defensible. Just know every toll booth becomes a small attack ad."
+      }
+    ]
+  },
+  {
+    "id": "gen_domestic_studentdebt",
+    "category": "domestic",
+    "title": "The Student Debt Question",
+    "briefing": "A mountain of student debt is crushing a generation, and millions are begging you to cancel it with a stroke of your pen. Critics call it a giveaway to the well-off that punishes those who paid. Your lawyers say you can probably do it; your economists say be careful.",
+    "source": "Secretary of Education",
+    "minDay": 3,
+    "choices": [
+      {
+        "id": "cancel_broad",
+        "label": "Cancel debt by executive order",
+        "detail": "Sweeping relief, signed today.",
+        "cost": 3,
+        "bold": true,
+        "effects": { "approval": 4, "economy": -3, "stability": -3, "legacy": 3 },
+        "result": "Millions wake up to lighter balances and your approval among younger voters spikes. The courts and the deficit hawks immediately come knocking.",
+        "news": [
+          { "outlet": "tribune", "headline": "A lifeline for a generation drowning in debt", "tone": "positive" },
+          { "outlet": "ledger", "headline": "A handout that betrays everyone who paid their way", "tone": "negative" },
+          { "outlet": "beacon", "headline": "President cancels swaths of student debt by order", "tone": "neutral" },
+          { "outlet": "buzz", "headline": "POTUS WIPES THE DEBT — group chats EXPLODING 🎉📚", "tone": "positive" }
+        ],
+        "social": [
+          { "handle": "@finally_free_fae", "text": "i just refreshed my account and cried at my desk. life-changing.", "sentiment": "positive", "clout": "260k" },
+          { "handle": "@paid_mine_pete", "text": "worked two jobs to pay mine off. cool to know that was for nothing.", "sentiment": "negative", "clout": "98k" }
+        ],
+        "advisor": "Electric with the young and the indebted. Expect lawsuits and a 'who pays?' firestorm."
+      },
+      {
+        "id": "targeted_relief",
+        "label": "Offer targeted, means-tested relief",
+        "detail": "Help the strugglers, spare the courts.",
+        "effects": { "approval": 1, "economy": 1, "stability": 3, "legacy": 2 },
+        "result": "You aim relief at low-income borrowers and public servants. It's quieter and survives legal scrutiny, but the headlines are muted.",
+        "news": [
+          { "outlet": "beacon", "headline": "President targets debt relief at neediest borrowers", "tone": "neutral" },
+          { "outlet": "ledger", "headline": "A restrained approach that respects taxpayers", "tone": "positive" },
+          { "outlet": "tribune", "headline": "Help for some, while millions are left waiting", "tone": "negative" },
+          { "outlet": "buzz", "headline": "POTUS hands out RELIEF — but did YOU make the cut? 🤔", "tone": "neutral" }
+        ],
+        "social": [
+          { "handle": "@teacher_tara", "text": "ten years of public service finally counted for something. grateful.", "sentiment": "positive", "clout": "44k" }
+        ],
+        "advisor": "Legally bulletproof and fiscally modest. It just won't trend the way the big version would."
+      },
+      {
+        "id": "reform_only",
+        "label": "Reform the system, cancel nothing",
+        "detail": "Cap rates, fix loans, no forgiveness.",
+        "effects": { "approval": -3, "economy": 2, "stability": 1, "legacy": -1 },
+        "result": "You overhaul interest rates and repayment rules instead of erasing balances. Wonks approve; borrowers expecting relief feel cheated.",
+        "news": [
+          { "outlet": "ledger", "headline": "President fixes the pipes instead of mopping the floor", "tone": "positive" },
+          { "outlet": "tribune", "headline": "Tinkering with the system while debtors suffer now", "tone": "negative" },
+          { "outlet": "beacon", "headline": "White House overhauls loan terms, skips forgiveness", "tone": "neutral" },
+          { "outlet": "buzz", "headline": "POTUS says NO to canceling debt — borrowers RAGING 😤", "tone": "negative" }
+        ],
+        "social": [
+          { "handle": "@expected_more_em", "text": "lower rates? cute. i needed the balance gone, not a coupon.", "sentiment": "negative", "clout": "120k" }
+        ],
+        "advisor": "Smart long-term policy that feels like a betrayal to anyone who wanted a number to drop."
+      }
+    ]
+  },
+  {
+    "id": "gen_domestic_crimewave",
+    "category": "domestic",
+    "title": "A City on Edge",
+    "briefing": "Violent crime is spiking in major cities and the nightly news leads with it every single night. One camp demands a flood of federal police and tougher sentences; another insists the answer is jobs, housing, and community programs. The mayors want money and they want it now.",
+    "source": "Attorney General",
+    "minDay": 2,
+    "choices": [
+      {
+        "id": "surge_police",
+        "label": "Surge federal police and funding",
+        "detail": "Boots on the street, fast.",
+        "cost": 2,
+        "bold": true,
+        "effects": { "approval": 3, "stability": 4, "legacy": -2, "world": -1 },
+        "result": "Federal officers fan out and the numbers start to dip within weeks. Safety-first voters cheer; civil-rights groups warn of overreach.",
+        "news": [
+          { "outlet": "ledger", "headline": "President restores order with a real crackdown", "tone": "positive" },
+          { "outlet": "tribune", "headline": "Flooding cities with police won't fix root causes", "tone": "negative" },
+          { "outlet": "beacon", "headline": "Federal officers deployed as crime fears surge", "tone": "neutral" },
+          { "outlet": "buzz", "headline": "POTUS SENDS IN THE CAVALRY — streets on LOCKDOWN 🚓", "tone": "neutral" }
+        ],
+        "social": [
+          { "handle": "@safe_streets_sam", "text": "i can finally walk my dog at night again. thank you.", "sentiment": "positive", "clout": "110k" },
+          { "handle": "@watch_the_watchers", "text": "more cops, fewer rights. we've seen how this movie ends.", "sentiment": "negative", "clout": "140k" }
+        ],
+        "advisor": "Fast, visible, popular. It also hands your critics a civil-liberties cudgel for years."
+      },
+      {
+        "id": "root_causes",
+        "label": "Fund jobs, housing, and prevention",
+        "detail": "Invest in the long game.",
+        "cost": 2,
+        "effects": { "approval": -2, "stability": 2, "economy": 1, "legacy": 4 },
+        "result": "You pour money into community programs and the violence-interruption crews. Advocates beam; skeptics ask why the streets aren't safe yet.",
+        "news": [
+          { "outlet": "tribune", "headline": "President invests in the roots, not just the cuffs", "tone": "positive" },
+          { "outlet": "ledger", "headline": "Soft-on-crime spending while cities bleed", "tone": "negative" },
+          { "outlet": "beacon", "headline": "White House bets on prevention to curb crime", "tone": "neutral" },
+          { "outlet": "buzz", "headline": "POTUS skips the SIRENS, opens the WALLET — will it work? 🏘️", "tone": "neutral" }
+        ],
+        "social": [
+          { "handle": "@long_game_lin", "text": "actual prevention instead of a photo-op crackdown. respect.", "sentiment": "positive", "clout": "76k" }
+        ],
+        "advisor": "The right long-term bet that gives you nothing to point at before the next news cycle."
+      },
+      {
+        "id": "both_balanced",
+        "label": "Do a measured bit of both",
+        "detail": "Some enforcement, some investment.",
+        "cost": 3,
+        "effects": { "approval": 2, "stability": 3, "economy": -2, "legacy": 1 },
+        "result": "You split the difference with targeted enforcement and new programs. The balanced plan calms the worst critics and thrills no one.",
+        "news": [
+          { "outlet": "beacon", "headline": "President pairs enforcement with prevention dollars", "tone": "neutral" },
+          { "outlet": "ledger", "headline": "Half a crackdown is still half a surrender", "tone": "negative" },
+          { "outlet": "tribune", "headline": "A compromise that risks doing neither well", "tone": "negative" },
+          { "outlet": "buzz", "headline": "POTUS tries to PLEASE EVERYONE on crime — bold strategy 🤷", "tone": "neutral" }
+        ],
+        "social": [
+          { "handle": "@middle_mia", "text": "carrots and sticks. not sexy but probably the realistic move.", "sentiment": "neutral" }
+        ],
+        "advisor": "The safe centrist play. It steadies the ship and gives both flanks a reason to grumble."
+      }
+    ]
+  },
+  {
+    "id": "gen_domestic_pardon",
+    "category": "domestic",
+    "title": "The Pardon on Your Desk",
+    "briefing": "A high-profile clemency request lands on your desk, and it is radioactive. Supporters call the prisoner a victim of an unjust system; opponents call clemency a slap in the face to the rule of law. Sign it and you make headlines for a week; deny it and you make a different set.",
+    "source": "Pardon Attorney",
+    "minDay": 300,
+    "weight": 0.8,
+    "choices": [
+      {
+        "id": "grant",
+        "label": "Grant the controversial pardon",
+        "bold": true,
+        "cost": 2,
+        "effects": { "approval": -2, "stability": -3, "legacy": 3 },
+        "result": "You sign, and the reaction is instant and ferocious. Advocates hail your courage while opponents accuse you of corrupting justice itself.",
+        "news": [
+          { "outlet": "tribune", "headline": "A brave act of mercy that rights a wrong", "tone": "positive" },
+          { "outlet": "ledger", "headline": "President spits on the rule of law", "tone": "negative" },
+          { "outlet": "beacon", "headline": "President grants high-profile, contested pardon", "tone": "neutral" },
+          { "outlet": "buzz", "headline": "POTUS FREES controversial figure — capital LOSES IT ✍️💣", "tone": "neutral" }
+        ],
+        "social": [
+          { "handle": "@mercy_now_mo", "text": "took guts. the system failed them and you finally fixed it.", "sentiment": "positive", "clout": "165k" },
+          { "handle": "@rule_of_law_ron", "text": "justice for sale. unbelievable. who's next on the list.", "sentiment": "negative", "clout": "112k" }
+        ],
+        "advisor": "A principled stand or a self-inflicted wound, depending entirely on who you ask."
+      },
+      {
+        "id": "deny",
+        "label": "Deny it and defend the process",
+        "effects": { "approval": 1, "stability": 4, "legacy": -2 },
+        "result": "You decline and let the courts have the final word. Institutionalists nod approvingly; the prisoner's champions vow they won't forget.",
+        "news": [
+          { "outlet": "ledger", "headline": "President respects justice, refuses political pardon", "tone": "positive" },
+          { "outlet": "beacon", "headline": "President declines contested clemency request", "tone": "neutral" },
+          { "outlet": "tribune", "headline": "A chance for mercy, squandered", "tone": "negative" },
+          { "outlet": "buzz", "headline": "POTUS says NOPE to mega-pardon — supporters SEETHING 😠", "tone": "negative" }
+        ],
+        "social": [
+          { "handle": "@process_first_pia", "text": "let the courts work. presidents shouldn't be a get-out-of-jail button.", "sentiment": "positive" }
+        ],
+        "advisor": "Steady and institutional. You'll be the villain to a loud, motivated minority."
+      },
+      {
+        "id": "commute",
+        "label": "Commute the sentence, withhold full pardon",
+        "detail": "Split the baby.",
+        "effects": { "approval": -1, "stability": 2, "legacy": 1 },
+        "result": "You shorten the sentence without erasing the conviction. The half-measure earns a shrug from everyone and a clean win from no one.",
+        "news": [
+          { "outlet": "beacon", "headline": "President commutes sentence, stops short of pardon", "tone": "neutral" },
+          { "outlet": "tribune", "headline": "Partial mercy that pleases no one fully", "tone": "negative" },
+          { "outlet": "ledger", "headline": "A clever dodge dressed as a compromise", "tone": "negative" },
+          { "outlet": "buzz", "headline": "POTUS SPLITS THE BABY on pardon — internet CONFUSED 🤔", "tone": "neutral" }
+        ],
+        "social": [
+          { "handle": "@on_the_fence_fin", "text": "the most 'technically did something' move possible. classic.", "sentiment": "neutral" }
+        ],
+        "advisor": "The threading-the-needle option. Low drama, low credit, and a faint whiff of dodging."
+      }
+    ]
+  },
+  {
+    "id": "gen_domestic_publichealth",
+    "category": "domestic",
+    "title": "The Mandate Question",
+    "briefing": "A fast-moving outbreak is filling hospitals, and your health team is urging a sweeping public-health mandate before it gets worse. Civil-liberties groups warn that heavy-handed orders will spark a backlash you can't control. The hospitals say they can't wait much longer.",
+    "source": "Surgeon General",
+    "minDay": 5,
+    "choices": [
+      {
+        "id": "strong_mandate",
+        "label": "Issue a strong national mandate",
+        "detail": "Move hard, move now.",
+        "cost": 2,
+        "bold": true,
+        "effects": { "approval": -2, "stability": 3, "economy": -3, "legacy": 4 },
+        "result": "You order sweeping measures and the curve starts to bend. The hospitals exhale; businesses and liberty groups erupt in protest.",
+        "news": [
+          { "outlet": "tribune", "headline": "President puts lives first with decisive action", "tone": "positive" },
+          { "outlet": "ledger", "headline": "Overreach that tramples freedom and commerce", "tone": "negative" },
+          { "outlet": "beacon", "headline": "President issues sweeping public-health order", "tone": "neutral" },
+          { "outlet": "buzz", "headline": "POTUS LOCKS IT DOWN — businesses in REVOLT 🦠🔒", "tone": "neutral" }
+        ],
+        "social": [
+          { "handle": "@frontline_doc", "text": "from inside the ICU: thank you. you may have just saved my unit.", "sentiment": "positive", "clout": "200k" },
+          { "handle": "@my_body_my_call", "text": "and there go our freedoms, one 'emergency' at a time.", "sentiment": "negative", "clout": "155k" }
+        ],
+        "advisor": "Saves lives and saves the system, at the cost of a roaring liberty backlash."
+      },
+      {
+        "id": "guidance_only",
+        "label": "Issue guidance, leave it voluntary",
+        "detail": "Recommend, don't require.",
+        "effects": { "approval": 2, "stability": -3, "economy": 1, "legacy": -3 },
+        "result": "You urge caution but mandate nothing. Liberty groups thank you; weeks later the hospitals are still overwhelmed and asking why.",
+        "news": [
+          { "outlet": "ledger", "headline": "President trusts the people over the bureaucrats", "tone": "positive" },
+          { "outlet": "tribune", "headline": "Inaction dressed up as freedom, hospitals pay the price", "tone": "negative" },
+          { "outlet": "beacon", "headline": "White House opts for guidance, not mandates", "tone": "neutral" },
+          { "outlet": "buzz", "headline": "POTUS keeps it CHILL on outbreak — doctors PANICKING 😷", "tone": "negative" }
+        ],
+        "social": [
+          { "handle": "@dont_tread_dee", "text": "finally a president who treats us like adults. thank you.", "sentiment": "positive", "clout": "130k" }
+        ],
+        "advisor": "Wins the freedom crowd now and owns every overflowing hospital later."
+      },
+      {
+        "id": "targeted_local",
+        "label": "Empower targeted local responses",
+        "detail": "Hot-spot rules, federal support.",
+        "cost": 2,
+        "effects": { "approval": 1, "stability": 2, "economy": -1, "legacy": 1 },
+        "result": "You fund and arm local authorities to act where it's worst. The flexible approach calms tempers and frustrates anyone wanting one clear national answer.",
+        "news": [
+          { "outlet": "beacon", "headline": "President backs localized, targeted health response", "tone": "neutral" },
+          { "outlet": "tribune", "headline": "A patchwork when the moment called for one voice", "tone": "negative" },
+          { "outlet": "ledger", "headline": "Sensible deference to local decision-makers", "tone": "positive" },
+          { "outlet": "buzz", "headline": "POTUS lets the LOCALS decide — chaos or genius? 🗺️", "tone": "neutral" }
+        ],
+        "social": [
+          { "handle": "@local_control_cal", "text": "different places, different rules. actually kind of smart?", "sentiment": "neutral" }
+        ],
+        "advisor": "Politically nimble and hard to attack. It just means fifty different headlines instead of one."
+      }
+    ]
+  }
+]

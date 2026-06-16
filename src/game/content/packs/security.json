@@ -1,0 +1,468 @@
+[
+  {
+    "id": "gen_security_covert_strike",
+    "category": "security",
+    "title": "The Planner in Karavel",
+    "briefing": "Intelligence has fixed the location of Idris Vohl, the architect behind the Harnsey bombings, holed up in a crowded apartment block in the Karavel District of Telmara. A drone window opens in ninety minutes, but the building is full of families. Take the shot and accept the collateral, or wait for a cleaner chance that may never come?",
+    "source": "CIA Director",
+    "minDay": 90,
+    "weight": 1.1,
+    "choices": [
+      {
+        "id": "strike_now",
+        "label": "Authorize the strike",
+        "detail": "Take Vohl off the board, accept civilian risk.",
+        "cost": 2,
+        "effects": { "stability": 6, "approval": 3, "world": -7, "legacy": -2 },
+        "result": "The missile lands. Vohl is confirmed dead, along with at least nine others, several of them children. Hawks call it justice; allied capitals issue furious statements.",
+        "news": [
+          { "outlet": "ledger", "headline": "President eliminates the Harnsey mastermind", "tone": "positive" },
+          { "outlet": "tribune", "headline": "Drone strike kills nine civilians to reach one man", "tone": "negative" },
+          { "outlet": "beacon", "headline": "Top terror planner killed in Telmara strike", "tone": "neutral" },
+          { "outlet": "buzz", "headline": "BOOM. POTUS DROPS THE HAMMER ON TERROR KINGPIN 💥🎯", "tone": "neutral" }
+        ],
+        "social": [
+          { "handle": "@vet_marcus", "text": "Vohl built the bomb that killed my unit. no tears here.", "sentiment": "positive", "clout": "88k" },
+          { "handle": "@amira_reports", "text": "those were apartments. families. we will be counting the dead for days.", "sentiment": "negative", "clout": "210k" }
+        ],
+        "advisor": "We get Vohl, but the footage of that building will run for a week.",
+        "setFlags": { "struck_karavel": true }
+      },
+      {
+        "id": "wait_clean",
+        "label": "Hold for a cleaner shot",
+        "detail": "Protect the civilians, risk losing the target.",
+        "effects": { "world": 5, "stability": -4, "approval": -3 },
+        "result": "You wave off the strike. Vohl slips into the tunnels under Karavel by nightfall and vanishes. The families live; the planner walks.",
+        "news": [
+          { "outlet": "tribune", "headline": "President spares a packed building, holds his fire", "tone": "positive" },
+          { "outlet": "ledger", "headline": "Hesitation lets the Harnsey planner escape", "tone": "negative" },
+          { "outlet": "beacon", "headline": "Strike called off over civilian concerns; target at large", "tone": "neutral" },
+          { "outlet": "buzz", "headline": "POTUS BLINKS?? TERROR BOSS GHOSTS INTO THE TUNNELS 👻", "tone": "negative" }
+        ],
+        "social": [
+          { "handle": "@privacy_pat", "text": "a president who won't bomb a daycare to make a point. imagine that.", "sentiment": "positive", "clout": "140k" }
+        ],
+        "advisor": "Cleaner conscience, dirtier problem. Vohl is still out there planning the next one."
+      }
+    ]
+  },
+  {
+    "id": "gen_security_surveillance_renewal",
+    "category": "security",
+    "title": "Section Nine Sunsets",
+    "briefing": "The warrantless bulk-collection authority known as Section Nine expires at midnight, and the agencies swear it is the backbone of every plot they have stopped. Civil-liberties groups call it a dragnet over a hundred million innocent citizens. Renew the program intact, let it lapse, or rebuild it with a warrant requirement nobody at the agencies wants?",
+    "source": "NSA Director",
+    "minDay": 200,
+    "weight": 1,
+    "choices": [
+      {
+        "id": "renew_clean",
+        "label": "Renew it, no changes",
+        "effects": { "stability": 5, "approval": -2, "world": -2 },
+        "result": "You sign the straight reauthorization. The collection towers keep humming. Privacy advocates promise a court fight you may not win.",
+        "news": [
+          { "outlet": "ledger", "headline": "President keeps our best counterterror tool online", "tone": "positive" },
+          { "outlet": "tribune", "headline": "Mass surveillance of citizens renewed in full", "tone": "negative" },
+          { "outlet": "beacon", "headline": "Section Nine reauthorized ahead of deadline", "tone": "neutral" },
+          { "outlet": "buzz", "headline": "BIG BROTHER GETS A SHINY NEW LEASE 👁️📡", "tone": "negative" }
+        ],
+        "social": [
+          { "handle": "@secure_sam", "text": "the plots they stop never make headlines. this keeps us alive.", "sentiment": "positive", "clout": "62k" }
+        ],
+        "advisor": "Agencies are thrilled. The courts and the kids on the feed are not."
+      },
+      {
+        "id": "let_lapse",
+        "label": "Let it expire",
+        "detail": "End the dragnet, accept a blind spot.",
+        "effects": { "approval": 4, "world": 3, "stability": -5, "legacy": 3 },
+        "result": "Midnight passes and the program goes dark. Privacy groups celebrate; the intelligence chiefs warn you just blinded the country.",
+        "news": [
+          { "outlet": "tribune", "headline": "President lets the surveillance dragnet die", "tone": "positive" },
+          { "outlet": "ledger", "headline": "We just went blind, and the President let it happen", "tone": "negative" },
+          { "outlet": "beacon", "headline": "Section Nine lapses; agencies scramble to adapt", "tone": "neutral" },
+          { "outlet": "buzz", "headline": "POTUS PULLS THE PLUG ON THE SPY MACHINE 🔌😱", "tone": "neutral" }
+        ],
+        "social": [
+          { "handle": "@privacy_pat", "text": "fifteen years of fighting this and it just... ended. crying.", "sentiment": "positive", "clout": "300k" }
+        ],
+        "advisor": "Liberty wins tonight. Pray nothing slips through the new gap before the next briefing."
+      },
+      {
+        "id": "reform_warrant",
+        "label": "Renew it, but require warrants",
+        "detail": "Threads the needle; angers the agencies.",
+        "cost": 1,
+        "effects": { "approval": 3, "world": 2, "stability": 1, "legacy": 4 },
+        "result": "You sign a version with judicial warrants baked in. Reformers call it a landmark; the agencies call it a paperwork ambush that will cost them weeks on every target.",
+        "news": [
+          { "outlet": "beacon", "headline": "President renews surveillance with new warrant rules", "tone": "neutral" },
+          { "outlet": "tribune", "headline": "Hard-won warrant requirement reins in the dragnet", "tone": "positive" },
+          { "outlet": "ledger", "headline": "New red tape will slow agents chasing real threats", "tone": "negative" },
+          { "outlet": "buzz", "headline": "JUDGES NOW GUARD THE KEYS TO BIG BROTHER ⚖️🔑", "tone": "neutral" }
+        ],
+        "social": [
+          { "handle": "@wonk_dana", "text": "warrants plus the program. boring, smart, and somehow it passed.", "sentiment": "positive", "clout": "95k" }
+        ],
+        "advisor": "The compromise nobody loves and history might. The spy shop will grumble for months."
+      }
+    ]
+  },
+  {
+    "id": "gen_security_cyber_retaliation",
+    "category": "security",
+    "title": "The Grid Goes Dark",
+    "briefing": "A cyberattack traced to the Vesk Syndicate, a state-backed crew out of Ostrava, just blacked out three states and bricked a water utility for two days. Cyber Command has staged a counterstrike that could fry Ostrava's own grid. Hit back in kind and risk a spiral, expose them publicly and rally allies, or absorb it quietly to avoid escalation?",
+    "source": "Cyber Command",
+    "minDay": 150,
+    "weight": 1,
+    "choices": [
+      {
+        "id": "counter_strike",
+        "label": "Launch the counterstrike",
+        "detail": "Hit their grid. Eye for an eye, online.",
+        "cost": 2,
+        "effects": { "stability": 5, "approval": 4, "world": -6 },
+        "result": "Cyber Command pulls the trigger and half of Ostrava goes dark for a night. The Syndicate's masters go quiet, then threaten retaliation. The cyber-cold war just got hotter.",
+        "news": [
+          { "outlet": "ledger", "headline": "President answers a cyber strike with a knockout blow", "tone": "positive" },
+          { "outlet": "tribune", "headline": "Retaliatory hack risks a war nobody can see coming", "tone": "negative" },
+          { "outlet": "beacon", "headline": "U.S. strikes back after grid attack; tensions surge", "tone": "neutral" },
+          { "outlet": "buzz", "headline": "POTUS HACKS BACK AND OSTRAVA GOES PITCH BLACK 💻🌑", "tone": "neutral" }
+        ],
+        "social": [
+          { "handle": "@secure_sam", "text": "they turned off our water. you do NOT let that slide.", "sentiment": "positive", "clout": "120k" }
+        ],
+        "advisor": "Deterrence restored, maybe. Or we just taught them what counts as fair game."
+      },
+      {
+        "id": "expose_rally",
+        "label": "Expose them, rally the allies",
+        "detail": "Declassify the attribution, sanction together.",
+        "effects": { "world": 6, "stability": 1, "approval": 1, "legacy": 3 },
+        "result": "You declassify the forensics and march a coalition to the podium. Ostrava denies everything as joint sanctions land. Hawks grumble it was all talk and no payback.",
+        "news": [
+          { "outlet": "beacon", "headline": "President names cyber attackers, unveils coalition", "tone": "neutral" },
+          { "outlet": "tribune", "headline": "Diplomatic answer avoids a dangerous cyber spiral", "tone": "positive" },
+          { "outlet": "ledger", "headline": "Sanctions and speeches won't stop the next blackout", "tone": "negative" },
+          { "outlet": "buzz", "headline": "POTUS DROPS THE RECEIPTS ON OSTRAVA HACKERS 🧾🌐", "tone": "neutral" }
+        ],
+        "social": [
+          { "handle": "@wonk_dana", "text": "naming and shaming with the whole alliance behind you actually bites.", "sentiment": "positive", "clout": "78k" }
+        ],
+        "advisor": "We look like grown-ups and keep the powder dry. Whether it deters them is another matter."
+      },
+      {
+        "id": "absorb_quiet",
+        "label": "Absorb it quietly",
+        "detail": "Harden defenses, say nothing.",
+        "effects": { "stability": -3, "approval": -3, "world": 2 },
+        "result": "You pour resources into defense and keep the attribution sealed. The lights come back on, but word leaks that you knew who did it and did nothing visible.",
+        "news": [
+          { "outlet": "tribune", "headline": "President avoids escalation after crippling cyberattack", "tone": "positive" },
+          { "outlet": "ledger", "headline": "Silence after the blackout reads as weakness", "tone": "negative" },
+          { "outlet": "beacon", "headline": "No public response as grid attack goes unanswered", "tone": "neutral" },
+          { "outlet": "buzz", "headline": "WHO TURNED OFF THE LIGHTS?? POTUS WON'T SAY 🤐🔦", "tone": "negative" }
+        ],
+        "social": [
+          { "handle": "@grid_gary", "text": "my town had no water for two days and the answer is... nothing?", "sentiment": "negative", "clout": "44k" }
+        ],
+        "advisor": "Cheapest path to peace, priciest path to looking helpless if this gets out."
+      }
+    ]
+  },
+  {
+    "id": "gen_security_spy_swap",
+    "category": "security",
+    "title": "Three for One",
+    "briefing": "The Federation of Drovia is holding a wrongfully detained journalist and an aid worker, and they will trade both for Anton Reyl, a convicted spy serving life in a federal pen. The Joint Chiefs hate freeing Reyl; the families are in your outer office, crying. Make the swap and bring two innocents home, or refuse and hold the line on rewarding hostage-taking?",
+    "source": "DNI",
+    "minDay": 120,
+    "weight": 1,
+    "choices": [
+      {
+        "id": "make_swap",
+        "label": "Make the swap",
+        "detail": "Bring them home, free the spy.",
+        "effects": { "approval": 5, "world": 2, "stability": -3, "legacy": 1 },
+        "result": "The exchange happens on a foggy tarmac at dawn. The journalist and aid worker walk into your arms on live TV; Reyl boards a jet east, smirking. Critics warn every adversary now sees Americans as currency.",
+        "news": [
+          { "outlet": "beacon", "headline": "President secures release of two detained Americans", "tone": "neutral" },
+          { "outlet": "tribune", "headline": "Two innocents come home in dawn prisoner exchange", "tone": "positive" },
+          { "outlet": "ledger", "headline": "Trading a master spy invites more hostage-taking", "tone": "negative" },
+          { "outlet": "buzz", "headline": "TARMAC TEARS! POTUS SWAPS A SPY FOR OUR HEROES 😭✈️", "tone": "positive" }
+        ],
+        "social": [
+          { "handle": "@homecoming_jen", "text": "she's been in a cell for 600 days. she's coming HOME. thank you.", "sentiment": "positive", "clout": "260k" }
+        ],
+        "advisor": "Two families whole again. Every cell block in Drovia just learned the price of an American."
+      },
+      {
+        "id": "refuse_swap",
+        "label": "Refuse the deal",
+        "detail": "Hold the line, abandon the hostages for now.",
+        "cost": 1,
+        "effects": { "stability": 3, "approval": -4, "world": -2 },
+        "result": "You decline and demand unconditional release instead. Drovia laughs and tightens the screws. The families go to the press; the photos of empty chairs at dinner tables are brutal.",
+        "news": [
+          { "outlet": "ledger", "headline": "President refuses to reward Drovia's hostage diplomacy", "tone": "positive" },
+          { "outlet": "tribune", "headline": "Two Americans left to rot as White House holds firm", "tone": "negative" },
+          { "outlet": "beacon", "headline": "Administration rejects spy swap, presses for release", "tone": "neutral" },
+          { "outlet": "buzz", "headline": "POTUS SAYS NO DEAL AS HOSTAGES STAY CAGED 🔒💔", "tone": "negative" }
+        ],
+        "social": [
+          { "handle": "@hawk_helen", "text": "harsh, but you can't make every citizen a bargaining chip. respect.", "sentiment": "positive", "clout": "71k" }
+        ],
+        "advisor": "Principle intact, prisoners not. Those empty-chair photos will haunt the news cycle."
+      }
+    ]
+  },
+  {
+    "id": "gen_security_leaked_war_plan",
+    "category": "security",
+    "title": "The Plan in the Papers",
+    "briefing": "Operation Glasshollow, your classified contingency for the Karsa Strait, just appeared in full on the front page of the Tribune, sourced to someone inside your own Situation Room. The leak has tipped your hand to three adversaries at once. Launch a leak hunt that will paralyze your inner circle, or swallow it, rewrite the plan, and move on without a witch hunt?",
+    "source": "Joint Chiefs",
+    "minDay": 300,
+    "weight": 0.9,
+    "choices": [
+      {
+        "id": "leak_hunt",
+        "label": "Order a full leak investigation",
+        "detail": "Polygraphs, phone records, the works.",
+        "cost": 2,
+        "effects": { "stability": 3, "approval": -3, "world": -1, "legacy": -2 },
+        "result": "You unleash the investigators on your own staff. Polygraphs and seized phones turn the West Wing toxic; two aides resign in protest and the leaker stays hidden, for now.",
+        "news": [
+          { "outlet": "ledger", "headline": "President hunts the traitor who exposed war plans", "tone": "positive" },
+          { "outlet": "tribune", "headline": "Leak probe turns the White House on its own staff", "tone": "negative" },
+          { "outlet": "beacon", "headline": "Sweeping investigation launched over Glasshollow leak", "tone": "neutral" },
+          { "outlet": "buzz", "headline": "MOLE HUNT! POTUS POLYGRAPHS THE WHOLE WEST WING 🐭🔍", "tone": "neutral" }
+        ],
+        "social": [
+          { "handle": "@secure_sam", "text": "someone handed our battle plan to the enemy. find them.", "sentiment": "positive", "clout": "84k" }
+        ],
+        "advisor": "We might catch the leaker. We will definitely poison the room trying."
+      },
+      {
+        "id": "rewrite_move",
+        "label": "Rewrite the plan, no manhunt",
+        "detail": "Cut losses, protect the team's trust.",
+        "effects": { "world": 3, "stability": -2, "approval": 2, "legacy": 2 },
+        "result": "You order Glasshollow scrapped and rebuilt from scratch and spare your staff the inquisition. The planners admire the calm; hawks fume that a leaker walked free.",
+        "news": [
+          { "outlet": "beacon", "headline": "President scraps compromised plan, declines leak probe", "tone": "neutral" },
+          { "outlet": "tribune", "headline": "President resists a paranoid purge over the leak", "tone": "positive" },
+          { "outlet": "ledger", "headline": "Letting a leaker walk free is a dangerous message", "tone": "negative" },
+          { "outlet": "buzz", "headline": "POTUS SHREDS THE PLAN, LETS THE MOLE SLIDE 📄✂️", "tone": "neutral" }
+        ],
+        "social": [
+          { "handle": "@staffer_anon", "text": "boss took the hit instead of turning us into suspects. that's leadership.", "sentiment": "positive", "clout": "52k" }
+        ],
+        "advisor": "Trust preserved, mole at large. Sometimes the cheapest fix is a new plan and a short memory."
+      }
+    ]
+  },
+  {
+    "id": "gen_security_rogue_general",
+    "category": "security",
+    "title": "Stars Out of Line",
+    "briefing": "General Marek Halloran, your Southern Command chief, has been quietly massing forces near the Brendaal border and telling officers he'll 'do what Washington won't.' It looks a step shy of insubordination, maybe worse. Relieve him publicly and risk fracturing a loyal officer corps, or rein him in privately and hope you've actually stopped him?",
+    "source": "Joint Chiefs",
+    "minDay": 400,
+    "weight": 0.85,
+    "choices": [
+      {
+        "id": "relieve_public",
+        "label": "Relieve him on the spot",
+        "detail": "Civilian control, made loud and clear.",
+        "cost": 2,
+        "effects": { "stability": 4, "approval": 1, "world": 2, "legacy": 3 },
+        "result": "You fire Halloran in front of the cameras and reassert that generals do not freelance. The institutionalists exhale; his loyalists in the ranks seethe and a few resign in solidarity.",
+        "news": [
+          { "outlet": "beacon", "headline": "President relieves general over unauthorized buildup", "tone": "neutral" },
+          { "outlet": "tribune", "headline": "Civilian control upheld as rogue general is fired", "tone": "positive" },
+          { "outlet": "ledger", "headline": "Sacking a battlefield commander rattles the ranks", "tone": "negative" },
+          { "outlet": "buzz", "headline": "POTUS YANKS THE STARS OFF A ROGUE GENERAL ⭐🚪", "tone": "neutral" }
+        ],
+        "social": [
+          { "handle": "@civ_control_carl", "text": "a general who says he'll do what DC won't is a general who has to go. period.", "sentiment": "positive", "clout": "98k" }
+        ],
+        "advisor": "You just reminded everyone who's commander in chief. Some of the corps won't love the reminder."
+      },
+      {
+        "id": "private_rein",
+        "label": "Rein him in privately",
+        "detail": "Quiet word, no public humiliation.",
+        "effects": { "stability": -2, "approval": 1, "world": -2 },
+        "result": "You pull Halloran into a closed-door dressing-down and he stands down the buildup, sullenly. No headlines, but you can't be sure the ambition went away with the troops.",
+        "news": [
+          { "outlet": "tribune", "headline": "President defuses general quietly, avoids a spectacle", "tone": "positive" },
+          { "outlet": "ledger", "headline": "Soft-glove handling of a general invites more defiance", "tone": "negative" },
+          { "outlet": "beacon", "headline": "Border buildup quietly stood down after White House talks", "tone": "neutral" },
+          { "outlet": "buzz", "headline": "WHAT HAPPENED BEHIND THAT DOOR? GENERAL GOES SILENT 🚪🤫", "tone": "neutral" }
+        ],
+        "social": [
+          { "handle": "@wonk_dana", "text": "no spectacle, no martyr, no crisis. quiet competence, if it holds.", "sentiment": "positive", "clout": "61k" }
+        ],
+        "advisor": "Crisis avoided, ambition only paused. Watch that border, and watch him."
+      }
+    ]
+  },
+  {
+    "id": "gen_security_election_meddling",
+    "category": "security",
+    "title": "Ghosts in the Ballot",
+    "briefing": "The DNI has caught the Vesk Syndicate running a covert influence campaign and probing voter-registration databases ahead of the midterms. Going public could shake faith in the vote itself; staying quiet protects the system but leaves the public blind to the threat. Expose it now and risk the panic, or contain it behind closed doors and trust the agencies to plug the holes?",
+    "source": "DNI",
+    "minDay": 500,
+    "weight": 0.95,
+    "choices": [
+      {
+        "id": "go_public",
+        "label": "Expose the operation publicly",
+        "detail": "Warn the country, brief the states.",
+        "effects": { "world": 3, "approval": 2, "stability": -4, "legacy": 3 },
+        "result": "You take to the podium and lay it out. States rush to harden their systems; trust in the ballot wobbles as opponents seize on the word 'meddling' to question every result.",
+        "news": [
+          { "outlet": "beacon", "headline": "President reveals foreign interference targeting midterms", "tone": "neutral" },
+          { "outlet": "tribune", "headline": "Transparency on election threat lets voters defend it", "tone": "positive" },
+          { "outlet": "ledger", "headline": "Sowing doubt about the vote does the enemy's work", "tone": "negative" },
+          { "outlet": "buzz", "headline": "FOREIGN GHOSTS IN OUR ELECTIONS?! POTUS SOUNDS ALARM 🗳️👻", "tone": "neutral" }
+        ],
+        "social": [
+          { "handle": "@vote_val", "text": "tell us the truth and let us fight it. sunlight beats a cover-up every time.", "sentiment": "positive", "clout": "175k" }
+        ],
+        "advisor": "Honesty arms the public and unsettles it. Expect the integrity of every close race to be questioned."
+      },
+      {
+        "id": "contain_quiet",
+        "label": "Contain it quietly",
+        "detail": "Plug the holes without spooking voters.",
+        "cost": 1,
+        "effects": { "stability": 4, "approval": -1, "world": -2 },
+        "result": "You order a silent scramble to lock the databases and counter the influence ops without a public word. The vote holds clean, but a later leak frames the quiet as a cover-up.",
+        "news": [
+          { "outlet": "ledger", "headline": "President protects voter confidence amid foreign threat", "tone": "positive" },
+          { "outlet": "tribune", "headline": "White House hid an election attack from the public", "tone": "negative" },
+          { "outlet": "beacon", "headline": "Interference countered quietly, officials confirm later", "tone": "neutral" },
+          { "outlet": "buzz", "headline": "POTUS KEPT THE ELECTION HACK A SECRET?! 🤐🗳️", "tone": "negative" }
+        ],
+        "social": [
+          { "handle": "@transparency_tom", "text": "they knew the whole time and said nothing. that's the part that scares me.", "sentiment": "negative", "clout": "130k" }
+        ],
+        "advisor": "Steady hands keep the vote intact. If 'we handled it quietly' ever leaks, it reads as 'we hid it.'"
+      }
+    ]
+  },
+  {
+    "id": "gen_security_border_crisis",
+    "category": "security",
+    "title": "Tunnels Under Verde Pass",
+    "briefing": "Intelligence has found a network of smuggling tunnels under Verde Pass that the Calderon Cartel is using to move weapons and people, and the governor is demanding troops on the line by morning. Deploying the military to the border projects strength but militarizes communities and unnerves your allies. Send the troops, surge surveillance instead, or hand it to civilian law enforcement and resist the spectacle?",
+    "source": "Homeland Security",
+    "minDay": 60,
+    "weight": 1,
+    "choices": [
+      {
+        "id": "deploy_troops",
+        "label": "Deploy the military",
+        "detail": "Boots on the line, fast and visible.",
+        "effects": { "stability": 5, "approval": 3, "world": -4 },
+        "result": "Convoys roll into Verde Pass by dawn. The tunnels go cold and the governor praises you; border towns bristle at the checkpoints and neighbors abroad call it heavy-handed.",
+        "news": [
+          { "outlet": "ledger", "headline": "President sends troops to seal a smuggling corridor", "tone": "positive" },
+          { "outlet": "tribune", "headline": "Military on the border alarms communities and allies", "tone": "negative" },
+          { "outlet": "beacon", "headline": "Troops deployed to Verde Pass as tunnels are found", "tone": "neutral" },
+          { "outlet": "buzz", "headline": "TROOPS STORM VERDE PASS, CARTEL TUNNELS GO DARK 🪖🕳️", "tone": "neutral" }
+        ],
+        "social": [
+          { "handle": "@border_betty", "text": "finally someone takes the cartel tunnels seriously. send them.", "sentiment": "positive", "clout": "92k" }
+        ],
+        "advisor": "Strong optics, fast results. The checkpoints in people's hometowns are the price."
+      },
+      {
+        "id": "surge_surveillance",
+        "label": "Surge surveillance and sensors",
+        "detail": "Drones and sensors, no troops.",
+        "cost": 1,
+        "effects": { "stability": 3, "world": -1, "approval": 1 },
+        "result": "You flood Verde Pass with drones, ground sensors, and tunnel-detection teams. The network gets mapped and slowly choked off, with far less spectacle, and far less instant payoff.",
+        "news": [
+          { "outlet": "beacon", "headline": "President answers tunnel threat with surveillance surge", "tone": "neutral" },
+          { "outlet": "tribune", "headline": "Sensors over soldiers eases fears of militarization", "tone": "positive" },
+          { "outlet": "ledger", "headline": "Drones are no substitute for boots on the line", "tone": "negative" },
+          { "outlet": "buzz", "headline": "POTUS UNLEASHES THE DRONE SWARM ON CARTEL TUNNELS 🛸🕳️", "tone": "neutral" }
+        ],
+        "social": [
+          { "handle": "@tech_tariq", "text": "map the tunnels, choke the supply, skip the tanks in main street. smart.", "sentiment": "positive", "clout": "67k" }
+        ],
+        "advisor": "Quieter and cleaner, but the governor wanted a parade and you gave him a spreadsheet."
+      },
+      {
+        "id": "civilian_lead",
+        "label": "Keep it civilian",
+        "detail": "Let law enforcement own it.",
+        "effects": { "world": 3, "approval": -2, "stability": -2, "legacy": 2 },
+        "result": "You hand Verde Pass to federal agents and local police and decline to militarize. Allies and civil-liberties groups applaud; the governor accuses you of leaving the border exposed.",
+        "news": [
+          { "outlet": "tribune", "headline": "President keeps the border in civilian hands", "tone": "positive" },
+          { "outlet": "ledger", "headline": "No troops, no urgency: the border stays porous", "tone": "negative" },
+          { "outlet": "beacon", "headline": "Tunnel response handed to law enforcement, not military", "tone": "neutral" },
+          { "outlet": "buzz", "headline": "POTUS SAYS NO TANKS, GOVERNOR LOSES IT 😤🚫🪖", "tone": "negative" }
+        ],
+        "social": [
+          { "handle": "@civ_control_carl", "text": "the border is a police job, not a war zone. good call.", "sentiment": "positive", "clout": "58k" }
+        ],
+        "advisor": "Principled and patient. The governor's outrage tour starts in three, two, one."
+      }
+    ]
+  },
+  {
+    "id": "gen_security_intel_failure",
+    "category": "security",
+    "title": "The Warning Nobody Read",
+    "briefing": "A devastating dock bombing in Port Hollin killed forty-one, and a buried analyst's memo shows the agencies had the warning ten days early and sat on it. The DNI is offering you a quiet reorganization to avoid blame; an independent commission would air the failure in public and gut morale at the agencies. Order the open inquiry, or fix it internally and contain the damage?",
+    "source": "DNI",
+    "minDay": 600,
+    "weight": 0.85,
+    "choices": [
+      {
+        "id": "open_commission",
+        "label": "Convene an independent commission",
+        "detail": "Public accountability, painful but clean.",
+        "effects": { "approval": 4, "world": 2, "stability": -5, "legacy": 5 },
+        "result": "You stand up a public commission with subpoena power. The hearings are brutal and the agencies bleed morale, but the country sees you chose truth over a cover-up.",
+        "news": [
+          { "outlet": "beacon", "headline": "President orders public inquiry into Port Hollin failure", "tone": "neutral" },
+          { "outlet": "tribune", "headline": "President demands accountability for ignored warning", "tone": "positive" },
+          { "outlet": "ledger", "headline": "Public flogging of the agencies hands the enemy a gift", "tone": "negative" },
+          { "outlet": "buzz", "headline": "POTUS RIPS THE LID OFF THE INTEL DISASTER 🔓💥", "tone": "neutral" }
+        ],
+        "social": [
+          { "handle": "@hollin_mom", "text": "they knew. for ten days they KNEW. we deserve the whole truth.", "sentiment": "positive", "clout": "240k" }
+        ],
+        "advisor": "Bravest, bloodiest path. The hearings will hurt the spy shop for years, but the public trusts the cleanup."
+      },
+      {
+        "id": "internal_fix",
+        "label": "Reorganize quietly inside",
+        "detail": "Fix the wiring, spare the spectacle.",
+        "cost": 1,
+        "effects": { "stability": 4, "approval": -3, "world": -1 },
+        "result": "You let the DNI run a discreet shake-up, reassigning the people who dropped the ball without a public reckoning. The agencies stabilize fast; the victims' families call it a whitewash.",
+        "news": [
+          { "outlet": "ledger", "headline": "President steadies the agencies with a quiet overhaul", "tone": "positive" },
+          { "outlet": "tribune", "headline": "Forty-one dead and the failure gets swept inside", "tone": "negative" },
+          { "outlet": "beacon", "headline": "Internal reorganization follows Port Hollin attack", "tone": "neutral" },
+          { "outlet": "buzz", "headline": "NO HEARINGS, NO NAMES: POTUS BURIES THE INTEL FAIL ⚰️📁", "tone": "negative" }
+        ],
+        "social": [
+          { "handle": "@accountability_ann", "text": "a 'quiet reorganization.' forty-one families and that's the answer. shameful.", "sentiment": "negative", "clout": "118k" }
+        ],
+        "advisor": "Fastest way to a functioning agency, surest way to a 'cover-up' headline. Choose your scar."
+      }
+    ]
+  }
+]
