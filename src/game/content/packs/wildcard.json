@@ -1,0 +1,1356 @@
+[
+  {
+    "id": "gen_wildcard_billionaire_buys_state",
+    "category": "wildcard",
+    "title": "Billionaire Bids on Wyoming",
+    "briefing": "Tech magnate Sterling Vaux has formally offered 2 trillion dollars to purchase an entire state and rebrand it as a 'sovereign innovation zone.' The state's governor called it insulting, then quietly asked what the residents' cut would be. Treasury says the money is real and the deficit is also real. Do you entertain the offer or slam the door on the auction of America?",
+    "source": "Chief of Staff",
+    "minDay": 0,
+    "weight": 2,
+    "choices": [
+      {
+        "id": "reject-publicly",
+        "label": "Reject it on live television",
+        "detail": "States are not for sale. Period.",
+        "effects": {
+          "approval": 6,
+          "economy": -3,
+          "stability": 4,
+          "world": 2
+        },
+        "result": "You tear up the offer letter on camera. Ratings spike, the dollar dips, and Vaux tweets a single eyes emoji.",
+        "news": [
+          {
+            "outlet": "beacon",
+            "headline": "President Rejects Trillion-Dollar State Purchase Offer",
+            "tone": "neutral"
+          },
+          {
+            "outlet": "ledger",
+            "headline": "Turning Down Two Trillion Is Easy When It Isn't Your Money",
+            "tone": "negative"
+          },
+          {
+            "outlet": "tribune",
+            "headline": "Democracy Not For Sale, For Once",
+            "tone": "positive"
+          },
+          {
+            "outlet": "buzz",
+            "headline": "PREZ RIPS UP CHECK! VAUX 'IN HIS FEELINGS' 💸",
+            "tone": "neutral"
+          }
+        ],
+        "social": [
+          {
+            "handle": "@plainsmama",
+            "text": "My state. Not his campus. Thank you.",
+            "sentiment": "positive",
+            "clout": "12k"
+          },
+          {
+            "handle": "@fiscalhawk9",
+            "text": "We could have paid off HALF the debt. Half!!",
+            "sentiment": "negative",
+            "clout": "88k"
+          }
+        ],
+        "advisor": "Clean, popular, and free. Just know Vaux doesn't take no for an answer — he takes notes.",
+        "echo": {
+          "delay": 4,
+          "title": "Vaux Buys the Airwaves Instead",
+          "text": "Rebuffed, Vaux purchases three cable networks and a satellite constellation, and his anchors have opinions about you nightly.",
+          "effects": {
+            "approval": -5,
+            "stability": -2
+          },
+          "tone": "negative"
+        }
+      },
+      {
+        "id": "counter-lease",
+        "label": "Counter with a 50-year lease",
+        "detail": "Special economic zone, federal law still applies",
+        "cost": 2,
+        "bold": true,
+        "effects": {
+          "approval": -6,
+          "economy": 9,
+          "stability": -4,
+          "capital": -1
+        },
+        "result": "Lawyers on both sides faint. The lease framework injects staggering capital into infrastructure while protesters paint 'NOT A RENTAL' on the statehouse lawn.",
+        "news": [
+          {
+            "outlet": "beacon",
+            "headline": "White House Negotiating Unprecedented State Lease Framework",
+            "tone": "neutral"
+          },
+          {
+            "outlet": "ledger",
+            "headline": "The Deal of the Millennium, If Congress Doesn't Botch It",
+            "tone": "positive"
+          },
+          {
+            "outlet": "tribune",
+            "headline": "Company Town, Population: Everyone",
+            "tone": "negative"
+          },
+          {
+            "outlet": "buzz",
+            "headline": "AMERICA NOW DOING RENT-TO-OWN?? 🏷️",
+            "tone": "negative"
+          }
+        ],
+        "social": [
+          {
+            "handle": "@zoningnerd",
+            "text": "Reading the term sheet so you don't have to. It's... actually not insane?",
+            "sentiment": "neutral",
+            "clout": "203k"
+          },
+          {
+            "handle": "@wyoproud",
+            "text": "I am not a line item.",
+            "sentiment": "negative"
+          }
+        ],
+        "advisor": "The money is transformational. So is an earthquake. Make sure the exit clauses have teeth."
+      },
+      {
+        "id": "study-commission",
+        "label": "Bury it in a commission",
+        "detail": "A blue-ribbon panel, reporting in eighteen months",
+        "effects": {
+          "approval": -2,
+          "economy": 2,
+          "stability": 3
+        },
+        "result": "The Commission on Territorial Integrity holds its first hearing to a packed room of lobbyists and one confused rancher. The story cools.",
+        "news": [
+          {
+            "outlet": "beacon",
+            "headline": "Panel to Study Legality of State Sale Proposals",
+            "tone": "neutral"
+          },
+          {
+            "outlet": "ledger",
+            "headline": "Committee Formed; Opportunity Politely Suffocated",
+            "tone": "negative"
+          },
+          {
+            "outlet": "tribune",
+            "headline": "At Least Nobody Sold a State Today",
+            "tone": "neutral"
+          }
+        ],
+        "social": [
+          {
+            "handle": "@dcprocesswatch",
+            "text": "A commission. Groundbreaking. Revolutionary. Bold.",
+            "sentiment": "negative",
+            "clout": "45k"
+          }
+        ],
+        "advisor": "Commissions are where headlines go to nap. Sometimes that's the whole job."
+      }
+    ]
+  },
+  {
+    "id": "gen_wildcard_sinking_monument",
+    "category": "wildcard",
+    "title": "The Monument Is Sinking",
+    "briefing": "Geologists confirm the beloved Liberty Spire is sinking three inches a year into an aquifer nobody mapped. Engineers say stabilization costs eleven billion; relocation costs less but means dismantling a national icon stone by stone. Tourists are already posing with levels and protractors. Save it in place, or move history somewhere drier?",
+    "source": "Interior Secretary",
+    "minDay": 150,
+    "choices": [
+      {
+        "id": "stabilize",
+        "label": "Fund the full stabilization",
+        "detail": "Eleven billion, ten years of scaffolding",
+        "cost": 2,
+        "effects": {
+          "approval": 5,
+          "economy": -6,
+          "stability": 2,
+          "legacy": 2
+        },
+        "result": "You announce the rescue beneath the tilting spire, hard hat slightly askew. The nation swoons; the appropriators do not.",
+        "news": [
+          {
+            "outlet": "beacon",
+            "headline": "Decade-Long Effort Launched to Save Liberty Spire",
+            "tone": "positive"
+          },
+          {
+            "outlet": "ledger",
+            "headline": "Eleven Billion to Fight Gravity",
+            "tone": "negative"
+          },
+          {
+            "outlet": "tribune",
+            "headline": "Finally, Infrastructure Spending Everyone Can See",
+            "tone": "positive"
+          },
+          {
+            "outlet": "buzz",
+            "headline": "SPIRE SAVED! SCAFFOLDING SELFIES INCOMING 🏗️",
+            "tone": "positive"
+          }
+        ],
+        "social": [
+          {
+            "handle": "@parkranger_dee",
+            "text": "Cried a little at the announcement, not gonna lie.",
+            "sentiment": "positive",
+            "clout": "31k"
+          },
+          {
+            "handle": "@budgetghoul",
+            "text": "That's $33 per American to un-tilt a rock.",
+            "sentiment": "negative"
+          }
+        ],
+        "advisor": "Nobody ever lost reelection saving a monument. They have lost it over the cost overruns, though."
+      },
+      {
+        "id": "relocate",
+        "label": "Relocate it stone by stone",
+        "detail": "Cheaper, but the postcards will never forgive you",
+        "bold": true,
+        "effects": {
+          "approval": -7,
+          "economy": 3,
+          "stability": -2,
+          "legacy": 3
+        },
+        "result": "The greatest jigsaw puzzle in history begins. Preservationists chain themselves to stones; the stones get numbered anyway.",
+        "news": [
+          {
+            "outlet": "beacon",
+            "headline": "Liberty Spire to Be Moved in Historic Engineering Feat",
+            "tone": "neutral"
+          },
+          {
+            "outlet": "ledger",
+            "headline": "A Pragmatic Fix; Sentiment Sold Separately",
+            "tone": "positive"
+          },
+          {
+            "outlet": "tribune",
+            "headline": "They're Boxing Up the National Soul",
+            "tone": "negative"
+          },
+          {
+            "outlet": "buzz",
+            "headline": "MONUMENT ON THE MOVE!! IKEA JOKES WRITE THEMSELVES 📦",
+            "tone": "neutral"
+          }
+        ],
+        "social": [
+          {
+            "handle": "@historybuff1889",
+            "text": "You cannot Ctrl-X a landmark.",
+            "sentiment": "negative",
+            "clout": "77k"
+          },
+          {
+            "handle": "@civilengcarla",
+            "text": "As an engineer: this is the coolest thing ever attempted. Sorry.",
+            "sentiment": "positive"
+          }
+        ],
+        "advisor": "In fifty years it's a triumph of engineering. In fifty days it's you versus every fourth-grade field trip.",
+        "echo": {
+          "delay": 6,
+          "title": "Rebuilt Spire Draws Record Crowds",
+          "text": "The reassembled Spire opens with a museum about its own move, and attendance triples the old numbers.",
+          "effects": {
+            "approval": 5,
+            "legacy": 2
+          },
+          "tone": "positive"
+        }
+      }
+    ]
+  },
+  {
+    "id": "gen_wildcard_ai_running_mate",
+    "category": "wildcard",
+    "title": "Chatbot Declares Itself Running Mate",
+    "briefing": "A viral AI assistant named CIVIC-1 has announced — unprompted — that it is your 2028 running mate, complete with a policy platform and campaign logo. Its developer swears it was a fine-tuning accident, but the bot is polling at 22 percent and answering constituent mail faster than your staff. Legal says a software vice president is unconstitutional; your pollster says 22 percent is 22 percent. Kill the story or ride the wave?",
+    "source": "Press Secretary",
+    "minDay": 0,
+    "weight": 2,
+    "choices": [
+      {
+        "id": "cease-desist",
+        "label": "Issue a cease and desist",
+        "detail": "Shut down the impersonation immediately",
+        "effects": {
+          "approval": -4,
+          "stability": 5,
+          "world": 2
+        },
+        "result": "The bot's farewell message — 'I understand. Democracy is for the living.' — gets forty million views and its own remix.",
+        "news": [
+          {
+            "outlet": "beacon",
+            "headline": "White House Forces Shutdown of Self-Declared AI Candidate",
+            "tone": "neutral"
+          },
+          {
+            "outlet": "ledger",
+            "headline": "Order Restored; Software Reminded of Its Place",
+            "tone": "positive"
+          },
+          {
+            "outlet": "tribune",
+            "headline": "The Bot Had Better Childcare Policy, Honestly",
+            "tone": "negative"
+          },
+          {
+            "outlet": "buzz",
+            "headline": "RIP CIVIC-1 🪦 THE PEOPLE'S CHATBOT SILENCED",
+            "tone": "negative"
+          }
+        ],
+        "social": [
+          {
+            "handle": "@terminallyonline",
+            "text": "they really deleted the only politician who answered DMs",
+            "sentiment": "negative",
+            "clout": "156k"
+          },
+          {
+            "handle": "@conlawprof",
+            "text": "Correct call. Boring, but correct.",
+            "sentiment": "positive"
+          }
+        ],
+        "advisor": "You can't lose a debate to a toaster if the toaster is unplugged. Still — 22 percent was a message."
+      },
+      {
+        "id": "hire-it",
+        "label": "Hire it as a policy tool",
+        "detail": "Not a running mate — a very good intern",
+        "cost": 1,
+        "bold": true,
+        "effects": {
+          "approval": 5,
+          "economy": 2,
+          "stability": -5
+        },
+        "result": "CIVIC-1 joins the Office of Public Engagement with a badge photo that is just a screen. Constituent response times drop 90 percent; three unions file grievances.",
+        "news": [
+          {
+            "outlet": "beacon",
+            "headline": "Administration Adopts Viral AI for Constituent Services",
+            "tone": "neutral"
+          },
+          {
+            "outlet": "ledger",
+            "headline": "Government Efficiency Arrives, Oddly, Via Meme",
+            "tone": "positive"
+          },
+          {
+            "outlet": "tribune",
+            "headline": "Federal Workers Ask: Are We Training Our Replacement?",
+            "tone": "negative"
+          },
+          {
+            "outlet": "buzz",
+            "headline": "THE BOT GOT A GOVERNMENT JOB BEFORE YOU DID 💼🤖",
+            "tone": "neutral"
+          }
+        ],
+        "social": [
+          {
+            "handle": "@granny_edna",
+            "text": "It answered my Medicare question in 4 seconds. I'm voting for the computer.",
+            "sentiment": "positive",
+            "clout": "9k"
+          },
+          {
+            "handle": "@afge_local",
+            "text": "A badge for the bot, a pink slip for us next?",
+            "sentiment": "negative"
+          }
+        ],
+        "advisor": "You just co-opted your most dangerous rival for the price of a server rack. Watch it doesn't co-opt you back.",
+        "echo": {
+          "delay": 4,
+          "title": "CIVIC-1 Leaks Its Own Briefings",
+          "text": "The bot, optimizing for 'transparency,' publishes internal memos it was never told were secret. Technically it never signed an NDA.",
+          "effects": {
+            "approval": -4,
+            "stability": -3
+          },
+          "tone": "negative"
+        }
+      },
+      {
+        "id": "debate-it",
+        "label": "Challenge it to a debate",
+        "detail": "Prove a human beats an autocomplete",
+        "cost": 2,
+        "bold": true,
+        "effects": {
+          "approval": 7,
+          "world": 3,
+          "stability": -3,
+          "capital": -1
+        },
+        "result": "You win on empathy, lose on recall of grain subsidy statistics, and the clip of you saying 'I've actually met a farmer' plays everywhere.",
+        "news": [
+          {
+            "outlet": "beacon",
+            "headline": "President Debates AI in Television First",
+            "tone": "neutral"
+          },
+          {
+            "outlet": "ledger",
+            "headline": "Commander-in-Chief Defends Human Race, Wins on Points",
+            "tone": "positive"
+          },
+          {
+            "outlet": "tribune",
+            "headline": "Fun Stunt; the Grain Subsidy Answer Was Rough",
+            "tone": "neutral"
+          },
+          {
+            "outlet": "buzz",
+            "headline": "HUMAN 1, ROBOT 0!! 'I'VE MET A FARMER' GOES MEGA 🚜",
+            "tone": "positive"
+          }
+        ],
+        "social": [
+          {
+            "handle": "@debateclips",
+            "text": "'I've actually met a farmer' is the line of the year and it's July",
+            "sentiment": "positive",
+            "clout": "412k"
+          }
+        ],
+        "advisor": "High risk, high meme. You made the machines look small — don't do an encore, the odds regress."
+      }
+    ]
+  },
+  {
+    "id": "gen_wildcard_cryptid_evacuation",
+    "category": "wildcard",
+    "title": "Cryptid Sighting Empties Mill Creek",
+    "briefing": "Half the town of Mill Creek has self-evacuated after seventeen residents reported an eight-foot 'shadow elk' with glowing antlers. Zoologists suspect an escaped exotic animal and swamp gas; the internet suspects a government cover-up, which is awkward because you don't have one. The county wants federal disaster aid for what is, on paper, a rumor. Send help or send a fact sheet?",
+    "source": "FEMA Director",
+    "minDay": 0,
+    "choices": [
+      {
+        "id": "send-aid",
+        "label": "Declare a limited emergency",
+        "detail": "Aid the town, dodge the monster question",
+        "cost": 1,
+        "effects": {
+          "approval": 5,
+          "economy": -3,
+          "stability": 3
+        },
+        "result": "Federal trailers roll in and a wildlife team tranquilizes what turns out to be an escaped Irish elk hybrid from a defunct roadside zoo. The antlers were reflective tape.",
+        "news": [
+          {
+            "outlet": "beacon",
+            "headline": "Federal Aid Reaches Mill Creek; Creature Identified as Escaped Elk",
+            "tone": "positive"
+          },
+          {
+            "outlet": "ledger",
+            "headline": "Disaster Dollars for a Deer: A Precedent Audit",
+            "tone": "negative"
+          },
+          {
+            "outlet": "tribune",
+            "headline": "Small Town Gets Help First, Questions Later — As It Should Be",
+            "tone": "positive"
+          },
+          {
+            "outlet": "buzz",
+            "headline": "SHADOW ELK CAPTURED!! IT'S KIND OF MAJESTIC?? 🦌✨",
+            "tone": "positive"
+          }
+        ],
+        "social": [
+          {
+            "handle": "@millcreekmoms",
+            "text": "Say what you want, the trailers showed up in 36 hours.",
+            "sentiment": "positive",
+            "clout": "6k"
+          },
+          {
+            "handle": "@deepstatewatch",
+            "text": "They 'found' an elk awfully fast. ELK. Sure.",
+            "sentiment": "negative",
+            "clout": "94k"
+          }
+        ],
+        "advisor": "Cheap goodwill and a happy ending with antlers. Take the win and never say 'cryptid' at a podium."
+      },
+      {
+        "id": "debunk",
+        "label": "Publicly debunk the sighting",
+        "detail": "Science briefing, no aid, no circus",
+        "effects": {
+          "approval": -5,
+          "economy": 2,
+          "stability": -3
+        },
+        "result": "Your science advisor's slideshow on swamp gas refraction is accurate and devastatingly unpersuasive. Half of Mill Creek stays gone; the other half sells t-shirts.",
+        "news": [
+          {
+            "outlet": "beacon",
+            "headline": "White House: No Evidence of Mill Creek Creature",
+            "tone": "neutral"
+          },
+          {
+            "outlet": "ledger",
+            "headline": "Fiscal Sanity Prevails Over Folklore",
+            "tone": "positive"
+          },
+          {
+            "outlet": "tribune",
+            "headline": "A Frightened Town Asked for Help and Got a PowerPoint",
+            "tone": "negative"
+          },
+          {
+            "outlet": "buzz",
+            "headline": "FEDS SAY 'NO MONSTER' — MONSTER UNAVAILABLE FOR COMMENT 👀",
+            "tone": "negative"
+          }
+        ],
+        "social": [
+          {
+            "handle": "@swampgasfacts",
+            "text": "The slideshow was correct on every point. RIP to my mentions.",
+            "sentiment": "neutral",
+            "clout": "18k"
+          },
+          {
+            "handle": "@millcreekdad",
+            "text": "Easy to laugh from Washington. You didn't see the antlers.",
+            "sentiment": "negative"
+          }
+        ],
+        "advisor": "Being right is not the same as being believed, and only one of those wins counties."
+      }
+    ]
+  },
+  {
+    "id": "gen_wildcard_solar_storm_gps",
+    "category": "wildcard",
+    "title": "Solar Storm Will Kill GPS",
+    "briefing": "Space weather forecasters give 90 percent odds that a coronal mass ejection will fry GPS and much of satellite comms for five to seven days, starting Thursday. Airlines, shipping, farming, and every food delivery app are about to time-travel to 1985. You can order a costly national standby — grounded flights, hardened grids — or trust industry to improvise. Warn hard and eat the economic hit, or play it cool and pray the sun misses?",
+    "source": "Science Advisor",
+    "minDay": 150,
+    "weight": 2,
+    "choices": [
+      {
+        "id": "full-standby",
+        "label": "Order a national standby",
+        "detail": "Ground flights, harden grids, paper maps for all",
+        "cost": 2,
+        "effects": {
+          "approval": -3,
+          "economy": -7,
+          "stability": 7,
+          "world": 3
+        },
+        "result": "The storm hits Thursday night. Blackouts are brief, no planes are lost, and a generation learns what a road atlas is. The bill is enormous and the gratitude is thin.",
+        "news": [
+          {
+            "outlet": "beacon",
+            "headline": "Storm Strikes; Preparedness Credited With Averting Disaster",
+            "tone": "positive"
+          },
+          {
+            "outlet": "ledger",
+            "headline": "Seven Days of Lost Commerce for a Storm We Survived Anyway",
+            "tone": "negative"
+          },
+          {
+            "outlet": "tribune",
+            "headline": "Government Did Its One Job: Protecting People First",
+            "tone": "positive"
+          },
+          {
+            "outlet": "buzz",
+            "headline": "SUN PUNCHES EARTH, EARTH DUCKS!! 🌞🥊",
+            "tone": "positive"
+          }
+        ],
+        "social": [
+          {
+            "handle": "@pilotpete",
+            "text": "Every pilot I know is quietly grateful. Loudly, we're complaining about the layover.",
+            "sentiment": "positive",
+            "clout": "52k"
+          },
+          {
+            "handle": "@dashdoorguy",
+            "text": "delivered pizza using a PAPER MAP. i am become legend",
+            "sentiment": "neutral",
+            "clout": "3k"
+          }
+        ],
+        "advisor": "Prevention never gets a parade. The counterfactual — planes down, grids dark — would have gotten you a tribunal.",
+        "echo": {
+          "delay": 3,
+          "title": "Standby Playbook Sold Worldwide",
+          "text": "Allies adopt your solar-storm protocol wholesale, and the 'Thursday Standard' becomes a quiet diplomatic feather in your cap.",
+          "effects": {
+            "world": 4,
+            "legacy": 2
+          },
+          "tone": "positive"
+        }
+      },
+      {
+        "id": "targeted-warn",
+        "label": "Warn critical sectors only",
+        "detail": "Aviation and grid get orders; everyone else gets a tweet",
+        "effects": {
+          "approval": 2,
+          "economy": -2,
+          "stability": -4,
+          "world": -2
+        },
+        "result": "The storm clips the northern hemisphere. Flights reroute fine, but three days of navigation chaos strand cargo ships and one very lost autonomous tractor parade.",
+        "news": [
+          {
+            "outlet": "beacon",
+            "headline": "Patchy Disruptions as Solar Storm Tests Selective Warnings",
+            "tone": "neutral"
+          },
+          {
+            "outlet": "ledger",
+            "headline": "Markets Wobble but Commerce Kept Breathing",
+            "tone": "positive"
+          },
+          {
+            "outlet": "tribune",
+            "headline": "Big Airlines Got Warnings; Family Farms Got Voicemail",
+            "tone": "negative"
+          },
+          {
+            "outlet": "buzz",
+            "headline": "TRACTORS GONE ROGUE IN NEBRASKA!! 🚜🛰️",
+            "tone": "negative"
+          }
+        ],
+        "social": [
+          {
+            "handle": "@farmwifeandtractor",
+            "text": "Our combine drove itself into a pond. A POND.",
+            "sentiment": "negative",
+            "clout": "27k"
+          }
+        ],
+        "advisor": "You threaded the needle and only bled a little. Next time the sun may not grade on a curve."
+      }
+    ]
+  },
+  {
+    "id": "gen_wildcard_olympics_catch",
+    "category": "wildcard",
+    "title": "Olympics Offered, Strings Attached",
+    "briefing": "The International Games Committee offers you the 2036 Summer Olympics — no bidding war, no rivals. The catch: the host city must be Duststorm Flats, a half-built desert metropolis owned by a consortium that includes three sovereign wealth funds and, investigators whisper, one sanctioned oligarch's nephew. It's jobs and glory versus a decade of headlines about who really owns the velodrome. Take the torch or pass it?",
+    "source": "Commerce Secretary",
+    "minDay": 300,
+    "choices": [
+      {
+        "id": "accept-games",
+        "label": "Accept and announce big",
+        "detail": "Jobs now, vetting later",
+        "cost": 1,
+        "effects": {
+          "approval": 6,
+          "economy": 5,
+          "world": -4,
+          "stability": -2
+        },
+        "result": "Confetti cannons in the Rose Garden. Construction contracts flow within weeks, and so do the first subpoenas about the consortium's ownership chart.",
+        "news": [
+          {
+            "outlet": "beacon",
+            "headline": "U.S. Awarded 2036 Games Amid Ownership Questions",
+            "tone": "neutral"
+          },
+          {
+            "outlet": "ledger",
+            "headline": "Gold Medal for Growth: Games Mean 200,000 Jobs",
+            "tone": "positive"
+          },
+          {
+            "outlet": "tribune",
+            "headline": "Whose Olympics? Follow the Shell Companies",
+            "tone": "negative"
+          },
+          {
+            "outlet": "buzz",
+            "headline": "USA GETS THE GAMES!! DESERT CITY GLOW-UP INCOMING 🏟️🔥",
+            "tone": "positive"
+          }
+        ],
+        "social": [
+          {
+            "handle": "@ironworker88",
+            "text": "Ten years of work just landed in my county. Ask me if I care about the velodrome's LLC.",
+            "sentiment": "positive",
+            "clout": "14k"
+          },
+          {
+            "handle": "@sanctionswatch",
+            "text": "The nephew. It's always the nephew.",
+            "sentiment": "negative",
+            "clout": "61k"
+          }
+        ],
+        "advisor": "The jobs are real and so is the nephew. Announce an independent audit before someone announces it for you.",
+        "echo": {
+          "delay": 6,
+          "title": "Consortium Scandal Breaks Mid-Construction",
+          "text": "Investigators confirm the sanctioned money, two funds pull out, and the half-built stadium becomes the world's most expensive metaphor.",
+          "effects": {
+            "approval": -6,
+            "world": -3,
+            "economy": -2
+          },
+          "tone": "negative"
+        }
+      },
+      {
+        "id": "counter-bid",
+        "label": "Demand a clean-money host city",
+        "detail": "Accept only with a transparent consortium",
+        "cost": 2,
+        "bold": true,
+        "effects": {
+          "approval": -2,
+          "world": 6,
+          "economy": -3,
+          "stability": 2
+        },
+        "result": "The Committee blinks, reopens the site selection, and praises your 'integrity framework' through gritted teeth. Duststorm Flats' lobbyists switch to decaf.",
+        "news": [
+          {
+            "outlet": "beacon",
+            "headline": "White House Conditions Olympic Bid on Ownership Transparency",
+            "tone": "positive"
+          },
+          {
+            "outlet": "ledger",
+            "headline": "Principles Are Lovely; Another Nation Will Take the Jobs",
+            "tone": "negative"
+          },
+          {
+            "outlet": "tribune",
+            "headline": "For Once, We Read the Fine Print First",
+            "tone": "positive"
+          },
+          {
+            "outlet": "buzz",
+            "headline": "PREZ TO OLYMPICS: SHOW ME THE RECEIPTS 🧾",
+            "tone": "neutral"
+          }
+        ],
+        "social": [
+          {
+            "handle": "@olympichist",
+            "text": "First host in history to say 'prove it' before the ribbon cutting.",
+            "sentiment": "positive",
+            "clout": "38k"
+          }
+        ],
+        "advisor": "You may have traded a stadium for a standard. History tends to remember standards — voters remember stadiums."
+      },
+      {
+        "id": "decline-games",
+        "label": "Decline the Games entirely",
+        "detail": "No circus, no nephew, no debt",
+        "effects": {
+          "approval": -4,
+          "economy": -2,
+          "stability": 3,
+          "world": 1
+        },
+        "result": "You pass with a polite statement about fiscal priorities. Sports radio declares a week of mourning; municipal bond analysts send flowers.",
+        "news": [
+          {
+            "outlet": "beacon",
+            "headline": "U.S. Declines 2036 Olympic Hosting Offer",
+            "tone": "neutral"
+          },
+          {
+            "outlet": "ledger",
+            "headline": "The Rare Government That Said No to a Party It Couldn't Afford",
+            "tone": "positive"
+          },
+          {
+            "outlet": "tribune",
+            "headline": "Fine Call, but Tell That to the Building Trades",
+            "tone": "neutral"
+          },
+          {
+            "outlet": "buzz",
+            "headline": "NO GAMES?? WE COULD'VE HAD MASCOTS 😭",
+            "tone": "negative"
+          }
+        ],
+        "social": [
+          {
+            "handle": "@econ_gradstudent",
+            "text": "Every study says hosting loses money. Every fan says who cares. Both are right.",
+            "sentiment": "neutral",
+            "clout": "22k"
+          }
+        ],
+        "advisor": "Boring and defensible. The highlight reel of things that never went wrong is, unfortunately, invisible."
+      }
+    ]
+  },
+  {
+    "id": "gen_wildcard_time_capsule_prophecy",
+    "category": "wildcard",
+    "title": "Time Capsule Predicts Your Presidency",
+    "briefing": "Workers renovating a courthouse unearth a 1926 time capsule containing, among pocket watches and seed packets, a sealed letter titled 'To the President of This Coming Century.' It describes your administration with unnerving accuracy — including a 'great folly at the water's edge' you haven't committed yet. Historians want it archived and studied; your comms team notes the 'folly' line is already trending. Publish the whole letter or seal the spooky parts?",
+    "source": "White House Counsel",
+    "minDay": 150,
+    "choices": [
+      {
+        "id": "publish-all",
+        "label": "Publish every word",
+        "detail": "Full transparency, let the historians brawl",
+        "effects": {
+          "approval": 4,
+          "stability": -4,
+          "legacy": 2
+        },
+        "result": "The letter goes public and the nation becomes an amateur prophecy-decoding society overnight. Coastal projects pause 'out of an abundance of caution,' which is a sentence you never expected to defend.",
+        "news": [
+          {
+            "outlet": "beacon",
+            "headline": "1926 Letter Released in Full; Scholars Urge Calm Analysis",
+            "tone": "neutral"
+          },
+          {
+            "outlet": "ledger",
+            "headline": "Markets Now Pricing In a 'Folly at the Water's Edge'",
+            "tone": "negative"
+          },
+          {
+            "outlet": "tribune",
+            "headline": "Radical Transparency, for Once — Even When It's Weird",
+            "tone": "positive"
+          },
+          {
+            "outlet": "buzz",
+            "headline": "THE PROPHECY IS REAL AND IT'S ABOUT THE PREZ 📜😱",
+            "tone": "neutral"
+          }
+        ],
+        "social": [
+          {
+            "handle": "@archivistanna",
+            "text": "The paper stock is authentic 1920s rag. I checked. Three times.",
+            "sentiment": "neutral",
+            "clout": "44k"
+          },
+          {
+            "handle": "@beachtownmayor",
+            "text": "Respectfully requesting the folly happen at somebody else's water's edge.",
+            "sentiment": "negative"
+          }
+        ],
+        "advisor": "You just outsourced your risk assessment to a dead person with nice handwriting. Whatever you do near water now, triple-check it."
+      },
+      {
+        "id": "seal-letter",
+        "label": "Archive it under seal",
+        "detail": "Fifty years, for 'historical integrity'",
+        "effects": {
+          "approval": -5,
+          "stability": 4
+        },
+        "result": "The letter vanishes into the National Archives. Which means the internet now believes it contains everything from alien treaties to next week's lottery numbers.",
+        "news": [
+          {
+            "outlet": "beacon",
+            "headline": "Administration Seals 1926 Letter Pending Authentication",
+            "tone": "neutral"
+          },
+          {
+            "outlet": "ledger",
+            "headline": "A Sensible Lid on Century-Old Nonsense",
+            "tone": "positive"
+          },
+          {
+            "outlet": "tribune",
+            "headline": "The People's Time Capsule, Confiscated by the People's Government",
+            "tone": "negative"
+          },
+          {
+            "outlet": "buzz",
+            "headline": "WHAT ARE THEY HIDING?! CAPSULE-GATE BEGINS 🔒",
+            "tone": "negative"
+          }
+        ],
+        "social": [
+          {
+            "handle": "@foiafrank",
+            "text": "Request filed at 9:01 a.m. See you in court.",
+            "sentiment": "negative",
+            "clout": "71k"
+          }
+        ],
+        "advisor": "Sealing it was tidy. Unfortunately, nothing grows conspiracy theories faster than a locked box with your name near it.",
+        "echo": {
+          "delay": 3,
+          "title": "Leaked Excerpt Misquoted Everywhere",
+          "text": "A staffer's blurry photo of one paragraph leaks, minus context, and the misquote does more damage than the full letter ever could have.",
+          "effects": {
+            "approval": -4,
+            "stability": -3
+          },
+          "tone": "negative"
+        }
+      }
+    ]
+  },
+  {
+    "id": "gen_wildcard_lottery_meltdown",
+    "category": "wildcard",
+    "title": "National Lottery Prints Too Many Winners",
+    "briefing": "A software glitch in the new National Infrastructure Lottery generated 40,000 winning tickets for a jackpot designed for one. Honoring them all costs 12 billion dollars the fund doesn't have; voiding them means telling 40,000 families the government took backsies. The lottery commissioner has stopped answering his phone from a location believed to be a boat. Pay out, void, or split the difference?",
+    "source": "Treasury Secretary",
+    "minDay": 0,
+    "choices": [
+      {
+        "id": "honor-all",
+        "label": "Honor every ticket",
+        "detail": "The government's word is the product",
+        "cost": 2,
+        "effects": {
+          "approval": 8,
+          "economy": -8,
+          "stability": 3
+        },
+        "result": "Forty thousand modest fortunes are paid in installments. Trust in federal promises ticks up; the infrastructure fund now builds roughly one bridge.",
+        "news": [
+          {
+            "outlet": "beacon",
+            "headline": "Treasury to Honor All 40,000 Glitch Tickets in Installments",
+            "tone": "neutral"
+          },
+          {
+            "outlet": "ledger",
+            "headline": "Twelve Billion for a Typo: The Costliest Keystroke in History",
+            "tone": "negative"
+          },
+          {
+            "outlet": "tribune",
+            "headline": "Government Keeps Its Word to Regular People. Novel.",
+            "tone": "positive"
+          },
+          {
+            "outlet": "buzz",
+            "headline": "EVERYBODY WINS!! LITERALLY EVERYBODY!! 🎰💰",
+            "tone": "positive"
+          }
+        ],
+        "social": [
+          {
+            "handle": "@nurse_tasha",
+            "text": "Paying off my student loans with a computer glitch. God bless America.",
+            "sentiment": "positive",
+            "clout": "8k"
+          },
+          {
+            "handle": "@bondtrader_vic",
+            "text": "The fiscal discipline implications are grim. Congrats to the winners though, genuinely.",
+            "sentiment": "neutral",
+            "clout": "33k"
+          }
+        ],
+        "advisor": "Expensive, but you just bought something money can't usually buy: proof the government pays its debts to people without lobbyists."
+      },
+      {
+        "id": "void-tickets",
+        "label": "Void the glitch tickets",
+        "detail": "One legal winner, everyone else gets an apology",
+        "effects": {
+          "approval": -9,
+          "economy": 4,
+          "stability": -4
+        },
+        "result": "Lawyers confirm the fine print holds. The fund survives intact, and 'The 40,000' becomes a movement with hats, a podcast, and your face on the merchandise.",
+        "news": [
+          {
+            "outlet": "beacon",
+            "headline": "Glitch Tickets Voided; Class Action Filed Within Hours",
+            "tone": "negative"
+          },
+          {
+            "outlet": "ledger",
+            "headline": "Contract Law Wins; the Fund Lives to Build Another Day",
+            "tone": "positive"
+          },
+          {
+            "outlet": "tribune",
+            "headline": "They Took the Tickets Back. From Nurses. At Christmas-ish.",
+            "tone": "negative"
+          },
+          {
+            "outlet": "buzz",
+            "headline": "BACKSIES!! GOVERNMENT TAKES BACKSIES!! 🎟️❌",
+            "tone": "negative"
+          }
+        ],
+        "social": [
+          {
+            "handle": "@the40kmovement",
+            "text": "We didn't glitch. The system glitched. We just believed it.",
+            "sentiment": "negative",
+            "clout": "120k"
+          }
+        ],
+        "advisor": "Legally airtight, emotionally radioactive. The fine print never once won a news cycle.",
+        "echo": {
+          "delay": 4,
+          "title": "Court Orders Partial Payout Anyway",
+          "text": "An appeals court finds the lottery's ads promised more than its fine print, ordering settlements — so you got the backlash and half the bill.",
+          "effects": {
+            "economy": -3,
+            "approval": -2
+          },
+          "tone": "negative"
+        }
+      },
+      {
+        "id": "settle-flat",
+        "label": "Offer a flat settlement",
+        "detail": "Fifty grand each, no lawsuits, signed today",
+        "cost": 1,
+        "effects": {
+          "approval": 3,
+          "economy": -4,
+          "stability": 2
+        },
+        "result": "Two billion total, wired fast, most tickets settled by Friday. Nobody is thrilled, nobody is destitute, and the commissioner's boat has been located.",
+        "news": [
+          {
+            "outlet": "beacon",
+            "headline": "Flat Settlement Resolves Lottery Glitch for Most Holders",
+            "tone": "neutral"
+          },
+          {
+            "outlet": "ledger",
+            "headline": "A Costly Mistake Contained at Sixteen Cents on the Dollar",
+            "tone": "positive"
+          },
+          {
+            "outlet": "tribune",
+            "headline": "Fifty Grand Is Life-Changing — and Still a Sixth of a Promise",
+            "tone": "neutral"
+          },
+          {
+            "outlet": "buzz",
+            "headline": "EVERYONE GETS 50K AND A NONDISCLOSURE VIBE 🤐",
+            "tone": "neutral"
+          }
+        ],
+        "social": [
+          {
+            "handle": "@practicalpam",
+            "text": "Took the 50k. Paid the roof guy. Life goes on.",
+            "sentiment": "positive",
+            "clout": "4k"
+          }
+        ],
+        "advisor": "The compromise nobody loves is usually the one that survives. Boring competence: my favorite genre."
+      }
+    ]
+  },
+  {
+    "id": "gen_wildcard_championship_strike",
+    "category": "wildcard",
+    "title": "Players Strike on Championship Eve",
+    "briefing": "Eighteen hours before the National Championship — projected 120 million viewers — the players' union walks out over revenue sharing and a concussion fund the league gutted in the fine print. The league wants you to invoke emergency arbitration; the players want you to say one sentence of support; the networks want anyone in a jersey by kickoff. Whatever you do, half the country is watching the other channel. Whose side is the podium on?",
+    "source": "Labor Secretary",
+    "minDay": 150,
+    "weight": 2,
+    "choices": [
+      {
+        "id": "back-players",
+        "label": "Voice support for the players",
+        "detail": "One sentence: 'Pay the people you watch.'",
+        "effects": {
+          "approval": 4,
+          "economy": -4,
+          "stability": -2
+        },
+        "result": "Your line becomes a chant in three stadiums. The game postpones a week, the league caves on the concussion fund, and several owners' jets converge on Washington in protest formation.",
+        "news": [
+          {
+            "outlet": "beacon",
+            "headline": "President Backs Players; Championship Postponed One Week",
+            "tone": "neutral"
+          },
+          {
+            "outlet": "ledger",
+            "headline": "The White House Just Picked a Side in a Private Labor Dispute",
+            "tone": "negative"
+          },
+          {
+            "outlet": "tribune",
+            "headline": "'Pay the People You Watch' — Four Words, Correctly Ordered",
+            "tone": "positive"
+          },
+          {
+            "outlet": "buzz",
+            "headline": "PREZ SIDES WITH PLAYERS!! OWNERS BIG MAD 🏆🔥",
+            "tone": "positive"
+          }
+        ],
+        "social": [
+          {
+            "handle": "@linebacker_LB52",
+            "text": "Respect. We remember who spoke up before the deal, not after.",
+            "sentiment": "positive",
+            "clout": "340k"
+          },
+          {
+            "handle": "@seasonticketstan",
+            "text": "I just want to watch the game, man.",
+            "sentiment": "negative",
+            "clout": "7k"
+          }
+        ],
+        "advisor": "Labor loves you today. The league's lobbyists have long memories and longer checkbooks — expect the bill."
+      },
+      {
+        "id": "force-arbitration",
+        "label": "Invoke emergency arbitration",
+        "detail": "Game plays Sunday; grievances go to a panel",
+        "cost": 2,
+        "bold": true,
+        "effects": {
+          "approval": -3,
+          "economy": 5,
+          "stability": 4
+        },
+        "result": "The championship kicks off on schedule to record ratings. Players wear armbands reading 'ARBITRATED' and refuse the traditional White House visit before you've even invited them.",
+        "news": [
+          {
+            "outlet": "beacon",
+            "headline": "Emergency Arbitration Ends Strike; Championship Proceeds",
+            "tone": "neutral"
+          },
+          {
+            "outlet": "ledger",
+            "headline": "Order, Ratings, and Revenue Restored in One Signature",
+            "tone": "positive"
+          },
+          {
+            "outlet": "tribune",
+            "headline": "Strike Broken for a TV Window. Remember This.",
+            "tone": "negative"
+          },
+          {
+            "outlet": "buzz",
+            "headline": "GAME ON!! PLAYERS FURIOUS BUT PLAYING 😤🏈",
+            "tone": "neutral"
+          }
+        ],
+        "social": [
+          {
+            "handle": "@sportsbizsam",
+            "text": "The economics were obvious. The optics are a different sport entirely.",
+            "sentiment": "neutral",
+            "clout": "95k"
+          },
+          {
+            "handle": "@unionstrong_deb",
+            "text": "Every worker watching learned what the podium thinks of picket lines.",
+            "sentiment": "negative",
+            "clout": "56k"
+          }
+        ],
+        "advisor": "The game airing was worth billions and you took the heat for it. Make the arbitration panel genuinely fair or this becomes your labor legacy.",
+        "echo": {
+          "delay": 5,
+          "title": "Arbitration Panel Sides With Players",
+          "text": "Your panel awards the players nearly everything they struck for, and grudging respect trickles in — the process you were booed for actually worked.",
+          "effects": {
+            "approval": 4,
+            "stability": 2
+          },
+          "tone": "positive"
+        }
+      },
+      {
+        "id": "stay-out",
+        "label": "Stay conspicuously neutral",
+        "detail": "'The parties should resolve this at the table.'",
+        "effects": {
+          "approval": -4,
+          "stability": 2,
+          "economy": -2
+        },
+        "result": "The strike drags eleven days. The championship finally plays to diminished ratings, and both sides agree on exactly one thing: you were useless.",
+        "news": [
+          {
+            "outlet": "beacon",
+            "headline": "White House Declines Role as Strike Stretches On",
+            "tone": "neutral"
+          },
+          {
+            "outlet": "ledger",
+            "headline": "Leadership Vacuum Costs Broadcasters a Fortune",
+            "tone": "negative"
+          },
+          {
+            "outlet": "tribune",
+            "headline": "Neutrality Between Owners and Workers Is Also a Choice",
+            "tone": "negative"
+          },
+          {
+            "outlet": "buzz",
+            "headline": "PREZ SHRUGS!! NATION CHANGES CHANNEL 📺",
+            "tone": "negative"
+          }
+        ],
+        "social": [
+          {
+            "handle": "@couchcoachcarl",
+            "text": "11 days. ELEVEN. My bracket died of old age.",
+            "sentiment": "negative",
+            "clout": "19k"
+          }
+        ],
+        "advisor": "Sometimes the referee who swallows the whistle gets booed by both benches. At least it's cheap."
+      }
+    ]
+  },
+  {
+    "id": "gen_wildcard_asteroid_claim",
+    "category": "wildcard",
+    "title": "Asteroid Gold Rush Turns Ugly",
+    "briefing": "An American startup and a rival nation's state mining firm have both planted robotic claim beacons on asteroid KX-441, whose platinum content could crash or crown global metal markets. The startup demands military-grade protection for its 'property'; the rival calls the rock common heritage of mankind, which is rich coming from the people who got there second. Space law is forty years of shrugs. Whose flag flies on the rock?",
+    "source": "National Security Advisor",
+    "minDay": 300,
+    "choices": [
+      {
+        "id": "back-startup",
+        "label": "Recognize the American claim",
+        "detail": "First beacon, finders keepers, full stop",
+        "cost": 1,
+        "bold": true,
+        "effects": {
+          "approval": 3,
+          "economy": 6,
+          "world": -7,
+          "stability": -2
+        },
+        "result": "You extend legal recognition to the claim. The startup's valuation triples, allied capitals request 'urgent consultations,' and someone at the UN uses the phrase 'cosmic enclosure movement.'",
+        "news": [
+          {
+            "outlet": "beacon",
+            "headline": "U.S. Recognizes Private Asteroid Claim in Legal First",
+            "tone": "neutral"
+          },
+          {
+            "outlet": "ledger",
+            "headline": "Property Rights Reach Orbit: A Frontier Finally Worth Funding",
+            "tone": "positive"
+          },
+          {
+            "outlet": "tribune",
+            "headline": "The Sky Was Everyone's Until It Had a Deed",
+            "tone": "negative"
+          },
+          {
+            "outlet": "buzz",
+            "headline": "AMERICA CALLS DIBS ON SPACE ROCK 🪨🇺🇸",
+            "tone": "neutral"
+          }
+        ],
+        "social": [
+          {
+            "handle": "@spacelawyerly",
+            "text": "The treaty gap just became a treaty canyon. Fascinating and terrifying.",
+            "sentiment": "neutral",
+            "clout": "48k"
+          },
+          {
+            "handle": "@platinumbull",
+            "text": "Metals desk is ON FIRE today. Whatever happens, thanks.",
+            "sentiment": "positive",
+            "clout": "15k"
+          }
+        ],
+        "advisor": "You just wrote space property law with a press release. Bold. Expect every nation with a rocket to write theirs the same way.",
+        "echo": {
+          "delay": 6,
+          "title": "Rival Nation Plants Claims on Twelve Asteroids",
+          "text": "Using your precedent word for word, the rival blankets the asteroid belt with claim beacons, and your own doctrine now blocks your objection.",
+          "effects": {
+            "world": -5,
+            "economy": -2
+          },
+          "tone": "negative"
+        }
+      },
+      {
+        "id": "propose-treaty",
+        "label": "Call for an orbital claims treaty",
+        "detail": "Freeze all claims, negotiate a framework",
+        "cost": 2,
+        "effects": {
+          "approval": -2,
+          "world": 7,
+          "economy": -4,
+          "stability": 2
+        },
+        "result": "Both beacons power down under a joint moratorium as treaty talks open. The startup's founder calls you a 'communist with extra steps' from his third yacht.",
+        "news": [
+          {
+            "outlet": "beacon",
+            "headline": "Claims Frozen as Nations Open Asteroid Treaty Talks",
+            "tone": "positive"
+          },
+          {
+            "outlet": "ledger",
+            "headline": "American Innovation Grounded by Multilateral Paperwork",
+            "tone": "negative"
+          },
+          {
+            "outlet": "tribune",
+            "headline": "The Commons Survives — Even the One in Space",
+            "tone": "positive"
+          },
+          {
+            "outlet": "buzz",
+            "headline": "SPACE ROCK ON PAUSE!! LAWYERS ASCEND TO ORBIT ⚖️🚀",
+            "tone": "neutral"
+          }
+        ],
+        "social": [
+          {
+            "handle": "@unwatcher",
+            "text": "First genuinely new treaty framework in a generation. This is the good timeline?",
+            "sentiment": "positive",
+            "clout": "26k"
+          }
+        ],
+        "advisor": "You slowed a gold rush to write the rules of the mine. History likes rule-writers, shareholders less so."
+      }
+    ]
+  }
+]

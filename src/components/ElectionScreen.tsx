@@ -2,86 +2,122 @@ import { useEffect, useState } from "react";
 import type { GameState } from "../game/types";
 import type { ElectionResult } from "../game/engine";
 import { STAT_KEYS, STAT_META } from "../game/engine";
+import { sfxDefeat, sfxFanfare, sfxBreaking } from "../game/sound";
+import Confetti from "./Confetti";
 
 export default function ElectionScreen({
   game,
   result,
+  reducedMotion,
   onContinue,
 }: {
   game: GameState;
   result: ElectionResult;
+  reducedMotion?: boolean;
   onContinue: () => void;
 }) {
-  const [shown, setShown] = useState(0);
-  const [done, setDone] = useState(false);
+  const [reporting, setReporting] = useState(0); // precincts %
+  const [shown, setShown] = useState(0); // your vote share
+  const [phase, setPhase] = useState<"counting" | "projection" | "verdict">("counting");
 
-  // Tick the vote share up for an election-night reveal.
   useEffect(() => {
-    const target = result.share;
-    const duration = 1700;
+    if (reducedMotion) {
+      // Skip the ceremony: straight to the verdict.
+      setReporting(100);
+      setShown(result.share);
+      setPhase("verdict");
+      if (result.won) sfxFanfare();
+      else sfxDefeat();
+      return;
+    }
+    sfxBreaking();
+    const duration = 2400;
     const startTs = performance.now();
     let raf = 0;
     const tick = (now: number) => {
       const t = Math.min(1, (now - startTs) / duration);
       const eased = 1 - Math.pow(1 - t, 3);
-      setShown(target * eased);
+      setReporting(Math.round(eased * 100));
+      setShown(result.share * eased);
       if (t < 1) {
         raf = requestAnimationFrame(tick);
       } else {
-        setShown(target);
-        setDone(true);
+        setPhase("projection");
       }
     };
     raf = requestAnimationFrame(tick);
     return () => cancelAnimationFrame(raf);
-  }, [result.share]);
+  }, [result.share, result.won, reducedMotion]);
+
+  useEffect(() => {
+    if (phase === "projection") {
+      const t = setTimeout(() => {
+        setPhase("verdict");
+        if (result.won) sfxFanfare();
+        else sfxDefeat();
+      }, 850);
+      return () => clearTimeout(t);
+    }
+  }, [phase, result.won]);
 
   const opp = 100 - shown;
 
   return (
-    <div className="card election">
-      <div className="election__kicker">ELECTION NIGHT · TERM {game.term}</div>
-      <h1 className="election__title">The Voters Decide</h1>
-      <p className="election__sub">
-        Four years of decisions come down to this. Polls are closing across the country…
-      </p>
+    <div className={`card board ${phase === "verdict" && !result.won ? "board--dimmed" : ""}`}>
+      {phase === "verdict" && result.won && <Confetti />}
 
-      <div className="election__tally">
-        <div className="election__side election__side--you">
-          <span className="election__pct">{shown.toFixed(1)}%</span>
-          <span className="election__who">{game.president.name}</span>
+      <div className="board__slug">ELECTION NIGHT // TERM {game.term} // GENERAL</div>
+      <h1 className="board__title">The Voters Decide</h1>
+
+      <div className="board__reporting">
+        <span>PRECINCTS REPORTING</span>
+        <span className="board__reporting-track">
+          <span className="board__reporting-fill" style={{ transform: `scaleX(${reporting / 100})` }} />
+        </span>
+        <span className="board__reporting-num">{reporting}%</span>
+      </div>
+
+      <div className="board__rows">
+        <div className="board__row board__row--you">
+          <span className="board__cand">{game.president.name.toUpperCase()}</span>
+          <span className="board__bar">
+            <span className="board__bar-fill you" style={{ transform: `scaleX(${shown / 100})` }} />
+          </span>
+          <span className="board__pct">{shown.toFixed(1)}%</span>
         </div>
-        <div className="election__vs">vs</div>
-        <div className="election__side election__side--opp">
-          <span className="election__pct">{opp.toFixed(1)}%</span>
-          <span className="election__who">The Challenger</span>
+        <div className="board__row">
+          <span className="board__cand">THE CHALLENGER</span>
+          <span className="board__bar">
+            <span className="board__bar-fill opp" style={{ transform: `scaleX(${opp / 100})` }} />
+          </span>
+          <span className="board__pct">{opp.toFixed(1)}%</span>
         </div>
       </div>
 
-      <div className="election__bar">
-        <div className="election__bar-you" style={{ width: `${shown}%` }} />
-      </div>
-
-      <div className="election__record">
+      <div className="board__record">
         {STAT_KEYS.map((k) => (
-          <div key={k} className="election__stat">
-            <span>{STAT_META[k].emoji}</span>
-            <span className="election__stat-val">{game.stats[k]}</span>
-            <span className="election__stat-lbl">{STAT_META[k].short}</span>
-          </div>
+          <span key={k} className="board__stat">
+            {STAT_META[k].short} <strong className={`stat-${k}-text`}>{game.stats[k]}</strong>
+          </span>
         ))}
       </div>
 
-      {done && (
-        <div className={`election__verdict ${result.won ? "is-win" : "is-loss"}`}>
-          <h2>{result.won ? "🎉 RE-ELECTED" : "🏳️ DEFEATED"}</h2>
+      {phase !== "counting" && (
+        <div className="board__projection">
+          <span className="stamp stamp--projection">PROJECTION</span>
+        </div>
+      )}
+
+      {phase === "verdict" && (
+        <div className={`board__verdict ${result.won ? "is-win" : "is-loss"}`}>
+          <h2 className="woodtype">{result.won ? "FOUR MORE YEARS" : "REJECTED"}</h2>
           <p>
             {result.won
-              ? "The people have spoken — four more years. The mandate is yours."
-              : "A gracious concession speech awaits. Your time in office has come to an end."}
+              ? "The mandate is yours. History is watching what you do with it."
+              : "A single typed line from the residence: “The people have spoken. Serve them well.”"}
           </p>
           <button className="btn btn--primary btn--block" onClick={onContinue}>
-            {result.won ? "Begin your next term →" : "See your legacy →"}
+            {result.won ? "Begin your second term →" : "Read your legacy →"}
           </button>
         </div>
       )}

@@ -1,0 +1,597 @@
+[
+  {
+    "id": "gen_personal_tellall_book",
+    "category": "personal",
+    "title": "The Tell-All Drops",
+    "briefing": "Your former body man has written a memoir, and the leaked excerpts are brutal in the pettiest ways: you eat cereal for dinner, you practice smiling in the elevator, and you once called a senator 'a haircut in a suit.' Publication day is Friday and every outlet has galleys. Do you defuse it, crush it, or outsell it?",
+    "source": "Press Secretary",
+    "minDay": 150,
+    "choices": [
+      {
+        "id": "laugh_it_off",
+        "label": "Laugh it off",
+        "detail": "Post the midnight cereal photo yourself",
+        "effects": { "approval": 5, "stability": 2, "legacy": -3 },
+        "result": "Your midnight-cereal selfie outperforms the book's first chapter. Historians wince; the internet crowns you.",
+        "news": [
+          { "outlet": "buzz", "headline": "PREZ EATS CEREAL FOR DINNER AND WE LOVE IT 🥣", "tone": "positive" },
+          { "outlet": "beacon", "headline": "White House Deflects Memoir With Humor", "tone": "neutral" },
+          { "outlet": "ledger", "headline": "Levity Is Not a Governing Strategy", "tone": "negative" },
+          { "outlet": "tribune", "headline": "At Least Someone in Power Is Relatable", "tone": "neutral" }
+        ],
+        "social": [
+          { "handle": "@midnightcrunch", "text": "president posting cereal pics at 1am is the most relatable thing the government has done in years", "sentiment": "positive", "clout": "212k" },
+          { "handle": "@gravitaswatch", "text": "the office deserves better than a spoon and a smirk", "sentiment": "negative" }
+        ],
+        "advisor": "Cheap laugh, cheap win — just remember the book has eleven more chapters."
+      },
+      {
+        "id": "lawyer_up",
+        "label": "Send the lawyers",
+        "detail": "Cease-and-desist before publication day",
+        "cost": 1,
+        "bold": true,
+        "effects": { "approval": -6, "stability": 3, "legacy": 1 },
+        "result": "The injunction lands and leaks inside the building dry up overnight. So does the goodwill of every reporter with a byline.",
+        "news": [
+          { "outlet": "beacon", "headline": "White House Moves to Block Former Aide's Memoir", "tone": "neutral" },
+          { "outlet": "ledger", "headline": "Discipline Returns to the West Wing", "tone": "positive" },
+          { "outlet": "tribune", "headline": "Presidents Don't Get to Ban Books", "tone": "negative" },
+          { "outlet": "buzz", "headline": "BANNED! THE BOOK THEY DON'T WANT YOU TO READ 📕🚫", "tone": "negative" }
+        ],
+        "social": [
+          { "handle": "@firstamendrew", "text": "a cease-and-desist is just a bestseller sticker with extra steps", "sentiment": "negative", "clout": "97k" }
+        ],
+        "advisor": "You've bought silence at retail price. Pray the appeal is quiet too.",
+        "echo": {
+          "delay": 3,
+          "title": "Streisand in Chief",
+          "text": "The injunction fails and the memoir debuts at number one, with your lawsuit as its marketing campaign.",
+          "effects": { "approval": -4, "legacy": -2 },
+          "tone": "negative"
+        }
+      },
+      {
+        "id": "write_your_own",
+        "label": "Announce your own memoir",
+        "detail": "Sign a rival book deal on the spot",
+        "cost": 1,
+        "effects": { "approval": 2, "economy": 1, "stability": -3, "legacy": 4 },
+        "result": "Publishers bid eight figures before lunch. Your staff spends the afternoon wondering which chapter they'll be in.",
+        "news": [
+          { "outlet": "ledger", "headline": "President's Book Deal Shows Market Confidence", "tone": "positive" },
+          { "outlet": "beacon", "headline": "Dueling Memoirs Set Up Publishing Showdown", "tone": "neutral" },
+          { "outlet": "buzz", "headline": "BOOK WARS! PREZ VS. BODY MAN 📚⚔️", "tone": "neutral" }
+        ],
+        "social": [
+          { "handle": "@galleyproof", "text": "the aide's book: gossip. the president's book: gossip with an approval rating", "sentiment": "neutral", "clout": "45k" },
+          { "handle": "@westwingintern", "text": "everyone in this building is suddenly very nice to me", "sentiment": "positive" }
+        ],
+        "advisor": "Nothing focuses a leaker's mind like knowing you write last."
+      }
+    ]
+  },
+  {
+    "id": "gen_personal_health_scare",
+    "category": "personal",
+    "title": "The Doctor's Quiet Word",
+    "briefing": "Your annual physical turned up an irregular heartbeat — minor, fixable, and politically radioactive. The physician can do the procedure quietly at Camp David under 'scheduled downtime,' or you can tell the country before the rumor mill does. Markets twitch at the word 'cardiac.' Disclose, or disappear for a weekend?",
+    "source": "White House Physician",
+    "minDay": 200,
+    "choices": [
+      {
+        "id": "full_disclosure",
+        "label": "Address the nation",
+        "detail": "Full medical briefing, cameras on",
+        "effects": { "approval": 3, "economy": -2, "stability": -3, "world": 1, "legacy": 3 },
+        "result": "You narrate your own EKG on live television. Markets dip, late night writes itself, and something like trust creeps upward.",
+        "news": [
+          { "outlet": "beacon", "headline": "President Discloses Heart Procedure, Prognosis Excellent", "tone": "neutral" },
+          { "outlet": "ledger", "headline": "Markets Wobble on Health News", "tone": "negative" },
+          { "outlet": "tribune", "headline": "Radical Transparency, For Once", "tone": "positive" },
+          { "outlet": "buzz", "headline": "PREZ HEART SCARE — SAYS 'I'M FINE, RELAX' 💓", "tone": "neutral" }
+        ],
+        "social": [
+          { "handle": "@cardionerd", "text": "an irregular heartbeat and a completely regular press conference. refreshing.", "sentiment": "positive", "clout": "61k" }
+        ],
+        "advisor": "You traded one bad news cycle for a credibility deposit. Decent rate."
+      },
+      {
+        "id": "quiet_weekend",
+        "label": "Schedule a quiet weekend",
+        "detail": "Camp David, no cameras, no announcement",
+        "bold": true,
+        "effects": { "approval": -1, "economy": 1, "stability": 3 },
+        "result": "The procedure takes forty minutes; the cover story takes eleven staffers. Everyone who knows is now someone who could talk.",
+        "news": [
+          { "outlet": "beacon", "headline": "President Spends Restful Weekend at Camp David", "tone": "neutral" },
+          { "outlet": "ledger", "headline": "Steady Hand, Steady Markets", "tone": "positive" },
+          { "outlet": "buzz", "headline": "WHERE'S THE PREZ?? WEEKEND VANISHING ACT 👀", "tone": "neutral" }
+        ],
+        "social": [
+          { "handle": "@schedulewatcher", "text": "two canceled rallies and a 'personal weekend.' I have questions", "sentiment": "negative", "clout": "33k" }
+        ],
+        "advisor": "Secrets in this town have a shelf life. Hope the heart outlasts the story.",
+        "setFlags": ["hid_health_scare"],
+        "echo": {
+          "delay": 3,
+          "title": "The Medical Records Leak",
+          "text": "A billing clerk's screenshot surfaces: the 'restful weekend' was a cardiac procedure. The condition was minor; the cover-up isn't.",
+          "effects": { "approval": -7, "stability": -4, "legacy": -3 },
+          "tone": "negative"
+        }
+      }
+    ]
+  },
+  {
+    "id": "gen_personal_first_dog_empire",
+    "category": "personal",
+    "title": "First Dog Goes Corporate",
+    "briefing": "Biscuit, the First Dog, has forty million followers, a fan-run merch black market, and now a formal licensing offer: plush toys, a breakfast cereal, an animated series. Ethics counsel is chewing antacids while children's hospitals quietly note what the proceeds could fund. Monetize the mutt, or keep the paws clean?",
+    "source": "First Spouse",
+    "minDay": 0,
+    "weight": 2,
+    "choices": [
+      {
+        "id": "charity_empire",
+        "label": "License it all for charity",
+        "detail": "Every royalty goes to children's hospitals",
+        "effects": { "approval": 5, "economy": 1, "stability": -2, "legacy": 2 },
+        "result": "Biscuit plushies sell out in four hours and a pediatric wing gets a naming gift. Ethics counsel files a memo titled 'Unprecedented, Concerning, Adorable.'",
+        "news": [
+          { "outlet": "buzz", "headline": "BISCUIT MANIA!! FIRST DOG SAVES SICK KIDS 🐕💖", "tone": "positive" },
+          { "outlet": "beacon", "headline": "First Dog Licensing Deal to Fund Hospitals", "tone": "neutral" },
+          { "outlet": "tribune", "headline": "Cute, But Who Audits the Dog?", "tone": "neutral" },
+          { "outlet": "ledger", "headline": "The Free Market Loves a Good Boy", "tone": "positive" }
+        ],
+        "social": [
+          { "handle": "@plushcollector", "text": "I bought four Biscuits. for the children. obviously", "sentiment": "positive", "clout": "18k" }
+        ],
+        "advisor": "Nobody's ever lost votes to a golden retriever. Just keep the paperwork spotless."
+      },
+      {
+        "id": "no_deal",
+        "label": "Keep the paws clean",
+        "detail": "No merchandising, no exceptions",
+        "effects": { "approval": -2, "economy": -1, "stability": 3, "legacy": 1 },
+        "result": "The ethics office frames your refusal memo. Forty million followers post crying emojis, and a bootleg plush industry thrives without you.",
+        "news": [
+          { "outlet": "beacon", "headline": "White House Declines First Dog Licensing Offer", "tone": "neutral" },
+          { "outlet": "tribune", "headline": "A Rare 'No' to Merchandising Everything", "tone": "positive" },
+          { "outlet": "buzz", "headline": "NO BISCUIT TOYS?! INTERNET IN MOURNING 😭", "tone": "negative" }
+        ],
+        "social": [
+          { "handle": "@etiquettewonk", "text": "somewhere an ethics lawyer just felt joy for the first time in years", "sentiment": "positive", "clout": "12k" },
+          { "handle": "@biscuitfanclub", "text": "we would have paid ANYTHING", "sentiment": "negative", "clout": "54k" }
+        ],
+        "advisor": "Clean hands, empty hospital wing. That's the trade — own it."
+      }
+    ]
+  },
+  {
+    "id": "gen_personal_state_dinner_fire",
+    "category": "personal",
+    "title": "The State Dinner Collapses",
+    "briefing": "Mid-toast at the state dinner, the visiting Prime Minister's translator faints into the consommé, the soufflé course catches fire, and a pop-star guest livestreams the whole thing to nine million people. The Prime Minister looks like he wants the floor to open. The room is waiting for you to speak. Grace, or comedy?",
+    "source": "Social Secretary",
+    "minDay": 0,
+    "choices": [
+      {
+        "id": "improvise_charm",
+        "label": "Grab the mic and roll",
+        "detail": "Toast 'the most memorable dinner in White House history'",
+        "effects": { "approval": 4, "world": -2, "legacy": 1 },
+        "result": "The room roars, the clip goes global, and the Prime Minister manages a thin smile his delegation later describes as 'diplomatic.'",
+        "news": [
+          { "outlet": "buzz", "headline": "FLAMING SOUFFLÉ, ICE-COLD PREZ 🔥😎", "tone": "positive" },
+          { "outlet": "beacon", "headline": "State Dinner Mishaps Met With Improvised Toast", "tone": "neutral" },
+          { "outlet": "ledger", "headline": "Allies Deserve Dignity, Not a Comedy Set", "tone": "negative" },
+          { "outlet": "tribune", "headline": "Shout Out the Kitchen Staff Who Actually Saved Dinner", "tone": "neutral" }
+        ],
+        "social": [
+          { "handle": "@popstarofficial", "text": "best. dinner. ever. 🔥", "sentiment": "positive", "clout": "9.2m" },
+          { "handle": "@protocolpedant", "text": "somewhere a chief of protocol is drafting a resignation letter", "sentiment": "negative" }
+        ],
+        "advisor": "You won the room and iced the guest. Hope his memory is short.",
+        "echo": {
+          "delay": 3,
+          "title": "The Prime Minister's Toast",
+          "text": "At his own state banquet, the Prime Minister retells the flaming-soufflé story as 'the night our friendship was forged' — and toasts you by name.",
+          "effects": { "approval": 1, "world": 4 },
+          "tone": "positive"
+        }
+      },
+      {
+        "id": "formal_grace",
+        "label": "End the evening with grace",
+        "detail": "Cut the program, check on the translator, apologize privately",
+        "effects": { "approval": -3, "stability": 2, "world": 3 },
+        "result": "The translator recovers and the Prime Minister's office issues warm thanks. At home, the clip of you soberly ending the party gets recut as 'the fun police.'",
+        "news": [
+          { "outlet": "beacon", "headline": "President Cuts Dinner Short After Medical Incident", "tone": "neutral" },
+          { "outlet": "ledger", "headline": "Composed, Traditional, Presidential", "tone": "positive" },
+          { "outlet": "buzz", "headline": "PARTY'S OVER — PREZ PULLS PLUG ON CHAOS NIGHT 🚨", "tone": "negative" }
+        ],
+        "social": [
+          { "handle": "@latenightclipper", "text": "he really said 'the evening is concluded' like a substitute teacher", "sentiment": "negative", "clout": "88k" }
+        ],
+        "advisor": "Boring is underrated. The alliance will remember; the internet won't."
+      }
+    ]
+  },
+  {
+    "id": "gen_personal_college_favor",
+    "category": "personal",
+    "title": "An Old Friend Calls",
+    "briefing": "Your college roommate — best man at your wedding, keeper of your worst stories — calls the private line. His daughter wants a White House fellowship 'fast-tracked,' and he'd love 'five minutes' with the Commerce Secretary about his startup. He knew you before the motorcade, and he's never asked for anything. Until now.",
+    "source": "Chief of Staff",
+    "minDay": 250,
+    "choices": [
+      {
+        "id": "quiet_favor",
+        "label": "Make the quiet calls",
+        "detail": "Fast-track the fellowship, arrange the meeting",
+        "bold": true,
+        "effects": { "approval": -1, "stability": -3, "capital": 1 },
+        "result": "The daughter starts Monday; the Secretary takes the meeting. Your friend texts a photo from your dorm days captioned 'still the best.'",
+        "news": [
+          { "outlet": "beacon", "headline": "New Fellowship Class Announced at White House", "tone": "neutral" },
+          { "outlet": "buzz", "headline": "WHO'S THE NEW INTERN? SOURCES SAY 'CONNECTED' 👀", "tone": "neutral" },
+          { "outlet": "tribune", "headline": "Merit Is for People Without Roommates", "tone": "negative" }
+        ],
+        "social": [
+          { "handle": "@fellowshipreject", "text": "applied three times. cool cool cool.", "sentiment": "negative", "clout": "8k" }
+        ],
+        "advisor": "Loyalty is a currency, but the exchange rate to scandal is brutal.",
+        "setFlags": ["friend_favor"],
+        "echo": {
+          "delay": 4,
+          "title": "The Fellowship Files",
+          "text": "A transparency group publishes the fast-track email chain. The favor was small; the headline — 'RULES FOR THEE' — is not.",
+          "effects": { "approval": -6, "stability": -3, "legacy": -2 },
+          "tone": "negative"
+        }
+      },
+      {
+        "id": "by_the_book",
+        "label": "Tell him to apply like everyone",
+        "detail": "No calls, no meetings, one long apology over beers",
+        "effects": { "approval": 1, "stability": 3, "legacy": 2, "capital": -1 },
+        "result": "He goes quiet for a week, then sends a two-word text: 'Get it.' The fellowship office never knows how close it came.",
+        "news": [
+          { "outlet": "beacon", "headline": "White House Fellowship Selections Proceed on Schedule", "tone": "neutral" },
+          { "outlet": "tribune", "headline": "Imagine: A Process That's Just a Process", "tone": "positive" },
+          { "outlet": "ledger", "headline": "Friendship Tested, Standards Kept", "tone": "positive" }
+        ],
+        "social": [
+          { "handle": "@ethicsdaily", "text": "the scandals you never hear about are the system working", "sentiment": "positive", "clout": "22k" }
+        ],
+        "advisor": "You just paid full price for integrity. It compounds — slowly.",
+        "echo": {
+          "delay": 5,
+          "title": "The Best Man's Toast",
+          "text": "At an alumni gala, your roommate tells the story of the favor you refused — 'and that,' he says, 'is why I trust him with the country.' The clip travels.",
+          "effects": { "approval": 4, "legacy": 2 },
+          "tone": "positive"
+        }
+      }
+    ]
+  },
+  {
+    "id": "gen_personal_press_roast",
+    "category": "personal",
+    "title": "Roast Night at the Correspondents",
+    "briefing": "The correspondents' dinner is Saturday and your writers have delivered two speeches: a flame-thrower set torching every outlet that's torched you, and a self-deprecating act that ends with you toasting the free press. The Beacon's editor is seated at table one, arms already crossed. Which speech goes in the teleprompter?",
+    "source": "Speechwriter",
+    "minDay": 300,
+    "choices": [
+      {
+        "id": "roast_them",
+        "label": "Run the flame-thrower set",
+        "detail": "Every outlet gets a verse",
+        "bold": true,
+        "effects": { "approval": 5, "stability": -3, "world": -1, "legacy": -1 },
+        "result": "The ballroom gasps, your base makes highlight reels, and four bureau chiefs leave before dessert. The jokes were fair; the invoices arrive Monday.",
+        "news": [
+          { "outlet": "buzz", "headline": "PREZ TORCHES PRESS TO THEIR FACES 🔥🎤", "tone": "positive" },
+          { "outlet": "ledger", "headline": "Finally, Someone Says It", "tone": "positive" },
+          { "outlet": "tribune", "headline": "Punching Down From the Podium", "tone": "negative" },
+          { "outlet": "beacon", "headline": "President's Roast Draws Laughs, and Walkouts", "tone": "neutral" }
+        ],
+        "social": [
+          { "handle": "@clipfarmer", "text": "the 'thoughts and prayers for the editorial board' line?? unhinged. iconic.", "sentiment": "positive", "clout": "310k" }
+        ],
+        "advisor": "Great set. Now every correction you ever need will run above the fold.",
+        "echo": {
+          "delay": 2,
+          "title": "Frost in the Briefing Room",
+          "text": "Your next stumble gets wall-to-wall coverage and zero benefit of the doubt. The press corps' memory, it turns out, is professional-grade.",
+          "effects": { "approval": -3, "stability": -2 },
+          "tone": "negative"
+        }
+      },
+      {
+        "id": "self_deprecate",
+        "label": "Run the humble set",
+        "detail": "You're the punchline; the press gets the toast",
+        "effects": { "approval": -2, "stability": 3, "legacy": 2 },
+        "result": "You bomb two jokes on purpose and land the toast. The room warms; your base's group chats call it 'surrender with a salad fork.'",
+        "news": [
+          { "outlet": "beacon", "headline": "President Pokes Fun — Mostly at Himself", "tone": "positive" },
+          { "outlet": "ledger", "headline": "A Commander-in-Chief Should Not Grovel for Laughs", "tone": "negative" },
+          { "outlet": "tribune", "headline": "Self-Awareness Sighted in Washington", "tone": "positive" }
+        ],
+        "social": [
+          { "handle": "@basecamp_hq", "text": "we wanted a fighter, we got a toastmaster", "sentiment": "negative", "clout": "76k" }
+        ],
+        "advisor": "You banked goodwill with people who buy ink by the barrel. Cheap insurance."
+      },
+      {
+        "id": "skip_dinner",
+        "label": "Skip the dinner entirely",
+        "detail": "Visit a night-shift firehouse instead",
+        "effects": { "approval": 3, "stability": -2 },
+        "result": "The firehouse photos are gold; the empty head-table chair becomes the night's longest-running joke, told entirely at your expense.",
+        "news": [
+          { "outlet": "buzz", "headline": "PREZ GHOSTS THE PRESS — HANGS WITH FIREFIGHTERS 🚒", "tone": "positive" },
+          { "outlet": "beacon", "headline": "President Skips Correspondents' Dinner, First in Decades", "tone": "neutral" },
+          { "outlet": "tribune", "headline": "Dodging Scrutiny Isn't a Photo Op", "tone": "negative" }
+        ],
+        "social": [
+          { "handle": "@ladder37", "text": "he did dishes. actual dishes.", "sentiment": "positive", "clout": "41k" }
+        ],
+        "advisor": "You can dodge the roast, not the reckoning. They'll write about that empty chair for weeks."
+      }
+    ]
+  },
+  {
+    "id": "gen_personal_hot_mic",
+    "category": "personal",
+    "title": "Hot Mic, Cold Sweat",
+    "briefing": "After the summit photo-op, you leaned to an aide and said the allied Chancellor 'negotiates like a toddler with a treaty.' The mic was live. Eighty million views, a diplomatic 'request for clarification,' and a meme format that will outlive us all. The Chancellor's plane is still on your tarmac.",
+    "source": "Press Secretary",
+    "minDay": 0,
+    "weight": 2,
+    "choices": [
+      {
+        "id": "apologize_fast",
+        "label": "Apologize before the plane leaves",
+        "detail": "Personal call, then a public statement",
+        "effects": { "approval": -3, "stability": 1, "world": 4 },
+        "result": "The Chancellor accepts with a frosty 'we've all been tired.' At home, the meme accounts declare you no fun; abroad, the alliance exhales.",
+        "news": [
+          { "outlet": "beacon", "headline": "President Apologizes for Hot-Mic Remark", "tone": "neutral" },
+          { "outlet": "ledger", "headline": "Apologizing Abroad for Telling the Truth", "tone": "negative" },
+          { "outlet": "tribune", "headline": "Repairing Damage Is Not Weakness", "tone": "positive" },
+          { "outlet": "buzz", "headline": "SORRY NOT SORRY? PREZ SAYS SORRY 😬", "tone": "neutral" }
+        ],
+        "social": [
+          { "handle": "@memearchivist", "text": "RIP toddler treaty format, killed by diplomacy", "sentiment": "neutral", "clout": "120k" }
+        ],
+        "advisor": "Eat the joke, keep the ally. That's the whole job some days."
+      },
+      {
+        "id": "own_it",
+        "label": "Own it",
+        "detail": "'I said what everyone in that room was thinking'",
+        "bold": true,
+        "effects": { "approval": 6, "stability": -2, "world": -6 },
+        "result": "Your base prints t-shirts by dinnertime. The Chancellor's office cancels a joint appearance and refers all questions to 'the toddler desk.'",
+        "news": [
+          { "outlet": "buzz", "headline": "'I SAID WHAT I SAID' — PREZ GOES FULL SAVAGE 💅", "tone": "positive" },
+          { "outlet": "ledger", "headline": "Strength Abroad Starts With Candor", "tone": "positive" },
+          { "outlet": "beacon", "headline": "Allied Relations Strained After President Declines to Apologize", "tone": "negative" },
+          { "outlet": "tribune", "headline": "Alliances Are Not Content", "tone": "negative" }
+        ],
+        "social": [
+          { "handle": "@tshirtcannon", "text": "TODDLER WITH A TREATY merch live in 2 hours", "sentiment": "positive", "clout": "67k" }
+        ],
+        "advisor": "The shirts are funny. The trade summit next quarter will not be.",
+        "echo": {
+          "delay": 3,
+          "title": "The Toddler Tax",
+          "text": "At trade talks, the Chancellor's delegation slow-walks every clause. Officials deny it's personal, in a tone that confirms it's personal.",
+          "effects": { "economy": -4, "world": -3 },
+          "tone": "negative"
+        }
+      },
+      {
+        "id": "golf_gambit",
+        "label": "Invite the Chancellor to Camp David",
+        "detail": "No apology — just eighteen holes and a long dinner",
+        "cost": 1,
+        "effects": { "approval": -1, "stability": 1, "world": 2, "capital": -1 },
+        "result": "The Chancellor arrives stone-faced and leaves laughing at a joke nobody will repeat. Neither of you says the word 'toddler.' The photos do the diplomacy.",
+        "news": [
+          { "outlet": "beacon", "headline": "Leaders Meet at Camp David After Hot-Mic Flap", "tone": "neutral" },
+          { "outlet": "buzz", "headline": "GOLF DIPLOMACY!! WHO WON? (WE MAY NEVER KNOW) ⛳", "tone": "neutral" },
+          { "outlet": "tribune", "headline": "Must Be Nice to Golf Your Way Out of Apologies", "tone": "negative" }
+        ],
+        "social": [
+          { "handle": "@fairwayintel", "text": "the handshake at the 18th looked... genuinely warm? plot twist", "sentiment": "positive", "clout": "29k" }
+        ],
+        "advisor": "An apology says sorry once. A tee time says it for four hours."
+      }
+    ]
+  },
+  {
+    "id": "gen_personal_portrait_choice",
+    "category": "personal",
+    "title": "Paint Me Like History",
+    "briefing": "The Portrait Commission needs your answer by Friday: a Grand Manner oil — columns, ceremonial desk, gravitas by the gallon — or a piece by a controversial young painter whose work critics call 'genius or vandalism, possibly both.' Your presidential library architect is holding on line two with matching questions. What image gets to outlive you?",
+    "source": "White House Curator",
+    "minDay": 600,
+    "choices": [
+      {
+        "id": "grand_manner",
+        "label": "Commission the Grand Manner oil",
+        "detail": "Columns, flag, the classic gaze into history",
+        "effects": { "approval": -1, "stability": 1, "legacy": 3 },
+        "result": "The sitting takes six weeks and the result is undeniably presidential — reviewers use words like 'safe,' 'stately,' and 'screensaver.'",
+        "news": [
+          { "outlet": "ledger", "headline": "A Portrait Worthy of the Office", "tone": "positive" },
+          { "outlet": "beacon", "headline": "Presidential Portrait to Follow Traditional Style", "tone": "neutral" },
+          { "outlet": "buzz", "headline": "SNOOZE ART! PREZ PICKS BEIGE IMMORTALITY 🖼️😴", "tone": "negative" }
+        ],
+        "social": [
+          { "handle": "@artcritique101", "text": "it's fine. it's a portrait. history will scroll past it", "sentiment": "neutral", "clout": "15k" }
+        ],
+        "advisor": "Nobody ever lost the future by boring it. Probably."
+      },
+      {
+        "id": "modernist_gamble",
+        "label": "Hire the controversial modernist",
+        "detail": "Neon undertones, fractured perspective, no desk",
+        "cost": 1,
+        "bold": true,
+        "effects": { "approval": -3, "stability": -2, "world": 2, "legacy": 5 },
+        "result": "The unveiling divides the art world in the best possible way. Half the country sees a masterpiece; the other half sees a president mid-glitch.",
+        "news": [
+          { "outlet": "tribune", "headline": "Finally, a President Who Trusts Artists", "tone": "positive" },
+          { "outlet": "buzz", "headline": "IS HE MELTING?? PORTRAIT BREAKS THE INTERNET 🫠🎨", "tone": "neutral" },
+          { "outlet": "ledger", "headline": "The Office Deserves a Desk, Not a Fever Dream", "tone": "negative" },
+          { "outlet": "beacon", "headline": "Modernist Presidential Portrait Sparks National Debate", "tone": "neutral" }
+        ],
+        "social": [
+          { "handle": "@galleryghost", "text": "museums will fight over this in 50 years. screenshot me", "sentiment": "positive", "clout": "38k" }
+        ],
+        "advisor": "You just picked a fight with taste itself. Bold. Genuinely can't call it."
+      },
+      {
+        "id": "peoples_choice",
+        "label": "Put it to a public vote",
+        "detail": "Three finalists, one national poll",
+        "effects": { "approval": 4, "stability": -1, "legacy": -3 },
+        "result": "Democracy chooses a portrait of you giving a thumbs-up next to Biscuit. Turnout is spectacular. Art historians request asylum.",
+        "news": [
+          { "outlet": "buzz", "headline": "AMERICA VOTES: THUMBS-UP DOG PORTRAIT WINS 🐕👍", "tone": "positive" },
+          { "outlet": "beacon", "headline": "Public Selects Presidential Portrait in Online Vote", "tone": "neutral" },
+          { "outlet": "tribune", "headline": "Art by Poll Is How We Got This Timeline", "tone": "negative" }
+        ],
+        "social": [
+          { "handle": "@votedforthedog", "text": "I voted for the dog one and I'd do it again", "sentiment": "positive", "clout": "203k" }
+        ],
+        "advisor": "You gave the people what they wanted. History's a tougher audience."
+      }
+    ]
+  },
+  {
+    "id": "gen_personal_staff_burnout",
+    "category": "personal",
+    "title": "The West Wing Runs Empty",
+    "briefing": "Your deputy chief of staff fell asleep in the Situation Room — during a briefing he was giving. Three schedulers quit this week, and the speechwriting shop is communicating entirely in typos. The Chief of Staff proposes a mandatory rest rotation right in the middle of your biggest legislative push. Power through, or power down?",
+    "source": "Chief of Staff",
+    "minDay": 400,
+    "choices": [
+      {
+        "id": "rest_rotation",
+        "label": "Order the rest rotation",
+        "detail": "Mandatory leave, staggered coverage, no exceptions",
+        "cost": 1,
+        "effects": { "approval": -1, "economy": -2, "stability": 4, "legacy": 1 },
+        "result": "For two weeks the building runs at half-speed and nothing catches fire. The bill slips a month; the deputy chief sends a postcard that just says 'THANK YOU.'",
+        "news": [
+          { "outlet": "beacon", "headline": "White House Staff Placed on Rest Rotation", "tone": "neutral" },
+          { "outlet": "tribune", "headline": "Imagine: A Boss Who Lets Workers Sleep", "tone": "positive" },
+          { "outlet": "ledger", "headline": "The Agenda Doesn't Nap", "tone": "negative" }
+        ],
+        "social": [
+          { "handle": "@wonkexhausted", "text": "a government office admitting humans need rest? unprecedented", "sentiment": "positive", "clout": "27k" }
+        ],
+        "advisor": "We lose a month now or lose the whole senior staff by spring. Easy math, hard optics."
+      },
+      {
+        "id": "push_through",
+        "label": "Push through the window",
+        "detail": "Espresso bar, hazard bonuses, victory or collapse",
+        "bold": true,
+        "effects": { "approval": 1, "economy": 3, "stability": -4, "capital": 1 },
+        "result": "The bill clears its hurdle at 4 a.m. to bleary applause. In the hallway, a scheduler updates her résumé with the desk lamp off, so no one sees.",
+        "news": [
+          { "outlet": "ledger", "headline": "Relentless West Wing Delivers", "tone": "positive" },
+          { "outlet": "beacon", "headline": "Legislative Win Comes Amid Staff Strain Reports", "tone": "neutral" },
+          { "outlet": "tribune", "headline": "The Burnout Bill: Passed on Broken Backs", "tone": "negative" },
+          { "outlet": "buzz", "headline": "4AM VOTE!! WEST WING RUNNING ON FUMES AND ESPRESSO ☕😵", "tone": "neutral" }
+        ],
+        "social": [
+          { "handle": "@dcstafflife", "text": "'hazard bonus' for a desk job should tell you everything", "sentiment": "negative", "clout": "52k" }
+        ],
+        "advisor": "We got the win. Now watch who doesn't show up Monday.",
+        "echo": {
+          "delay": 3,
+          "title": "The Resignation Wave",
+          "text": "Five senior aides resign in one news cycle, each with a politely devastating letter. The rebuild costs you a quarter of momentum.",
+          "effects": { "approval": -3, "stability": -5 },
+          "tone": "negative"
+        }
+      }
+    ]
+  },
+  {
+    "id": "gen_personal_vacation_gambit",
+    "category": "personal",
+    "title": "The Empty Calendar Gambit",
+    "briefing": "It's the quietest news week of your term, and the First Family has a beach house on hold and a teenager threatening 'memoirs of a neglected childhood' if you cancel again. Aides warn that presidents on paddleboards become metaphors within the hour. The alternative: stay, and squeeze a policy blitz out of the silence.",
+    "source": "First Spouse",
+    "minDay": 150,
+    "choices": [
+      {
+        "id": "real_vacation",
+        "label": "Take the real vacation",
+        "detail": "One week, no press pool on the beach",
+        "effects": { "approval": -2, "stability": 2, "capital": 1 },
+        "result": "You fall off the paddleboard exactly once, and the photo is everywhere within minutes. Your kid teaches you a card game; you can't remember the last time you laughed like that.",
+        "news": [
+          { "outlet": "buzz", "headline": "SPLASH-IN-CHIEF!! PREZ WIPES OUT 🌊🏄", "tone": "neutral" },
+          { "outlet": "ledger", "headline": "Who's Minding the Store?", "tone": "negative" },
+          { "outlet": "beacon", "headline": "President Begins Week-Long Family Vacation", "tone": "neutral" },
+          { "outlet": "tribune", "headline": "Rest Is Labor Policy Too", "tone": "positive" }
+        ],
+        "social": [
+          { "handle": "@paddleboardpapa", "text": "respectfully, that wipeout form was terrible. welcome to the club", "sentiment": "positive", "clout": "19k" }
+        ],
+        "advisor": "The wipeout costs a point. The recharge might save the term. I'll take that trade."
+      },
+      {
+        "id": "working_vacation",
+        "label": "Take a working vacation",
+        "detail": "The beach house becomes the 'Coastal White House'",
+        "effects": { "approval": 1, "economy": 1, "stability": -1 },
+        "result": "You sign two orders in flip-flops and take a briefing under an umbrella. The family gets you at half-strength; the country gets a tan president. Nobody is fully satisfied.",
+        "news": [
+          { "outlet": "beacon", "headline": "President Balances Vacation With Official Duties", "tone": "neutral" },
+          { "outlet": "ledger", "headline": "Working Vacation Keeps Markets Calm", "tone": "positive" },
+          { "outlet": "buzz", "headline": "BRIEFINGS IN FLIP-FLOPS!! COASTAL WHITE HOUSE VIBES 🩴", "tone": "positive" }
+        ],
+        "social": [
+          { "handle": "@beachpoolreport", "text": "the motorcade has beach towels now. this is my life", "sentiment": "neutral", "clout": "11k" }
+        ],
+        "advisor": "Half a vacation rests half a president. Better than none, worse than either."
+      },
+      {
+        "id": "cancel_blitz",
+        "label": "Cancel and blitz",
+        "detail": "Surprise policy week while rivals sleep",
+        "effects": { "approval": 3, "economy": 1, "stability": -2 },
+        "result": "You dominate a dead news week and clear the backlog. The beach house deposit is gone, and dinner that Sunday is very, very quiet.",
+        "news": [
+          { "outlet": "beacon", "headline": "White House Launches Surprise Policy Week", "tone": "neutral" },
+          { "outlet": "ledger", "headline": "No Days Off: Executive Tempo Impresses", "tone": "positive" },
+          { "outlet": "tribune", "headline": "Even Presidents Need a Union Rep", "tone": "neutral" },
+          { "outlet": "buzz", "headline": "VACATION CANCELED!! WORKAHOLIC-IN-CHIEF STRIKES AGAIN 😤", "tone": "negative" }
+        ],
+        "social": [
+          { "handle": "@newsdesertweek", "text": "he really saw an empty calendar and said 'mine'", "sentiment": "positive", "clout": "44k" }
+        ],
+        "advisor": "You bought a great week. Check what it cost at the residence.",
+        "echo": {
+          "delay": 4,
+          "title": "Running on Empty",
+          "text": "Mid-press conference, you blank on your own signature initiative for nine seconds. The clip loops all weekend; the word 'exhausted' trends.",
+          "effects": { "approval": -4, "stability": -2 },
+          "tone": "negative"
+        }
+      }
+    ]
+  }
+]

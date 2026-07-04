@@ -1,0 +1,667 @@
+[
+  {
+    "id": "gen_long_seawall",
+    "category": "environment",
+    "title": "The Hundred-Year Wall",
+    "briefing": "The Army Corps slides a thirty-year blueprint across the Resolute Desk: a coastal barrier system shielding forty million people. The price tag has a comma most budgets never meet, and the ribbon-cutting would fall to a president not yet born. Storms, meanwhile, are not waiting. Do you pour the first concrete or the first cold water?",
+    "source": "Army Corps Director",
+    "minDay": 0,
+    "choices": [
+      {
+        "id": "break-ground",
+        "label": "Break ground on the wall",
+        "detail": "Thirty years, three coastlines, one signature",
+        "cost": 2,
+        "bold": true,
+        "effects": { "approval": 2, "economy": -4, "legacy": 2 },
+        "result": "Cranes rise over the first estuary. The bill rises faster, and every deficit hawk in the capital learns your name.",
+        "news": [
+          { "outlet": "beacon", "headline": "Coastal Barrier Project Breaks Ground After Decades of Study", "tone": "neutral" },
+          { "outlet": "ledger", "headline": "Trillion-Dollar Wall Built on Borrowed Money", "tone": "negative" },
+          { "outlet": "tribune", "headline": "Finally, a Government That Builds for the Grandchildren", "tone": "positive" },
+          { "outlet": "buzz", "headline": "POTUS POURS BIGGEST CONCRETE IN HISTORY 🌊🧱", "tone": "positive" }
+        ],
+        "social": [
+          { "handle": "@tidewatcher", "text": "My town has flooded 3 times in 5 years. Today I cried at a groundbreaking.", "sentiment": "positive", "clout": "12k" },
+          { "handle": "@deficit_dan", "text": "Your great-grandkids will still be paying for this photo op.", "sentiment": "negative", "clout": "47k" }
+        ],
+        "advisor": "Nobody thanks you for the storm that doesn't happen — until one doesn't.",
+        "echo": {
+          "delay": 5,
+          "title": "The Wall Holds",
+          "text": "A category-four storm slams the coast; the finished pilot sections hold and the evacuated districts stay dry. Engineers become folk heroes, and so, briefly, do you.",
+          "effects": { "approval": 6, "stability": 5, "legacy": 4 },
+          "tone": "positive"
+        },
+        "setFlags": ["seawall_built"]
+      },
+      {
+        "id": "study-more",
+        "label": "Commission another decade of study",
+        "detail": "Prudence is cheaper than concrete",
+        "effects": { "economy": 2, "approval": -2 },
+        "result": "The blueprint goes back in the drawer with a fresh ribbon of caveats. The bond markets exhale; the coastal mayors do not.",
+        "news": [
+          { "outlet": "beacon", "headline": "White House Orders Further Review of Coastal Barrier Plan", "tone": "neutral" },
+          { "outlet": "ledger", "headline": "Fiscal Sanity Prevails on Seawall Scheme", "tone": "positive" },
+          { "outlet": "tribune", "headline": "Coasts Told to Tread Water for Another Decade", "tone": "negative" },
+          { "outlet": "buzz", "headline": "WALL? WHAT WALL? 📋💤", "tone": "negative" }
+        ],
+        "social": [
+          { "handle": "@mayor_delmar", "text": "We don't need another study. We have the data. It's in our basements.", "sentiment": "negative", "clout": "22k" }
+        ],
+        "advisor": "We saved the money. Pray we never learn what it was for.",
+        "echo": {
+          "delay": 4,
+          "title": "The Surge Arrives",
+          "text": "A storm surge swallows the very shoreline the shelved barrier would have shielded. Your signature sits on the study that studied it.",
+          "effects": { "stability": -6, "approval": -5, "economy": -4 },
+          "tone": "negative"
+        }
+      },
+      {
+        "id": "local-levees",
+        "label": "Fund local levees instead",
+        "detail": "A thousand small walls, no grand one",
+        "effects": { "approval": 1, "economy": -1, "stability": 1 },
+        "result": "Governors cut ribbons on levees you paid for. The grand blueprint gathers dust, but sandbags become infrastructure.",
+        "news": [
+          { "outlet": "beacon", "headline": "Administration Opts for Local Flood Grants Over Megaproject", "tone": "neutral" },
+          { "outlet": "ledger", "headline": "Sensible, Scaled, Solvent", "tone": "positive" },
+          { "outlet": "tribune", "headline": "Patchwork Protection for a Rising Ocean", "tone": "negative" },
+          { "outlet": "buzz", "headline": "MINI WALLS FOR EVERYONE 🧱🤏", "tone": "neutral" }
+        ],
+        "social": [
+          { "handle": "@floodplain_phd", "text": "Levees protect towns. Systems protect coastlines. We bought towns.", "sentiment": "neutral", "clout": "9k" }
+        ],
+        "advisor": "Every governor owes you one. Whether the ocean respects IOUs is another matter.",
+        "echo": {
+          "delay": 5,
+          "title": "Patchwork Report Card",
+          "text": "The levees save three towns and fail two. The ledger of gratitude and grief splits your coalition down the waterline.",
+          "effects": { "approval": -2, "stability": -3 },
+          "tone": "neutral"
+        }
+      }
+    ]
+  },
+  {
+    "id": "gen_long_bankpick",
+    "category": "economy",
+    "title": "The Chair Goes Empty",
+    "briefing": "The central bank chair retires with a handshake and a warning about 'political weather.' Your party wants Marcus Vale, a loyal booster who promises cheap money through the midterms. The shortlist's other name is Dr. Ingrid Halloran, a hawk who once called your budget 'a bedtime story.' Whose hands get the printing press?",
+    "source": "Treasury Secretary",
+    "minDay": 180,
+    "weight": 2,
+    "choices": [
+      {
+        "id": "loyalist",
+        "label": "Appoint the loyal booster",
+        "detail": "Low rates, high fives",
+        "effects": { "approval": 3, "economy": 2, "capital": 1 },
+        "result": "Vale is confirmed on party lines and cuts rates by Friday. Markets pop, champagne corks likewise.",
+        "news": [
+          { "outlet": "beacon", "headline": "President Taps Ally Vale to Lead Central Bank", "tone": "neutral" },
+          { "outlet": "ledger", "headline": "Markets Cheer a Chair Who Gets It", "tone": "positive" },
+          { "outlet": "tribune", "headline": "The Printing Press Just Became a Campaign Office", "tone": "negative" },
+          { "outlet": "buzz", "headline": "MONEY MAN VALE MAKES IT RAIN 💸🎉", "tone": "positive" }
+        ],
+        "social": [
+          { "handle": "@punchbowl_pete", "text": "Rate cuts into an expansion. What could possibly go wrong.", "sentiment": "negative", "clout": "61k" },
+          { "handle": "@mainstreetmama", "text": "My loan payment dropped $80. I don't care about the theory.", "sentiment": "positive" }
+        ],
+        "advisor": "Cheap money buys loud applause. The bill arrives quietly, later, with interest.",
+        "echo": {
+          "delay": 5,
+          "title": "The Vale Inflation",
+          "text": "Prices rip loose from their moorings — groceries, rents, everything. Vale hikes in a panic, and the whiplash carries your name on it.",
+          "effects": { "economy": -8, "approval": -6, "stability": -3 },
+          "tone": "negative"
+        }
+      },
+      {
+        "id": "expert",
+        "label": "Appoint the hawkish expert",
+        "detail": "She will not return your calls",
+        "effects": { "approval": -3, "economy": -2, "capital": -1 },
+        "result": "Halloran is confirmed with grudging bipartisan respect and immediately raises rates. Your party calls it betrayal; she calls it Tuesday.",
+        "news": [
+          { "outlet": "beacon", "headline": "Halloran Confirmed as Central Bank Chief, Signals Higher Rates", "tone": "neutral" },
+          { "outlet": "ledger", "headline": "A Hawk in the Nest — Borrowers Beware", "tone": "negative" },
+          { "outlet": "tribune", "headline": "Independence Wins One for Once", "tone": "positive" },
+          { "outlet": "buzz", "headline": "ICE QUEEN OF INTEREST RATES FREEZES YOUR MORTGAGE 🥶🏦", "tone": "negative" }
+        ],
+        "social": [
+          { "handle": "@smallbizsam", "text": "Just watched my expansion loan die on live TV.", "sentiment": "negative", "clout": "18k" }
+        ],
+        "advisor": "You just hired someone to tell you no for a decade. That was the point.",
+        "echo": {
+          "delay": 5,
+          "title": "The Halloran Dividend",
+          "text": "Inflation lands soft as a feather while rivals abroad battle price spirals. Economists coin the phrase 'the Halloran dividend,' and history spells your name right.",
+          "effects": { "economy": 7, "approval": 4, "world": 2, "legacy": 3 },
+          "tone": "positive"
+        }
+      }
+    ]
+  },
+  {
+    "id": "gen_long_chalkdust",
+    "category": "domestic",
+    "title": "The Forty-Year Report Card",
+    "briefing": "National test scores just posted their worst decade on record, and every fix on your desk is either slow or shiny. The real overhaul — teacher pay, curriculum, tutoring — costs money and shows up in scores long after you've left office. The shiny option ships a tablet to every backpack by fall. Which gets funded?",
+    "source": "Education Secretary",
+    "minDay": 0,
+    "choices": [
+      {
+        "id": "deep-overhaul",
+        "label": "Fund the deep overhaul",
+        "detail": "Pay teachers, fix curriculum, wait a decade",
+        "cost": 2,
+        "effects": { "approval": -3, "economy": -2, "legacy": 2 },
+        "result": "The bill passes ugly, funded by a payroll tweak nobody claps for. The teachers' union frames your signature; the tabloids frame your tax.",
+        "news": [
+          { "outlet": "beacon", "headline": "Sweeping Education Overhaul Signed Into Law", "tone": "neutral" },
+          { "outlet": "ledger", "headline": "A Tax Hike Dressed in Chalk Dust", "tone": "negative" },
+          { "outlet": "tribune", "headline": "Teachers Finally Paid Like Professionals", "tone": "positive" },
+          { "outlet": "buzz", "headline": "POTUS RAISES TAXES FOR HOMEWORK 📚😤", "tone": "negative" }
+        ],
+        "social": [
+          { "handle": "@mrs_kowalski_3rd", "text": "22 years teaching. First raise that beat inflation. I'm framing the pay stub.", "sentiment": "positive", "clout": "31k" }
+        ],
+        "advisor": "This pays off after your portrait's hung. Legacy is a long trade, sir.",
+        "echo": {
+          "delay": 6,
+          "title": "The Scores Come In",
+          "text": "A decade of data drops: reading and math up across every district that took the money. The overhaul is renamed for you, which is the capital's highest form of apology.",
+          "effects": { "approval": 6, "economy": 4, "legacy": 5 },
+          "tone": "positive"
+        }
+      },
+      {
+        "id": "tablet-blitz",
+        "label": "Ship a tablet to every student",
+        "detail": "Visible, viral, by fall semester",
+        "effects": { "approval": 4, "economy": -1 },
+        "result": "The unboxing videos are a genre by October. Somewhere, a warehouse of chargers goes missing, but the photo ops are luminous.",
+        "news": [
+          { "outlet": "beacon", "headline": "Administration Launches Universal Student Tablet Program", "tone": "neutral" },
+          { "outlet": "ledger", "headline": "Gadget Giveaway Skips the Hard Questions", "tone": "negative" },
+          { "outlet": "tribune", "headline": "Devices Are Not Teachers", "tone": "negative" },
+          { "outlet": "buzz", "headline": "FREE TABLETS FOR EVERY KID!! 🎁📱", "tone": "positive" }
+        ],
+        "social": [
+          { "handle": "@unboxdad", "text": "My daughter got a tablet from the PRESIDENT. She used it to watch slime videos. 10/10.", "sentiment": "positive", "clout": "8k" }
+        ],
+        "advisor": "We bought a great semester of headlines. Reading scores were not included in the box.",
+        "echo": {
+          "delay": 5,
+          "title": "The Drawer Full of Tablets",
+          "text": "An inspector general finds scores flat, devices idle, and a procurement contract that smells like a donor's cologne. The word 'boondoggle' trends with your face on it.",
+          "effects": { "approval": -6, "economy": -2, "legacy": -3 },
+          "tone": "negative"
+        }
+      }
+    ]
+  },
+  {
+    "id": "gen_long_pension",
+    "category": "economy",
+    "title": "The Actuarial Time Bomb",
+    "briefing": "A binder lands on your desk with a red tab: the national pension fund goes insolvent in twelve years, right about when today's fifty-somethings need it most. Fixing it now means asking voters to work two years longer. Ignoring it means the math becomes someone else's massacre — possibly yours, in the history books. The binder does not blink.",
+    "source": "Budget Director",
+    "minDay": 300,
+    "choices": [
+      {
+        "id": "fix-now",
+        "label": "Raise the retirement age now",
+        "detail": "Two years, phased in, politically radioactive",
+        "cost": 2,
+        "bold": true,
+        "effects": { "approval": -4, "stability": -2, "economy": 2 },
+        "result": "The bill passes by one vote and your approval drops like a pension check in a headwind. Actuaries, a quiet people, weep with joy.",
+        "news": [
+          { "outlet": "beacon", "headline": "Retirement Age to Rise Two Years Under Solvency Act", "tone": "neutral" },
+          { "outlet": "ledger", "headline": "Finally, a President Who Can Do Arithmetic", "tone": "positive" },
+          { "outlet": "tribune", "headline": "Workers Handed the Bill for Decades of Neglect", "tone": "negative" },
+          { "outlet": "buzz", "headline": "WORK TIL YOU DROP, SAYS POTUS ⚰️💼", "tone": "negative" }
+        ],
+        "social": [
+          { "handle": "@weldergary", "text": "I'm 58 with two bad knees and now two more years. Thanks for nothing.", "sentiment": "negative", "clout": "44k" }
+        ],
+        "advisor": "You just spent a mountain of capital on people who won't thank you for twenty years. Correct call.",
+        "echo": {
+          "delay": 6,
+          "title": "The Upgrade",
+          "text": "Rating agencies restore the nation's gold-plated credit, citing pension solvency 'achieved against political gravity.' Borrowing costs fall for everyone with a mortgage — and one president gets a footnote in the textbooks.",
+          "effects": { "economy": 7, "approval": 3, "legacy": 4 },
+          "tone": "positive"
+        },
+        "setFlags": ["pension_fixed"]
+      },
+      {
+        "id": "paper-over",
+        "label": "Paper over it with bonds",
+        "detail": "Solvent through the next election, guaranteed",
+        "effects": { "approval": 2, "economy": 1 },
+        "result": "A quiet bond issue plugs the hole through the horizon that matters — the electoral one. The red-tabbed binder returns to its shelf, ticking.",
+        "news": [
+          { "outlet": "beacon", "headline": "Treasury Issues Bonds to Shore Up Pension Fund", "tone": "neutral" },
+          { "outlet": "ledger", "headline": "Borrowing From the Kids to Pay the Grandparents", "tone": "negative" },
+          { "outlet": "tribune", "headline": "Benefits Protected — For Now", "tone": "positive" },
+          { "outlet": "buzz", "headline": "PENSION PANIC POSTPONED 🎉📉", "tone": "neutral" }
+        ],
+        "social": [
+          { "handle": "@actuary_al", "text": "Ah yes, the 'future president's problem' asset class.", "sentiment": "negative", "clout": "15k" }
+        ],
+        "advisor": "We bought time with money we don't have. It's the capital's oldest recipe.",
+        "echo": {
+          "delay": 5,
+          "title": "The Downgrade",
+          "text": "A rating agency reads the fine print and downgrades the debt. Emergency benefit trims pass at 2 a.m., and every senior in the country knows whose signature bought the delay.",
+          "effects": { "economy": -7, "stability": -5, "approval": -4 },
+          "tone": "negative"
+        }
+      }
+    ]
+  },
+  {
+    "id": "gen_long_fusion",
+    "category": "tech",
+    "title": "A Star in a Bottle",
+    "briefing": "Your science advisor arrives vibrating like a tuning fork: the national labs believe fusion ignition at scale is one decade of steady funding away — and rival powers are hiring your physicists at triple pay. The money would be invisible to voters, buried in a line item nobody reads. Solar subsidies, by contrast, photograph beautifully. Where does the watt go?",
+    "source": "Science Advisor",
+    "minDay": 0,
+    "choices": [
+      {
+        "id": "fund-fusion",
+        "label": "Quietly fund the fusion labs",
+        "detail": "A decade-long bet in a line item",
+        "cost": 1,
+        "effects": { "economy": -2, "approval": -1, "legacy": 2 },
+        "result": "The appropriation slips through in a footnote. One blogger notices; the physicists stop returning headhunters' calls.",
+        "news": [
+          { "outlet": "beacon", "headline": "Budget Includes Decade-Long Fusion Research Commitment", "tone": "neutral" },
+          { "outlet": "ledger", "headline": "Betting Billions on a Bottle of Sunshine", "tone": "negative" },
+          { "outlet": "tribune", "headline": "Public Science Gets Its Moonshot", "tone": "positive" },
+          { "outlet": "buzz", "headline": "NERD MONEY?? WHERE'S OUR MONEY 🤓🔬", "tone": "negative" }
+        ],
+        "social": [
+          { "handle": "@plasma_queen", "text": "Ten years of funding certainty. You don't know what you just did for us. Actually, in ten years, you will.", "sentiment": "positive", "clout": "7k" }
+        ],
+        "advisor": "If this works, you're a founder of the next century. If not, nobody will even remember to blame you.",
+        "echo": {
+          "delay": 6,
+          "title": "Ignition",
+          "text": "The lab holds a burning plasma for a full minute — net power, repeatable, real. The world calls it the century's Kitty Hawk, and the funding footnote becomes the most-read line item in history.",
+          "effects": { "world": 6, "economy": 5, "approval": 4, "legacy": 6 },
+          "tone": "positive"
+        },
+        "setFlags": ["fusion_funded"]
+      },
+      {
+        "id": "solar-splash",
+        "label": "Pour it into visible solar subsidies",
+        "detail": "Panels on roofs before the next election",
+        "effects": { "approval": 3, "economy": 1, "world": 1 },
+        "result": "Rooftops shimmer from the campaign plane window. Install trucks can't be booked till spring, and neither can your advance team.",
+        "news": [
+          { "outlet": "beacon", "headline": "Solar Subsidy Expansion Drives Record Installations", "tone": "neutral" },
+          { "outlet": "ledger", "headline": "Subsidy Sugar High for a Pet Industry", "tone": "negative" },
+          { "outlet": "tribune", "headline": "Clean Energy for the Many, Finally", "tone": "positive" },
+          { "outlet": "buzz", "headline": "SUN KING PRESIDENT ☀️👑", "tone": "positive" }
+        ],
+        "social": [
+          { "handle": "@roofguy_reno", "text": "Booked solid for 8 months. Hiring six crews. God bless the line item.", "sentiment": "positive", "clout": "12k" }
+        ],
+        "advisor": "Lovely optics. Just remember subsidies are a tide — and tides go back out.",
+        "echo": {
+          "delay": 4,
+          "title": "The Subsidy Cliff",
+          "text": "The subsidies lapse on schedule and the install industry folds like a beach chair — layoffs, bankruptcies, and a documentary. Meanwhile a rival power announces a fusion milestone using three of your former physicists.",
+          "effects": { "economy": -5, "approval": -4, "world": -4 },
+          "tone": "negative"
+        }
+      },
+      {
+        "id": "cut-both",
+        "label": "Fund neither, bank the savings",
+        "detail": "The deficit is also a legacy",
+        "effects": { "economy": 2, "approval": -2 },
+        "result": "The budget line dies quietly. The physicists' farewell party is catered, foreign, and extremely well-funded.",
+        "news": [
+          { "outlet": "beacon", "headline": "Energy Research Programs Cut in Budget Deal", "tone": "neutral" },
+          { "outlet": "ledger", "headline": "A Rare Outbreak of Spending Restraint", "tone": "positive" },
+          { "outlet": "tribune", "headline": "Science Sacrificed on the Altar of Austerity", "tone": "negative" },
+          { "outlet": "buzz", "headline": "POTUS TO SUN: NOT INTERESTED 🌞🚫", "tone": "negative" }
+        ],
+        "social": [
+          { "handle": "@grad_student_greg", "text": "Lab defunded. Beijing offer letter arrived the same afternoon. Coincidence is efficient.", "sentiment": "negative", "clout": "5k" }
+        ],
+        "advisor": "Cheapest option on the menu today. Menus change.",
+        "echo": {
+          "delay": 5,
+          "title": "Someone Else's Star",
+          "text": "A rival bloc announces sustained fusion ignition to a stunned world — powered, the credits note, by researchers you defunded. The century's biggest ribbon gets cut in someone else's language.",
+          "effects": { "world": -7, "approval": -3, "legacy": -4 },
+          "tone": "negative"
+        }
+      }
+    ]
+  },
+  {
+    "id": "gen_long_census",
+    "category": "domestic",
+    "title": "The Decennial Knife Fight",
+    "briefing": "The census is due, and everyone in the capital understands that whoever counts decides. The modern count — statisticians, door-knockers, satellite sampling — is expensive and slow. The cheap count misses cities and hollows and everyone without a mailbox. And your party's map-drawers have kindly offered to 'help interpret' the results. The pencil is in your hand.",
+    "source": "Commerce Secretary",
+    "minDay": 450,
+    "choices": [
+      {
+        "id": "gold-count",
+        "label": "Fund the gold-standard count",
+        "detail": "Every soul, every hollow, every high-rise",
+        "cost": 1,
+        "effects": { "economy": -2, "approval": -1, "stability": 1 },
+        "result": "An army of enumerators fans out with clipboards and satellite maps. It's over budget, behind schedule, and defensible in any court in the land.",
+        "news": [
+          { "outlet": "beacon", "headline": "Census Bureau Receives Full Funding for Modern Count", "tone": "neutral" },
+          { "outlet": "ledger", "headline": "A Billion-Dollar Headcount", "tone": "negative" },
+          { "outlet": "tribune", "headline": "Everyone Counts, For Once Literally", "tone": "positive" },
+          { "outlet": "buzz", "headline": "GOVT KNOWS WHERE YOU LIVE (OFFICIALLY) 🏠📋", "tone": "neutral" }
+        ],
+        "social": [
+          { "handle": "@demographer_dee", "text": "A clean count is the operating system of democracy. We just got a stable release.", "sentiment": "positive", "clout": "6k" }
+        ],
+        "advisor": "Nobody campaigns on data integrity. They just lose without it.",
+        "echo": {
+          "delay": 5,
+          "title": "The Maps That Held",
+          "text": "Redistricting season arrives and — miracle — the maps survive every court challenge, because the numbers beneath them are unimpeachable. The knife fight everyone predicted becomes a mildly tense seminar.",
+          "effects": { "stability": 6, "approval": 3, "legacy": 2 },
+          "tone": "positive"
+        }
+      },
+      {
+        "id": "cheap-count",
+        "label": "Run the bargain headcount",
+        "detail": "Mailers, a website, and hope",
+        "effects": { "economy": 2, "approval": 1 },
+        "result": "The count comes in under budget and on time, with asterisks the size of counties. The undercounted notice at the speed of lawyers.",
+        "news": [
+          { "outlet": "beacon", "headline": "Streamlined Census Concludes Amid Accuracy Concerns", "tone": "neutral" },
+          { "outlet": "ledger", "headline": "Efficient Count Ends the Boondoggle Era", "tone": "positive" },
+          { "outlet": "tribune", "headline": "Millions Erased by a Budget Line", "tone": "negative" },
+          { "outlet": "buzz", "headline": "CENSUS DONE EARLY, EXPERTS SCREAMING 📉👻", "tone": "negative" }
+        ],
+        "social": [
+          { "handle": "@countmein_coalition", "text": "Our block got zero knocks. Zero. We exist, for the record.", "sentiment": "negative", "clout": "19k" }
+        ],
+        "advisor": "We saved a billion dollars and mortgaged the next decade's math.",
+        "echo": {
+          "delay": 5,
+          "title": "The Undercount Unravels",
+          "text": "Courts toss maps in five states after the undercount is proven in discovery. Redistricting descends into a constitutional food fight with your budget memo as Exhibit A.",
+          "effects": { "stability": -7, "approval": -4, "capital": -2 },
+          "tone": "negative"
+        }
+      },
+      {
+        "id": "map-help",
+        "label": "Let party cartographers 'advise'",
+        "detail": "Just a little thumb on the scale",
+        "bold": true,
+        "effects": { "approval": 2, "stability": -2, "capital": 2 },
+        "result": "The maps that emerge are works of abstract art — districts shaped like sea horses, all of them somehow yours. The party is delighted. The lawsuits are immediate.",
+        "news": [
+          { "outlet": "beacon", "headline": "Watchdogs Question Partisan Role in Census Analysis", "tone": "negative" },
+          { "outlet": "ledger", "headline": "Hardball Is Legal, Losers Cry Foul", "tone": "positive" },
+          { "outlet": "tribune", "headline": "Democracy, Gerrymandered in Broad Daylight", "tone": "negative" },
+          { "outlet": "buzz", "headline": "THIS DISTRICT LOOKS LIKE A SEAHORSE?? 🐴🌊", "tone": "negative" }
+        ],
+        "social": [
+          { "handle": "@maps_r_us", "text": "District 14 is 340 miles long and 2 blocks wide. A masterpiece of something.", "sentiment": "negative", "clout": "28k" }
+        ],
+        "advisor": "The party owes you everything now. Courts, however, keep their own ledgers.",
+        "echo": {
+          "delay": 4,
+          "title": "The Seahorse Verdict",
+          "text": "The high court strikes the maps nine to nothing and names the White House memo in the opinion. 'Seahorse-gate' enters the language, and your party's gains evaporate with prejudice.",
+          "effects": { "approval": -6, "stability": -4, "legacy": -4 },
+          "tone": "negative"
+        }
+      }
+    ]
+  },
+  {
+    "id": "gen_long_superbug",
+    "category": "tech",
+    "title": "The Slow Pandemic",
+    "briefing": "The Surgeon General briefs you on a threat with no press cycle: bacteria are out-evolving our antibiotics, and the drug pipeline is dry because cures are less profitable than maintenance. A national program — new drug prizes, stewardship rules, surveillance labs — costs real money to prevent a catastrophe on nobody's calendar. Can you stand paying for an invisible disaster?",
+    "source": "Surgeon General",
+    "minDay": 200,
+    "choices": [
+      {
+        "id": "launch-program",
+        "label": "Launch the resistance moonshot",
+        "detail": "Prize funds, lab networks, stewardship rules",
+        "cost": 1,
+        "effects": { "economy": -2, "approval": -1, "world": 1 },
+        "result": "The program launches to polite applause and zero fireworks. Three shuttered antibiotic labs reopen; the news cycle does not.",
+        "news": [
+          { "outlet": "beacon", "headline": "National Antimicrobial Resistance Initiative Launched", "tone": "neutral" },
+          { "outlet": "ledger", "headline": "Big Spend on a Maybe-Someday Menace", "tone": "negative" },
+          { "outlet": "tribune", "headline": "Public Health Wins One Against the Market", "tone": "positive" },
+          { "outlet": "buzz", "headline": "PREZ FIGHTS INVISIBLE GERMS 🦠🥊", "tone": "neutral" }
+        ],
+        "social": [
+          { "handle": "@id_doc_priya", "text": "Reopened the pipeline. Most important boring thing this decade.", "sentiment": "positive", "clout": "4k" }
+        ],
+        "advisor": "You just bought insurance the voters don't know they own. Someday they'll find the receipt.",
+        "echo": {
+          "delay": 6,
+          "title": "The Outbreak That Wasn't",
+          "text": "A resistant strain tears through hospitals on two continents — and stalls at your borders, smothered by the surveillance net and a shelf of new drugs. The world asks how; the answer has your signature on it.",
+          "effects": { "world": 6, "approval": 5, "stability": 3, "legacy": 3 },
+          "tone": "positive"
+        },
+        "setFlags": ["amr_program"]
+      },
+      {
+        "id": "market-fix",
+        "label": "Trust market incentives",
+        "detail": "A tax nudge and a stern press release",
+        "effects": { "approval": 2, "economy": 2 },
+        "result": "Pharma issues grateful statements and a voluntary pledge with the structural integrity of wet cardboard. The savings look great in this quarter's budget.",
+        "news": [
+          { "outlet": "beacon", "headline": "Administration Opts for Voluntary Approach on Antibiotic Pipeline", "tone": "neutral" },
+          { "outlet": "ledger", "headline": "Market Solutions Over Bureaucratic Empires", "tone": "positive" },
+          { "outlet": "tribune", "headline": "A Pinky Promise Against a Pathogen", "tone": "negative" },
+          { "outlet": "buzz", "headline": "GERMS VS. VIBES: WHO WINS? 🦠🤝", "tone": "negative" }
+        ],
+        "social": [
+          { "handle": "@microbe_mike", "text": "Voluntary pledges have literally never restarted a drug pipeline but sure.", "sentiment": "negative", "clout": "9k" }
+        ],
+        "advisor": "The cheapest option, as long as evolution takes the decade off.",
+        "echo": {
+          "delay": 5,
+          "title": "Strain Omega",
+          "text": "A pan-resistant strain surfaces in three domestic hospitals with nothing on the shelf to stop it. Wards close, elective surgery halts, and the old briefing memo leaks with your 'no' in the margin.",
+          "effects": { "stability": -6, "approval": -5, "world": -3 },
+          "tone": "negative"
+        }
+      }
+    ]
+  },
+  {
+    "id": "gen_long_reserve",
+    "category": "economy",
+    "title": "Sell at the Peak?",
+    "briefing": "Oil has hit an all-time high, and your Energy Secretary can barely contain herself: selling half the strategic reserve now would book a legendary profit, drop pump prices before the polls, and balance an ugly quarter. The reserve exists, of course, for the crisis nobody schedules. The market is ringing a bell, and they say nobody rings a bell at the top.",
+    "source": "Energy Secretary",
+    "minDay": 600,
+    "weight": 2,
+    "choices": [
+      {
+        "id": "sell-half",
+        "label": "Sell half the reserve",
+        "detail": "Book the profit, drop pump prices",
+        "bold": true,
+        "effects": { "economy": 4, "approval": 3, "world": -1 },
+        "result": "The auction nets a windfall and gas falls forty cents by Friday. Traders toast you by name; the empty salt caverns echo.",
+        "news": [
+          { "outlet": "beacon", "headline": "Government Sells Half of Strategic Reserve at Record Prices", "tone": "neutral" },
+          { "outlet": "ledger", "headline": "A Masterful Trade — Buy Low, Sell High, Govern Well", "tone": "positive" },
+          { "outlet": "tribune", "headline": "Selling the Umbrella Because It's Sunny", "tone": "negative" },
+          { "outlet": "buzz", "headline": "POTUS TIMES THE MARKET, NAILS IT 📈🛢️", "tone": "positive" }
+        ],
+        "social": [
+          { "handle": "@gaspricegary", "text": "Filled up for $38. FRAMED THE RECEIPT.", "sentiment": "positive", "clout": "26k" },
+          { "handle": "@grid_prepper", "text": "Reserves exist for the day you can't buy at any price. Signed, history.", "sentiment": "negative", "clout": "11k" }
+        ],
+        "advisor": "It's a brilliant trade right up until the day it's a famous one.",
+        "echo": {
+          "delay": 4,
+          "title": "The Caverns Echo",
+          "text": "A strait closes half a world away and oil triples in a week — with the reserve at half strength, you're rationing releases and taking calls from allies you can't help. The 'trade of the decade' becomes a case study with your name in the title.",
+          "effects": { "economy": -7, "stability": -5, "approval": -5 },
+          "tone": "negative"
+        }
+      },
+      {
+        "id": "hold-reserve",
+        "label": "Hold the reserve",
+        "detail": "Insurance is for keeping",
+        "effects": { "approval": -3, "economy": -2 },
+        "result": "Pump prices stay ugly and the windfall goes unbooked. Columnists call you the president who left billions in a salt cavern; you call it a reserve.",
+        "news": [
+          { "outlet": "beacon", "headline": "White House Declines to Tap Strategic Reserve Despite Record Prices", "tone": "neutral" },
+          { "outlet": "ledger", "headline": "Billions Left on the Table", "tone": "negative" },
+          { "outlet": "tribune", "headline": "Restraint at the Top, Pain at the Pump", "tone": "neutral" },
+          { "outlet": "buzz", "headline": "PREZ HOARDS OIL WHILE WE PAY $6 ⛽😭", "tone": "negative" }
+        ],
+        "social": [
+          { "handle": "@commuter_carla", "text": "$96 to fill my van. The reserve better be saving itself for something spectacular.", "sentiment": "negative", "clout": "14k" }
+        ],
+        "advisor": "You just paid the premium on a policy everyone hopes expires worthless.",
+        "echo": {
+          "delay": 5,
+          "title": "The Day the Strait Closed",
+          "text": "A blockade chokes global supply and prices go vertical — and you open the full reserve like a dam, holding the economy steady while rivals ration. The salt caverns turn out to be the best trade never made.",
+          "effects": { "stability": 6, "approval": 6, "world": 4 },
+          "tone": "positive"
+        }
+      },
+      {
+        "id": "sell-sliver",
+        "label": "Sell a sliver, bank the rest",
+        "detail": "Take some profit, keep the insurance",
+        "effects": { "approval": 1, "economy": 2 },
+        "result": "A modest auction shaves a dime off pump prices and pockets a tidy sum. Nobody is thrilled, nobody is furious — the rarest weather in the capital.",
+        "news": [
+          { "outlet": "beacon", "headline": "Partial Reserve Sale Nets Windfall, Keeps Stockpile Intact", "tone": "neutral" },
+          { "outlet": "ledger", "headline": "Half-Measures From the Oil Vault", "tone": "neutral" },
+          { "outlet": "tribune", "headline": "A Hedge, Not a Policy", "tone": "neutral" },
+          { "outlet": "buzz", "headline": "PREZ SELLS *SOME* OIL, CROWD SHRUGS 🤷🛢️", "tone": "neutral" }
+        ],
+        "social": [
+          { "handle": "@market_marge", "text": "Textbook risk management. Zero content for my newsletter. Well played, I guess.", "sentiment": "neutral", "clout": "5k" }
+        ],
+        "advisor": "Nobody writes ballads about the sensibly hedged. They do keep getting re-elected, though.",
+        "echo": {
+          "delay": 4,
+          "title": "The Hedge Holds",
+          "text": "When prices finally break, the modest sale looks shrewd and the intact reserve looks prudent. The history books allot you one approving sentence, which is more than most get.",
+          "effects": { "economy": 3, "stability": 2 },
+          "tone": "neutral"
+        }
+      }
+    ]
+  },
+  {
+    "id": "gen_long_service",
+    "category": "domestic",
+    "title": "A Year for the Flag",
+    "briefing": "Over a rare quiet dinner, the First Spouse slides you a one-page plan that has been gathering champions: a national service year — young people rebuilding trails, tutoring kids, staffing clinics, side by side across every dividing line in the country. Voluntary with stipends costs money; mandatory costs an uproar. 'The country doesn't know itself anymore,' they say. 'Introduce it.'",
+    "source": "First Spouse",
+    "minDay": 150,
+    "choices": [
+      {
+        "id": "voluntary-corps",
+        "label": "Launch a paid voluntary corps",
+        "detail": "Stipends, uniforms, a million slots",
+        "cost": 1,
+        "effects": { "economy": -2, "approval": 1, "stability": 1 },
+        "result": "Applications crash the website on day one. The first cohorts ship out to fire lines and reading circles, and the price tag ships out to the appropriators.",
+        "news": [
+          { "outlet": "beacon", "headline": "National Service Corps Opens With Million-Slot Goal", "tone": "neutral" },
+          { "outlet": "ledger", "headline": "A Costly Camp for the Government's New Favorite Youth", "tone": "negative" },
+          { "outlet": "tribune", "headline": "Paid Service: Opportunity Instead of Obligation", "tone": "positive" },
+          { "outlet": "buzz", "headline": "GEN Z GETS UNIFORMS AND A PAYCHECK 🎒🇺🇸", "tone": "positive" }
+        ],
+        "social": [
+          { "handle": "@firstgen_felix", "text": "Tutoring in a town I'd never heard of, serving with kids from six states. Best broke year of my life.", "sentiment": "positive", "clout": "3k" }
+        ],
+        "advisor": "It's a slow-release investment in the national mood. Ask me in five years if it worked.",
+        "echo": {
+          "delay": 6,
+          "title": "The Corps Comes Home",
+          "text": "The first million alumni come home with cross-country friendships and a habit of showing up. Volunteering, trust, and small-town main streets all tick upward in the data — sociologists call it 'the cohort effect' and name you in the acknowledgments.",
+          "effects": { "approval": 5, "stability": 5, "legacy": 4 },
+          "tone": "positive"
+        },
+        "setFlags": ["service_corps"]
+      },
+      {
+        "id": "mandatory-year",
+        "label": "Make the service year mandatory",
+        "detail": "Everyone serves. Everyone.",
+        "cost": 2,
+        "bold": true,
+        "effects": { "approval": -4, "stability": -2, "capital": -1 },
+        "result": "The signing ceremony is drowned out by protests from eighteen-year-olds and their lawyers. Courts allow it; dinner tables remain divided.",
+        "news": [
+          { "outlet": "beacon", "headline": "Mandatory Service Year Signed Into Law Amid Protests", "tone": "neutral" },
+          { "outlet": "ledger", "headline": "Conscripting the Young for a Feel-Good Scheme", "tone": "negative" },
+          { "outlet": "tribune", "headline": "Shared Duty — or Forced Labor With Extra Steps?", "tone": "negative" },
+          { "outlet": "buzz", "headline": "EVERYONE DRAFTED (FOR TRAIL WORK) 😱⛏️", "tone": "negative" }
+        ],
+        "social": [
+          { "handle": "@collegebound_cass", "text": "My gap year is now government property. See you in court.", "sentiment": "negative", "clout": "21k" }
+        ],
+        "advisor": "You've made a million enemies who are currently seventeen. The bet is on who they become at thirty.",
+        "echo": {
+          "delay": 5,
+          "title": "The Melting Pot Report",
+          "text": "Five years on, a landmark study finds service alumni are half as likely to despise the other side — they've camped with them. Polarization metrics bend for the first time in decades, and the law's angriest critics quietly enroll their kids.",
+          "effects": { "stability": 7, "approval": 4, "legacy": 3 },
+          "tone": "positive"
+        }
+      },
+      {
+        "id": "tax-credit",
+        "label": "Offer a volunteering tax credit instead",
+        "detail": "Service by receipt",
+        "effects": { "approval": 2, "economy": 1 },
+        "result": "The credit polls beautifully and requires no barracks. Accountants develop a sudden interest in community gardens.",
+        "news": [
+          { "outlet": "beacon", "headline": "Volunteering Tax Credit Replaces Service Corps Proposal", "tone": "neutral" },
+          { "outlet": "ledger", "headline": "Incentives, Not Institutions — the Right Call", "tone": "positive" },
+          { "outlet": "tribune", "headline": "Civic Duty, Now With a Coupon", "tone": "negative" },
+          { "outlet": "buzz", "headline": "GOOD DEEDS = TAX BREAK, LFG 🧾😇", "tone": "neutral" }
+        ],
+        "social": [
+          { "handle": "@nonprofit_nina", "text": "Weirdly, none of the new 'volunteers' stay past the photo.", "sentiment": "negative", "clout": "6k" }
+        ],
+        "advisor": "Cheap, popular, forgettable. Two of those help you.",
+        "echo": {
+          "delay": 4,
+          "title": "The Receipt Racket",
+          "text": "An audit finds consulting firms billing 'volunteer hours' by the yacht-load; the credit is quietly capped after burning a crater in revenues. The word 'service' polls worse than before you started.",
+          "effects": { "economy": -4, "approval": -4, "legacy": -2 },
+          "tone": "negative"
+        }
+      }
+    ]
+  }
+]

@@ -52,6 +52,19 @@ for (const file of readdirSync(dir).filter((f) => f.endsWith(".json"))) {
         if (typeof n.headline !== "string") warn(`${tag}/${c.id}: bad headline`);
         if (!TONES.has(n.tone)) warn(`${tag}/${c.id}: bad tone "${n.tone}"`);
       }
+      if (c.echo) {
+        if (!Number.isInteger(c.echo.delay) || c.echo.delay < 1 || c.echo.delay > 12)
+          warn(`${tag}/${c.id}: echo delay must be int 1..12`);
+        if (typeof c.echo.title !== "string" || typeof c.echo.text !== "string")
+          warn(`${tag}/${c.id}: echo needs title+text`);
+        if (!c.echo.effects || typeof c.echo.effects !== "object") warn(`${tag}/${c.id}: echo missing effects`);
+        else for (const k of Object.keys(c.echo.effects)) {
+          if (!STAT_KEYS.has(k)) warn(`${tag}/${c.id}: echo bad effect key "${k}"`);
+          if (!Number.isInteger(c.echo.effects[k])) warn(`${tag}/${c.id}: echo non-integer ${k}`);
+          if (Math.abs(c.echo.effects[k]) > 20) warn(`${tag}/${c.id}: echo huge ${k}=${c.echo.effects[k]}`);
+        }
+        if (!TONES.has(c.echo.tone)) warn(`${tag}/${c.id}: echo bad tone "${c.echo.tone}"`);
+      }
     }
     ok++;
   }

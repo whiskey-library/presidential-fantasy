@@ -1,4 +1,4 @@
-// ── Core type system for Presidential Fantasy ──────────────────────────────
+// ── Core type system for Presidential Fantasy v2 ───────────────────────────
 
 export type StatKey = "approval" | "economy" | "stability" | "world";
 
@@ -52,6 +52,35 @@ export interface Effects {
   legacy?: number;
 }
 
+/** A delayed consequence planted by a choice — fires N decisions later. */
+export interface EchoSpec {
+  /** How many decisions later the echo fires. */
+  delay: number;
+  /** Short headline for the consequence card, e.g. "The Sanctions Bite Back". */
+  title: string;
+  /** 1–2 sentence narration of the delayed fallout. */
+  text: string;
+  effects: Effects;
+  tone?: Sentiment;
+}
+
+/** An echo queued in game state, waiting for its due decision. */
+export interface PendingEcho extends EchoSpec {
+  /** Fires when state.decisions reaches this count. */
+  dueAtDecision: number;
+  /** Title of the event that planted it (for the card's source line). */
+  sourceTitle: string;
+}
+
+/** An echo that just fired — rendered on the result screen. */
+export interface FiredEcho {
+  title: string;
+  text: string;
+  effects: Effects;
+  tone?: Sentiment;
+  sourceTitle: string;
+}
+
 export interface Choice {
   id: string;
   /** The button label — the action. */
@@ -69,6 +98,8 @@ export interface Choice {
   social?: SocialReaction[];
   /** A line of feedback from your inner circle. */
   advisor?: string;
+  /** Optional delayed consequence — the decision comes back around. */
+  echo?: EchoSpec;
   setFlags?: string[];
   clearFlags?: string[];
   /** Achievement id to award when this choice is taken. */
@@ -137,44 +168,97 @@ export interface CareerLogEntry {
   approvalAfter: number;
 }
 
+export type Difficulty = "easy" | "normal" | "hard";
+
+export interface DifficultySpec {
+  id: Difficulty;
+  name: string;
+  blurb: string;
+  emoji: string;
+  /** Multiplier applied to negative stat deltas. */
+  negScale: number;
+  /** Default decision timer in seconds (0 = off). */
+  timer: number;
+  /** Election-night random swing, ± this many points. */
+  electionNoise: number;
+}
+
 export type GameStatus =
-  | "intro"
   | "playing"
   | "result"
+  | "midterm"
   | "election"
   | "gameover"
   | "victory";
 
+export interface MidtermResult {
+  share: number;
+  tier: "hold" | "split" | "lose";
+  title: string;
+  text: string;
+  effects: Effects;
+}
+
 export interface GameState {
   schema: number;
   president: { name: string; personaId: string };
+  difficulty: Difficulty;
+  /** Set when this career is a date-seeded daily challenge (e.g. "2026-07-04"). */
+  dailySeed: string | null;
+  /** Deterministic RNG cursor for daily runs (advances every draw). */
+  rngState: number;
   stats: Stats;
   capital: number;
   /** Days in office — ticks up forever; the spine of your career. */
   day: number;
   /** 1-based term number. */
   term: number;
-  /** Decisions made this term (drives the election clock). */
+  /** Decisions made this term (drives midterms + the election clock). */
   termDecisions: number;
   /** Total decisions made across the whole career. */
   decisions: number;
   peakApproval: number;
   legacy: number;
+  /** National mood: −8 (furious) .. +8 (euphoric). Drifts toward 0. */
+  mood: number;
+  /** Consecutive approval-positive decisions (momentum). */
+  streak: number;
+  /** Consecutive decisions with economy below the recession line. */
+  recessionWatch: number;
+  /** Consecutive decisions with stability below the unrest line. */
+  unrestWatch: number;
   flags: Record<string, true>;
   seenEvents: string[];
   achievements: string[];
   /** Recent approval values for the sparkline. */
   approvalTrend: number[];
   log: CareerLogEntry[];
+  /** Echoes waiting to fire. */
+  pendingEchoes: PendingEcho[];
+  /** Echoes that fired on the last decision (for the result screen). */
+  lastEchoes: FiredEcho[];
+  /** Midterm result awaiting display (status === "midterm"). */
+  midterm: MidtermResult | null;
+  /** True once this term's midterm has run. */
+  midtermDone: boolean;
+  /** Election-night roll, drawn once at the term boundary and persisted so
+   *  re-renders and reloads can never re-roll the outcome. */
+  electionRoll?: number;
+  /** The difficulty/persona/mood-scaled effects actually applied last turn. */
+  lastEffects?: Effects;
   status: GameStatus;
   currentEventId: string | null;
   lastChoiceId: string | null;
+  /** True when the last "choice" was the timer expiring on the player. */
+  dithered: boolean;
   endReason?: string;
   /** Achievements unlocked but not yet shown as a toast. */
   pendingToasts: string[];
+  /** One-off notices (momentum, mood shifts) for the result screen. */
+  notices: string[];
 }
 
-/** Persistent cross-career record kept in localStorage. */
+/** A finished career recorded to a profile's hall of fame / leaderboard. */
 export interface HallOfFameEntry {
   name: string;
   personaId: string;
@@ -184,4 +268,43 @@ export interface HallOfFameEntry {
   terms: number;
   endReason: string;
   date: string;
+  difficulty?: Difficulty;
+  dailySeed?: string | null;
+  /** Owning profile (added when merging into the cross-profile leaderboard). */
+  profileId?: string;
+  profileName?: string;
+  profileAvatar?: string;
+}
+
+// ── Profiles & auth ─────────────────────────────────────────────────────────
+
+export interface ProfileTotals {
+  careers: number;
+  decisions: number;
+  days: number;
+  bestLegacy: number;
+  wins: number;
+}
+
+export interface Profile {
+  id: string;
+  name: string;
+  /** Emoji avatar. */
+  avatar: string;
+  createdAt: string;
+  lastSeenAt: string;
+  totals: ProfileTotals;
+  /** All-time achievement union across careers. */
+  achievements: string[];
+  /** Daily-challenge results: date → best legacy that day. */
+  daily: Record<string, number>;
+}
+
+export interface Settings {
+  sound: boolean;
+  /** Decision timer seconds; null = use difficulty default; 0 = off. */
+  timerOverride: number | null;
+  reducedMotion: boolean;
+  /** Skip redaction reveals and ceremonial beats. */
+  fastBriefings: boolean;
 }

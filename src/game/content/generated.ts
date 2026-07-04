@@ -10,6 +10,9 @@ import scandal from "./packs/scandal.json";
 import tech from "./packs/tech.json";
 import environment from "./packs/environment.json";
 import security from "./packs/security.json";
+import personal from "./packs/personal.json";
+import wildcard from "./packs/wildcard.json";
+import longgame from "./packs/longgame.json";
 
 export const GENERATED_EVENTS = [
   ...economy,
@@ -20,4 +23,7 @@ export const GENERATED_EVENTS = [
   ...tech,
   ...environment,
   ...security,
+  ...personal,
+  ...wildcard,
+  ...longgame,
 ] as unknown as GameEvent[];

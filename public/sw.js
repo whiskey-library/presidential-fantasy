@@ -1,5 +1,5 @@
 // Minimal offline-first service worker so Presidential Fantasy installs and plays as an app.
-const CACHE = "presidential-fantasy-v1";
+const CACHE = "presidential-fantasy-v2";
 const CORE = ["./", "./index.html", "./manifest.webmanifest", "./icon.svg"];
 
 self.addEventListener("install", (event) => {
