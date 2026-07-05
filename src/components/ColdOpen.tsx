@@ -1,10 +1,6 @@
 import { useEffect, useState } from "react";
 
-const LINES = [
-  "ESTABLISHING SECURE CHANNEL…",
-  "CLEARANCE: EYES ONLY",
-  "GOOD EVENING, MR. PRESIDENT.",
-];
+const LINES = ["GOOD EVENING, MR. PRESIDENT."];
 
 /** Once-per-session typed intro. Tap anywhere to skip. */
 export default function ColdOpen({ onDone }: { onDone: () => void }) {
@@ -12,10 +8,10 @@ export default function ColdOpen({ onDone }: { onDone: () => void }) {
 
   useEffect(() => {
     if (shown >= LINES.length) {
-      const t = setTimeout(onDone, 650);
+      const t = setTimeout(onDone, 600);
       return () => clearTimeout(t);
     }
-    const t = setTimeout(() => setShown((s) => s + 1), shown === 0 ? 500 : 620);
+    const t = setTimeout(() => setShown((s) => s + 1), 280);
     return () => clearTimeout(t);
   }, [shown, onDone]);
 

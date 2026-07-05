@@ -1,24 +1,27 @@
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { createPortal } from "react-dom";
-import type { EventCategory, GameState, GameEvent } from "../game/types";
+import type { EventCategory, GameState, GameEvent, Choice, StatKey } from "../game/types";
 import { DITHER_CHOICE, getEvent } from "../game/engine";
 import { sfxBreaking, sfxDecide } from "../game/sound";
 import TimerRing from "./TimerRing";
+import Portrait from "./Portrait";
+import Scene from "./scenes";
 
 export const CATEGORY_LABEL: Record<EventCategory, string> = {
   economy: "Economy",
-  foreign: "Foreign Policy",
+  foreign: "Foreign",
   domestic: "Domestic",
   crisis: "Crisis",
   scandal: "Scandal",
-  tech: "Technology",
+  tech: "Tech",
   environment: "Environment",
-  security: "National Security",
+  security: "Security",
   personal: "The Office",
   wildcard: "Wildcard",
 };
 
-const GLYPHS = ["A", "B", "C", "D"];
+const STAT_DOT: StatKey[] = ["approval", "economy", "stability", "world"];
+const SWIPE_COMMIT = 92; // px of drag that counts as a decision
 
 function severityOf(ev: GameEvent): "routine" | "elevated" | "critical" {
   if (ev.category === "crisis" || ev.category === "security") return "critical";
@@ -26,18 +29,9 @@ function severityOf(ev: GameEvent): "routine" | "elevated" | "critical" {
   return "routine";
 }
 
-/** The stat a choice moves hardest — for the memo's hint strip. */
-function dominantStat(effects: Record<string, number | undefined>): string | null {
-  let best: string | null = null;
-  let mag = 0;
-  for (const k of ["approval", "economy", "stability", "world"]) {
-    const v = Math.abs(effects[k] ?? 0);
-    if (v > mag) {
-      mag = v;
-      best = k;
-    }
-  }
-  return best;
+/** Which meters a choice touches — shown as hint dots (direction stays secret). */
+function touchedStats(c: Choice): StatKey[] {
+  return STAT_DOT.filter((k) => (c.effects[k] ?? 0) !== 0);
 }
 
 export default function EventCard({
@@ -54,28 +48,30 @@ export default function EventCard({
   onChoose: (choiceId: string) => void;
 }) {
   const ev = getEvent(pool, game.currentEventId);
-  const [revealed, setRevealed] = useState(fastBriefings);
   const [signing, setSigning] = useState<string | null>(null);
   const [urgent, setUrgent] = useState(false);
+  const [expanded, setExpanded] = useState(false);
 
-  const severity = ev ? severityOf(ev) : "routine";
-  const lines = useMemo(() => {
-    if (!ev) return [];
-    // Split briefing into sentence-ish lines for the redaction sweep.
-    return ev.briefing.match(/[^.!?]+[.!?]+["']?\s*/g) ?? [ev.briefing];
-  }, [ev]);
+  // ── Swipe physics (2 affordable choices → left/right like a real desk) ────
+  const [drag, setDrag] = useState(0);
+  const dragStart = useRef<number | null>(null);
+  const cardRef = useRef<HTMLDivElement>(null);
 
-  // Redaction reveal: unseal choices when the sweep finishes (or instantly).
+  const choices = ev?.choices ?? [];
+  const affordable = choices.filter((c) => (c.cost ?? 0) <= game.capital);
+  const swipeable = !signing && choices.length === 2 && affordable.length === 2;
+  const leftChoice = swipeable ? choices[0] : null;
+  const rightChoice = swipeable ? choices[1] : null;
+
   useEffect(() => {
-    setRevealed(fastBriefings);
+    setExpanded(false);
     setSigning(null);
-    if (fastBriefings) return;
-    const total = 420 + lines.length * 60 + 120;
-    const t = setTimeout(() => setRevealed(true), Math.min(total, 900));
-    return () => clearTimeout(t);
-  }, [game.currentEventId, fastBriefings, lines.length]);
+    setDrag(0);
+    dragStart.current = null;
+  }, [game.currentEventId]);
 
   // Crisis stinger + screen shake on arrival.
+  const severity = ev ? severityOf(ev) : "routine";
   useEffect(() => {
     if (ev && severity === "critical") {
       sfxBreaking();
@@ -91,84 +87,159 @@ export default function EventCard({
 
   if (!ev) {
     return (
-      <article className="card dossier">
-        <h1 className="dossier__title">A quiet day in the West Wing</h1>
-        <p className="dossier__briefing">No briefings on the desk right now.</p>
+      <article className="card vcard">
+        <h1 className="vcard__title">A quiet day in the West Wing</h1>
+        <p className="vcard__short">No briefings on the desk right now.</p>
       </article>
     );
   }
 
-  const sign = (choiceId: string, afford: boolean) => {
-    if (!afford || signing) return;
-    setSigning(choiceId);
+  const sign = (choice: Choice) => {
+    if (signing) return;
+    if ((choice.cost ?? 0) > game.capital) return;
+    setSigning(choice.id);
     sfxDecide();
-    setTimeout(() => onChoose(choiceId), fastBriefings ? 60 : 220);
+    setTimeout(() => onChoose(choice.id), fastBriefings ? 60 : 240);
   };
 
+  const onPointerDown = (e: React.PointerEvent) => {
+    if (!swipeable) return;
+    // Don't hijack presses that start on buttons/links.
+    if ((e.target as HTMLElement).closest("button")) return;
+    dragStart.current = e.clientX;
+    cardRef.current?.setPointerCapture(e.pointerId);
+  };
+  const onPointerMove = (e: React.PointerEvent) => {
+    if (dragStart.current == null) return;
+    setDrag(Math.max(-140, Math.min(140, e.clientX - dragStart.current)));
+  };
+  const onPointerUp = () => {
+    if (dragStart.current == null) return;
+    dragStart.current = null;
+    if (drag <= -SWIPE_COMMIT && leftChoice) {
+      setDrag(-280);
+      sign(leftChoice);
+      return;
+    }
+    if (drag >= SWIPE_COMMIT && rightChoice) {
+      setDrag(280);
+      sign(rightChoice);
+      return;
+    }
+    setDrag(0);
+  };
+
+  // Split briefing: first sentence stays visible, the rest folds away.
+  const sentences = ev.briefing.match(/[^.!?]+[.!?]+["']?\s*/g) ?? [ev.briefing];
+  const shortText = sentences[0];
+  const restText = sentences.slice(1).join("").trim();
+
+  const dragPct = Math.min(1, Math.abs(drag) / SWIPE_COMMIT);
+
   return (
-    <article
-      className={`card dossier sev-${severity} ${urgent ? "dossier--urgent" : ""}`}
-      key={ev.id}
-      data-cat={ev.category}
-    >
-      {/* Portal: .card's contain:paint would clip a fixed-position vignette. */}
+    <div className="vcard-zone">
       {urgent && createPortal(<div className="urgency-vignette" aria-hidden="true" />, document.body)}
-      {severity === "critical" && <div className="dossier__flash">FLASH // CRITICAL</div>}
 
-      <div className="dossier__head">
-        <span className="dossier__file">FILE No. {String(game.decisions + 1).padStart(4, "0")}</span>
-        <span className={`stamp stamp--cat cat-${ev.category}`}>{CATEGORY_LABEL[ev.category].toUpperCase()}</span>
-        <TimerRing
-          key={ev.id}
-          seconds={timerSeconds}
-          paused={Boolean(signing)}
-          onExpire={() => onChoose(DITHER_CHOICE.id)}
-          onUrgent={setUrgent}
-        />
-      </div>
-      {ev.source && <div className="dossier__source">FROM: {ev.source.toUpperCase()}</div>}
+      {/* Swipe side cues */}
+      {swipeable && (
+        <>
+          <div className="swipe-cue swipe-cue--left" style={{ opacity: drag < -18 ? dragPct : 0 }} aria-hidden>
+            <span className="swipe-cue__arrow">◀</span>
+            <span className="swipe-cue__label">{leftChoice!.label}</span>
+          </div>
+          <div className="swipe-cue swipe-cue--right" style={{ opacity: drag > 18 ? dragPct : 0 }} aria-hidden>
+            <span className="swipe-cue__label">{rightChoice!.label}</span>
+            <span className="swipe-cue__arrow">▶</span>
+          </div>
+        </>
+      )}
 
-      <h1 className="dossier__title">{ev.title}</h1>
+      <article
+        ref={cardRef}
+        className={`card vcard sev-${severity} ${signing ? "vcard--signing" : ""} ${dragStart.current != null ? "vcard--dragging" : ""}`}
+        key={ev.id}
+        style={drag !== 0 ? { transform: `translateX(${drag}px) rotate(${drag / 22}deg)` } : undefined}
+        onPointerDown={onPointerDown}
+        onPointerMove={onPointerMove}
+        onPointerUp={onPointerUp}
+        onPointerCancel={onPointerUp}
+      >
+        {/* ── Illustrated scene banner ── */}
+        <div className={`vcard__scene scene-${ev.category}`}>
+          <Scene category={ev.category} />
+          {severity === "critical" && <div className="vcard__flash">⚠ CRISIS</div>}
+          <span className={`vcard__cat cat-${ev.category}`}>{CATEGORY_LABEL[ev.category]}</span>
+          <div className="vcard__timer">
+            <TimerRing
+              key={ev.id}
+              seconds={timerSeconds}
+              paused={Boolean(signing)}
+              onExpire={() => onChoose(DITHER_CHOICE.id)}
+              onUrgent={setUrgent}
+            />
+          </div>
+        </div>
 
-      <div className={`dossier__briefing ${revealed ? "is-revealed" : ""}`} onClick={() => setRevealed(true)}>
-        {lines.map((l, i) => (
-          <span key={i} className={fastBriefings ? undefined : "redact-line"} style={{ animationDelay: `${i * 60}ms` }}>
-            {l}
-          </span>
-        ))}
-      </div>
+        {/* ── Advisor presents the situation ── */}
+        <div className="vcard__body">
+          <div className="vcard__brief">
+            {ev.source && (
+              <div className="vcard__advisor">
+                <Portrait name={ev.source} size={54} />
+                <span className="vcard__advisor-name">{ev.source}</span>
+              </div>
+            )}
+            <div className="bubble">
+              <h1 className="vcard__title">{ev.title}</h1>
+              <p className="vcard__short">
+                {shortText}
+                {restText && !expanded && (
+                  <button className="bubble__more" onClick={() => setExpanded(true)}>
+                    more…
+                  </button>
+                )}
+              </p>
+              {restText && expanded && <p className="vcard__rest">{restText}</p>}
+            </div>
+          </div>
 
-      <div className={`dossier__choices ${revealed ? "" : "dossier__choices--sealed"}`}>
-        <div className="section-label">YOUR ORDER, MR. PRESIDENT</div>
-        {ev.choices.map((c, i) => {
-          const cost = c.cost ?? 0;
-          const afford = cost <= game.capital;
-          const hint = dominantStat(c.effects as Record<string, number>);
-          return (
-            <button
-              key={c.id}
-              className={`memo ${c.bold ? "memo--bold" : ""} ${afford ? "" : "memo--locked"} ${
-                signing === c.id ? "memo--signed" : ""
-              }`}
-              disabled={!afford || !revealed || Boolean(signing)}
-              onClick={() => sign(c.id, afford)}
-            >
-              {hint && <span className={`memo__hint stat-${hint}`} aria-hidden />}
-              <span className="memo__glyph">{GLYPHS[i] ?? "•"}</span>
-              <span className="memo__main">
-                <span className="memo__label">{c.label}</span>
-                {c.detail && <span className="memo__detail">{c.detail}</span>}
-              </span>
-              {cost > 0 && (
-                <span className={`memo__cost ${afford ? "" : "memo__cost--locked"}`}>
-                  ⚡{cost}
-                </span>
-              )}
-              {signing === c.id && <span className="memo__stamp">SIGNED</span>}
-            </button>
-          );
-        })}
-      </div>
-    </article>
+          {/* ── Choices ── */}
+          <div className="vcard__choices">
+            {choices.map((c, i) => {
+              const cost = c.cost ?? 0;
+              const afford = cost <= game.capital;
+              const dots = touchedStats(c);
+              const side = swipeable ? (i === 0 ? "◀" : "▶") : null;
+              return (
+                <button
+                  key={c.id}
+                  className={`act ${c.bold ? "act--bold" : ""} ${afford ? "" : "act--locked"} ${signing === c.id ? "act--signed" : ""}`}
+                  disabled={!afford || Boolean(signing)}
+                  onClick={() => sign(c)}
+                >
+                  {side && <span className="act__side" aria-hidden>{side}</span>}
+                  <span className="act__main">
+                    <span className="act__label">{c.label}</span>
+                    <span className="act__meta">
+                      <span className="act__dots" title="Moves these meters">
+                        {dots.map((k) => (
+                          <i key={k} className={`dot dot-${k}`} />
+                        ))}
+                      </span>
+                      {c.detail && <span className="act__detail">{c.detail}</span>}
+                    </span>
+                  </span>
+                  {cost > 0 && (
+                    <span className={`act__cost ${afford ? "" : "act__cost--locked"}`}>⚡{cost}</span>
+                  )}
+                  {signing === c.id && <span className="act__stamp">SIGNED</span>}
+                </button>
+              );
+            })}
+            {swipeable && <div className="vcard__hint">swipe the card — or tap a decision</div>}
+          </div>
+        </div>
+      </article>
+    </div>
   );
 }

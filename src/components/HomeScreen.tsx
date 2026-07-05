@@ -5,6 +5,7 @@ import { DIFFICULTIES } from "../game/engine";
 import { ACHIEVEMENTS } from "../game/achievements";
 import { todaySeed } from "../game/rng";
 import { hashSeed } from "../game/rng";
+import PersonalScene from "./scenes/PersonalScene";
 
 export default function HomeScreen({
   profile,
@@ -46,10 +47,14 @@ export default function HomeScreen({
         </button>
       </div>
 
-      <header className="home__head">
-        <div className="seal" aria-hidden>★</div>
-        <h1 className="home__title">Presidential&nbsp;Fantasy</h1>
-        <p className="home__tag">The desk is yours. The clock is running.</p>
+      <header className="home__hero">
+        <div className="home__hero-scene" aria-hidden>
+          <PersonalScene />
+        </div>
+        <div className="home__hero-text">
+          <h1 className="home__title">Presidential&nbsp;Fantasy</h1>
+          <p className="home__tag">The desk is yours. The clock is running.</p>
+        </div>
       </header>
 
       {savedGame && !configuring && (
