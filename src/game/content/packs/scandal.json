@@ -2,8 +2,8 @@
   {
     "id": "gen_scandal_leakedmemo",
     "category": "scandal",
-    "title": "The Leaked Memo",
-    "briefing": "A blunt internal memo with your initials on it leaked overnight, and it says the quiet part loud about a policy you've been selling differently in public. The press wants to know if it's real before the evening broadcast. You can confirm it and reframe, or call it a forgery and dare them to prove otherwise.",
+    "title": "The Columbus Memo",
+    "briefing": "A three-page memo with your initials leaked overnight, privately calling the $52 billion Ohio chip-plant subsidies you championed in Columbus 'a jobs mirage with good lighting.' Reporters want confirmation it's real before the six o'clock broadcast. You can confirm it and reframe, or call it a forgery and dare them to prove otherwise.",
     "source": "Press Secretary",
     "minDay": 120,
     "weight": 1,
@@ -12,16 +12,16 @@
         "id": "confirm",
         "label": "Confirm it and explain the thinking",
         "effects": { "approval": -3, "stability": 4, "legacy": 3 },
-        "result": "You own the memo, walk reporters through the reasoning, and reframe it as candor. The contradiction stings for a day, then the story moves on.",
+        "result": "You own the memo, walk reporters through the subsidy math line by line, and reframe it as candor. Columbus grumbles for a day, then the story moves on.",
         "news": [
-          { "outlet": "beacon", "headline": "President confirms memo, defends internal debate as healthy", "tone": "neutral" },
-          { "outlet": "ledger", "headline": "At least this White House admits what it's doing", "tone": "positive" },
-          { "outlet": "tribune", "headline": "Memo confirms the gap between words and deeds", "tone": "negative" },
-          { "outlet": "buzz", "headline": "POTUS says YEAH I WROTE THAT, deal with it 😤", "tone": "neutral" }
+          { "outlet": "beacon", "headline": "President confirms Ohio memo, defends internal debate as healthy", "tone": "neutral" },
+          { "outlet": "ledger", "headline": "At least this White House admits what the subsidies cost", "tone": "positive" },
+          { "outlet": "tribune", "headline": "Memo confirms the gap between the podium and the policy", "tone": "negative" },
+          { "outlet": "buzz", "headline": "POTUS says YEAH I WROTE THAT 😤 Ohio, deal with it", "tone": "neutral" }
         ],
         "social": [
-          { "handle": "@policywonk_pat", "text": "admitting it is annoyingly the smart move here. respect.", "sentiment": "positive", "clout": "61k" },
-          { "handle": "@ragingmoderate", "text": "wish the public message matched the memo but ok, honesty counts", "sentiment": "neutral", "clout": "22k" }
+          { "handle": "@buckeyewonk_pat", "text": "admitting it is annoyingly the smart move here. columbus respects candor.", "sentiment": "positive", "clout": "61k" },
+          { "handle": "@ragingmoderate", "text": "wish the stump speech matched the memo but ok, honesty counts", "sentiment": "neutral", "clout": "22k" }
         ],
         "advisor": "If it's real, confirm it before someone else defines it for you.",
         "setFlags": ["weathered_scandal"]
@@ -31,10 +31,10 @@
         "label": "Call it a fabrication",
         "bold": true,
         "effects": { "approval": 2, "stability": -7, "legacy": -5 },
-        "result": "You flatly deny it. Two days later the original document surfaces with metadata, and now the lie is the story instead of the memo.",
+        "result": "You flatly deny it. Two days later the original surfaces with metadata from your own comms office, and now the lie is the story instead of the memo.",
         "news": [
-          { "outlet": "tribune", "headline": "BUSTED: White House denied a memo it actually wrote", "tone": "negative" },
-          { "outlet": "beacon", "headline": "Document metadata contradicts presidential denial", "tone": "negative" },
+          { "outlet": "tribune", "headline": "BUSTED: White House denied a memo it wrote itself", "tone": "negative" },
+          { "outlet": "beacon", "headline": "Metadata contradicts presidential denial of Ohio memo", "tone": "negative" },
           { "outlet": "ledger", "headline": "Denying real documents only feeds the wolves", "tone": "negative" },
           { "outlet": "buzz", "headline": "LIAR LIAR: the MEMO was REAL the WHOLE TIME 🔥📄", "tone": "negative" }
         ],
@@ -48,8 +48,8 @@
   {
     "id": "gen_scandal_appointeeconflict",
     "category": "scandal",
-    "title": "Your Appointee's Side Hustle",
-    "briefing": "Your new energy secretary still holds a fat stake in a company that just won a federal contract. The optics are a gift to your opponents, and she insists it's all technically legal. You can force her to divest or step aside, or let her ride it out and absorb the headlines.",
+    "title": "The Secretary's Portfolio",
+    "briefing": "Energy Secretary Dana Whitfield still holds an $18 million stake in Meridian Grid Systems, which just won a $2.1 billion federal transmission contract. The optics are a gift to your opponents, and she insists it's all technically legal. You can force her to divest or step aside, or let her ride out the headlines.",
     "source": "White House Counsel",
     "minDay": 180,
     "choices": [
@@ -57,17 +57,17 @@
         "id": "divest",
         "label": "Order full divestment or resignation",
         "effects": { "approval": 1, "stability": 3, "legacy": 3, "capital": -2 },
-        "result": "You give her 48 hours to divest or walk. She sells, the ethics office signs off, and the story loses its hook by week's end.",
+        "result": "You give Whitfield 48 hours to divest or walk. She sells the Meridian stake at a loss, the ethics office signs off, and the story loses its hook by Friday.",
         "news": [
-          { "outlet": "beacon", "headline": "Energy chief divests after conflict questions", "tone": "neutral" },
+          { "outlet": "beacon", "headline": "Energy Secretary Whitfield divests Meridian stake after conflict questions", "tone": "neutral" },
           { "outlet": "tribune", "headline": "Forced divestment is the bare minimum, but they did it", "tone": "positive" },
           { "outlet": "ledger", "headline": "President acts fast to clear an ethics cloud", "tone": "positive" },
-          { "outlet": "buzz", "headline": "SELL SELL SELL: secretary dumps stock to keep her CHAIR 💺", "tone": "neutral" }
+          { "outlet": "buzz", "headline": "SELL SELL SELL: Whitfield dumps $18M in stock to keep her CHAIR 💺", "tone": "neutral" }
         ],
         "social": [
           { "handle": "@ethics_nerd", "text": "divest or leave. that's the rule. glad someone enforced it.", "sentiment": "positive", "clout": "47k" }
         ],
-        "advisor": "A clean appointee is cheaper than a month of conflict headlines.",
+        "advisor": "A clean secretary is cheaper than a month of Meridian headlines.",
         "setFlags": ["weathered_scandal"]
       },
       {
@@ -75,10 +75,10 @@
         "label": "Defend her and call it a witch hunt",
         "bold": true,
         "effects": { "approval": -6, "stability": -6, "legacy": -5 },
-        "result": "You circle the wagons and dismiss the story as partisan noise. Then a second contract surfaces, and now the whole cabinet's holdings are under the microscope.",
+        "result": "You circle the wagons and dismiss the story as partisan noise. Then Meridian lands a second contract — $600 million for grid sensors — and the whole cabinet's holdings go under the microscope.",
         "news": [
-          { "outlet": "tribune", "headline": "President shields appointee as second contract emerges", "tone": "negative" },
-          { "outlet": "beacon", "headline": "Conflict-of-interest questions widen to full cabinet", "tone": "negative" },
+          { "outlet": "tribune", "headline": "President shields Whitfield as second Meridian contract emerges", "tone": "negative" },
+          { "outlet": "beacon", "headline": "Conflict-of-interest questions widen from Energy to full cabinet", "tone": "negative" },
           { "outlet": "ledger", "headline": "Loyalty is admirable; this is reckless", "tone": "negative" },
           { "outlet": "buzz", "headline": "SHE WON A SECOND CONTRACT?! cabinet stock check NOW 📈🚨", "tone": "negative" }
         ],
@@ -92,8 +92,8 @@
   {
     "id": "gen_scandal_perjurystaffer",
     "category": "scandal",
-    "title": "Caught Lying To Congress",
-    "briefing": "Your deputy chief of staff told a Senate committee something that turned out to be flatly false, and the transcript is public. Lawmakers are circling the word 'perjury.' You can cut him loose and let the process run, or vouch for him and gamble your own credibility on his.",
+    "title": "Delgado Under Oath",
+    "briefing": "Your deputy chief of staff, Ray Delgado, told the Senate Judiciary Committee he'd had no contact with a surveillance contractor — and visitor logs show four meetings. The transcript is public, and Senator Carol Braddock of Maine is circling the word 'perjury.' You can cut him loose and let the process run, or vouch for him and gamble your own credibility on his.",
     "source": "Chief of Staff",
     "minDay": 240,
     "choices": [
@@ -101,12 +101,12 @@
         "id": "cutloose",
         "label": "Accept his resignation, cooperate fully",
         "effects": { "approval": -2, "stability": 5, "legacy": 4 },
-        "result": "You accept his resignation, pledge full cooperation, and refer the matter out. Painful loss of a loyalist, but the institution holds and so do you.",
+        "result": "You accept Delgado's resignation, pledge full cooperation, and refer the matter to Justice. Painful loss of a loyalist, but the institution holds and so do you.",
         "news": [
-          { "outlet": "beacon", "headline": "Deputy resigns amid false-testimony probe; White House cooperates", "tone": "neutral" },
+          { "outlet": "beacon", "headline": "Delgado resigns amid false-testimony probe; White House cooperates", "tone": "neutral" },
           { "outlet": "tribune", "headline": "Lying to Congress should cost a job. It did", "tone": "positive" },
           { "outlet": "ledger", "headline": "President chooses the rule of law over a friend", "tone": "positive" },
-          { "outlet": "buzz", "headline": "DEPUTY GONE: you don't FIB to the SENATE and stay 👋", "tone": "neutral" }
+          { "outlet": "buzz", "headline": "DELGADO GONE: you don't FIB to the SENATE and stay 👋", "tone": "neutral" }
         ],
         "social": [
           { "handle": "@rule_of_law_ron", "text": "he lied under oath and he's out. system worked for once.", "sentiment": "positive", "clout": "88k" }
@@ -119,15 +119,15 @@
         "label": "Publicly vouch for him",
         "bold": true,
         "effects": { "approval": -5, "stability": -8, "legacy": -6, "capital": -2 },
-        "result": "You stake your name on his honesty. A second contradicting document drops, and committee leaders pivot from his credibility to yours.",
+        "result": "You stake your name on Delgado's honesty. A fifth visitor log drops within the week, and Braddock's committee pivots from his credibility to yours.",
         "news": [
-          { "outlet": "tribune", "headline": "President stakes credibility on aide who misled Congress", "tone": "negative" },
-          { "outlet": "beacon", "headline": "New document deepens false-testimony case against deputy", "tone": "negative" },
+          { "outlet": "tribune", "headline": "President stakes credibility on aide who misled Judiciary panel", "tone": "negative" },
+          { "outlet": "beacon", "headline": "New visitor log deepens false-testimony case against Delgado", "tone": "negative" },
           { "outlet": "ledger", "headline": "Tying yourself to a perjury risk is a rookie error", "tone": "negative" },
           { "outlet": "buzz", "headline": "POTUS PINKY-SWEARS the liar isn't lying 🤞💀", "tone": "negative" }
         ],
         "social": [
-          { "handle": "@gavel_gazer", "text": "now it's the president's word on the line. terrible bet.", "sentiment": "negative", "clout": "245k" }
+          { "handle": "@gavel_gazer", "text": "now it's the president's word vs the visitor logs. terrible bet.", "sentiment": "negative", "clout": "245k" }
         ],
         "advisor": "Don't lend your credibility to someone who already spent theirs."
       }
@@ -136,8 +136,8 @@
   {
     "id": "gen_scandal_donoraccess",
     "category": "scandal",
-    "title": "Pay-To-Sit Dinners",
-    "briefing": "A reporter has receipts: top donors who maxed out got private policy dinners and a say on a draft regulation. It looks exactly like access for sale. You can publish the meeting logs and tighten the rules, or insulate the donors and tough out the coverage.",
+    "title": "The Map Room Dinners",
+    "briefing": "A Beacon reporter has receipts: fourteen donors who gave $500,000 apiece got private Map Room dinners and edits on a draft methane rule. It looks exactly like access for sale. You can publish the meeting logs and tighten the rules, or insulate the donors and tough out the coverage.",
     "source": "White House Counsel",
     "minDay": 300,
     "choices": [
@@ -145,9 +145,9 @@
         "id": "disclose",
         "label": "Release the logs, ban donor policy meetings",
         "effects": { "approval": -2, "stability": 4, "legacy": 4 },
-        "result": "You post every meeting log and announce a firewall between fundraising and policy. Critics grumble it should've existed already, but the access story collapses.",
+        "result": "You post every meeting log and announce a firewall between fundraising and policy. Critics grumble it should've existed already, but the access story collapses by the weekend.",
         "news": [
-          { "outlet": "beacon", "headline": "White House publishes donor logs, bars access dinners", "tone": "neutral" },
+          { "outlet": "beacon", "headline": "White House publishes donor logs, bars Map Room policy dinners", "tone": "neutral" },
           { "outlet": "tribune", "headline": "Transparency on big money? We'll take the win", "tone": "positive" },
           { "outlet": "ledger", "headline": "A firewall on access cools a damaging story", "tone": "positive" },
           { "outlet": "buzz", "headline": "EVERY donor dinner DUMPED online 🍽️📜 receipts for DAYS", "tone": "neutral" }
@@ -163,9 +163,9 @@
         "label": "Refuse to release the logs",
         "bold": true,
         "effects": { "approval": -7, "stability": -5, "legacy": -5 },
-        "result": "You claim the logs are private and protect the donors. A staffer leaks a guest list anyway, and now the cover-up is the story.",
+        "result": "You claim the logs are private and protect the donors. A West Wing steward leaks the guest list anyway — two hedge fund founders, a casino magnate — and now the cover-up is the story.",
         "news": [
-          { "outlet": "tribune", "headline": "STONEWALL: White House hides who bought the dinners", "tone": "negative" },
+          { "outlet": "tribune", "headline": "STONEWALL: White House hides who bought the Map Room dinners", "tone": "negative" },
           { "outlet": "beacon", "headline": "Leaked guest list undercuts White House secrecy claims", "tone": "negative" },
           { "outlet": "ledger", "headline": "Hiding the donor list only confirms the worst read", "tone": "negative" },
           { "outlet": "buzz", "headline": "WHAT'S ON THE LIST?! POTUS guards the GUEST BOOK 👀🔒", "tone": "negative" }
@@ -180,8 +180,8 @@
   {
     "id": "gen_scandal_familydeal",
     "category": "scandal",
-    "title": "Your Brother's Bad Deal",
-    "briefing": "Your brother used the family name to land a sketchy overseas infrastructure deal, and a foreign partner is now bragging that he 'has a line to the President.' It's not illegal for you, but the smell is everywhere. You can publicly distance yourself and refer it for review, or quietly protect family and hope it stays small.",
+    "title": "Denny's Jakarta Deal",
+    "briefing": "Your brother Denny used the family name to land a $200 million port-dredging contract in Jakarta, and his Indonesian partner is now telling investors he 'has a line to the President.' Nothing illegal on your end, but the smell carries from the Potomac to the Java Sea. You can publicly distance yourself and refer it for review, or quietly protect family and hope it stays small.",
     "source": "Chief of Staff",
     "minDay": 360,
     "choices": [
@@ -189,9 +189,9 @@
         "id": "distance",
         "label": "Distance yourself, refer for review",
         "effects": { "approval": -3, "stability": 3, "legacy": 4, "world": -1 },
-        "result": "You state plainly that he speaks for no one but himself and ask ethics counsel to review any overlap. It's a tense family dinner, but the line holds.",
+        "result": "You state plainly that Denny speaks for no one but himself and ask ethics counsel to review any overlap. It's a tense Thanksgiving, but the line holds.",
         "news": [
-          { "outlet": "beacon", "headline": "President disavows brother's overseas venture, orders review", "tone": "neutral" },
+          { "outlet": "beacon", "headline": "President disavows brother's Jakarta venture, orders review", "tone": "neutral" },
           { "outlet": "tribune", "headline": "Drawing a hard line on a relative? Surprisingly right", "tone": "positive" },
           { "outlet": "ledger", "headline": "Family is family, but the office comes first here", "tone": "positive" },
           { "outlet": "buzz", "headline": "POTUS THROWS BRO UNDER THE BUS 🚌 'he speaks for himself' 😬", "tone": "neutral" }
@@ -207,17 +207,17 @@
         "label": "Quietly shield your brother",
         "bold": true,
         "effects": { "approval": -8, "stability": -6, "legacy": -6, "world": -2 },
-        "result": "You stay silent and lean on people to drop it. The foreign partner doubles down on the 'line to the President' claim, and the deal becomes an international embarrassment.",
+        "result": "You stay silent and lean on people to drop it. The partner, construction magnate Suryo Hartanto, repeats the 'line to the President' pitch at a Singapore investor summit, and the deal becomes an international embarrassment.",
         "news": [
-          { "outlet": "tribune", "headline": "President silent as brother trades on his name abroad", "tone": "negative" },
-          { "outlet": "beacon", "headline": "Foreign partner repeats claim of direct line to the President", "tone": "negative" },
+          { "outlet": "tribune", "headline": "President silent as brother trades on his name in Jakarta", "tone": "negative" },
+          { "outlet": "beacon", "headline": "Indonesian partner repeats claim of direct line to the President", "tone": "negative" },
           { "outlet": "ledger", "headline": "Protecting family at the nation's expense is indefensible", "tone": "negative" },
-          { "outlet": "buzz", "headline": "'A LINE TO THE PREZ' 📞🌍 the BRO deal won't DIE", "tone": "negative" }
+          { "outlet": "buzz", "headline": "'A LINE TO THE PREZ' 📞🌏 the JAKARTA bro deal won't DIE", "tone": "negative" }
         ],
         "social": [
-          { "handle": "@globe_watch", "text": "every day of silence is the partner's free advertising. yikes.", "sentiment": "negative", "clout": "210k" }
+          { "handle": "@globe_watch", "text": "every day of silence is free advertising for hartanto. yikes.", "sentiment": "negative", "clout": "210k" }
         ],
-        "advisor": "Silence reads as endorsement. Abroad it reads as policy."
+        "advisor": "Silence reads as endorsement. In Jakarta it reads as policy."
       }
     ]
   },
@@ -225,7 +225,7 @@
     "id": "gen_scandal_deletedemails",
     "category": "scandal",
     "title": "The Vanishing Emails",
-    "briefing": "An archivist flags that a month of staff emails covering a sensitive decision were 'auto-deleted' under a policy nobody remembers approving. It might be sloppiness, it might be worse. You can order a forensic recovery and report it, or quietly let the gap stand and call it routine retention.",
+    "briefing": "A National Archives officer flags that five weeks of staff emails covering the $9 billion border-surveillance contract award were 'auto-deleted' under a policy nobody remembers approving. It might be sloppiness, it might be worse. You can order a forensic recovery and report it, or let the gap stand and call it routine retention.",
     "source": "White House Counsel",
     "minDay": 420,
     "choices": [
@@ -233,9 +233,9 @@
         "id": "recover",
         "label": "Order recovery and disclose the gap",
         "effects": { "approval": -2, "stability": 4, "legacy": 3 },
-        "result": "You bring in forensics, recover most of the messages, and disclose the lapse with the fix. Embarrassing on process, but it kills any cover-up narrative.",
+        "result": "You bring in forensic teams, recover 94 percent of the messages, and disclose the lapse alongside the fix. Embarrassing on process, but it kills any cover-up narrative.",
         "news": [
-          { "outlet": "beacon", "headline": "White House recovers deleted emails, discloses retention lapse", "tone": "neutral" },
+          { "outlet": "beacon", "headline": "White House recovers deleted contract emails, discloses lapse", "tone": "neutral" },
           { "outlet": "tribune", "headline": "Recovering the record beats shredding it", "tone": "positive" },
           { "outlet": "ledger", "headline": "Owning a process failure defuses a ticking bomb", "tone": "positive" },
           { "outlet": "buzz", "headline": "FROM THE DEAD: deleted emails RESURRECTED 💀📧 spooky", "tone": "neutral" }
@@ -251,15 +251,15 @@
         "label": "Call it routine and let the gap stand",
         "bold": true,
         "effects": { "approval": -4, "stability": -7, "legacy": -6 },
-        "result": "You shrug it off as standard retention. A backup turns up on a contractor's server, proving the deletion wasn't routine at all.",
+        "result": "You shrug it off as standard retention. A full backup turns up on a contractor's server in Reston, Virginia, proving the deletion targeted exactly the contract-award week.",
         "news": [
-          { "outlet": "tribune", "headline": "COVER-UP: backup proves emails weren't routinely deleted", "tone": "negative" },
+          { "outlet": "tribune", "headline": "COVER-UP: Reston backup proves emails weren't routinely deleted", "tone": "negative" },
           { "outlet": "beacon", "headline": "Contractor backup contradicts 'routine retention' claim", "tone": "negative" },
           { "outlet": "ledger", "headline": "A convenient deletion is the reddest of flags", "tone": "negative" },
           { "outlet": "buzz", "headline": "THE BACKUP EXISTS 😱💾 'routine' my FOOT 🚩🚩", "tone": "negative" }
         ],
         "social": [
-          { "handle": "@theres_a_backup", "text": "there is ALWAYS a backup. they should know this by now.", "sentiment": "negative", "clout": "300k" }
+          { "handle": "@theres_a_backup", "text": "there is ALWAYS a backup in northern virginia. they should know this.", "sentiment": "negative", "clout": "300k" }
         ],
         "advisor": "Nothing is ever truly deleted. Pretending otherwise is the trap."
       }
@@ -269,7 +269,7 @@
     "id": "gen_scandal_affairrumor",
     "category": "scandal",
     "title": "The Whisper Campaign",
-    "briefing": "A tabloid is shopping an affair rumor about you, thin on proof but heavy on insinuation, and your team is split on whether to engage. Ignore it and it might fade, or it might fester. You can address it directly and briefly, or refuse to dignify it and let the silence speak.",
+    "briefing": "The National Meteor, a supermarket tabloid, is shopping an affair rumor about you — thin on proof, heavy on insinuation — and your team is split on whether to engage. Ignore it and it might fade, or it might fester. You can address it once and briefly, or go to war with the outlet.",
     "source": "Press Secretary",
     "minDay": 150,
     "weight": 1,
@@ -278,7 +278,7 @@
         "id": "address",
         "label": "Address it once, plainly, then move on",
         "effects": { "approval": 1, "stability": 2, "legacy": 1 },
-        "result": "You give one calm, flat denial and refuse a circus. With nothing new to chase, the tabloid's story deflates within the news cycle.",
+        "result": "You give one calm, flat denial in the briefing room and refuse a circus. With nothing new to chase, the Meteor's story deflates within a news cycle.",
         "news": [
           { "outlet": "beacon", "headline": "President issues brief denial of tabloid rumor", "tone": "neutral" },
           { "outlet": "ledger", "headline": "A short, firm answer starves a smear", "tone": "positive" },
@@ -296,10 +296,10 @@
         "label": "Launch an aggressive counter-attack",
         "bold": true,
         "effects": { "approval": -4, "stability": -3, "legacy": -2 },
-        "result": "You stand up a war room, threaten lawsuits, and attack the outlet by name. The escalation makes a thin rumor look like a story worth a week of coverage.",
+        "result": "You stand up a war room, threaten a $100 million libel suit, and attack the Meteor by name from the podium. The escalation makes a thin rumor look like a story worth a week of coverage.",
         "news": [
-          { "outlet": "tribune", "headline": "President's furious response elevates a flimsy rumor", "tone": "negative" },
-          { "outlet": "beacon", "headline": "Legal threats keep tabloid story in the headlines", "tone": "negative" },
+          { "outlet": "tribune", "headline": "President's furious response elevates a flimsy tabloid rumor", "tone": "negative" },
+          { "outlet": "beacon", "headline": "Legal threats keep Meteor story in the headlines", "tone": "negative" },
           { "outlet": "ledger", "headline": "Overreacting handed the smear a second life", "tone": "negative" },
           { "outlet": "buzz", "headline": "WHY SO MAD?? 😏 the LADY doth protest TOO MUCH 🔥", "tone": "negative" }
         ],
@@ -314,7 +314,7 @@
     "id": "gen_scandal_pardonwhisper",
     "category": "scandal",
     "title": "A Pardon For Sale?",
-    "briefing": "A lobbyist is reportedly telling clients that a generous 'legal defense fund' donation could grease a presidential pardon for a convicted financier. You never authorized any such thing, but the whisper is spreading and one name on the pardon list happens to match. You can refer it to the special counsel and freeze the list, or wave it off as gossip and proceed.",
+    "briefing": "K Street lobbyist Gerald Vance is reportedly telling clients that a $2 million 'legal defense fund' donation could grease a presidential pardon for Leonard Marsh, a financier doing eight years for a $340 million Ponzi scheme. You never authorized any such thing, but the whisper is spreading and Marsh's name is already on the pardon list. You can refer it to a special counsel and freeze the list, or wave it off as gossip and proceed.",
     "source": "White House Counsel",
     "minDay": 540,
     "choices": [
@@ -322,7 +322,7 @@
         "id": "refer",
         "label": "Refer to special counsel, freeze the list",
         "effects": { "approval": -2, "stability": 5, "legacy": 5, "capital": -2 },
-        "result": "You freeze the pardon list and hand the matter to an independent prosecutor before lunch. The decisiveness signals you have nothing to hide and quarantines the rot.",
+        "result": "You freeze the pardon list and hand the Vance matter to an independent prosecutor before lunch. The decisiveness signals you have nothing to hide and quarantines the rot.",
         "news": [
           { "outlet": "beacon", "headline": "President refers pardon-for-cash claim to special counsel", "tone": "neutral" },
           { "outlet": "tribune", "headline": "Freezing the list was the only honest move", "tone": "positive" },
@@ -340,15 +340,15 @@
         "label": "Dismiss it and proceed with the pardon",
         "bold": true,
         "effects": { "approval": -10, "stability": -9, "legacy": -8 },
-        "result": "You call it gossip and sign the pardon anyway. The lobbyist's voicemails surface, the timing looks damning, and 'pardon for sale' becomes a defining headline.",
+        "result": "You call it gossip and sign the Marsh pardon anyway. Vance's voicemails surface within days, the timing looks damning, and 'pardon for sale' becomes a defining headline.",
         "news": [
-          { "outlet": "tribune", "headline": "PARDON FOR SALE: president signs as lobbyist tapes emerge", "tone": "negative" },
-          { "outlet": "beacon", "headline": "Voicemails raise questions about pardon's timing", "tone": "negative" },
+          { "outlet": "tribune", "headline": "PARDON FOR SALE: president signs as Vance tapes emerge", "tone": "negative" },
+          { "outlet": "beacon", "headline": "Voicemails raise questions about timing of Marsh pardon", "tone": "negative" },
           { "outlet": "ledger", "headline": "Signing through the whisper was indefensible", "tone": "negative" },
           { "outlet": "buzz", "headline": "CASH FOR CLEMENCY 💸🔓 the TAPES are OUT and it's UGLY", "tone": "negative" }
         ],
         "social": [
-          { "handle": "@bagman_busted", "text": "signed it anyway while the voicemails existed?? unbelievable.", "sentiment": "negative", "clout": "480k" }
+          { "handle": "@bagman_busted", "text": "signed the marsh pardon while the voicemails existed?? unbelievable.", "sentiment": "negative", "clout": "480k" }
         ],
         "advisor": "Of every scandal, this is the one that ends presidencies. Do not proceed."
       }
@@ -358,7 +358,7 @@
     "id": "gen_scandal_classifieddocs",
     "category": "scandal",
     "title": "Boxes In The Garage",
-    "briefing": "A staffer found cartons of classified documents in your private residence's garage, apparently mishandled since the transition. Nobody's accused you of anything yet, but the archives and the press will both want answers. You can self-report to the archives and invite a search, or sit on it and hope a quiet return goes unnoticed.",
+    "briefing": "A staffer found eleven cartons of classified documents — some marked SECRET//NOFORN, covering NATO force posture — in the garage of your lake house outside Traverse City, Michigan. Nobody's accused you of anything yet, but the National Archives and the press will both want answers. You can self-report and invite a full search, or sit on it and hope a quiet return goes unnoticed.",
     "source": "White House Counsel",
     "minDay": 90,
     "choices": [
@@ -366,9 +366,9 @@
         "id": "selfreport",
         "label": "Self-report and invite a full search",
         "effects": { "approval": -3, "stability": 4, "legacy": 3 },
-        "result": "You notify the archives immediately, hand everything back, and consent to a sweep of the property. It's an embarrassing headline for a day, but cooperation is the whole story.",
+        "result": "You notify the Archives immediately, hand back all eleven cartons, and consent to an FBI sweep of the property. It's an embarrassing headline for a day, but cooperation is the whole story.",
         "news": [
-          { "outlet": "beacon", "headline": "President self-reports classified documents, invites search", "tone": "neutral" },
+          { "outlet": "beacon", "headline": "President self-reports classified documents, invites FBI search", "tone": "neutral" },
           { "outlet": "tribune", "headline": "Self-reporting beats getting caught, full stop", "tone": "positive" },
           { "outlet": "ledger", "headline": "Cooperation turns a mishap into a footnote", "tone": "positive" },
           { "outlet": "buzz", "headline": "CLASSIFIED in the GARAGE?? 📦🔐 at least POTUS FESSED UP", "tone": "neutral" }
@@ -384,10 +384,10 @@
         "label": "Quietly return them and say nothing",
         "bold": true,
         "effects": { "approval": -5, "stability": -8, "legacy": -7 },
-        "result": "You arrange a discreet return and tell no one. A courier logs the handoff, the log leaks, and the silence makes routine carelessness look like concealment.",
+        "result": "You arrange a discreet return through a former aide and tell no one. A courier logs the Traverse City handoff, the log leaks, and routine carelessness starts to look like concealment.",
         "news": [
           { "outlet": "tribune", "headline": "Leaked log: classified docs returned in secret, never disclosed", "tone": "negative" },
-          { "outlet": "beacon", "headline": "Undisclosed document return raises concealment questions", "tone": "negative" },
+          { "outlet": "beacon", "headline": "Undisclosed Michigan document return raises concealment questions", "tone": "negative" },
           { "outlet": "ledger", "headline": "A quiet return was the worst available option", "tone": "negative" },
           { "outlet": "buzz", "headline": "SECRET HANDOFF EXPOSED 🤫📦 why HIDE it?! 🚨", "tone": "negative" }
         ],

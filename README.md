@@ -86,7 +86,7 @@ The build is fully static, so any host works (Netlify, Vercel, Cloudflare Pages,
 
 ## A note
 
-This is a **fictional, nonpartisan** political sim. The outlets, countries, and scenarios are invented; any resemblance to real events, parties, or people is for entertainment only.
+This is a **fictional, nonpartisan** political sim. Real places and institutions appear as backdrop, but every person, company, outlet, and incident is invented — any resemblance to actual events or persons is coincidental, and no political party is depicted or endorsed.
 
 ## License
 

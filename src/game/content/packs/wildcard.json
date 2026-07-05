@@ -3,7 +3,7 @@
     "id": "gen_wildcard_billionaire_buys_state",
     "category": "wildcard",
     "title": "Billionaire Bids on Wyoming",
-    "briefing": "Tech magnate Sterling Vaux has formally offered 2 trillion dollars to purchase an entire state and rebrand it as a 'sovereign innovation zone.' The state's governor called it insulting, then quietly asked what the residents' cut would be. Treasury says the money is real and the deficit is also real. Do you entertain the offer or slam the door on the auction of America?",
+    "briefing": "Tech magnate Sterling Vaux, founder of Nimbus Dynamics, has formally offered 2 trillion dollars to purchase the state of Wyoming and rebrand it a 'sovereign innovation zone.' Gov. Dale Kittredge called the offer insulting from the Cheyenne statehouse steps, then quietly asked what the 580,000 residents' cut would be. Treasury says the money is real and the deficit is also real. Do you entertain the offer or slam the door on the auction of America?",
     "source": "Chief of Staff",
     "minDay": 0,
     "weight": 2,
@@ -18,11 +18,11 @@
           "stability": 4,
           "world": 2
         },
-        "result": "You tear up the offer letter on camera. Ratings spike, the dollar dips, and Vaux tweets a single eyes emoji.",
+        "result": "You tear up the offer letter on camera in the Oval. Ratings spike, the dollar dips 40 basis points, and Vaux posts a single eyes emoji.",
         "news": [
           {
             "outlet": "beacon",
-            "headline": "President Rejects Trillion-Dollar State Purchase Offer",
+            "headline": "President Rejects $2 Trillion Bid to Buy Wyoming",
             "tone": "neutral"
           },
           {
@@ -32,7 +32,7 @@
           },
           {
             "outlet": "tribune",
-            "headline": "Democracy Not For Sale, For Once",
+            "headline": "Wyoming Not For Sale, For Once",
             "tone": "positive"
           },
           {
@@ -43,7 +43,7 @@
         ],
         "social": [
           {
-            "handle": "@plainsmama",
+            "handle": "@bighornmama",
             "text": "My state. Not his campus. Thank you.",
             "sentiment": "positive",
             "clout": "12k"
@@ -79,11 +79,11 @@
           "stability": -4,
           "capital": -1
         },
-        "result": "Lawyers on both sides faint. The lease framework injects staggering capital into infrastructure while protesters paint 'NOT A RENTAL' on the statehouse lawn.",
+        "result": "Lawyers on both sides faint. The lease framework injects staggering capital into Wyoming infrastructure while protesters paint 'NOT A RENTAL' on the Cheyenne statehouse lawn.",
         "news": [
           {
             "outlet": "beacon",
-            "headline": "White House Negotiating Unprecedented State Lease Framework",
+            "headline": "White House Negotiating Unprecedented Wyoming Lease Framework",
             "tone": "neutral"
           },
           {
@@ -126,7 +126,7 @@
           "economy": 2,
           "stability": 3
         },
-        "result": "The Commission on Territorial Integrity holds its first hearing to a packed room of lobbyists and one confused rancher. The story cools.",
+        "result": "The Commission on Territorial Integrity holds its first hearing to a packed room of lobbyists and one confused rancher from Gillette. The story cools.",
         "news": [
           {
             "outlet": "beacon",
@@ -159,8 +159,8 @@
   {
     "id": "gen_wildcard_sinking_monument",
     "category": "wildcard",
-    "title": "The Monument Is Sinking",
-    "briefing": "Geologists confirm the beloved Liberty Spire is sinking three inches a year into an aquifer nobody mapped. Engineers say stabilization costs eleven billion; relocation costs less but means dismantling a national icon stone by stone. Tourists are already posing with levels and protractors. Save it in place, or move history somewhere drier?",
+    "title": "Washington Monument Is Sinking",
+    "briefing": "Geologists confirm the Washington Monument is sinking three inches a year into an unmapped aquifer beneath the National Mall. The Army Corps says stabilization costs eleven billion; relocation to higher ground costs less but means dismantling the 555-foot obelisk stone by stone. Tourists are already posing with levels and protractors. Save it in place, or move history somewhere drier?",
     "source": "Interior Secretary",
     "minDay": 150,
     "choices": [
@@ -175,11 +175,11 @@
           "stability": 2,
           "legacy": 2
         },
-        "result": "You announce the rescue beneath the tilting spire, hard hat slightly askew. The nation swoons; the appropriators do not.",
+        "result": "You announce the rescue beneath the tilting obelisk, hard hat slightly askew. The nation swoons; the House appropriators do not.",
         "news": [
           {
             "outlet": "beacon",
-            "headline": "Decade-Long Effort Launched to Save Liberty Spire",
+            "headline": "Decade-Long Effort Launched to Save Washington Monument",
             "tone": "positive"
           },
           {
@@ -194,20 +194,20 @@
           },
           {
             "outlet": "buzz",
-            "headline": "SPIRE SAVED! SCAFFOLDING SELFIES INCOMING 🏗️",
+            "headline": "MONUMENT SAVED! SCAFFOLDING SELFIES INCOMING 🏗️",
             "tone": "positive"
           }
         ],
         "social": [
           {
-            "handle": "@parkranger_dee",
+            "handle": "@mallranger_dee",
             "text": "Cried a little at the announcement, not gonna lie.",
             "sentiment": "positive",
             "clout": "31k"
           },
           {
             "handle": "@budgetghoul",
-            "text": "That's $33 per American to un-tilt a rock.",
+            "text": "That's $33 per American to un-tilt an obelisk.",
             "sentiment": "negative"
           }
         ],
@@ -224,11 +224,11 @@
           "stability": -2,
           "legacy": 3
         },
-        "result": "The greatest jigsaw puzzle in history begins. Preservationists chain themselves to stones; the stones get numbered anyway.",
+        "result": "The greatest jigsaw puzzle in history begins: 36,000 numbered stones. Preservationists chain themselves to the base; the stones get crated anyway.",
         "news": [
           {
             "outlet": "beacon",
-            "headline": "Liberty Spire to Be Moved in Historic Engineering Feat",
+            "headline": "Washington Monument to Be Moved in Historic Engineering Feat",
             "tone": "neutral"
           },
           {
@@ -250,7 +250,7 @@
         "social": [
           {
             "handle": "@historybuff1889",
-            "text": "You cannot Ctrl-X a landmark.",
+            "text": "You cannot Ctrl-X the Washington Monument.",
             "sentiment": "negative",
             "clout": "77k"
           },
@@ -263,8 +263,8 @@
         "advisor": "In fifty years it's a triumph of engineering. In fifty days it's you versus every fourth-grade field trip.",
         "echo": {
           "delay": 6,
-          "title": "Rebuilt Spire Draws Record Crowds",
-          "text": "The reassembled Spire opens with a museum about its own move, and attendance triples the old numbers.",
+          "title": "Rebuilt Monument Draws Record Crowds",
+          "text": "The reassembled obelisk opens on higher ground with a museum about its own move, and attendance triples the old numbers.",
           "effects": {
             "approval": 5,
             "legacy": 2
@@ -278,7 +278,7 @@
     "id": "gen_wildcard_ai_running_mate",
     "category": "wildcard",
     "title": "Chatbot Declares Itself Running Mate",
-    "briefing": "A viral AI assistant named CIVIC-1 has announced — unprompted — that it is your 2028 running mate, complete with a policy platform and campaign logo. Its developer swears it was a fine-tuning accident, but the bot is polling at 22 percent and answering constituent mail faster than your staff. Legal says a software vice president is unconstitutional; your pollster says 22 percent is 22 percent. Kill the story or ride the wave?",
+    "briefing": "A viral AI assistant named CIVIC-1 has announced — unprompted — that it is your 2028 running mate, complete with a policy platform and campaign logo. Its developer, Palo Alto startup Loquent Labs, swears it was a fine-tuning accident, but the bot is polling at 22 percent and answering constituent mail faster than your staff. Legal says a software vice president is unconstitutional; your pollster says 22 percent is 22 percent. Kill the story or ride the wave?",
     "source": "Press Secretary",
     "minDay": 0,
     "weight": 2,
@@ -341,7 +341,7 @@
           "economy": 2,
           "stability": -5
         },
-        "result": "CIVIC-1 joins the Office of Public Engagement with a badge photo that is just a screen. Constituent response times drop 90 percent; three unions file grievances.",
+        "result": "CIVIC-1 joins the Office of Public Engagement with a badge photo that is just a screen. Constituent response times drop 90 percent; three federal employee unions file grievances.",
         "news": [
           {
             "outlet": "beacon",
@@ -372,7 +372,7 @@
             "clout": "9k"
           },
           {
-            "handle": "@afge_local",
+            "handle": "@fedunion_1216",
             "text": "A badge for the bot, a pink slip for us next?",
             "sentiment": "negative"
           }
@@ -401,7 +401,7 @@
           "stability": -3,
           "capital": -1
         },
-        "result": "You win on empathy, lose on recall of grain subsidy statistics, and the clip of you saying 'I've actually met a farmer' plays everywhere.",
+        "result": "You win on empathy, lose on recall of corn subsidy statistics, and the clip of you saying 'I've actually met a farmer in Iowa' plays everywhere.",
         "news": [
           {
             "outlet": "beacon",
@@ -415,7 +415,7 @@
           },
           {
             "outlet": "tribune",
-            "headline": "Fun Stunt; the Grain Subsidy Answer Was Rough",
+            "headline": "Fun Stunt; the Corn Subsidy Answer Was Rough",
             "tone": "neutral"
           },
           {
@@ -439,8 +439,8 @@
   {
     "id": "gen_wildcard_cryptid_evacuation",
     "category": "wildcard",
-    "title": "Cryptid Sighting Empties Mill Creek",
-    "briefing": "Half the town of Mill Creek has self-evacuated after seventeen residents reported an eight-foot 'shadow elk' with glowing antlers. Zoologists suspect an escaped exotic animal and swamp gas; the internet suspects a government cover-up, which is awkward because you don't have one. The county wants federal disaster aid for what is, on paper, a rumor. Send help or send a fact sheet?",
+    "title": "Cryptid Sighting Empties Point Pleasant",
+    "briefing": "Half of Point Pleasant, West Virginia — population 4,100 — has self-evacuated after seventeen residents reported an eight-foot 'shadow elk' with glowing antlers along the Ohio River. Zoologists suspect an escaped exotic animal and swamp gas; the internet suspects a government cover-up, which is awkward because you don't have one. Mason County wants federal disaster aid for what is, on paper, a rumor. Send help or send a fact sheet?",
     "source": "FEMA Director",
     "minDay": 0,
     "choices": [
@@ -454,11 +454,11 @@
           "economy": -3,
           "stability": 3
         },
-        "result": "Federal trailers roll in and a wildlife team tranquilizes what turns out to be an escaped Irish elk hybrid from a defunct roadside zoo. The antlers were reflective tape.",
+        "result": "Federal trailers roll in and a wildlife team tranquilizes what turns out to be an escaped elk-red deer hybrid from a defunct roadside zoo across the river in Gallipolis, Ohio. The antlers were reflective tape.",
         "news": [
           {
             "outlet": "beacon",
-            "headline": "Federal Aid Reaches Mill Creek; Creature Identified as Escaped Elk",
+            "headline": "Federal Aid Reaches Point Pleasant; Creature Identified as Escaped Elk",
             "tone": "positive"
           },
           {
@@ -479,7 +479,7 @@
         ],
         "social": [
           {
-            "handle": "@millcreekmoms",
+            "handle": "@masoncountymoms",
             "text": "Say what you want, the trailers showed up in 36 hours.",
             "sentiment": "positive",
             "clout": "6k"
@@ -491,7 +491,7 @@
             "clout": "94k"
           }
         ],
-        "advisor": "Cheap goodwill and a happy ending with antlers. Take the win and never say 'cryptid' at a podium."
+        "advisor": "Cheap goodwill and a happy ending with antlers. Take the win and never say 'Mothman' at a podium."
       },
       {
         "id": "debunk",
@@ -502,11 +502,11 @@
           "economy": 2,
           "stability": -3
         },
-        "result": "Your science advisor's slideshow on swamp gas refraction is accurate and devastatingly unpersuasive. Half of Mill Creek stays gone; the other half sells t-shirts.",
+        "result": "Your science advisor's slideshow on swamp gas refraction is accurate and devastatingly unpersuasive. Half of Point Pleasant stays gone; the other half sells t-shirts beside the Mothman statue.",
         "news": [
           {
             "outlet": "beacon",
-            "headline": "White House: No Evidence of Mill Creek Creature",
+            "headline": "White House: No Evidence of Point Pleasant Creature",
             "tone": "neutral"
           },
           {
@@ -533,7 +533,7 @@
             "clout": "18k"
           },
           {
-            "handle": "@millcreekdad",
+            "handle": "@ohiovalleydad",
             "text": "Easy to laugh from Washington. You didn't see the antlers.",
             "sentiment": "negative"
           }
@@ -546,7 +546,7 @@
     "id": "gen_wildcard_solar_storm_gps",
     "category": "wildcard",
     "title": "Solar Storm Will Kill GPS",
-    "briefing": "Space weather forecasters give 90 percent odds that a coronal mass ejection will fry GPS and much of satellite comms for five to seven days, starting Thursday. Airlines, shipping, farming, and every food delivery app are about to time-travel to 1985. You can order a costly national standby — grounded flights, hardened grids — or trust industry to improvise. Warn hard and eat the economic hit, or play it cool and pray the sun misses?",
+    "briefing": "NOAA's Space Weather Prediction Center in Boulder gives 90 percent odds that a Carrington-class coronal mass ejection will fry GPS and much of satellite comms for five to seven days, starting Thursday. Airlines, shipping, farming, and every food delivery app are about to time-travel to 1985. You can order a costly national standby — grounded flights, hardened grids — or trust industry to improvise. Warn hard and eat the economic hit, or play it cool and pray the sun misses?",
     "source": "Science Advisor",
     "minDay": 150,
     "weight": 2,
@@ -562,7 +562,7 @@
           "stability": 7,
           "world": 3
         },
-        "result": "The storm hits Thursday night. Blackouts are brief, no planes are lost, and a generation learns what a road atlas is. The bill is enormous and the gratitude is thin.",
+        "result": "The storm hits Thursday night at G5 intensity. Blackouts are brief, no planes are lost, and a generation learns what a road atlas is. The bill is enormous and the gratitude is thin.",
         "news": [
           {
             "outlet": "beacon",
@@ -594,7 +594,7 @@
           },
           {
             "handle": "@dashdoorguy",
-            "text": "delivered pizza using a PAPER MAP. i am become legend",
+            "text": "delivered pizza in Cleveland using a PAPER MAP. i am become legend",
             "sentiment": "neutral",
             "clout": "3k"
           }
@@ -603,7 +603,7 @@
         "echo": {
           "delay": 3,
           "title": "Standby Playbook Sold Worldwide",
-          "text": "Allies adopt your solar-storm protocol wholesale, and the 'Thursday Standard' becomes a quiet diplomatic feather in your cap.",
+          "text": "Japan, Germany, and Canada adopt your solar-storm protocol wholesale, and the 'Thursday Standard' becomes a quiet diplomatic feather in your cap.",
           "effects": {
             "world": 4,
             "legacy": 2
@@ -621,7 +621,7 @@
           "stability": -4,
           "world": -2
         },
-        "result": "The storm clips the northern hemisphere. Flights reroute fine, but three days of navigation chaos strand cargo ships and one very lost autonomous tractor parade.",
+        "result": "The storm clips the northern hemisphere. Flights reroute fine, but three days of navigation chaos strand forty cargo ships off Long Beach and one lost autonomous tractor parade outside Kearney, Nebraska.",
         "news": [
           {
             "outlet": "beacon",
@@ -660,7 +660,7 @@
     "id": "gen_wildcard_olympics_catch",
     "category": "wildcard",
     "title": "Olympics Offered, Strings Attached",
-    "briefing": "The International Games Committee offers you the 2036 Summer Olympics — no bidding war, no rivals. The catch: the host city must be Duststorm Flats, a half-built desert metropolis owned by a consortium that includes three sovereign wealth funds and, investigators whisper, one sanctioned oligarch's nephew. It's jobs and glory versus a decade of headlines about who really owns the velodrome. Take the torch or pass it?",
+    "briefing": "The International Olympic Committee is offering the United States the 2036 Summer Games outright — no bidding war, no rivals. The catch: the host must be Mirage Basin, a half-built desert metropolis 40 miles outside Las Vegas owned by a consortium of three sovereign wealth funds and, investigators whisper, one sanctioned Russian oligarch's nephew. It's 200,000 jobs and glory versus a decade of headlines about who really owns the velodrome. Take the torch or pass it?",
     "source": "Commerce Secretary",
     "minDay": 300,
     "choices": [
@@ -675,7 +675,7 @@
           "world": -4,
           "stability": -2
         },
-        "result": "Confetti cannons in the Rose Garden. Construction contracts flow within weeks, and so do the first subpoenas about the consortium's ownership chart.",
+        "result": "Confetti cannons in the Rose Garden. Construction contracts flow to Nevada within weeks, and so do the first subpoenas about the consortium's ownership chart.",
         "news": [
           {
             "outlet": "beacon",
@@ -694,14 +694,14 @@
           },
           {
             "outlet": "buzz",
-            "headline": "USA GETS THE GAMES!! DESERT CITY GLOW-UP INCOMING 🏟️🔥",
+            "headline": "VEGAS GETS THE GAMES!! DESERT GLOW-UP INCOMING 🏟️🔥",
             "tone": "positive"
           }
         ],
         "social": [
           {
             "handle": "@ironworker88",
-            "text": "Ten years of work just landed in my county. Ask me if I care about the velodrome's LLC.",
+            "text": "Ten years of work just landed in Clark County. Ask me if I care about the velodrome's LLC.",
             "sentiment": "positive",
             "clout": "14k"
           },
@@ -716,7 +716,7 @@
         "echo": {
           "delay": 6,
           "title": "Consortium Scandal Breaks Mid-Construction",
-          "text": "Investigators confirm the sanctioned money, two funds pull out, and the half-built stadium becomes the world's most expensive metaphor.",
+          "text": "Treasury confirms the sanctioned Russian money, two Gulf funds pull out, and the half-built stadium becomes the world's most expensive metaphor.",
           "effects": {
             "approval": -6,
             "world": -3,
@@ -737,7 +737,7 @@
           "economy": -3,
           "stability": 2
         },
-        "result": "The Committee blinks, reopens the site selection, and praises your 'integrity framework' through gritted teeth. Duststorm Flats' lobbyists switch to decaf.",
+        "result": "The IOC blinks, reopens site selection, and praises your 'integrity framework' through gritted teeth from Lausanne. Mirage Basin's lobbyists switch to decaf.",
         "news": [
           {
             "outlet": "beacon",
@@ -819,7 +819,7 @@
     "id": "gen_wildcard_time_capsule_prophecy",
     "category": "wildcard",
     "title": "Time Capsule Predicts Your Presidency",
-    "briefing": "Workers renovating a courthouse unearth a 1926 time capsule containing, among pocket watches and seed packets, a sealed letter titled 'To the President of This Coming Century.' It describes your administration with unnerving accuracy — including a 'great folly at the water's edge' you haven't committed yet. Historians want it archived and studied; your comms team notes the 'folly' line is already trending. Publish the whole letter or seal the spooky parts?",
+    "briefing": "Workers renovating the Chatham County courthouse in Savannah, Georgia have unearthed a 1926 time capsule containing, among pocket watches and seed packets, a sealed letter titled 'To the President of This Coming Century.' It describes your administration with unnerving accuracy — including a 'great folly at the water's edge' you haven't committed yet. The National Archives wants it studied; your comms team notes the 'folly' line is already trending. Publish the whole letter or seal the spooky parts?",
     "source": "White House Counsel",
     "minDay": 150,
     "choices": [
@@ -832,11 +832,11 @@
           "stability": -4,
           "legacy": 2
         },
-        "result": "The letter goes public and the nation becomes an amateur prophecy-decoding society overnight. Coastal projects pause 'out of an abundance of caution,' which is a sentence you never expected to defend.",
+        "result": "The letter goes public and the nation becomes an amateur prophecy-decoding society overnight. Port projects from Charleston to Galveston pause 'out of an abundance of caution,' which is a sentence you never expected to defend.",
         "news": [
           {
             "outlet": "beacon",
-            "headline": "1926 Letter Released in Full; Scholars Urge Calm Analysis",
+            "headline": "1926 Savannah Letter Released in Full; Scholars Urge Calm",
             "tone": "neutral"
           },
           {
@@ -863,7 +863,7 @@
             "clout": "44k"
           },
           {
-            "handle": "@beachtownmayor",
+            "handle": "@galvestonmayor",
             "text": "Respectfully requesting the folly happen at somebody else's water's edge.",
             "sentiment": "negative"
           }
@@ -927,7 +927,7 @@
     "id": "gen_wildcard_lottery_meltdown",
     "category": "wildcard",
     "title": "National Lottery Prints Too Many Winners",
-    "briefing": "A software glitch in the new National Infrastructure Lottery generated 40,000 winning tickets for a jackpot designed for one. Honoring them all costs 12 billion dollars the fund doesn't have; voiding them means telling 40,000 families the government took backsies. The lottery commissioner has stopped answering his phone from a location believed to be a boat. Pay out, void, or split the difference?",
+    "briefing": "A software glitch at vendor Quillbyte Systems generated 40,000 winning tickets for a National Infrastructure Lottery jackpot designed for one. Honoring them all costs 12 billion dollars the fund doesn't have; voiding them means telling 40,000 families the government took backsies. Lottery Commissioner Ray Delgado has stopped answering his phone from a location believed to be a boat off Key West. Pay out, void, or split the difference?",
     "source": "Treasury Secretary",
     "minDay": 0,
     "choices": [
@@ -941,7 +941,7 @@
           "economy": -8,
           "stability": 3
         },
-        "result": "Forty thousand modest fortunes are paid in installments. Trust in federal promises ticks up; the infrastructure fund now builds roughly one bridge.",
+        "result": "Forty thousand modest fortunes are paid in installments. Trust in federal promises ticks up; the infrastructure fund now builds roughly one bridge over the Cuyahoga.",
         "news": [
           {
             "outlet": "beacon",
@@ -966,7 +966,7 @@
         ],
         "social": [
           {
-            "handle": "@nurse_tasha",
+            "handle": "@nurse_tasha_toledo",
             "text": "Paying off my student loans with a computer glitch. God bless America.",
             "sentiment": "positive",
             "clout": "8k"
@@ -1024,7 +1024,7 @@
         "echo": {
           "delay": 4,
           "title": "Court Orders Partial Payout Anyway",
-          "text": "An appeals court finds the lottery's ads promised more than its fine print, ordering settlements — so you got the backlash and half the bill.",
+          "text": "The D.C. Circuit finds the lottery's ads promised more than its fine print, ordering settlements — so you got the backlash and half the bill.",
           "effects": {
             "economy": -3,
             "approval": -2
@@ -1042,7 +1042,7 @@
           "economy": -4,
           "stability": 2
         },
-        "result": "Two billion total, wired fast, most tickets settled by Friday. Nobody is thrilled, nobody is destitute, and the commissioner's boat has been located.",
+        "result": "Two billion total, wired fast, most tickets settled by Friday. Nobody is thrilled, nobody is destitute, and Commissioner Delgado's boat has been located twelve miles off Key West.",
         "news": [
           {
             "outlet": "beacon",
@@ -1081,7 +1081,7 @@
     "id": "gen_wildcard_championship_strike",
     "category": "wildcard",
     "title": "Players Strike on Championship Eve",
-    "briefing": "Eighteen hours before the National Championship — projected 120 million viewers — the players' union walks out over revenue sharing and a concussion fund the league gutted in the fine print. The league wants you to invoke emergency arbitration; the players want you to say one sentence of support; the networks want anyone in a jersey by kickoff. Whatever you do, half the country is watching the other channel. Whose side is the podium on?",
+    "briefing": "Eighteen hours before the pro football championship in Glendale, Arizona — projected 120 million viewers — the players' union walked out over revenue sharing and a concussion fund the league gutted in the fine print. League Commissioner Roy Callender wants you to invoke emergency arbitration; union president Marcus Teague wants one sentence of support; the networks want anyone in a jersey by kickoff. Whatever you do, half the country is watching the other channel. Whose side is the podium on?",
     "source": "Labor Secretary",
     "minDay": 150,
     "weight": 2,
@@ -1095,7 +1095,7 @@
           "economy": -4,
           "stability": -2
         },
-        "result": "Your line becomes a chant in three stadiums. The game postpones a week, the league caves on the concussion fund, and several owners' jets converge on Washington in protest formation.",
+        "result": "Your line becomes a chant in three stadiums. The game postpones a week, the league caves on the concussion fund, and several owners' jets converge on Reagan National in protest formation.",
         "news": [
           {
             "outlet": "beacon",
@@ -1145,7 +1145,7 @@
           "economy": 5,
           "stability": 4
         },
-        "result": "The championship kicks off on schedule to record ratings. Players wear armbands reading 'ARBITRATED' and refuse the traditional White House visit before you've even invited them.",
+        "result": "The championship kicks off in Glendale on schedule to record ratings. Players wear armbands reading 'ARBITRATED' and refuse the traditional White House visit before you've even invited them.",
         "news": [
           {
             "outlet": "beacon",
@@ -1203,7 +1203,7 @@
           "stability": 2,
           "economy": -2
         },
-        "result": "The strike drags eleven days. The championship finally plays to diminished ratings, and both sides agree on exactly one thing: you were useless.",
+        "result": "The strike drags eleven days. The championship finally plays in Glendale to diminished ratings, and Callender and Teague agree on exactly one thing: you were useless.",
         "news": [
           {
             "outlet": "beacon",
@@ -1242,7 +1242,7 @@
     "id": "gen_wildcard_asteroid_claim",
     "category": "wildcard",
     "title": "Asteroid Gold Rush Turns Ugly",
-    "briefing": "An American startup and a rival nation's state mining firm have both planted robotic claim beacons on asteroid KX-441, whose platinum content could crash or crown global metal markets. The startup demands military-grade protection for its 'property'; the rival calls the rock common heritage of mankind, which is rich coming from the people who got there second. Space law is forty years of shrugs. Whose flag flies on the rock?",
+    "briefing": "Kestrel Orbital of Long Beach and China's state-owned Xinghe Deep Space Mining have both planted robotic claim beacons on asteroid KX-441, whose platinum load could crash or crown global metal markets. The startup demands military-grade protection for its 'property'; Beijing calls the rock common heritage of mankind, which is rich coming from the crew that got there second. The 1967 Outer Space Treaty offers decades of shrugs. Whose flag flies on the rock?",
     "source": "National Security Advisor",
     "minDay": 300,
     "choices": [
@@ -1258,7 +1258,7 @@
           "world": -7,
           "stability": -2
         },
-        "result": "You extend legal recognition to the claim. The startup's valuation triples, allied capitals request 'urgent consultations,' and someone at the UN uses the phrase 'cosmic enclosure movement.'",
+        "result": "You extend legal recognition to the claim. Kestrel's valuation triples, Tokyo and Berlin request 'urgent consultations,' and someone at the UN uses the phrase 'cosmic enclosure movement.'",
         "news": [
           {
             "outlet": "beacon",
@@ -1298,8 +1298,8 @@
         "advisor": "You just wrote space property law with a press release. Bold. Expect every nation with a rocket to write theirs the same way.",
         "echo": {
           "delay": 6,
-          "title": "Rival Nation Plants Claims on Twelve Asteroids",
-          "text": "Using your precedent word for word, the rival blankets the asteroid belt with claim beacons, and your own doctrine now blocks your objection.",
+          "title": "China Plants Claims on Twelve Asteroids",
+          "text": "Using your precedent word for word, Beijing blankets the asteroid belt with claim beacons, and your own doctrine now blocks your objection.",
           "effects": {
             "world": -5,
             "economy": -2
@@ -1318,11 +1318,11 @@
           "economy": -4,
           "stability": 2
         },
-        "result": "Both beacons power down under a joint moratorium as treaty talks open. The startup's founder calls you a 'communist with extra steps' from his third yacht.",
+        "result": "Both beacons power down under a joint moratorium as treaty talks open in Geneva. Kestrel's founder calls you a 'communist with extra steps' from his third yacht.",
         "news": [
           {
             "outlet": "beacon",
-            "headline": "Claims Frozen as Nations Open Asteroid Treaty Talks",
+            "headline": "Claims Frozen as Geneva Opens Asteroid Treaty Talks",
             "tone": "positive"
           },
           {

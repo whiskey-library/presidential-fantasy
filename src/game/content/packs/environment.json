@@ -2,8 +2,8 @@
   {
     "id": "gen_environment_pipeline",
     "category": "environment",
-    "title": "Sign the Mega-Pipeline?",
-    "briefing": "A continent-spanning pipeline is one signature away from breaking ground. Backers promise cheaper fuel and tens of thousands of construction jobs; tribes, ranchers, and climate groups have chained themselves to the proposed route. Energy for the grid, or a fight you'll be litigating for a decade?",
+    "title": "Sign the Meridian Pipeline?",
+    "briefing": "The Meridian pipeline — Bakken crude from Williston, North Dakota, to the refineries of Port Arthur, Texas — is one signature away from breaking ground. Backers promise cheaper fuel and 28,000 construction jobs; Lakota water protectors, Sandhills ranchers, and climate groups have chained themselves to the Missouri River crossing. Energy for the grid, or a decade in federal court?",
     "source": "Energy Secretary",
     "minDay": 0,
     "choices": [
@@ -11,35 +11,35 @@
         "id": "approve",
         "label": "Approve the pipeline",
         "effects": { "economy": 7, "approval": 1, "world": -5, "stability": -3 },
-        "result": "Steel starts shipping within weeks and energy futures dip. Protest camps swell along the route and the courts fill with injunctions.",
+        "result": "Steel ships to Williston within weeks and crude futures dip $3 a barrel. Protest camps swell at the Missouri crossing and injunctions stack up in a Bismarck courtroom.",
         "news": [
-          { "outlet": "ledger", "headline": "Pipeline greenlit: jobs and energy independence flow", "tone": "positive" },
-          { "outlet": "tribune", "headline": "President paves a carbon superhighway through sacred land", "tone": "negative" },
-          { "outlet": "beacon", "headline": "Administration approves long-disputed pipeline", "tone": "neutral" },
-          { "outlet": "buzz", "headline": "POTUS SIGNS THE PIPE — protesters storm the prairie! 🛢️🔥", "tone": "neutral" }
+          { "outlet": "ledger", "headline": "Meridian greenlit: 28,000 jobs and energy independence flow", "tone": "positive" },
+          { "outlet": "tribune", "headline": "President paves a carbon superhighway through treaty land", "tone": "negative" },
+          { "outlet": "beacon", "headline": "Administration approves long-disputed Meridian pipeline", "tone": "neutral" },
+          { "outlet": "buzz", "headline": "POTUS SIGNS THE PIPE — Dakota prairie ERUPTS! 🛢️🔥", "tone": "neutral" }
         ],
         "social": [
-          { "handle": "@welder_in_wyoming", "text": "two years of steady work just landed in my lap. about time.", "sentiment": "positive", "clout": "33k" },
-          { "handle": "@prairie_keeper", "text": "they ran it straight through our water. we're not moving.", "sentiment": "negative", "clout": "88k" }
+          { "handle": "@welder_in_williston", "text": "two years of steady work just landed in my lap. about time.", "sentiment": "positive", "clout": "33k" },
+          { "handle": "@missouri_river_rosa", "text": "they ran it under our river. we're not moving.", "sentiment": "negative", "clout": "88k" }
         ],
-        "advisor": "The jobs are real and immediate. So are the lawsuits — budget for a long, ugly courtroom decade.",
+        "advisor": "The jobs are real and immediate. So are the lawsuits — you'll own half the Eighth Circuit's docket for a decade.",
         "setFlags": { "pipeline_approved": true }
       },
       {
         "id": "reroute",
         "label": "Demand a costly reroute",
-        "detail": "Force it around protected land and water.",
+        "detail": "Bend it east, around the reservation and the aquifer.",
         "cost": 2,
         "effects": { "stability": 4, "world": 2, "economy": -2, "approval": -1 },
-        "result": "You order the route bent around the sensitive corridor. Both sides grumble — too expensive for industry, too compromised for purists — but the camps quietly fold.",
+        "result": "You order the route bent 140 miles east, clear of the reservation and the Ogallala Aquifer. Both sides grumble — too expensive for industry, too compromised for purists — but the camps quietly fold.",
         "news": [
-          { "outlet": "beacon", "headline": "President forces pipeline reroute to cool tensions", "tone": "neutral" },
-          { "outlet": "ledger", "headline": "Red tape adds billions and years to vital project", "tone": "negative" },
-          { "outlet": "tribune", "headline": "A partial win: the water is spared, the pipe is not", "tone": "neutral" },
+          { "outlet": "beacon", "headline": "President forces 140-mile pipeline reroute to cool tensions", "tone": "neutral" },
+          { "outlet": "ledger", "headline": "Reroute adds $4 billion and three years to vital project", "tone": "negative" },
+          { "outlet": "tribune", "headline": "A partial win: the aquifer is spared, the pipe is not", "tone": "neutral" },
           { "outlet": "buzz", "headline": "POTUS BENDS THE PIPE — nobody's happy, everybody's loud! 😤", "tone": "neutral" }
         ],
         "social": [
-          { "handle": "@middle_lane_meg", "text": "a compromise where both sides are annoyed? that's basically governing.", "sentiment": "neutral", "clout": "12k" }
+          { "handle": "@omaha_middle_lane", "text": "a compromise where both sides are annoyed? that's basically governing.", "sentiment": "neutral", "clout": "12k" }
         ],
         "advisor": "Splitting the baby costs money and thrills nobody, but it empties the protest camps. Sometimes quiet is the win."
       },
@@ -47,17 +47,17 @@
         "id": "kill",
         "label": "Kill the project",
         "effects": { "world": 6, "legacy": 4, "economy": -5, "approval": -2 },
-        "result": "You revoke the permit for good. Climate groups throw a party; energy markets twitch and a region's promised paychecks vanish overnight.",
+        "result": "You revoke the federal permit for good. Climate groups celebrate outside the White House; crude futures twitch and 28,000 promised paychecks vanish from the Dakotas overnight.",
         "news": [
-          { "outlet": "tribune", "headline": "President kills the pipeline — a line in the sand for the climate", "tone": "positive" },
-          { "outlet": "ledger", "headline": "Thousands of jobs torched to please activists", "tone": "negative" },
-          { "outlet": "beacon", "headline": "Administration cancels disputed pipeline permit", "tone": "neutral" },
-          { "outlet": "buzz", "headline": "POTUS PULLS THE PLUG on the pipe — boomtowns BUST! 💸", "tone": "negative" }
+          { "outlet": "tribune", "headline": "President kills Meridian — a line in the sand for the climate", "tone": "positive" },
+          { "outlet": "ledger", "headline": "28,000 jobs torched to please activists", "tone": "negative" },
+          { "outlet": "beacon", "headline": "Administration revokes Meridian pipeline permit", "tone": "neutral" },
+          { "outlet": "buzz", "headline": "POTUS PULLS THE PLUG — Williston boomtown goes BUST! 💸", "tone": "negative" }
         ],
         "social": [
-          { "handle": "@river_runs_clean", "text": "my grandkids will drink that water. worth every angry headline.", "sentiment": "positive", "clout": "210k" }
+          { "handle": "@river_runs_clean", "text": "my grandkids will drink from the Missouri. worth every angry headline.", "sentiment": "positive", "clout": "210k" }
         ],
-        "advisor": "A legacy-defining no. Just know the laid-off welders vote too, and they'll remember.",
+        "advisor": "A legacy-defining no. Just know the laid-off welders in Williston vote too, and they'll remember.",
         "setFlags": { "pipeline_killed": true }
       }
     ]
@@ -66,7 +66,7 @@
     "id": "gen_environment_emissions_cap",
     "category": "environment",
     "title": "Cap the Smokestacks?",
-    "briefing": "Your team has drafted the strictest carbon caps in the nation's history. Hit the targets and you lead the world on climate; miss the politics and you hand industry a rallying cry about shuttered plants and higher bills. How hard do you squeeze?",
+    "briefing": "Your EPA has drafted the strictest carbon caps in American history — 55 percent below 2005 levels by 2035, no exemptions. Hit the targets and you lead the world on climate; miss the politics and every shuttered plant from Pittsburgh to Gary becomes an ad about higher bills. How hard do you squeeze?",
     "source": "EPA Administrator",
     "minDay": 2,
     "weight": 1.2,
@@ -76,24 +76,24 @@
         "label": "Impose the strict cap",
         "bold": true,
         "effects": { "world": 8, "legacy": 5, "economy": -6, "approval": -3 },
-        "result": "Emissions targets become law with no soft landing. Green investors cheer, heavy industry warns of layoffs, and your poll numbers in factory states sag.",
+        "result": "The 2035 targets become law with no soft landing. Green investors cheer, steelmakers along the Ohio River warn of layoffs, and your polling in Ohio and Pennsylvania sags six points.",
         "news": [
           { "outlet": "tribune", "headline": "Boldest climate cap in history clears the desk", "tone": "positive" },
-          { "outlet": "ledger", "headline": "War on industry: mandate threatens the factory floor", "tone": "negative" },
+          { "outlet": "ledger", "headline": "War on industry: mandate menaces mills from Gary to Weirton", "tone": "negative" },
           { "outlet": "beacon", "headline": "President signs sweeping emissions limits", "tone": "neutral" },
           { "outlet": "buzz", "headline": "POTUS SLAMS the smokestacks — bills set to SOAR?! 🌫️", "tone": "neutral" }
         ],
         "social": [
-          { "handle": "@cleanairkid", "text": "first time my city's asthma map might actually shrink. i'm crying.", "sentiment": "positive", "clout": "95k" }
+          { "handle": "@cleanair_akron", "text": "first time akron's asthma map might actually shrink. i'm crying.", "sentiment": "positive", "clout": "95k" }
         ],
-        "advisor": "History will love this; the rust belt won't. The economy will take a real bruise before the upside lands."
+        "advisor": "History will love this; Youngstown won't. The economy takes a real bruise before the upside lands."
       },
       {
         "id": "phase_in",
         "label": "Phase it in slowly",
         "detail": "Long runway, industry credits, softer targets.",
         "effects": { "world": 3, "economy": 1, "stability": 2, "approval": 1 },
-        "result": "You set gentle, escalating targets with credits for early movers. The reaction is a collective shrug — exactly the goal.",
+        "result": "You set gentle targets that don't bite until 2030, with credits for early movers. The reaction is a collective shrug — exactly the goal.",
         "news": [
           { "outlet": "beacon", "headline": "President opts for gradual emissions phase-in", "tone": "neutral" },
           { "outlet": "ledger", "headline": "Industry breathes easier under softened timeline", "tone": "positive" },
@@ -101,7 +101,7 @@
           { "outlet": "buzz", "headline": "POTUS goes EASY on the smoke — greens grumble 😒", "tone": "neutral" }
         ],
         "social": [
-          { "handle": "@plant_manager_pat", "text": "a timeline i can actually plan around. i'll take it.", "sentiment": "positive", "clout": "8k" }
+          { "handle": "@toledo_plant_pat", "text": "a timeline i can actually plan around. i'll take it.", "sentiment": "positive", "clout": "8k" }
         ],
         "advisor": "Pragmatic and quiet. You buy peace now and trade away a chunk of the legacy headline."
       },
@@ -109,7 +109,7 @@
         "id": "scrap",
         "label": "Scrap the caps entirely",
         "effects": { "economy": 5, "approval": 2, "world": -6, "legacy": -3 },
-        "result": "You shelve the rules and lean into 'energy abundance.' Markets rally and industry sends thank-you notes; climate scientists send open letters.",
+        "result": "You shelve the caps and lean into 'energy abundance.' The Dow rallies 600 points and industry sends thank-you notes; 400 climate scientists sign an open letter.",
         "news": [
           { "outlet": "ledger", "headline": "Common sense wins: job-killing caps shelved", "tone": "positive" },
           { "outlet": "tribune", "headline": "President abandons the climate fight before it starts", "tone": "negative" },
@@ -126,8 +126,8 @@
   {
     "id": "gen_environment_wildfire",
     "category": "environment",
-    "title": "The Megafire Spreads",
-    "briefing": "A record drought has turned the western forests into a tinderbox, and three fires just merged into one. Towns are evacuating, the smoke has reached the coasts, and your phone won't stop. Throw everything at the flames now, or hold resources and confront why this keeps happening?",
+    "title": "The Klamath Megafire",
+    "briefing": "After a record drought, three fires in the Klamath National Forest have merged into one 800,000-acre blaze straddling the California-Oregon line. Yreka is evacuating, Medford is next, and the smoke has turned skies orange as far east as Boston. Throw everything at the flames now, or hold resources and confront why this keeps happening?",
     "source": "FEMA Director",
     "minDay": 4,
     "choices": [
@@ -136,15 +136,15 @@
         "label": "Surge every resource now",
         "cost": 2,
         "effects": { "approval": 5, "stability": 3, "economy": -3 },
-        "result": "You federalize the response and the sky fills with tankers. The line holds outside the biggest town and the cameras catch you hugging firefighters.",
+        "result": "You federalize the response and the sky over the Klamath fills with tankers. The line holds outside Yreka and the cameras catch you hugging hotshot crews at dawn.",
         "news": [
           { "outlet": "beacon", "headline": "President mounts massive federal firefight", "tone": "positive" },
-          { "outlet": "buzz", "headline": "POTUS GOES ALL IN on the megafire — TOWN SAVED at dawn! 🔥🚁", "tone": "positive" },
+          { "outlet": "buzz", "headline": "POTUS GOES ALL IN on the megafire — YREKA SAVED at dawn! 🔥🚁", "tone": "positive" },
           { "outlet": "tribune", "headline": "Heroic response, but the drought question goes unanswered", "tone": "neutral" },
-          { "outlet": "ledger", "headline": "Disaster bill balloons as Washington opens the spigot", "tone": "negative" }
+          { "outlet": "ledger", "headline": "Disaster tab hits $11 billion as Washington opens the spigot", "tone": "negative" }
         ],
         "social": [
-          { "handle": "@evacuated_ellen", "text": "watched the tankers turn the fire back from our ridge. thank you isn't enough.", "sentiment": "positive", "clout": "120k" }
+          { "handle": "@yreka_ellen", "text": "watched the tankers turn the fire back from our ridge. thank you isn't enough.", "sentiment": "positive", "clout": "120k" }
         ],
         "advisor": "Showing up wins the week. Just don't let 'we fought hard' become an excuse to skip 'why again?'"
       },
@@ -153,11 +153,11 @@
         "label": "Fund prevention & resilience",
         "detail": "Controlled burns, forest thinning, building codes.",
         "effects": { "world": 4, "stability": 3, "legacy": 3, "approval": -2 },
-        "result": "You pair the response with a major resilience package — controlled burns, fire-wise codes, drought infrastructure. Experts applaud; some voters wanted to see you on the fire line instead.",
+        "result": "You pair the response with a $6 billion resilience package — controlled burns across the Sierra, fire-wise codes, drought infrastructure. Forest scientists applaud; some voters wanted you on the fire line instead.",
         "news": [
           { "outlet": "tribune", "headline": "President treats the cause, not just the smoke", "tone": "positive" },
           { "outlet": "beacon", "headline": "Administration unveils wildfire resilience plan", "tone": "neutral" },
-          { "outlet": "ledger", "headline": "More mandates and burn rules dumped on rural towns", "tone": "negative" },
+          { "outlet": "ledger", "headline": "More mandates and burn rules dumped on rural counties", "tone": "negative" },
           { "outlet": "buzz", "headline": "POTUS lights MORE fires (on purpose?!) to stop the big one 🤔🔥", "tone": "neutral" }
         ],
         "social": [
@@ -169,15 +169,15 @@
         "id": "local",
         "label": "Leave it to the states",
         "effects": { "economy": 2, "stability": -4, "approval": -4, "world": -2 },
-        "result": "You frame fire as a state matter and keep federal cash on a short leash. Governors fume, the fire jumps the line, and a town you could've saved makes the evening news.",
+        "result": "You call fire a state matter and keep federal cash on a short leash. Gov. Elena Bruno of California fumes on live TV, the fire jumps Highway 96, and Happy Camp — a town you could have saved — burns on the evening news.",
         "news": [
           { "outlet": "ledger", "headline": "President holds the line on federal spending", "tone": "positive" },
-          { "outlet": "tribune", "headline": "Towns burn as Washington shrugs", "tone": "negative" },
+          { "outlet": "tribune", "headline": "Happy Camp burns as Washington shrugs", "tone": "negative" },
           { "outlet": "beacon", "headline": "President defers wildfire response to states", "tone": "neutral" },
-          { "outlet": "buzz", "headline": "POTUS SITS OUT the megafire — governors RAGE! 😡🔥", "tone": "negative" }
+          { "outlet": "buzz", "headline": "POTUS SITS OUT the megafire — Sacramento RAGES! 😡🔥", "tone": "negative" }
         ],
         "social": [
-          { "handle": "@ash_and_embers", "text": "we called for help and got a press release. our street is gone.", "sentiment": "negative", "clout": "180k" }
+          { "handle": "@siskiyou_ash", "text": "we called for help and got a press release. our street is gone.", "sentiment": "negative", "clout": "180k" }
         ],
         "advisor": "Fiscally tidy, politically radioactive. A disaster is the one place 'not my job' never plays."
       }
@@ -187,33 +187,33 @@
     "id": "gen_environment_ev_mandate",
     "category": "environment",
     "title": "Mandate the Electric Future?",
-    "briefing": "Your draft rule would phase out new gas-engine cars within a decade. Automakers are split, autoworkers are nervous, and the charging network barely exists outside the cities. Floor it toward the electric future, or pump the brakes before the public revolts?",
+    "briefing": "Your draft rule would end sales of new gas-engine cars by 2038. Detroit is split, Michigan autoworkers are nervous, and you can still drive I-90 across Montana without passing a fast charger. Floor it toward the electric future, or pump the brakes before the public revolts?",
     "source": "Transportation Secretary",
     "minDay": 6,
     "choices": [
       {
         "id": "full_mandate",
-        "label": "Set the hard deadline",
+        "label": "Set the 2038 deadline",
         "bold": true,
         "effects": { "world": 6, "legacy": 4, "economy": -3, "approval": -4 },
-        "result": "You lock in the phase-out date. EV makers and battery towns boom; truck-country voters hear 'they're taking your engine' and the backlash writes itself.",
+        "result": "You lock in the 2038 phase-out. Helios Motors jumps 12 percent and battery towns from Georgia to Tennessee boom; truck country hears 'they're taking your engine' and the backlash writes itself.",
         "news": [
-          { "outlet": "tribune", "headline": "President sets the date the gas engine ends", "tone": "positive" },
+          { "outlet": "tribune", "headline": "President sets the date the gas engine ends: 2038", "tone": "positive" },
           { "outlet": "ledger", "headline": "Government picks your next car — and it isn't ready", "tone": "negative" },
           { "outlet": "beacon", "headline": "Administration mandates EV transition timeline", "tone": "neutral" },
           { "outlet": "buzz", "headline": "POTUS BANS the gas pedal (eventually) — pickup nation REVOLTS! ⚡🚗", "tone": "neutral" }
         ],
         "social": [
-          { "handle": "@battery_belt_bri", "text": "our gigafactory just announced a third shift. the future has a zip code now.", "sentiment": "positive", "clout": "73k" }
+          { "handle": "@chattanooga_bri", "text": "our gigafactory just announced a third shift. the future has a tennessee zip code now.", "sentiment": "positive", "clout": "73k" }
         ],
-        "advisor": "The right long arc, the wrong charging map. You'll be defending range anxiety at every town hall."
+        "advisor": "The right long arc, the wrong charging map. You'll be defending range anxiety at every town hall west of the Mississippi."
       },
       {
         "id": "incentives",
         "label": "Incentivize, don't mandate",
         "detail": "Rebates, charger buildout, no ban.",
         "effects": { "world": 3, "economy": 2, "approval": 2 },
-        "result": "You pour money into rebates and chargers and let buyers choose. Adoption climbs steadily and almost nobody feels forced — but the gas era doesn't end on schedule.",
+        "result": "You pour $30 billion into rebates and a coast-to-coast charger buildout and let buyers choose. Adoption climbs steadily and almost nobody feels forced — but the gas era doesn't end on schedule.",
         "news": [
           { "outlet": "beacon", "headline": "President bets on carrots over mandates for EVs", "tone": "neutral" },
           { "outlet": "ledger", "headline": "Consumer choice survives the green push", "tone": "positive" },
@@ -229,7 +229,7 @@
         "id": "shelve",
         "label": "Shelve the mandate",
         "effects": { "economy": 4, "approval": 3, "world": -5, "legacy": -2 },
-        "result": "You side with the engine and kill the timeline. Dealers and gearheads celebrate; battery startups and climate hawks feel the rug pulled.",
+        "result": "You side with the engine and kill the timeline. Dealers and gearheads celebrate; Georgia battery startups feel the rug pulled while China's EV makers lap the field.",
         "news": [
           { "outlet": "ledger", "headline": "President saves the American gas engine", "tone": "positive" },
           { "outlet": "tribune", "headline": "EV future stalls out in the driveway", "tone": "negative" },
@@ -239,15 +239,15 @@
         "social": [
           { "handle": "@v8_forever", "text": "you can have my gas pedal when you pry it from my cold dead foot. WE WON.", "sentiment": "positive", "clout": "150k" }
         ],
-        "advisor": "A crowd-pleaser at the pump. The transition you're skipping is happening abroad with or without you."
+        "advisor": "A crowd-pleaser at the pump. The transition you're skipping is happening in Shanghai with or without you."
       }
     ]
   },
   {
     "id": "gen_environment_park_deal",
     "category": "environment",
-    "title": "Sell the National Park?",
-    "briefing": "A mining consortium has offered a staggering sum for extraction rights on the edge of a beloved national park. The money could fund the entire parks system for years; the land could never be unspoiled again. Cash the check, or keep the postcard?",
+    "title": "Sell Yellowstone's Doorstep?",
+    "briefing": "Cordillera Resources has offered $14 billion for gold and copper rights on Yellowstone's northeastern edge, above Cooke City, Montana. The money could fund the entire park system for a decade; the headwaters of the Lamar River could never be unspoiled again. Cash the check, or keep the postcard?",
     "source": "Interior Secretary",
     "minDay": 8,
     "choices": [
@@ -255,45 +255,45 @@
         "id": "lease_edge",
         "label": "Lease the buffer lands",
         "effects": { "economy": 6, "approval": 1, "world": -4, "stability": -2 },
-        "result": "You open the park's outer rim to extraction and earmark the windfall for trails and rangers. Conservationists call it a bribe to wreck the view.",
+        "result": "You open the buffer lands above Cooke City and earmark the windfall for trails and rangers. Conservationists call it a bribe to wreck the Beartooth front.",
         "news": [
-          { "outlet": "ledger", "headline": "Park self-funds for a decade on smart land deal", "tone": "positive" },
-          { "outlet": "tribune", "headline": "President sells the park's edge to the highest bidder", "tone": "negative" },
-          { "outlet": "beacon", "headline": "Interior leases park buffer lands for extraction", "tone": "neutral" },
-          { "outlet": "buzz", "headline": "POTUS PUTS THE PARK ON SALE — your favorite view, now with a mine! ⛏️🏞️", "tone": "neutral" }
+          { "outlet": "ledger", "headline": "Park system self-funds for a decade on Montana deal", "tone": "positive" },
+          { "outlet": "tribune", "headline": "President sells Yellowstone's edge to the highest bidder", "tone": "negative" },
+          { "outlet": "beacon", "headline": "Interior leases Yellowstone buffer lands for mining", "tone": "neutral" },
+          { "outlet": "buzz", "headline": "POTUS PUTS YELLOWSTONE ON SALE — now with a mine! ⛏️🏞️", "tone": "neutral" }
         ],
         "social": [
-          { "handle": "@gateway_town_gus", "text": "ranger jobs AND mining jobs in one valley? our school stays open.", "sentiment": "positive", "clout": "18k" }
+          { "handle": "@cooke_city_gus", "text": "ranger jobs AND mining jobs in one valley? our school stays open.", "sentiment": "positive", "clout": "18k" }
         ],
-        "advisor": "The math is seductive and the scenery is finite. Once that ridgeline goes, no budget buys it back."
+        "advisor": "The math is seductive and the scenery is finite. Once the Beartooth front goes, no budget buys it back."
       },
       {
         "id": "expand",
         "label": "Reject it and expand the park",
         "bold": true,
         "effects": { "world": 7, "legacy": 6, "economy": -5, "approval": -1 },
-        "result": "You not only decline — you annex the disputed land into the park forever. Hikers weep with joy; the consortium and the cash-strapped county do not.",
+        "result": "You not only decline — you fold the disputed 30,000 acres into Yellowstone forever. Hikers weep with joy; Cordillera and cash-strapped Park County do not.",
         "news": [
-          { "outlet": "tribune", "headline": "Historic: president grows the park instead of selling it", "tone": "positive" },
-          { "outlet": "beacon", "headline": "President expands national park, rejects mining bid", "tone": "neutral" },
-          { "outlet": "ledger", "headline": "Billions in jobs locked away for a pretty view", "tone": "negative" },
-          { "outlet": "buzz", "headline": "POTUS SUPERSIZES the park — miners LOCKED OUT forever! 🌲🚫", "tone": "neutral" }
+          { "outlet": "tribune", "headline": "Historic: president grows Yellowstone instead of selling it", "tone": "positive" },
+          { "outlet": "beacon", "headline": "President expands Yellowstone, rejects mining bid", "tone": "neutral" },
+          { "outlet": "ledger", "headline": "$14 billion locked away for a pretty view", "tone": "negative" },
+          { "outlet": "buzz", "headline": "POTUS SUPERSIZES YELLOWSTONE — miners LOCKED OUT forever! 🌲🚫", "tone": "neutral" }
         ],
         "social": [
-          { "handle": "@thru_hiker_thea", "text": "walked this ridge for 30 years scared it'd be gone. now it never will be.", "sentiment": "positive", "clout": "240k" }
+          { "handle": "@thru_hiker_thea", "text": "walked the beartooth for 30 years scared it'd be gone. now it never will be.", "sentiment": "positive", "clout": "240k" }
         ],
-        "advisor": "The cleanest legacy move on the board. The county that wanted the money will make you feel it."
+        "advisor": "The cleanest legacy move on the board. Park County wanted that money, and they'll make you feel it."
       },
       {
         "id": "study",
         "label": "Order an environmental study",
         "detail": "Punt with a multi-year review.",
         "effects": { "stability": 2, "approval": -1 },
-        "result": "You commission a years-long impact review and decide nothing today. Both camps accuse you of stalling — which is, precisely, the plan.",
+        "result": "You order a multi-year impact review of the Lamar headwaters and decide nothing today. Both camps accuse you of stalling — which is, precisely, the plan.",
         "news": [
-          { "outlet": "beacon", "headline": "President orders study on disputed park lands", "tone": "neutral" },
+          { "outlet": "beacon", "headline": "President orders study on Yellowstone buffer lands", "tone": "neutral" },
           { "outlet": "ledger", "headline": "Decision dodged as red tape buries a deal", "tone": "negative" },
-          { "outlet": "tribune", "headline": "Conservationists wary of a quiet path to drilling", "tone": "neutral" },
+          { "outlet": "tribune", "headline": "Conservationists wary of a quiet path to the mine", "tone": "neutral" },
           { "outlet": "buzz", "headline": "POTUS hits SNOOZE on the park fight — see you in 2030! 😴", "tone": "neutral" }
         ],
         "social": [
@@ -306,8 +306,8 @@
   {
     "id": "gen_environment_water_war",
     "category": "environment",
-    "title": "The River Runs Dry",
-    "briefing": "Two states are at each other's throats over a shrinking river that feeds both. The upstream farms want their historic share; the downstream cities are rationing showers. Governors are calling daily, and there isn't enough water for everyone to win.",
+    "title": "The Colorado Runs Dry",
+    "briefing": "Arizona and California are at each other's throats over the shrinking Colorado River, with Lake Mead 40 feet from dead pool. Imperial Valley growers hold rights dating to 1901; Phoenix is rationing showers and Gov. Marta Reyes of Arizona calls the residence daily. There isn't enough water for everyone to win.",
     "source": "Interior Secretary",
     "minDay": 10,
     "weight": 1.1,
@@ -317,47 +317,47 @@
         "label": "Broker a forced compact",
         "cost": 2,
         "effects": { "stability": 5, "approval": 2, "economy": -2, "legacy": 3 },
-        "result": "You lock both governors in a room and don't let them out without a signed deal. Nobody gets all they wanted, but the lawsuits stop and the taps stay on.",
+        "result": "You lock Reyes and Gov. Ellen Nakamura of California in the Roosevelt Room until they sign. Nobody gets all they wanted, but the lawsuits stop and the taps stay on in Phoenix.",
         "news": [
-          { "outlet": "beacon", "headline": "President brokers historic water-sharing compact", "tone": "positive" },
+          { "outlet": "beacon", "headline": "President brokers historic Colorado River compact", "tone": "positive" },
           { "outlet": "tribune", "headline": "A fair-ish peace in the western water war", "tone": "neutral" },
-          { "outlet": "ledger", "headline": "Farmers forced to give up generational water rights", "tone": "negative" },
-          { "outlet": "buzz", "headline": "POTUS SPLITS THE RIVER — two states, one very angry handshake! 🤝💧", "tone": "neutral" }
+          { "outlet": "ledger", "headline": "Imperial Valley forced to give up century-old water rights", "tone": "negative" },
+          { "outlet": "buzz", "headline": "POTUS SPLITS THE COLORADO — one very angry handshake! 🤝💧", "tone": "neutral" }
         ],
         "social": [
-          { "handle": "@downstream_dana", "text": "the city can shower again. i don't care who's mad, it worked.", "sentiment": "positive", "clout": "55k" }
+          { "handle": "@phoenix_dana", "text": "the city can shower again. i don't care who's mad, it worked.", "sentiment": "positive", "clout": "55k" }
         ],
         "advisor": "Thankless and durable. A compact you force today is a war you don't fight every summer."
       },
       {
         "id": "farms",
-        "label": "Side with the farms",
+        "label": "Back the Imperial Valley farms",
         "effects": { "economy": 4, "approval": 1, "stability": -3, "world": -2 },
-        "result": "You defend senior water rights and the upstream growers keep their flow. The harvest is saved; downstream cities tighten rationing and seethe.",
+        "result": "You defend the 1901 water rights and the Imperial Valley keeps its flow. The winter lettuce harvest is saved; Phoenix and Las Vegas tighten rationing and seethe.",
         "news": [
           { "outlet": "ledger", "headline": "President protects the farmers who feed the nation", "tone": "positive" },
-          { "outlet": "tribune", "headline": "Cities left to ration while crops drink the river dry", "tone": "negative" },
-          { "outlet": "beacon", "headline": "Administration upholds upstream water rights", "tone": "neutral" },
-          { "outlet": "buzz", "headline": "POTUS PICKS THE FARMS — city faucets run DRY! 🚿❌", "tone": "negative" }
+          { "outlet": "tribune", "headline": "Phoenix rations while alfalfa drinks the river dry", "tone": "negative" },
+          { "outlet": "beacon", "headline": "Administration upholds senior Colorado River rights", "tone": "neutral" },
+          { "outlet": "buzz", "headline": "POTUS PICKS THE FARMS — Phoenix faucets run DRY! 🚿❌", "tone": "negative" }
         ],
         "social": [
-          { "handle": "@fourth_gen_farmer", "text": "this water built our farm over a century. finally someone respects that.", "sentiment": "positive", "clout": "47k" }
+          { "handle": "@fourth_gen_farmer", "text": "this water built our farm since 1907. finally someone respects that.", "sentiment": "positive", "clout": "47k" }
         ],
-        "advisor": "Feeds the nation and the base. The thirsty millions downstream are a much bigger electorate."
+        "advisor": "Feeds the nation and the base. The five million thirsty voters in Phoenix and Vegas are a bigger electorate."
       },
       {
         "id": "cities",
         "label": "Prioritize the cities",
         "effects": { "stability": 3, "approval": 2, "economy": -4, "world": 1 },
-        "result": "You route emergency flows to the parched metros. Faucets recover and unrest cools — while fallow fields and furious growers dominate the farm-state press.",
+        "result": "You route emergency flows to Phoenix, Tucson, and Las Vegas. Faucets recover and unrest cools — while fallowed fields and furious growers dominate the Imperial Valley press.",
         "news": [
-          { "outlet": "tribune", "headline": "President keeps millions from running out of water", "tone": "positive" },
-          { "outlet": "beacon", "headline": "Emergency flows redirected to drought-hit cities", "tone": "neutral" },
-          { "outlet": "ledger", "headline": "Crops left to die so cities can keep their lawns", "tone": "negative" },
+          { "outlet": "tribune", "headline": "President keeps five million people from running dry", "tone": "positive" },
+          { "outlet": "beacon", "headline": "Emergency Colorado River flows redirected to desert cities", "tone": "neutral" },
+          { "outlet": "ledger", "headline": "Crops left to die so Vegas can keep its fountains", "tone": "negative" },
           { "outlet": "buzz", "headline": "POTUS SAVES THE CITIES — farmers watch fields TURN TO DUST! 🌾💀", "tone": "neutral" }
         ],
         "social": [
-          { "handle": "@rationed_rita", "text": "20 days of brown-water warnings just ended. you have no idea.", "sentiment": "positive", "clout": "82k" }
+          { "handle": "@mesa_rita", "text": "20 days of brown-water warnings just ended. you have no idea.", "sentiment": "positive", "clout": "82k" }
         ],
         "advisor": "More people, more stability, more food-price blowback. There's no clean answer when the river loses."
       }
@@ -367,7 +367,7 @@
     "id": "gen_environment_coal_town",
     "category": "environment",
     "title": "The Last Mine Closes",
-    "briefing": "The country's last major coal mine is days from shutting for good, taking a whole town's livelihood with it. You can't save the coal — but you can decide what these families wake up to. Prop up the past, or pay to build them a future?",
+    "briefing": "Cardinal Hollow, the country's last major coal mine, is days from closing for good — taking 1,100 jobs in McDowell County, West Virginia with it. You can't save the coal — but you can decide what the families in Welch wake up to. Prop up the past, or pay to build them a future?",
     "source": "Labor Secretary",
     "minDay": 12,
     "choices": [
@@ -377,12 +377,12 @@
         "bold": true,
         "cost": 2,
         "effects": { "world": 4, "stability": 4, "legacy": 4, "economy": -3 },
-        "result": "You announce a retraining and clean-energy investment package built around the town. It's hopeful and expensive, and the miners are watching to see if 'transition' is more than a brochure.",
+        "result": "You announce a $2 billion retraining and clean-energy package built around Welch. It's hopeful and expensive, and the miners are watching to see if 'transition' is more than a brochure.",
         "news": [
           { "outlet": "tribune", "headline": "President turns a dying coal town toward the sun", "tone": "positive" },
-          { "outlet": "beacon", "headline": "Federal package aims to retrain coal workers", "tone": "neutral" },
+          { "outlet": "beacon", "headline": "Federal package aims to retrain McDowell County miners", "tone": "neutral" },
           { "outlet": "ledger", "headline": "Washington bets miners want to build wind turbines", "tone": "negative" },
-          { "outlet": "buzz", "headline": "POTUS swaps COAL for SOLAR in dying town — will it work?! ☀️⛏️", "tone": "neutral" }
+          { "outlet": "buzz", "headline": "POTUS swaps COAL for SOLAR in West Virginia — will it work?! ☀️⛏️", "tone": "neutral" }
         ],
         "social": [
           { "handle": "@third_shift_terry", "text": "skeptical but i signed up for the training. first hope this valley's had in years.", "sentiment": "neutral", "clout": "38k" }
@@ -393,7 +393,7 @@
         "id": "subsidize",
         "label": "Subsidize the mine to stay open",
         "effects": { "approval": 3, "economy": -2, "world": -5, "stability": 1 },
-        "result": "You write checks to keep the lights on underground a few more years. The town cheers; economists and climate groups call it money set on fire.",
+        "result": "You write nine-figure checks to keep Cardinal Hollow open a few more years. Welch cheers and Sen. Bill Hartline calls it 'a promise kept'; economists call it money on fire.",
         "news": [
           { "outlet": "ledger", "headline": "President stands by coal country's workers", "tone": "positive" },
           { "outlet": "tribune", "headline": "Taxpayers prop up a mine the market already buried", "tone": "negative" },
@@ -409,12 +409,12 @@
         "id": "let_close",
         "label": "Let it close, offer relocation aid",
         "effects": { "economy": 2, "world": 3, "approval": -4, "stability": -2 },
-        "result": "You let the market run its course and offer checks to help families move on. It's honest and unsentimental, and the town feels written off.",
+        "result": "You let the market run its course and offer relocation checks to help families leave. It's honest and unsentimental, and McDowell County feels written off.",
         "news": [
-          { "outlet": "beacon", "headline": "Mine closes as president offers relocation aid", "tone": "neutral" },
-          { "outlet": "tribune", "headline": "Coal's last chapter ends, but the town is left behind", "tone": "negative" },
+          { "outlet": "beacon", "headline": "Cardinal Hollow closes as president offers relocation aid", "tone": "neutral" },
+          { "outlet": "tribune", "headline": "Coal's last chapter ends, but Welch is left behind", "tone": "negative" },
           { "outlet": "ledger", "headline": "President abandons coal families to 'the market'", "tone": "negative" },
-          { "outlet": "buzz", "headline": "POTUS to coal town: HERE'S A CHECK, GOOD LUCK! 📦😔", "tone": "negative" }
+          { "outlet": "buzz", "headline": "POTUS to West Virginia: HERE'S A CHECK, GOOD LUCK! 📦😔", "tone": "negative" }
         ],
         "social": [
           { "handle": "@hollow_holler", "text": "they don't want us to move. they want us to disappear. message received.", "sentiment": "negative", "clout": "130k" }
@@ -426,8 +426,8 @@
   {
     "id": "gen_environment_climate_summit",
     "category": "environment",
-    "title": "Pledge at the Climate Summit",
-    "briefing": "Every major nation is at the global climate summit, cameras rolling, waiting to hear your number. A bold pledge makes you the world's climate leader but binds your economy to hard targets; a cautious one keeps your hands free and your rivals smirking. The podium is yours.",
+    "title": "Pledge at the Geneva Summit",
+    "briefing": "Every major nation is in Geneva for the UN climate summit, cameras rolling, waiting to hear your number. A bold pledge makes you the world's climate leader but binds your economy to hard targets; a cautious one keeps your hands free while China's Premier Wen Zhao smirks from the front row. The podium is yours.",
     "source": "Secretary of State",
     "minDay": 14,
     "weight": 1.2,
@@ -437,27 +437,27 @@
         "label": "Make the most ambitious pledge",
         "bold": true,
         "effects": { "world": 9, "legacy": 6, "economy": -5, "approval": -2 },
-        "result": "You commit to the deepest cuts in the room and rally smaller nations behind you. The world stands and claps; back home, industry reads the fine print and groans.",
+        "result": "You commit to a 65 percent cut by 2035 — the deepest in the room — and rally the island states behind you. The Geneva hall stands and claps; back home, industry reads the fine print and groans.",
         "news": [
-          { "outlet": "tribune", "headline": "President leads the world with a landmark climate pledge", "tone": "positive" },
-          { "outlet": "beacon", "headline": "President announces ambitious emissions commitment", "tone": "neutral" },
-          { "outlet": "ledger", "headline": "Grand promises abroad, painful bills back home", "tone": "negative" },
-          { "outlet": "buzz", "headline": "POTUS WOWS the summit — signs away the smokestacks on LIVE TV! 🌍🎤", "tone": "neutral" }
+          { "outlet": "tribune", "headline": "President leads the world with a landmark Geneva pledge", "tone": "positive" },
+          { "outlet": "beacon", "headline": "President pledges 65 percent emissions cut in Geneva", "tone": "neutral" },
+          { "outlet": "ledger", "headline": "Grand promises in Geneva, painful bills back home", "tone": "negative" },
+          { "outlet": "buzz", "headline": "POTUS WOWS GENEVA — signs away the smokestacks on LIVE TV! 🌍🎤", "tone": "neutral" }
         ],
         "social": [
-          { "handle": "@global_greta_fan", "text": "watched the whole hall stand up. our president just led the planet. chills.", "sentiment": "positive", "clout": "310k" }
+          { "handle": "@youth_delegate_dee", "text": "watched the whole hall stand up. our president just led the planet. chills.", "sentiment": "positive", "clout": "310k" }
         ],
-        "advisor": "A standing ovation in front of the world. Now you owe the world a delivery you'll be judged on for years."
+        "advisor": "A standing ovation in Geneva. Now you owe the world a delivery you'll be judged on for years."
       },
       {
         "id": "modest_pledge",
         "label": "Offer a credible modest pledge",
         "detail": "Real, achievable, no heroics.",
         "effects": { "world": 4, "stability": 2, "approval": 1, "economy": -1 },
-        "result": "You pledge cuts you can actually hit and dare others to match. Diplomats nod approvingly; activists wanted fireworks and got a spreadsheet.",
+        "result": "You pledge a 40 percent cut you can actually hit and dare Beijing to match it. The German and Japanese delegations nod approvingly; activists wanted fireworks and got a spreadsheet.",
         "news": [
           { "outlet": "beacon", "headline": "President offers measured, achievable climate target", "tone": "neutral" },
-          { "outlet": "ledger", "headline": "Sensible: no reckless promises at the summit", "tone": "positive" },
+          { "outlet": "ledger", "headline": "Sensible: no reckless promises in Geneva", "tone": "positive" },
           { "outlet": "tribune", "headline": "Cautious pledge falls short of the moment", "tone": "negative" },
           { "outlet": "buzz", "headline": "POTUS plays it SAFE on the world stage — activists yawn 😴", "tone": "neutral" }
         ],
@@ -470,17 +470,17 @@
         "id": "no_pledge",
         "label": "Refuse to bind your economy",
         "effects": { "economy": 4, "approval": 1, "world": -7, "stability": -2, "legacy": -3 },
-        "result": "You decline to sign anything that ties your hands and put growth first. Energy markets and sovereignty hawks cheer; allies leave the summit muttering about American retreat.",
+        "result": "You decline to sign anything binding and put growth first. Oil futures and sovereignty hawks cheer; Berlin and Tokyo mutter about American retreat as Premier Wen Zhao fills the vacuum by lunch.",
         "news": [
           { "outlet": "ledger", "headline": "President refuses to mortgage the economy abroad", "tone": "positive" },
-          { "outlet": "tribune", "headline": "President walks away as the world commits", "tone": "negative" },
-          { "outlet": "beacon", "headline": "President declines binding climate pledge at summit", "tone": "neutral" },
-          { "outlet": "buzz", "headline": "POTUS GHOSTS the climate summit — allies SHOOK! 🌍🚪", "tone": "negative" }
+          { "outlet": "tribune", "headline": "President walks out of Geneva as the world commits", "tone": "negative" },
+          { "outlet": "beacon", "headline": "President declines binding pledge at Geneva summit", "tone": "neutral" },
+          { "outlet": "buzz", "headline": "POTUS GHOSTS GENEVA — allies SHOOK! 🌍🚪", "tone": "negative" }
         ],
         "social": [
-          { "handle": "@sovereign_sam", "text": "finally a president who won't let foreigners set our energy policy. respect.", "sentiment": "positive", "clout": "98k" }
+          { "handle": "@sovereign_sam", "text": "finally a president who won't let geneva set our energy policy. respect.", "sentiment": "positive", "clout": "98k" }
         ],
-        "advisor": "Protects the economy and your independence. It also hands your rivals the moral high ground on a platter."
+        "advisor": "Protects the economy and your independence. It also hands Beijing the moral high ground on a platter."
       }
     ]
   },
@@ -488,7 +488,7 @@
     "id": "gen_environment_nuclear",
     "category": "environment",
     "title": "Revive Nuclear Power?",
-    "briefing": "Engineers say a new generation of reactors could deliver clean, round-the-clock power and slash emissions for good. But 'nuclear' still spooks the public, the waste question lingers, and the price tag is enormous. Bet big on the atom, or steer clear of the word entirely?",
+    "briefing": "Lodestar Energy says its next-generation small reactors could deliver clean, round-the-clock power from the Clinch River site in Tennessee within eight years. But 'nuclear' still spooks the public, the waste still has nowhere to go but Yucca Mountain, and the buildout runs $90 billion. Bet big on the atom, or steer clear of the word entirely?",
     "source": "Energy Secretary",
     "minDay": 16,
     "choices": [
@@ -498,7 +498,7 @@
         "bold": true,
         "cost": 3,
         "effects": { "world": 6, "economy": 3, "legacy": 5, "approval": -3, "stability": -2 },
-        "result": "You greenlight a fleet of next-gen reactors and the clean-firm-power crowd is ecstatic. NIMBY hearings ignite in every proposed county and the protest signs come out of the attic.",
+        "result": "You greenlight a 12-reactor fleet from Tennessee to Wyoming and the clean-firm-power crowd is ecstatic. NIMBY hearings ignite in every proposed county and the Three Mile Island signs come out of the attic.",
         "news": [
           { "outlet": "beacon", "headline": "President bets the climate on a nuclear revival", "tone": "neutral" },
           { "outlet": "ledger", "headline": "Finally: clean power that works at 3 a.m.", "tone": "positive" },
@@ -509,16 +509,16 @@
           { "handle": "@atoms_for_peace", "text": "clean baseload that doesn't care if the wind blows. this is the unlock. FINALLY.", "sentiment": "positive", "clout": "67k" },
           { "handle": "@not_in_my_county", "text": "a reactor 8 miles from my kids' school? absolutely not. see you at the hearing.", "sentiment": "negative", "clout": "54k" }
         ],
-        "advisor": "Clean, firm, and politically scary. The physics is on your side; the public memory is not."
+        "advisor": "Clean, firm, and politically scary. The physics is on your side; the memory of Three Mile Island is not."
       },
       {
         "id": "pilot",
         "label": "Fund a small pilot program",
         "detail": "One demo reactor, prove it first.",
         "effects": { "world": 3, "economy": 1, "stability": 1 },
-        "result": "You bankroll a single advanced demo and promise to scale only if it works. Cautious and credible — boosters wanted a fleet, skeptics wanted nothing.",
+        "result": "You bankroll a single demo reactor at Clinch River and promise to scale only if it works. Cautious and credible — boosters wanted a fleet, skeptics wanted nothing.",
         "news": [
-          { "outlet": "beacon", "headline": "President funds advanced nuclear demonstration plant", "tone": "neutral" },
+          { "outlet": "beacon", "headline": "President funds demo reactor at Tennessee's Clinch River", "tone": "neutral" },
           { "outlet": "ledger", "headline": "Smart first step toward clean, reliable power", "tone": "positive" },
           { "outlet": "tribune", "headline": "A toe in the water while the climate clock ticks", "tone": "neutral" },
           { "outlet": "buzz", "headline": "POTUS builds ONE tiny reactor — baby steps to the atom! ⚛️🍼", "tone": "neutral" }
@@ -532,7 +532,7 @@
         "id": "no_nuclear",
         "label": "Rule out new nuclear",
         "effects": { "approval": 2, "world": -3, "economy": -1, "legacy": -2 },
-        "result": "You take the atom off the table and double down on wind, solar, and storage. Anti-nuclear voters relax; grid engineers warn you just removed your only clean backstop for the dark, windless nights.",
+        "result": "You take the atom off the table and double down on prairie wind, desert solar, and storage. Anti-nuclear voters relax; grid engineers warn you just removed your only clean backstop for the dark, windless nights.",
         "news": [
           { "outlet": "tribune", "headline": "President closes the door on nuclear risk", "tone": "positive" },
           { "outlet": "ledger", "headline": "President benches the one clean source that runs nonstop", "tone": "negative" },

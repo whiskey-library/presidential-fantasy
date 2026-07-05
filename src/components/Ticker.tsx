@@ -2,16 +2,18 @@ import { useMemo } from "react";
 import type { GameState } from "../game/types";
 
 const AMBIENT = [
-  "Markets open mixed as capital watches the West Wing",
-  "Pundits split on the administration's next move",
+  "Dow futures flat as traders watch the West Wing",
+  "Gas averages $3.61 nationwide, AAA reports",
+  "Senate floor vote on the highway bill slips to Thursday",
   "Motorcade spotted leaving the South Lawn",
-  "Approval polls in the field this week",
-  "Press corps camped outside the briefing room",
-  "Allies request clarity on administration policy",
-  "Congressional leaders trade barbs on cable",
-  "First Family declines comment on palace intrigue",
+  "Gallup has a fresh approval poll in the field",
+  "Press corps camped outside the Brady Briefing Room",
+  "NATO ministers convene in Brussels next week",
+  "Ohio and Pennsylvania report strong factory orders",
+  "Amtrak funding fight stalls in committee",
   "Late-night hosts sharpen their monologues",
-  "Federal agencies await executive guidance",
+  "Treasury auctions $58B in 10-year notes at 1 p.m.",
+  "Wildfire season outlook briefing due from FEMA",
 ];
 
 export default function Ticker({ game, crisis }: { game: GameState; crisis: boolean }) {
