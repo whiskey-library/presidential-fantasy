@@ -1,11 +1,9 @@
 import { useEffect, useRef, useState } from "react";
 import { sfxTick } from "../game/sound";
 
-const R = 18;
-const CIRC = 2 * Math.PI * R;
-
 /**
- * Real-time decision countdown. Pauses when the tab is hidden.
+ * Real-time decision countdown, 8-bit edition: a chunky square badge whose
+ * fill drains in whole-pixel steps. Pauses when the tab is hidden.
  * Calls onExpire exactly once when it hits zero.
  */
 export default function TimerRing({
@@ -26,7 +24,7 @@ export default function TimerRing({
   onExpireRef.current = onExpire;
   onUrgentRef.current = onUrgent;
 
-  // Reset when a new decision (new `seconds` identity) arrives.
+  // Reset when a new decision arrives.
   useEffect(() => {
     setLeft(seconds);
     expired.current = false;
@@ -42,7 +40,6 @@ export default function TimerRing({
         if (next <= 0 && !expired.current) {
           expired.current = true;
           clearInterval(iv);
-          // Defer: never fire a state transition mid-render.
           setTimeout(() => onExpireRef.current(), 30);
           return 0;
         }
@@ -60,39 +57,33 @@ export default function TimerRing({
 
   if (seconds <= 0) return null;
 
-  const frac = Math.max(0, left / seconds);
+  // Drain quantized to 10 pixel rows — it empties one chunky row at a time.
+  const rows = Math.ceil((left / seconds) * 10);
   const tone = left > 30 ? "brass" : left > 10 ? "warn" : "stamp";
 
   return (
-    <div className={`timer timer--${tone} ${critical ? "timer--critical" : ""}`} aria-label={`${left} seconds to decide`}>
-      <svg viewBox="0 0 44 44" width="44" height="44">
-        <circle className="timer__track" cx="22" cy="22" r={R} fill="none" strokeWidth="3" />
-        <circle
-          className="timer__arc"
-          cx="22"
-          cy="22"
-          r={R}
-          fill="none"
-          strokeWidth="3"
-          strokeLinecap="round"
-          strokeDasharray={CIRC}
-          strokeDashoffset={CIRC * (1 - frac)}
-          transform="rotate(-90 22 22)"
-        />
-        {urgent && (
-          <circle
-            className="timer__pulse"
-            cx="22"
-            cy="22"
-            r={R}
-            fill="none"
-            strokeWidth="2"
-            strokeDasharray={CIRC}
-            transform="rotate(-90 22 22)"
-          />
-        )}
+    <div
+      className={`ptimer ptimer--${tone} ${critical ? "ptimer--critical" : ""}`}
+      aria-label={`${left} seconds to decide`}
+    >
+      <svg viewBox="0 0 48 48" width="46" height="46" shapeRendering="crispEdges" aria-hidden>
+        {/* backing */}
+        <rect x="4" y="4" width="40" height="40" fill="#08090f" />
+        {/* drain fill, bottom-up in whole rows (4px each) */}
+        <rect x="4" y={4 + (10 - rows) * 4} width="40" height={rows * 4} className="ptimer__fill" />
+        {/* chunky frame */}
+        <g className="ptimer__frame">
+          <rect x="4" y="0" width="40" height="4" />
+          <rect x="4" y="44" width="40" height="4" />
+          <rect x="0" y="4" width="4" height="40" />
+          <rect x="44" y="4" width="4" height="40" />
+          <rect x="4" y="4" width="4" height="4" />
+          <rect x="40" y="4" width="4" height="4" />
+          <rect x="4" y="40" width="4" height="4" />
+          <rect x="40" y="40" width="4" height="4" />
+        </g>
       </svg>
-      <span className="timer__num">{left}</span>
+      <span className="ptimer__num">{left}</span>
     </div>
   );
 }

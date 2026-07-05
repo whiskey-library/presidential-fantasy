@@ -1,108 +1,307 @@
 export default function WildcardScene() {
   return (
-    <svg viewBox="0 0 400 180" width="100%" height="100%" preserveAspectRatio="xMidYMid slice" role="img" aria-label="A glowing disc hovers over a moonlit farm with a barn and water tower">
-      <defs>
-        <linearGradient id="wildSky" x1="0" y1="0" x2="0" y2="1">
-          <stop offset="0" stopColor="#0d1526" />
-          <stop offset="1" stopColor="#05070b" />
-        </linearGradient>
-        <radialGradient id="wildOrbGlow" cx="0.5" cy="0.5" r="0.5">
-          <stop offset="0" stopColor="#45cdde" stopOpacity="0.35" />
-          <stop offset="0.6" stopColor="#45cdde" stopOpacity="0.12" />
-          <stop offset="1" stopColor="#45cdde" stopOpacity="0" />
-        </radialGradient>
-        <radialGradient id="wildMoonGlow" cx="0.5" cy="0.5" r="0.5">
-          <stop offset="0" stopColor="#e9edf5" stopOpacity="0.18" />
-          <stop offset="1" stopColor="#e9edf5" stopOpacity="0" />
-        </radialGradient>
-      </defs>
+    <svg
+      viewBox="0 0 400 180"
+      width="100%"
+      height="100%"
+      preserveAspectRatio="xMidYMid slice"
+      shapeRendering="crispEdges"
+      role="img"
+      aria-label="Pixel art night scene of a heartland farm with a barn, water tower, and a flying saucer beaming a purple tractor beam under a starry sky"
+    >
+      {/* ===== SKY ===== */}
+      <rect x="0" y="0" width="400" height="120" fill="#0b1026" />
+      <rect x="0" y="120" width="400" height="8" fill="#141b3c" />
+      {/* dithered horizon rows (2 rows max) */}
+      <rect x="0" y="116" width="4" height="4" fill="#141b3c" />
+      <rect x="8" y="116" width="4" height="4" fill="#141b3c" />
+      <rect x="16" y="116" width="4" height="4" fill="#141b3c" />
+      <rect x="24" y="116" width="4" height="4" fill="#141b3c" />
+      <rect x="32" y="116" width="4" height="4" fill="#141b3c" />
+      <rect x="40" y="116" width="4" height="4" fill="#141b3c" />
+      <rect x="48" y="116" width="4" height="4" fill="#141b3c" />
+      <rect x="56" y="116" width="4" height="4" fill="#141b3c" />
+      <rect x="64" y="116" width="4" height="4" fill="#141b3c" />
+      <rect x="72" y="116" width="4" height="4" fill="#141b3c" />
+      <rect x="80" y="116" width="4" height="4" fill="#141b3c" />
+      <rect x="88" y="116" width="4" height="4" fill="#141b3c" />
+      <rect x="96" y="116" width="4" height="4" fill="#141b3c" />
+      <rect x="104" y="116" width="4" height="4" fill="#141b3c" />
+      <rect x="112" y="116" width="4" height="4" fill="#141b3c" />
+      <rect x="120" y="116" width="4" height="4" fill="#141b3c" />
+      <rect x="128" y="116" width="4" height="4" fill="#141b3c" />
+      <rect x="136" y="116" width="4" height="4" fill="#141b3c" />
+      <rect x="144" y="116" width="4" height="4" fill="#141b3c" />
+      <rect x="152" y="116" width="4" height="4" fill="#141b3c" />
+      <rect x="160" y="116" width="4" height="4" fill="#141b3c" />
+      <rect x="168" y="116" width="4" height="4" fill="#141b3c" />
+      <rect x="176" y="116" width="4" height="4" fill="#141b3c" />
+      <rect x="184" y="116" width="4" height="4" fill="#141b3c" />
+      <rect x="192" y="116" width="4" height="4" fill="#141b3c" />
+      <rect x="200" y="116" width="4" height="4" fill="#141b3c" />
+      <rect x="208" y="116" width="4" height="4" fill="#141b3c" />
+      <rect x="216" y="116" width="4" height="4" fill="#141b3c" />
+      <rect x="224" y="116" width="4" height="4" fill="#141b3c" />
+      <rect x="232" y="116" width="4" height="4" fill="#141b3c" />
+      <rect x="240" y="116" width="4" height="4" fill="#141b3c" />
+      <rect x="248" y="116" width="4" height="4" fill="#141b3c" />
+      <rect x="256" y="116" width="4" height="4" fill="#141b3c" />
+      <rect x="264" y="116" width="4" height="4" fill="#141b3c" />
+      <rect x="272" y="116" width="4" height="4" fill="#141b3c" />
+      <rect x="280" y="116" width="4" height="4" fill="#141b3c" />
+      <rect x="288" y="116" width="4" height="4" fill="#141b3c" />
+      <rect x="296" y="116" width="4" height="4" fill="#141b3c" />
+      <rect x="304" y="116" width="4" height="4" fill="#141b3c" />
+      <rect x="312" y="116" width="4" height="4" fill="#141b3c" />
+      <rect x="320" y="116" width="4" height="4" fill="#141b3c" />
+      <rect x="328" y="116" width="4" height="4" fill="#141b3c" />
+      <rect x="336" y="116" width="4" height="4" fill="#141b3c" />
+      <rect x="344" y="116" width="4" height="4" fill="#141b3c" />
+      <rect x="352" y="116" width="4" height="4" fill="#141b3c" />
+      <rect x="360" y="116" width="4" height="4" fill="#141b3c" />
+      <rect x="368" y="116" width="4" height="4" fill="#141b3c" />
+      <rect x="376" y="116" width="4" height="4" fill="#141b3c" />
+      <rect x="384" y="116" width="4" height="4" fill="#141b3c" />
+      <rect x="392" y="116" width="4" height="4" fill="#141b3c" />
 
-      <rect x="0" y="0" width="400" height="180" fill="url(#wildSky)" />
+      {/* ===== STARS ===== */}
+      <rect x="16" y="12" width="4" height="4" fill="#e8ecf8" />
+      <rect x="56" y="28" width="4" height="4" fill="#4a5a8a" />
+      <rect x="92" y="8" width="4" height="4" fill="#e8ecf8" />
+      <rect x="132" y="36" width="4" height="4" fill="#4a5a8a" />
+      <rect x="160" y="16" width="4" height="4" fill="#e8ecf8" />
+      <rect x="196" y="44" width="4" height="4" fill="#e8ecf8" />
+      <rect x="220" y="12" width="4" height="4" fill="#4a5a8a" />
+      <rect x="252" y="32" width="4" height="4" fill="#e8ecf8" />
+      <rect x="284" y="8" width="4" height="4" fill="#e8ecf8" />
+      <rect x="308" y="52" width="4" height="4" fill="#4a5a8a" />
+      <rect x="340" y="20" width="4" height="4" fill="#e8ecf8" />
+      <rect x="376" y="40" width="4" height="4" fill="#4a5a8a" />
+      <rect x="388" y="8" width="4" height="4" fill="#e8ecf8" />
+      <rect x="180" y="72" width="4" height="4" fill="#4a5a8a" />
+      <rect x="24" y="64" width="4" height="4" fill="#4a5a8a" />
+      {/* twinkling stars (2-frame flip) */}
+      <rect x="120" y="20" width="4" height="4" fill="#e8ecf8">
+        <animate
+          attributeName="fill"
+          values="#e8ecf8;#4a5a8a;#e8ecf8"
+          keyTimes="0;0.5;1"
+          calcMode="discrete"
+          dur="1.4s"
+          repeatCount="indefinite"
+        />
+      </rect>
+      <rect x="268" y="60" width="4" height="4" fill="#4a5a8a">
+        <animate
+          attributeName="fill"
+          values="#4a5a8a;#e8ecf8;#4a5a8a"
+          keyTimes="0;0.5;1"
+          calcMode="discrete"
+          dur="1.1s"
+          repeatCount="indefinite"
+        />
+      </rect>
+      <rect x="356" y="64" width="4" height="4" fill="#e8ecf8">
+        <animate
+          attributeName="fill"
+          values="#e8ecf8;#0b1026;#e8ecf8"
+          keyTimes="0;0.5;1"
+          calcMode="discrete"
+          dur="1.6s"
+          repeatCount="indefinite"
+        />
+      </rect>
 
-      <circle cx="345" cy="30" r="26" fill="url(#wildMoonGlow)" />
-      <circle cx="345" cy="30" r="9" fill="#e9edf5" fillOpacity="0.5" />
+      {/* ===== MOON (upper right, blocky with bite) ===== */}
+      <rect x="320" y="16" width="16" height="4" fill="#e8ecf8" />
+      <rect x="316" y="20" width="24" height="4" fill="#e8ecf8" />
+      <rect x="312" y="24" width="28" height="12" fill="#e8ecf8" />
+      <rect x="316" y="36" width="24" height="4" fill="#e8ecf8" />
+      <rect x="320" y="40" width="16" height="4" fill="#e8ecf8" />
+      <rect x="328" y="20" width="12" height="4" fill="#0b1026" />
+      <rect x="332" y="24" width="8" height="8" fill="#0b1026" />
 
-      <circle cx="22" cy="18" r="1" fill="#e9edf5" opacity="0.5" />
-      <circle cx="48" cy="40" r="1" fill="#e9edf5" opacity="0.35" />
-      <circle cx="75" cy="12" r="1" fill="#e9edf5" opacity="0.6" />
-      <circle cx="103" cy="30" r="1" fill="#e9edf5" opacity="0.4" />
-      <circle cx="140" cy="14" r="1" fill="#e9edf5" opacity="0.55" />
-      <circle cx="168" cy="38" r="1" fill="#e9edf5" opacity="0.3" />
-      <circle cx="205" cy="10" r="1" fill="#e9edf5" opacity="0.5" />
-      <circle cx="236" cy="26" r="1" fill="#e9edf5" opacity="0.4" />
-      <circle cx="262" cy="48" r="1" fill="#e9edf5" opacity="0.35" />
-      <circle cx="290" cy="14" r="1" fill="#e9edf5" opacity="0.55" />
-      <circle cx="311" cy="52" r="1" fill="#e9edf5" opacity="0.3" />
-      <circle cx="378" cy="60" r="1" fill="#e9edf5" opacity="0.4" />
-      <circle cx="12" cy="58" r="1" fill="#e9edf5" opacity="0.35" />
-      <circle cx="60" cy="70" r="1" fill="#e9edf5" opacity="0.3" />
-      <circle cx="130" cy="55" r="1" fill="#e9edf5" opacity="0.4" />
-      <circle cx="222" cy="60" r="1" fill="#e9edf5" opacity="0.35" />
-
+      {/* ===== TRACTOR BEAM (purple, flips on/off) ===== */}
       <g>
-        <animateTransform attributeName="transform" type="translate" values="0 0; 0 -4; 0 0" dur="6s" repeatCount="indefinite" />
-        <circle cx="150" cy="58" r="46" fill="url(#wildOrbGlow)" />
-        <polygon points="128,66 172,66 196,150 104,150" fill="#45cdde" opacity="0.1">
-          <animate attributeName="opacity" values="0.06;0.16;0.06" dur="6s" repeatCount="indefinite" />
-        </polygon>
-        <ellipse cx="150" cy="62" rx="30" ry="8" fill="#1d2b4a" />
-        <ellipse cx="150" cy="60" rx="30" ry="8" fill="#3a4a66" />
-        <path d="M132 56 Q150 42 168 56 Q150 62 132 56" fill="#52658c" />
-        <ellipse cx="150" cy="50" rx="9" ry="5" fill="#45cdde" opacity="0.7" />
-        <circle cx="132" cy="63" r="1.5" fill="#ebce8b" />
-        <circle cx="141" cy="65" r="1.5" fill="#c9a961" />
-        <circle cx="150" cy="66" r="1.5" fill="#ebce8b" />
-        <circle cx="159" cy="65" r="1.5" fill="#c9a961" />
-        <circle cx="168" cy="63" r="1.5" fill="#ebce8b" />
+        <animate
+          attributeName="visibility"
+          values="visible;hidden;visible"
+          keyTimes="0;0.5;1"
+          calcMode="discrete"
+          dur="1.2s"
+          repeatCount="indefinite"
+        />
+        <rect x="76" y="56" width="16" height="8" fill="#9a78e0" />
+        <rect x="72" y="64" width="24" height="16" fill="#9a78e0" />
+        <rect x="68" y="80" width="32" height="20" fill="#9a78e0" />
+        <rect x="64" y="100" width="40" height="20" fill="#9a78e0" />
       </g>
 
-      <path d="M0 132 Q70 118 150 128 Q240 138 320 124 Q370 118 400 126 L400 180 L0 180 Z" fill="#16213a" />
-
-      <g fill="#1d2b4a">
-        <rect x="238" y="94" width="52" height="36" />
-        <polygon points="232,96 264,76 296,96" />
-        <rect x="228" y="118" width="14" height="12" />
+      {/* ===== UFO (bobs 4px in discrete steps) ===== */}
+      <g>
+        <animateTransform
+          attributeName="transform"
+          type="translate"
+          values="0 0;0 4;0 0"
+          keyTimes="0;0.5;1"
+          calcMode="discrete"
+          dur="1.2s"
+          repeatCount="indefinite"
+        />
+        {/* dome */}
+        <rect x="76" y="24" width="16" height="4" fill="#4a5a8a" />
+        <rect x="72" y="28" width="24" height="4" fill="#4a5a8a" />
+        <rect x="80" y="24" width="4" height="4" fill="#e8ecf8" />
+        {/* saucer body */}
+        <rect x="60" y="32" width="48" height="4" fill="#4a5a8a" />
+        <rect x="52" y="36" width="64" height="8" fill="#4a5a8a" />
+        <rect x="60" y="44" width="48" height="4" fill="#2a3a6e" />
+        {/* running lights on rim */}
+        <rect x="60" y="36" width="4" height="4" fill="#ffd98a">
+          <animate
+            attributeName="fill"
+            values="#ffd98a;#4a5a8a;#ffd98a"
+            keyTimes="0;0.5;1"
+            calcMode="discrete"
+            dur="0.6s"
+            repeatCount="indefinite"
+          />
+        </rect>
+        <rect x="82" y="36" width="4" height="4" fill="#4a5a8a">
+          <animate
+            attributeName="fill"
+            values="#4a5a8a;#ffd98a;#4a5a8a"
+            keyTimes="0;0.5;1"
+            calcMode="discrete"
+            dur="0.6s"
+            repeatCount="indefinite"
+          />
+        </rect>
+        <rect x="104" y="36" width="4" height="4" fill="#ffd98a">
+          <animate
+            attributeName="fill"
+            values="#ffd98a;#4a5a8a;#ffd98a"
+            keyTimes="0;0.5;1"
+            calcMode="discrete"
+            dur="0.6s"
+            repeatCount="indefinite"
+          />
+        </rect>
+        {/* teal underglow */}
+        <rect x="68" y="48" width="32" height="4" fill="#4ac9d9" />
+        <rect x="76" y="52" width="16" height="4" fill="#4ac9d9" />
       </g>
-      <rect x="250" y="104" width="9" height="9" fill="#c9a961" />
-      <rect x="269" y="104" width="9" height="9" fill="#ebce8b" opacity="0.85" />
-      <rect x="259" y="116" width="10" height="14" fill="#0d1526" />
 
-      <g fill="#1d2b4a">
-        <rect x="330" y="72" width="4" height="52" />
-        <rect x="352" y="72" width="4" height="52" />
-        <rect x="328" y="98" width="30" height="3" />
-        <path d="M326 58 L360 58 L356 78 L330 78 Z" />
-        <path d="M326 58 Q343 48 360 58 Z" />
-        <rect x="341" y="118" width="4" height="10" />
-      </g>
-      <circle cx="343" cy="68" r="2" fill="#ebce8b">
-        <animate attributeName="opacity" values="1;0.25;1" dur="4s" repeatCount="indefinite" />
-      </circle>
+      {/* ===== ROLLING FIELD SILHOUETTES ===== */}
+      {/* far hill left */}
+      <rect x="0" y="112" width="56" height="4" fill="#1e2a52" />
+      <rect x="0" y="108" width="36" height="4" fill="#1e2a52" />
+      <rect x="0" y="104" width="20" height="4" fill="#1e2a52" />
+      <rect x="0" y="116" width="80" height="12" fill="#1e2a52" />
+      {/* far hill right */}
+      <rect x="300" y="112" width="100" height="4" fill="#1e2a52" />
+      <rect x="324" y="108" width="76" height="4" fill="#1e2a52" />
+      <rect x="348" y="104" width="52" height="4" fill="#1e2a52" />
+      <rect x="288" y="116" width="112" height="12" fill="#1e2a52" />
+      {/* mid rolling swell center */}
+      <rect x="120" y="120" width="180" height="8" fill="#1e2a52" />
+      <rect x="148" y="116" width="120" height="4" fill="#1e2a52" />
 
-      <g fill="#1d2b4a">
-        <rect x="52" y="106" width="7" height="22" />
-        <path d="M44 106 L67 106 L61 92 L50 92 Z" />
-      </g>
-      <rect x="20" y="120" width="2" height="12" fill="#1d2b4a" />
-      <rect x="88" y="122" width="2" height="10" fill="#1d2b4a" />
-      <rect x="19" y="122" width="71" height="2" fill="#1d2b4a" />
+      {/* ===== BARN (center-left) ===== */}
+      {/* gambrel roof */}
+      <rect x="140" y="76" width="24" height="4" fill="#2a3a6e" />
+      <rect x="132" y="80" width="40" height="4" fill="#2a3a6e" />
+      <rect x="128" y="84" width="48" height="4" fill="#2a3a6e" />
+      <rect x="124" y="88" width="56" height="4" fill="#2a3a6e" />
+      {/* barn body */}
+      <rect x="128" y="92" width="48" height="36" fill="#1e2a52" />
+      {/* loft window (amber, blinking) */}
+      <rect x="148" y="96" width="8" height="8" fill="#f5b84f">
+        <animate
+          attributeName="fill"
+          values="#f5b84f;#ffd98a;#f5b84f"
+          keyTimes="0;0.5;1"
+          calcMode="discrete"
+          dur="1.5s"
+          repeatCount="indefinite"
+        />
+      </rect>
+      {/* big barn door */}
+      <rect x="140" y="108" width="24" height="20" fill="#08090f" />
+      <rect x="148" y="108" width="8" height="20" fill="#2a3a6e" />
+      {/* amber glow spilling from door edges */}
+      <rect x="144" y="120" width="4" height="8" fill="#f5b84f" />
+      <rect x="156" y="120" width="4" height="8" fill="#f5b84f" />
 
-      <path d="M0 148 Q60 138 130 146 Q210 154 290 144 Q350 138 400 146 L400 180 L0 180 Z" fill="#0a101d" />
-      <path d="M0 162 Q100 154 200 160 Q300 166 400 158 L400 180 L0 180 Z" fill="#05070b" />
+      {/* ===== SILO next to barn ===== */}
+      <rect x="188" y="84" width="16" height="44" fill="#2a3a6e" />
+      <rect x="192" y="80" width="8" height="4" fill="#2a3a6e" />
+      <rect x="188" y="84" width="4" height="44" fill="#1e2a52" />
 
-      <g stroke="#16213a" strokeWidth="1.5" strokeLinecap="round">
-        <path d="M30 160 L28 170" />
-        <path d="M55 158 L54 169" />
-        <path d="M82 161 L81 171" />
-        <path d="M112 158 L110 168" />
-        <path d="M148 162 L147 172" />
-        <path d="M188 159 L187 170" />
-        <path d="M228 162 L227 172" />
-        <path d="M268 158 L266 169" />
-        <path d="M308 160 L307 171" />
-        <path d="M348 158 L347 169" />
-        <path d="M380 161 L379 171" />
-      </g>
+      {/* ===== WATER TOWER (right) ===== */}
+      {/* tank */}
+      <rect x="308" y="64" width="40" height="4" fill="#2a3a6e" />
+      <rect x="304" y="68" width="48" height="20" fill="#2a3a6e" />
+      <rect x="308" y="88" width="40" height="4" fill="#2a3a6e" />
+      <rect x="304" y="68" width="4" height="20" fill="#1e2a52" />
+      {/* roof cap */}
+      <rect x="320" y="60" width="16" height="4" fill="#1e2a52" />
+      {/* amber beacon on top (blinks) */}
+      <rect x="326" y="56" width="4" height="4" fill="#ffd98a">
+        <animate
+          attributeName="visibility"
+          values="visible;hidden;visible"
+          keyTimes="0;0.5;1"
+          calcMode="discrete"
+          dur="1.0s"
+          repeatCount="indefinite"
+        />
+      </rect>
+      {/* legs */}
+      <rect x="308" y="92" width="4" height="36" fill="#1e2a52" />
+      <rect x="340" y="92" width="4" height="36" fill="#1e2a52" />
+      <rect x="316" y="92" width="4" height="20" fill="#1e2a52" />
+      <rect x="332" y="92" width="4" height="20" fill="#1e2a52" />
+      {/* cross brace */}
+      <rect x="312" y="104" width="32" height="4" fill="#1e2a52" />
+
+      {/* ===== GROUND BAND with crop rows ===== */}
+      <rect x="0" y="128" width="400" height="52" fill="#10131f" />
+      {/* crop rows: horizontal furrow lines */}
+      <rect x="0" y="136" width="400" height="4" fill="#08090f" />
+      <rect x="0" y="148" width="400" height="4" fill="#08090f" />
+      <rect x="0" y="160" width="400" height="4" fill="#08090f" />
+      <rect x="0" y="172" width="400" height="4" fill="#08090f" />
+      {/* crop stubble tufts between furrows */}
+      <rect x="12" y="132" width="4" height="4" fill="#1e2a52" />
+      <rect x="44" y="132" width="4" height="4" fill="#1e2a52" />
+      <rect x="76" y="132" width="4" height="4" fill="#1e2a52" />
+      <rect x="108" y="132" width="4" height="4" fill="#1e2a52" />
+      <rect x="204" y="132" width="4" height="4" fill="#1e2a52" />
+      <rect x="236" y="132" width="4" height="4" fill="#1e2a52" />
+      <rect x="268" y="132" width="4" height="4" fill="#1e2a52" />
+      <rect x="364" y="132" width="4" height="4" fill="#1e2a52" />
+      <rect x="28" y="144" width="4" height="4" fill="#1e2a52" />
+      <rect x="92" y="144" width="4" height="4" fill="#1e2a52" />
+      <rect x="156" y="144" width="4" height="4" fill="#1e2a52" />
+      <rect x="220" y="144" width="4" height="4" fill="#1e2a52" />
+      <rect x="284" y="144" width="4" height="4" fill="#1e2a52" />
+      <rect x="348" y="144" width="4" height="4" fill="#1e2a52" />
+      <rect x="60" y="156" width="4" height="4" fill="#1e2a52" />
+      <rect x="140" y="156" width="4" height="4" fill="#1e2a52" />
+      <rect x="252" y="156" width="4" height="4" fill="#1e2a52" />
+      <rect x="332" y="156" width="4" height="4" fill="#1e2a52" />
+      {/* beam glow patch on ground under UFO */}
+      <rect x="68" y="128" width="32" height="4" fill="#9a78e0">
+        <animate
+          attributeName="visibility"
+          values="visible;hidden;visible"
+          keyTimes="0;0.5;1"
+          calcMode="discrete"
+          dur="1.2s"
+          repeatCount="indefinite"
+        />
+      </rect>
     </svg>
   );
 }

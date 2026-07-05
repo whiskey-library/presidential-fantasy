@@ -10,7 +10,8 @@ createRoot(document.getElementById("root")!).render(
 );
 
 // Register the service worker so the game installs and plays offline as an app.
-if ("serviceWorker" in navigator) {
+// Dev builds skip it — a cache-first SW poisons Vite's live module graph.
+if ("serviceWorker" in navigator && !import.meta.env.DEV) {
   window.addEventListener("load", () => {
     const url = `${import.meta.env.BASE_URL}sw.js`;
     navigator.serviceWorker.register(url).catch(() => {

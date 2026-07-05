@@ -1,27 +1,21 @@
 import type { StatKey } from "../game/types";
 
-// ── Liquid meter orbs ───────────────────────────────────────────────────────
-// The four national meters as literal water levels: a glass orb that fills,
-// sloshes, and drains as the country reacts. Glanceable from across the room.
+// ── Pixel water tanks ───────────────────────────────────────────────────────
+// The four national meters as 8-bit water tanks: chunky pixel vessels whose
+// level rises and falls, with a classic 2-frame animated surface row.
 
-const STAT_COLOR: Record<StatKey, string> = {
-  approval: "#6fa6ff",
-  economy: "#46de96",
-  stability: "#f5b84f",
-  world: "#45cdde",
+const STAT_COLOR: Record<StatKey, { main: string; light: string }> = {
+  approval: { main: "#4a7de0", light: "#7da6ff" },
+  economy: { main: "#2fae6e", light: "#4ad98a" },
+  stability: { main: "#d99a2f", light: "#f5b84f" },
+  world: { main: "#2fa9b8", light: "#4ac9d9" },
 };
 
-const STAT_ICON: Record<StatKey, JSX.Element> = {
-  // tiny inline glyphs drawn at 12x12, rendered above the waterline
-  approval: (
-    <path d="M6 1.5 L7.2 4.4 L10.4 4.6 L8 6.6 L8.8 9.7 L6 8 L3.2 9.7 L4 6.6 L1.6 4.6 L4.8 4.4 Z" />
-  ),
-  economy: <path d="M2 10 L2 6.5 L4.5 6.5 L4.5 10 Z M5.5 10 L5.5 4 L8 4 L8 10 Z M9 10 L9 1.8 L11.5 1.8 L11.5 10 Z" />,
-  stability: <path d="M6 1.2 L10.8 3.4 L10.8 4.6 L1.2 4.6 L1.2 3.4 Z M2.4 5.4 L3.8 5.4 L3.8 9 L2.4 9 Z M5.3 5.4 L6.7 5.4 L6.7 9 L5.3 9 Z M8.2 5.4 L9.6 5.4 L9.6 9 L8.2 9 Z M1.2 9.8 L10.8 9.8 L10.8 11 L1.2 11 Z" />,
-  world: (
-    <path d="M6 0.8 A5.2 5.2 0 1 0 6 11.2 A5.2 5.2 0 1 0 6 0.8 Z M6 2 A4 4 0 0 1 6 10 A9 9 0 0 1 6 2 Z M1.5 5.4 L10.5 5.4 L10.5 6.6 L1.5 6.6 Z" fillRule="evenodd" />
-  ),
-};
+// 16×16 logical pixels, 1 px = 4 svg units.
+const P = 4;
+const GRID = 16;
+const INNER_TOP = 2; // rows 2..14 hold water (12 rows of range)
+const INNER_BOTTOM = 14;
 
 export default function Orb({
   statKey,
@@ -36,58 +30,95 @@ export default function Orb({
   size?: number;
   delta?: number | null;
 }) {
-  const color = STAT_COLOR[statKey];
+  const c = STAT_COLOR[statKey];
   const danger = value < 22;
   const warn = !danger && value < 40;
-  // Waterline: value 0 → y 64 (empty), 100 → y 8 (full), inside a r=28 orb.
-  const level = 64 - (value / 100) * 56;
-  const uid = `orb-${statKey}-${size}`;
+
+  // Quantize the waterline to whole pixel rows — that's the 8-bit charm.
+  const range = INNER_BOTTOM - INNER_TOP; // 12 rows
+  const filledRows = Math.max(value > 0 ? 1 : 0, Math.round((value / 100) * range));
+  const surfaceY = INNER_BOTTOM - filledRows; // top row of water
 
   return (
     <div className={`orb ${danger ? "orb--danger" : warn ? "orb--warn" : ""}`}>
       <div className="orb__glass" style={{ width: size, height: size }}>
-        <svg viewBox="0 0 72 72" width={size} height={size} role="img" aria-label={`${label} ${value} of 100`}>
-          <defs>
-            <clipPath id={uid}>
-              <circle cx="36" cy="36" r="28" />
-            </clipPath>
-          </defs>
-          {/* glass */}
-          <circle cx="36" cy="36" r="28" fill="#0a0e15" />
-          <g clipPath={`url(#${uid})`}>
-            {/* liquid body */}
-            <rect x="0" y={level} width="72" height="72" fill={color} opacity="0.28" />
-            {/* rolling wave surface: two-hump path, translated for a seamless loop */}
+        <svg
+          viewBox={`0 0 ${GRID * P} ${GRID * P}`}
+          width={size}
+          height={size}
+          role="img"
+          aria-label={`${label} ${value} of 100`}
+          shapeRendering="crispEdges"
+        >
+          {/* tank body */}
+          <rect x={P} y={P} width={(GRID - 2) * P} height={(GRID - 2) * P} fill="#08090f" />
+          {/* water body */}
+          {filledRows > 0 && (
+            <rect
+              x={2 * P}
+              y={surfaceY * P}
+              width={(GRID - 4) * P}
+              height={(INNER_BOTTOM - surfaceY) * P}
+              fill={c.main}
+            />
+          )}
+          {/* 2-frame surface row: alternating light pixels swap phase */}
+          {filledRows > 0 && (
             <g>
-              <path
-                d={`M-72 ${level} Q -54 ${level - 4} -36 ${level} T 0 ${level} T 36 ${level} T 72 ${level} T 108 ${level} V 80 H -72 Z`}
-                fill={color}
-                opacity="0.5"
-              >
-                <animateTransform attributeName="transform" type="translate" from="0 0" to="72 0" dur="3.2s" repeatCount="indefinite" />
-              </path>
-              <path
-                d={`M-72 ${level + 1.5} Q -54 ${level - 2.5} -36 ${level + 1.5} T 0 ${level + 1.5} T 36 ${level + 1.5} T 72 ${level + 1.5} T 108 ${level + 1.5} V 80 H -72 Z`}
-                fill={color}
-                opacity="0.35"
-              >
-                <animateTransform attributeName="transform" type="translate" from="72 0" to="0 0" dur="4.1s" repeatCount="indefinite" />
-              </path>
+              <g>
+                {[2, 4, 6, 8, 10, 12].map((x) => (
+                  <rect key={x} x={x * P} y={surfaceY * P} width={P} height={P} fill={c.light} />
+                ))}
+                <animate
+                  attributeName="visibility"
+                  values="visible;hidden;visible"
+                  keyTimes="0;0.5;1"
+                  calcMode="discrete"
+                  dur="0.9s"
+                  repeatCount="indefinite"
+                />
+              </g>
+              <g visibility="hidden">
+                {[3, 5, 7, 9, 11].map((x) => (
+                  <rect key={x} x={x * P} y={surfaceY * P} width={P} height={P} fill={c.light} />
+                ))}
+                <animate
+                  attributeName="visibility"
+                  values="hidden;visible;hidden"
+                  keyTimes="0;0.5;1"
+                  calcMode="discrete"
+                  dur="0.9s"
+                  repeatCount="indefinite"
+                />
+              </g>
             </g>
-            {/* glass shine */}
-            <ellipse cx="27" cy="20" rx="10" ry="5" fill="#e9edf5" opacity="0.08" transform="rotate(-20 27 20)" />
+          )}
+          {/* glass shine pixels */}
+          <rect x={3 * P} y={3 * P} width={P} height={2 * P} fill="#e8ecf8" opacity="0.18" />
+          {/* chunky frame */}
+          <g fill={danger ? "#e04858" : "#4a5a8a"}>
+            <rect x={P} y={0} width={(GRID - 2) * P} height={P} />
+            <rect x={P} y={(GRID - 1) * P} width={(GRID - 2) * P} height={P} />
+            <rect x={0} y={P} width={P} height={(GRID - 2) * P} />
+            <rect x={(GRID - 1) * P} y={P} width={P} height={(GRID - 2) * P} />
+            {/* corner nubs */}
+            <rect x={P} y={P} width={P} height={P} />
+            <rect x={(GRID - 2) * P} y={P} width={P} height={P} />
+            <rect x={P} y={(GRID - 2) * P} width={P} height={P} />
+            <rect x={(GRID - 2) * P} y={(GRID - 2) * P} width={P} height={P} />
           </g>
-          {/* icon watermark */}
-          <g transform="translate(30 12) scale(1)" fill={color} opacity="0.9">
-            {STAT_ICON[statKey]}
-          </g>
-          {/* rim */}
-          <circle cx="36" cy="36" r="28" fill="none" stroke={danger ? "#d8394a" : "rgba(150,168,196,0.35)"} strokeWidth="2.5" className="orb__rim" />
-          {/* value */}
-          <text x="36" y="44" textAnchor="middle" fontSize="19" fontWeight="700" fill="#e9edf5" fontFamily="ui-monospace, SFMono-Regular, Menlo, monospace">
-            {value}
-          </text>
+          {danger && (
+            <animate
+              attributeName="opacity"
+              values="1;0.55;1"
+              keyTimes="0;0.5;1"
+              calcMode="discrete"
+              dur="0.8s"
+              repeatCount="indefinite"
+            />
+          )}
         </svg>
+        <span className="orb__value">{value}</span>
         {delta != null && delta !== 0 && (
           <span key={`${statKey}-${delta}-${value}`} className={`orb__delta ${delta > 0 ? "up" : "down"}`}>
             {delta > 0 ? "+" : ""}

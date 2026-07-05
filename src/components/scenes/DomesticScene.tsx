@@ -5,161 +5,220 @@ export default function DomesticScene() {
       width="100%"
       height="100%"
       preserveAspectRatio="xMidYMid slice"
+      shapeRendering="crispEdges"
       role="img"
-      aria-label="The Capitol dome at 2 AM under a full moon, brass-lit portico windows, bare winter trees, long dark lawn"
+      aria-label="Pixel art of the Capitol dome at night under a blocky moon, amber portico windows glowing, bare trees on a moonlit lawn with a lit walkway"
     >
-      <defs>
-        <linearGradient id="domSky" x1="0" y1="0" x2="0" y2="1">
-          <stop offset="0" stopColor="#0d1526" />
-          <stop offset="1" stopColor="#05070b" />
-        </linearGradient>
-        <radialGradient id="domMoonGlow" cx="0.5" cy="0.5" r="0.5">
-          <stop offset="0" stopColor="#e9edf5" stopOpacity="0.28" />
-          <stop offset="0.6" stopColor="#e9edf5" stopOpacity="0.08" />
-          <stop offset="1" stopColor="#e9edf5" stopOpacity="0" />
-        </radialGradient>
-        <radialGradient id="domPorchGlow" cx="0.5" cy="0.5" r="0.5">
-          <stop offset="0" stopColor="#c9a961" stopOpacity="0.22" />
-          <stop offset="1" stopColor="#c9a961" stopOpacity="0" />
-        </radialGradient>
-      </defs>
+      {/* ===== SKY ===== */}
+      <rect x="0" y="0" width="400" height="124" fill="#0b1026" />
+      {/* horizon band */}
+      <rect x="0" y="116" width="400" height="8" fill="#141b3c" />
+      {/* dithered rows above band (2 rows max) */}
+      <rect x="0" y="112" width="4" height="4" fill="#141b3c" />
+      <rect x="12" y="112" width="4" height="4" fill="#141b3c" />
+      <rect x="24" y="112" width="4" height="4" fill="#141b3c" />
+      <rect x="36" y="112" width="4" height="4" fill="#141b3c" />
+      <rect x="52" y="112" width="4" height="4" fill="#141b3c" />
+      <rect x="68" y="112" width="4" height="4" fill="#141b3c" />
+      <rect x="84" y="112" width="4" height="4" fill="#141b3c" />
+      <rect x="100" y="112" width="4" height="4" fill="#141b3c" />
+      <rect x="316" y="112" width="4" height="4" fill="#141b3c" />
+      <rect x="332" y="112" width="4" height="4" fill="#141b3c" />
+      <rect x="348" y="112" width="4" height="4" fill="#141b3c" />
+      <rect x="364" y="112" width="4" height="4" fill="#141b3c" />
+      <rect x="380" y="112" width="4" height="4" fill="#141b3c" />
+      <rect x="392" y="112" width="4" height="4" fill="#141b3c" />
+      <rect x="8" y="108" width="4" height="4" fill="#141b3c" />
+      <rect x="32" y="108" width="4" height="4" fill="#141b3c" />
+      <rect x="64" y="108" width="4" height="4" fill="#141b3c" />
+      <rect x="340" y="108" width="4" height="4" fill="#141b3c" />
+      <rect x="372" y="108" width="4" height="4" fill="#141b3c" />
 
-      <rect x="0" y="0" width="400" height="180" fill="url(#domSky)" />
+      {/* ===== STARS ===== */}
+      <rect x="20" y="16" width="4" height="4" fill="#e8ecf8" />
+      <rect x="148" y="12" width="4" height="4" fill="#4a5a8a" />
+      <rect x="184" y="28" width="4" height="4" fill="#e8ecf8" />
+      <rect x="232" y="8" width="4" height="4" fill="#e8ecf8" />
+      <rect x="280" y="24" width="4" height="4" fill="#4a5a8a" />
+      <rect x="332" y="12" width="4" height="4" fill="#e8ecf8" />
+      <rect x="368" y="36" width="4" height="4" fill="#4a5a8a" />
+      <rect x="388" y="16" width="4" height="4" fill="#e8ecf8" />
+      <rect x="12" y="60" width="4" height="4" fill="#4a5a8a" />
+      <rect x="352" y="64" width="4" height="4" fill="#e8ecf8" />
+      <rect x="308" y="44" width="4" height="4" fill="#4a5a8a" />
 
-      <circle cx="34" cy="22" r="1" fill="#e9edf5" opacity="0.5" />
-      <circle cx="72" cy="41" r="1" fill="#e9edf5" opacity="0.35" />
-      <circle cx="118" cy="15" r="1" fill="#e9edf5" opacity="0.55" />
-      <circle cx="153" cy="34" r="1" fill="#e9edf5" opacity="0.3" />
-      <circle cx="196" cy="10" r="1" fill="#e9edf5" opacity="0.45" />
-      <circle cx="341" cy="14" r="1" fill="#e9edf5" opacity="0.5" />
-      <circle cx="376" cy="38" r="1" fill="#e9edf5" opacity="0.35" />
-      <circle cx="21" cy="62" r="1" fill="#e9edf5" opacity="0.3" />
-      <circle cx="386" cy="70" r="1" fill="#e9edf5" opacity="0.4" />
-      <circle cx="98" cy="55" r="1" fill="#e9edf5" opacity="0.4" />
+      {/* ===== MOON upper-left (blocky circle with bite) ===== */}
+      <rect x="64" y="16" width="24" height="4" fill="#e8ecf8" />
+      <rect x="56" y="20" width="40" height="4" fill="#e8ecf8" />
+      <rect x="52" y="24" width="48" height="8" fill="#e8ecf8" />
+      <rect x="48" y="32" width="56" height="16" fill="#e8ecf8" />
+      <rect x="52" y="48" width="48" height="8" fill="#e8ecf8" />
+      <rect x="56" y="56" width="40" height="4" fill="#e8ecf8" />
+      <rect x="64" y="60" width="24" height="4" fill="#e8ecf8" />
+      {/* bite / craters */}
+      <rect x="84" y="24" width="16" height="8" fill="#0b1026" />
+      <rect x="92" y="32" width="12" height="8" fill="#0b1026" />
+      <rect x="64" y="36" width="8" height="8" fill="#141b3c" />
+      <rect x="76" y="48" width="8" height="4" fill="#141b3c" />
 
-      <circle cx="255" cy="38" r="42" fill="url(#domMoonGlow)" />
-      <circle cx="255" cy="38" r="16" fill="#e9edf5" opacity="0.85" />
-      <circle cx="250" cy="34" r="3" fill="#0d1526" opacity="0.12" />
-      <circle cx="260" cy="42" r="2" fill="#0d1526" opacity="0.1" />
-
-      <g opacity="0.5">
-        <rect x="-90" y="33" width="58" height="5" rx="2.5" fill="#1d2b4a">
-          <animateTransform
-            attributeName="transform"
-            type="translate"
-            from="0 0"
-            to="480 0"
-            dur="8s"
-            repeatCount="indefinite"
-          />
-        </rect>
+      {/* twinkling star beside moon — 2 discrete frames */}
+      <g>
+        <rect x="120" y="36" width="4" height="4" fill="#e8ecf8" />
+        <animate
+          attributeName="visibility"
+          values="visible;hidden;visible"
+          keyTimes="0;0.5;1"
+          calcMode="discrete"
+          dur="1.2s"
+          repeatCount="indefinite"
+        />
+      </g>
+      <g>
+        <rect x="120" y="28" width="4" height="4" fill="#e8ecf8" />
+        <rect x="120" y="44" width="4" height="4" fill="#e8ecf8" />
+        <rect x="112" y="36" width="4" height="4" fill="#e8ecf8" />
+        <rect x="128" y="36" width="4" height="4" fill="#e8ecf8" />
+        <animate
+          attributeName="visibility"
+          values="hidden;visible;hidden"
+          keyTimes="0;0.5;1"
+          calcMode="discrete"
+          dur="1.2s"
+          repeatCount="indefinite"
+        />
       </g>
 
-      <ellipse cx="258" cy="126" rx="60" ry="26" fill="url(#domPorchGlow)" />
+      {/* ===== CAPITOL (center-right) ===== */}
+      {/* statue tip */}
+      <rect x="256" y="24" width="4" height="8" fill="#2a3a6e" />
+      <rect x="252" y="32" width="12" height="4" fill="#2a3a6e" />
+      {/* lantern / tholos */}
+      <rect x="248" y="36" width="20" height="8" fill="#1e2a52" />
+      <rect x="252" y="38" width="4" height="4" fill="#f5b84f" />
+      <rect x="260" y="38" width="4" height="4" fill="#f5b84f" />
+      {/* dome — stacked shrinking rects */}
+      <rect x="244" y="44" width="28" height="4" fill="#2a3a6e" />
+      <rect x="240" y="48" width="36" height="4" fill="#2a3a6e" />
+      <rect x="236" y="52" width="44" height="8" fill="#1e2a52" />
+      <rect x="232" y="60" width="52" height="8" fill="#1e2a52" />
+      <rect x="228" y="68" width="60" height="8" fill="#1e2a52" />
+      {/* dome rib highlights */}
+      <rect x="256" y="52" width="4" height="24" fill="#2a3a6e" />
+      <rect x="240" y="60" width="4" height="16" fill="#2a3a6e" />
+      <rect x="272" y="60" width="4" height="16" fill="#2a3a6e" />
+      {/* drum with lit slit windows */}
+      <rect x="228" y="76" width="60" height="12" fill="#2a3a6e" />
+      <rect x="236" y="80" width="4" height="8" fill="#f5b84f" />
+      <rect x="248" y="80" width="4" height="8" fill="#f5b84f" />
+      <rect x="260" y="80" width="4" height="8" fill="#f5b84f" />
+      <rect x="272" y="80" width="4" height="8" fill="#f5b84f" />
+      {/* dome base ledge */}
+      <rect x="220" y="88" width="76" height="4" fill="#1e2a52" />
+      {/* main block */}
+      <rect x="212" y="92" width="92" height="36" fill="#1e2a52" />
+      {/* portico pediment + columns */}
+      <rect x="232" y="92" width="52" height="4" fill="#2a3a6e" />
+      <rect x="228" y="96" width="60" height="4" fill="#2a3a6e" />
+      <rect x="232" y="100" width="4" height="24" fill="#4a5a8a" />
+      <rect x="244" y="100" width="4" height="24" fill="#4a5a8a" />
+      <rect x="256" y="100" width="4" height="24" fill="#4a5a8a" />
+      <rect x="268" y="100" width="4" height="24" fill="#4a5a8a" />
+      <rect x="280" y="100" width="4" height="24" fill="#4a5a8a" />
+      {/* amber portico windows between columns */}
+      <rect x="236" y="104" width="8" height="12" fill="#f5b84f" />
+      <rect x="248" y="104" width="8" height="12" fill="#f5b84f" />
+      <rect x="260" y="104" width="8" height="12" fill="#f5b84f" />
+      <rect x="272" y="104" width="8" height="12" fill="#f5b84f" />
+      {/* doorway — pulses between amber tones */}
+      <rect x="252" y="116" width="12" height="12" fill="#ffd98a">
+        <animate
+          attributeName="fill"
+          values="#ffd98a;#f5b84f;#ffd98a"
+          keyTimes="0;0.5;1"
+          calcMode="discrete"
+          dur="1.6s"
+          repeatCount="indefinite"
+        />
+      </rect>
+      {/* wings */}
+      <rect x="188" y="100" width="24" height="28" fill="#1e2a52" />
+      <rect x="304" y="100" width="24" height="28" fill="#1e2a52" />
+      <rect x="188" y="100" width="24" height="4" fill="#2a3a6e" />
+      <rect x="304" y="100" width="24" height="4" fill="#2a3a6e" />
+      {/* wing windows */}
+      <rect x="192" y="108" width="4" height="8" fill="#f5b84f" />
+      <rect x="200" y="108" width="4" height="8" fill="#f5b84f" />
+      <rect x="308" y="108" width="4" height="8" fill="#f5b84f" />
+      <rect x="316" y="108" width="4" height="8" fill="#f5b84f" />
+      <rect x="192" y="120" width="4" height="8" fill="#f5b84f" />
+      <rect x="316" y="120" width="4" height="8" fill="#f5b84f" />
+      {/* one wing window flickering off and on */}
+      <rect x="200" y="120" width="4" height="8" fill="#f5b84f">
+        <animate
+          attributeName="fill"
+          values="#f5b84f;#1e2a52;#f5b84f"
+          keyTimes="0;0.55;1"
+          calcMode="discrete"
+          dur="1.4s"
+          repeatCount="indefinite"
+        />
+      </rect>
+      <rect x="308" y="120" width="4" height="8" fill="#1e2a52" />
+      {/* front steps */}
+      <rect x="240" y="128" width="36" height="4" fill="#2a3a6e" />
+      <rect x="236" y="132" width="44" height="4" fill="#4a5a8a" />
 
-      <g fill="#16213a">
-        <rect x="253" y="42" width="4" height="10" />
-        <circle cx="255" cy="42" r="2.5" />
-        <path d="M240 72 Q255 50 270 72 Z" />
-        <rect x="238" y="70" width="34" height="5" />
-        <rect x="242" y="75" width="26" height="9" />
-        <rect x="236" y="84" width="38" height="4" />
-        <rect x="240" y="88" width="30" height="12" />
-        <rect x="230" y="100" width="50" height="5" />
-        <rect x="196" y="105" width="118" height="25" />
-        <rect x="188" y="122" width="134" height="8" />
-        <rect x="148" y="110" width="48" height="20" />
-        <rect x="314" y="110" width="48" height="20" />
-      </g>
+      {/* ===== BARE TREES ===== */}
+      {/* left tree */}
+      <rect x="40" y="96" width="4" height="40" fill="#1e2a52" />
+      <rect x="28" y="92" width="12" height="4" fill="#1e2a52" />
+      <rect x="24" y="84" width="4" height="8" fill="#1e2a52" />
+      <rect x="44" y="88" width="16" height="4" fill="#1e2a52" />
+      <rect x="56" y="80" width="4" height="8" fill="#1e2a52" />
+      <rect x="36" y="80" width="4" height="12" fill="#1e2a52" />
+      <rect x="36" y="76" width="12" height="4" fill="#1e2a52" />
+      {/* mid-left small tree */}
+      <rect x="120" y="108" width="4" height="28" fill="#1e2a52" />
+      <rect x="108" y="104" width="12" height="4" fill="#1e2a52" />
+      <rect x="104" y="96" width="4" height="8" fill="#1e2a52" />
+      <rect x="124" y="100" width="12" height="4" fill="#1e2a52" />
+      <rect x="132" y="92" width="4" height="8" fill="#1e2a52" />
+      {/* right tree */}
+      <rect x="356" y="92" width="4" height="44" fill="#1e2a52" />
+      <rect x="344" y="88" width="12" height="4" fill="#1e2a52" />
+      <rect x="340" y="80" width="4" height="8" fill="#1e2a52" />
+      <rect x="360" y="84" width="16" height="4" fill="#1e2a52" />
+      <rect x="372" y="76" width="4" height="8" fill="#1e2a52" />
+      <rect x="352" y="76" width="4" height="12" fill="#1e2a52" />
 
-      <g fill="#1d2b4a">
-        <rect x="243" y="77" width="2" height="7" />
-        <rect x="249" y="77" width="2" height="7" />
-        <rect x="255" y="77" width="2" height="7" />
-        <rect x="261" y="77" width="2" height="7" />
-        <rect x="267" y="77" width="2" height="7" />
-        <rect x="243" y="90" width="2.5" height="10" />
-        <rect x="250" y="90" width="2.5" height="10" />
-        <rect x="257" y="90" width="2.5" height="10" />
-        <rect x="264" y="90" width="2.5" height="10" />
-      </g>
+      {/* ===== GROUND / LAWN ===== */}
+      <rect x="0" y="124" width="400" height="12" fill="#1e2a52" />
+      <rect x="0" y="136" width="400" height="44" fill="#10131f" />
+      {/* lawn texture flecks */}
+      <rect x="16" y="128" width="8" height="4" fill="#2a3a6e" />
+      <rect x="76" y="132" width="8" height="4" fill="#2a3a6e" />
+      <rect x="148" y="128" width="8" height="4" fill="#2a3a6e" />
+      <rect x="336" y="128" width="8" height="4" fill="#2a3a6e" />
+      <rect x="380" y="132" width="8" height="4" fill="#2a3a6e" />
 
-      <g fill="#24365c">
-        <rect x="222" y="107" width="3" height="15" />
-        <rect x="230" y="107" width="3" height="15" />
-        <rect x="238" y="107" width="3" height="15" />
-        <rect x="246" y="107" width="3" height="15" />
-        <rect x="254" y="107" width="3" height="15" />
-        <rect x="262" y="107" width="3" height="15" />
-        <rect x="270" y="107" width="3" height="15" />
-        <rect x="278" y="107" width="3" height="15" />
-        <rect x="286" y="107" width="3" height="15" />
-      </g>
-
-      <g fill="#c9a961">
-        <rect x="226" y="111" width="2.5" height="6" opacity="0.9" />
-        <rect x="234" y="111" width="2.5" height="6" opacity="0.7" />
-        <rect x="250" y="111" width="2.5" height="6" opacity="0.9">
-          <animate
-            attributeName="opacity"
-            values="0.9;0.35;0.9"
-            dur="5s"
-            repeatCount="indefinite"
-          />
-        </rect>
-        <rect x="258" y="111" width="2.5" height="6" opacity="0.8" />
-        <rect x="274" y="111" width="2.5" height="6" opacity="0.65" />
-        <rect x="282" y="111" width="2.5" height="6" opacity="0.9" />
-        <rect x="154" y="114" width="3" height="5" opacity="0.6" />
-        <rect x="166" y="114" width="3" height="5" opacity="0.8" />
-        <rect x="178" y="114" width="3" height="5" opacity="0.5" />
-        <rect x="322" y="114" width="3" height="5" opacity="0.7" />
-        <rect x="334" y="114" width="3" height="5" opacity="0.5" />
-        <rect x="346" y="114" width="3" height="5" opacity="0.8" />
-      </g>
-      <rect x="253.5" y="45" width="3" height="4" fill="#ebce8b" opacity="0.85" />
-
-      <g stroke="#16213a" strokeWidth="3" strokeLinecap="round" fill="none">
-        <path d="M52 130 L52 92" />
-        <path d="M52 104 L38 88" strokeWidth="2" />
-        <path d="M52 100 L66 84" strokeWidth="2" />
-        <path d="M52 112 L42 102" strokeWidth="1.5" />
-        <path d="M38 88 L32 78" strokeWidth="1" />
-        <path d="M66 84 L72 74" strokeWidth="1" />
-        <path d="M52 92 L48 80" strokeWidth="1.5" />
-      </g>
-      <g stroke="#16213a" strokeWidth="3" strokeLinecap="round" fill="none">
-        <path d="M110 130 L110 98" />
-        <path d="M110 110 L98 96" strokeWidth="2" />
-        <path d="M110 106 L122 92" strokeWidth="2" />
-        <path d="M98 96 L92 86" strokeWidth="1" />
-        <path d="M122 92 L128 84" strokeWidth="1" />
-        <path d="M110 98 L114 86" strokeWidth="1.5" />
-      </g>
-      <g stroke="#16213a" strokeWidth="3" strokeLinecap="round" fill="none">
-        <path d="M348 130 L348 94" />
-        <path d="M348 106 L336 92" strokeWidth="2" />
-        <path d="M348 102 L360 88" strokeWidth="2" />
-        <path d="M336 92 L330 82" strokeWidth="1" />
-        <path d="M360 88 L368 80" strokeWidth="1" />
-        <path d="M348 94 L344 82" strokeWidth="1.5" />
-      </g>
-      <g stroke="#16213a" strokeWidth="2.5" strokeLinecap="round" fill="none">
-        <path d="M20 130 L20 104" />
-        <path d="M20 114 L11 104" strokeWidth="1.5" />
-        <path d="M20 110 L29 100" strokeWidth="1.5" />
-      </g>
-      <g stroke="#16213a" strokeWidth="2.5" strokeLinecap="round" fill="none">
-        <path d="M385 130 L385 102" />
-        <path d="M385 112 L376 102" strokeWidth="1.5" />
-        <path d="M385 108 L394 98" strokeWidth="1.5" />
-      </g>
-
-      <rect x="0" y="128" width="400" height="52" fill="#05070b" />
-      <rect x="0" y="128" width="400" height="3" fill="#16213a" />
-      <path d="M180 131 L230 131 L262 180 L148 180 Z" fill="#0d1526" opacity="0.6" />
-      <rect x="0" y="150" width="400" height="1" fill="#16213a" opacity="0.5" />
-      <ellipse cx="255" cy="133" rx="40" ry="3" fill="#c9a961" opacity="0.1" />
+      {/* ===== LIT WALKWAY ===== */}
+      <rect x="0" y="148" width="400" height="8" fill="#1e2a52" />
+      <rect x="8" y="152" width="12" height="4" fill="#f5b84f" />
+      <rect x="48" y="152" width="12" height="4" fill="#f5b84f" />
+      <rect x="88" y="152" width="12" height="4" fill="#f5b84f" />
+      <rect x="128" y="152" width="12" height="4" fill="#f5b84f" />
+      <rect x="168" y="152" width="12" height="4" fill="#f5b84f" />
+      <rect x="208" y="152" width="12" height="4" fill="#f5b84f" />
+      <rect x="248" y="152" width="12" height="4" fill="#ffd98a" />
+      <rect x="288" y="152" width="12" height="4" fill="#f5b84f" />
+      <rect x="328" y="152" width="12" height="4" fill="#f5b84f" />
+      <rect x="368" y="152" width="12" height="4" fill="#f5b84f" />
+      {/* soft walkway glow row */}
+      <rect x="8" y="156" width="12" height="4" fill="#2a3a6e" />
+      <rect x="88" y="156" width="12" height="4" fill="#2a3a6e" />
+      <rect x="168" y="156" width="12" height="4" fill="#2a3a6e" />
+      <rect x="248" y="156" width="12" height="4" fill="#2a3a6e" />
+      <rect x="328" y="156" width="12" height="4" fill="#2a3a6e" />
     </svg>
   );
 }

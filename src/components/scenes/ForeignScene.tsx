@@ -5,111 +5,229 @@ export default function ForeignScene() {
       width="100%"
       height="100%"
       preserveAspectRatio="xMidYMid slice"
+      shapeRendering="crispEdges"
       role="img"
-      aria-label="Embassy row at night: flag-lined avenue leading to a grand lit palace under a crescent moon"
+      aria-label="Pixel art embassy summit at night: a domed palace with lit amber door and windows, flanked by rows of flagpoles with waving pennants over wet pavement"
     >
-      <defs>
-        <linearGradient id="foreignSky" x1="0" y1="0" x2="0" y2="1">
-          <stop offset="0" stopColor="#0d1526" />
-          <stop offset="1" stopColor="#05070b" />
-        </linearGradient>
-        <radialGradient id="foreignMoonGlow" cx="0.5" cy="0.5" r="0.5">
-          <stop offset="0" stopColor="#e9edf5" stopOpacity="0.25" />
-          <stop offset="1" stopColor="#e9edf5" stopOpacity="0" />
-        </radialGradient>
-        <radialGradient id="foreignDoorGlow" cx="0.5" cy="0.5" r="0.5">
-          <stop offset="0" stopColor="#c9a961" stopOpacity="0.35" />
-          <stop offset="1" stopColor="#c9a961" stopOpacity="0" />
-        </radialGradient>
-      </defs>
+      {/* ===== SKY ===== */}
+      <rect x="0" y="0" width="400" height="120" fill="#0b1026" />
+      {/* horizon band + dither rows */}
+      <rect x="0" y="120" width="400" height="12" fill="#141b3c" />
+      <rect x="0" y="116" width="4" height="4" fill="#141b3c" />
+      <rect x="8" y="116" width="4" height="4" fill="#141b3c" />
+      <rect x="16" y="116" width="4" height="4" fill="#141b3c" />
+      <rect x="24" y="116" width="4" height="4" fill="#141b3c" />
+      <rect x="32" y="116" width="4" height="4" fill="#141b3c" />
+      <rect x="352" y="116" width="4" height="4" fill="#141b3c" />
+      <rect x="360" y="116" width="4" height="4" fill="#141b3c" />
+      <rect x="368" y="116" width="4" height="4" fill="#141b3c" />
+      <rect x="376" y="116" width="4" height="4" fill="#141b3c" />
+      <rect x="384" y="116" width="4" height="4" fill="#141b3c" />
+      <rect x="392" y="116" width="4" height="4" fill="#141b3c" />
 
-      <rect x="0" y="0" width="400" height="180" fill="url(#foreignSky)" />
+      {/* ===== MOON (top-left, blocky circle with bite) ===== */}
+      <rect x="40" y="16" width="16" height="4" fill="#e8ecf8" />
+      <rect x="36" y="20" width="24" height="4" fill="#e8ecf8" />
+      <rect x="32" y="24" width="32" height="16" fill="#e8ecf8" />
+      <rect x="36" y="40" width="24" height="4" fill="#e8ecf8" />
+      <rect x="40" y="44" width="16" height="4" fill="#e8ecf8" />
+      <rect x="52" y="20" width="8" height="8" fill="#0b1026" />
+      <rect x="56" y="28" width="8" height="8" fill="#0b1026" />
 
-      <circle cx="52" cy="30" r="1" fill="#e9edf5" opacity="0.5" />
-      <circle cx="110" cy="18" r="1" fill="#e9edf5" opacity="0.35" />
-      <circle cx="160" cy="34" r="1" fill="#e9edf5" opacity="0.45" />
-      <circle cx="250" cy="20" r="1" fill="#e9edf5" opacity="0.4" />
-      <circle cx="298" cy="38" r="1" fill="#e9edf5" opacity="0.55" />
-      <circle cx="352" cy="24" r="1" fill="#e9edf5" opacity="0.35" />
-      <circle cx="382" cy="46" r="1" fill="#e9edf5" opacity="0.45" />
-      <circle cx="22" cy="52" r="1" fill="#e9edf5" opacity="0.3" />
+      {/* ===== STARS ===== */}
+      <rect x="100" y="12" width="4" height="4" fill="#e8ecf8" />
+      <rect x="164" y="28" width="4" height="4" fill="#4a5a8a" />
+      <rect x="232" y="12" width="4" height="4" fill="#e8ecf8" />
+      <rect x="296" y="24" width="4" height="4" fill="#e8ecf8" />
+      <rect x="344" y="8" width="4" height="4" fill="#4a5a8a" />
+      <rect x="372" y="40" width="4" height="4" fill="#e8ecf8" />
+      <rect x="16" y="60" width="4" height="4" fill="#4a5a8a" />
+      <rect x="132" y="44" width="4" height="4" fill="#e8ecf8" />
+      <rect x="268" y="40" width="4" height="4" fill="#4a5a8a" />
+      <rect x="316" y="56" width="4" height="4" fill="#e8ecf8" />
 
-      <circle cx="330" cy="34" r="26" fill="url(#foreignMoonGlow)" />
-      <circle cx="330" cy="34" r="9" fill="#e9edf5" opacity="0.7" />
-      <circle cx="334" cy="31" r="8" fill="#0d1526" />
+      {/* ===== BACKGROUND CITY SILHOUETTE ===== */}
+      <rect x="0" y="96" width="48" height="36" fill="#1e2a52" />
+      <rect x="8" y="88" width="20" height="8" fill="#1e2a52" />
+      <rect x="48" y="104" width="40" height="28" fill="#1e2a52" />
+      <rect x="312" y="100" width="44" height="32" fill="#1e2a52" />
+      <rect x="324" y="92" width="16" height="8" fill="#1e2a52" />
+      <rect x="356" y="108" width="44" height="24" fill="#1e2a52" />
 
-      <rect x="0" y="96" width="70" height="44" fill="#16213a" />
-      <rect x="330" y="94" width="70" height="46" fill="#16213a" />
-      <rect x="12" y="104" width="5" height="4" fill="#c9a961" opacity="0.5" />
-      <rect x="40" y="112" width="5" height="4" fill="#c9a961" opacity="0.4" />
-      <rect x="352" y="102" width="5" height="4" fill="#c9a961" opacity="0.5" />
-      <rect x="378" y="114" width="5" height="4" fill="#c9a961" opacity="0.35" />
-
-      <rect x="120" y="70" width="160" height="70" fill="#1d2b4a" />
-      <rect x="112" y="66" width="176" height="6" fill="#24365c" />
-      <polygon points="160,66 240,66 200,40" fill="#24365c" />
-      <rect x="196" y="28" width="8" height="14" fill="#24365c" />
-      <rect x="188" y="52" width="24" height="14" fill="#1d2b4a" />
-
-      <rect x="132" y="80" width="8" height="60" fill="#24365c" />
-      <rect x="152" y="80" width="8" height="60" fill="#24365c" />
-      <rect x="240" y="80" width="8" height="60" fill="#24365c" />
-      <rect x="260" y="80" width="8" height="60" fill="#24365c" />
-
-      <rect x="170" y="84" width="9" height="14" fill="#c9a961" opacity="0.85" />
-      <rect x="221" y="84" width="9" height="14" fill="#c9a961" opacity="0.85" />
-      <rect x="170" y="108" width="9" height="14" fill="#c9a961" opacity="0.55" />
-      <rect x="221" y="108" width="9" height="14" fill="#ebce8b" opacity="0.8">
-        <animate attributeName="opacity" values="0.8;0.15;0.8" dur="5s" repeatCount="indefinite" />
-      </rect>
-      <rect x="138" y="94" width="6" height="9" fill="#c9a961" opacity="0.4" />
-      <rect x="256" y="94" width="6" height="9" fill="#c9a961" opacity="0.4" />
-
-      <circle cx="200" cy="126" r="24" fill="url(#foreignDoorGlow)" />
-      <rect x="192" y="112" width="16" height="28" fill="#ebce8b" opacity="0.9" />
-      <rect x="199" y="112" width="2" height="28" fill="#1d2b4a" />
-      <rect x="184" y="108" width="32" height="4" fill="#24365c" />
-
-      <rect x="86" y="70" width="2" height="70" fill="#3a4a66" />
-      <polygon points="88,72 112,76 88,84" fill="#52658c" />
-      <rect x="104" y="80" width="2" height="60" fill="#3a4a66" />
-      <polygon points="106,82 126,86 106,92" fill="#c9a961" opacity="0.75" />
-
-      <rect x="312" y="70" width="2" height="70" fill="#3a4a66" />
-      <polygon points="312,72 288,76 312,84" fill="#52658c" />
-      <rect x="294" y="80" width="2" height="60" fill="#3a4a66" />
-      <polygon points="294,82 274,86 294,92" fill="#c9a961" opacity="0.75" />
-
-      <rect x="64" y="60" width="2" height="80" fill="#3a4a66" />
-      <polygon points="66,62 94,67 66,76" fill="#52658c">
-        <animateTransform
-          attributeName="transform"
-          type="skewY"
-          values="0;2;0;-1;0"
-          dur="6s"
+      {/* ===== PALACE — center ===== */}
+      {/* dome: stacked rects */}
+      <rect x="192" y="36" width="16" height="4" fill="#2a3a6e" />
+      <rect x="184" y="40" width="32" height="4" fill="#2a3a6e" />
+      <rect x="176" y="44" width="48" height="8" fill="#2a3a6e" />
+      <rect x="172" y="52" width="56" height="8" fill="#2a3a6e" />
+      {/* dome finial */}
+      <rect x="196" y="28" width="4" height="8" fill="#4a5a8a" />
+      {/* dome drum */}
+      <rect x="180" y="60" width="40" height="8" fill="#1e2a52" />
+      <rect x="184" y="60" width="4" height="8" fill="#f5b84f" />
+      <rect x="198" y="60" width="4" height="8" fill="#f5b84f" />
+      <rect x="212" y="60" width="4" height="8" fill="#f5b84f" />
+      {/* upper block */}
+      <rect x="168" y="68" width="64" height="12" fill="#2a3a6e" />
+      {/* cornice */}
+      <rect x="152" y="80" width="96" height="4" fill="#4a5a8a" />
+      {/* main facade */}
+      <rect x="156" y="84" width="88" height="48" fill="#1e2a52" />
+      {/* side wings */}
+      <rect x="120" y="96" width="36" height="36" fill="#2a3a6e" />
+      <rect x="244" y="96" width="36" height="36" fill="#2a3a6e" />
+      <rect x="120" y="92" width="36" height="4" fill="#4a5a8a" />
+      <rect x="244" y="92" width="36" height="4" fill="#4a5a8a" />
+      {/* columns on facade */}
+      <rect x="164" y="88" width="4" height="36" fill="#4a5a8a" />
+      <rect x="232" y="88" width="4" height="36" fill="#4a5a8a" />
+      {/* facade windows, amber */}
+      <rect x="172" y="92" width="8" height="8" fill="#f5b84f" />
+      <rect x="220" y="92" width="8" height="8" fill="#f5b84f" />
+      {/* blinking upper window */}
+      <rect x="196" y="92" width="8" height="8" fill="#f5b84f">
+        <animate
+          attributeName="fill"
+          values="#f5b84f;#ffd98a;#f5b84f"
+          keyTimes="0;0.5;1"
+          calcMode="discrete"
+          dur="1.4s"
           repeatCount="indefinite"
         />
-      </polygon>
-      <rect x="334" y="60" width="2" height="80" fill="#3a4a66" />
-      <polygon points="334,62 306,67 334,76" fill="#52658c" />
+      </rect>
+      {/* wing windows */}
+      <rect x="128" y="104" width="8" height="8" fill="#f5b84f" />
+      <rect x="144" y="104" width="4" height="8" fill="#141b3c" />
+      <rect x="264" y="104" width="8" height="8" fill="#f5b84f" />
+      <rect x="252" y="104" width="4" height="8" fill="#141b3c" />
+      {/* grand door: amber with bright core */}
+      <rect x="188" y="104" width="24" height="28" fill="#f5b84f" />
+      <rect x="192" y="108" width="16" height="24" fill="#ffd98a" />
+      <rect x="184" y="100" width="32" height="4" fill="#4a5a8a" />
+      {/* door guards: tiny silhouettes */}
+      <rect x="176" y="116" width="4" height="4" fill="#08090f" />
+      <rect x="176" y="120" width="4" height="12" fill="#08090f" />
+      <rect x="220" y="116" width="4" height="4" fill="#08090f" />
+      <rect x="220" y="120" width="4" height="12" fill="#08090f" />
 
-      <circle cx="65" cy="58" r="1.5" fill="#c9a961" opacity="0.6" />
-      <circle cx="335" cy="58" r="1.5" fill="#c9a961" opacity="0.6" />
-      <circle cx="87" cy="68" r="1.5" fill="#c9a961" opacity="0.5" />
-      <circle cx="313" cy="68" r="1.5" fill="#c9a961" opacity="0.5" />
+      {/* ===== GROUND / WET PAVEMENT ===== */}
+      <rect x="0" y="132" width="400" height="48" fill="#10131f" />
+      {/* pavement seam highlight */}
+      <rect x="0" y="132" width="400" height="4" fill="#1e2a52" />
+      {/* central walkway leading to door */}
+      <rect x="184" y="136" width="32" height="44" fill="#08090f" />
+      <rect x="180" y="152" width="40" height="28" fill="#08090f" />
 
-      <rect x="0" y="140" width="400" height="40" fill="#05070b" />
-      <rect x="0" y="140" width="400" height="2" fill="#16213a" />
-      <polygon points="150,142 250,142 300,180 100,180" fill="#0d1526" opacity="0.6" />
-      <rect x="196" y="142" width="8" height="30" fill="#c9a961" opacity="0.18" />
-      <rect x="170" y="146" width="6" height="22" fill="#c9a961" opacity="0.1" />
-      <rect x="224" y="146" width="6" height="22" fill="#c9a961" opacity="0.1" />
-      <rect x="64" y="142" width="3" height="16" fill="#3a4a66" opacity="0.3" />
-      <rect x="334" y="142" width="3" height="16" fill="#3a4a66" opacity="0.3" />
-      <rect x="120" y="150" width="60" height="1" fill="#16213a" opacity="0.7" />
-      <rect x="230" y="156" width="70" height="1" fill="#16213a" opacity="0.7" />
-      <rect x="40" y="164" width="90" height="1" fill="#16213a" opacity="0.5" />
-      <rect x="280" y="168" width="80" height="1" fill="#16213a" opacity="0.5" />
+      {/* door light reflection on wet pavement */}
+      <rect x="192" y="136" width="16" height="4" fill="#ffd98a" />
+      <rect x="196" y="144" width="8" height="4" fill="#f5b84f" />
+      <rect x="192" y="156" width="4" height="4" fill="#f5b84f" />
+      <rect x="204" y="164" width="4" height="4" fill="#f5b84f">
+        <animate
+          attributeName="fill"
+          values="#f5b84f;#10131f;#f5b84f"
+          keyTimes="0;0.5;1"
+          calcMode="discrete"
+          dur="1.6s"
+          repeatCount="indefinite"
+        />
+      </rect>
+      {/* stray amber reflections under lamps/windows */}
+      <rect x="128" y="140" width="8" height="4" fill="#f5b84f" />
+      <rect x="264" y="140" width="8" height="4" fill="#f5b84f" />
+      <rect x="88" y="160" width="4" height="4" fill="#f5b84f" />
+      <rect x="308" y="160" width="4" height="4" fill="#f5b84f" />
+      {/* dim wet sheen strips */}
+      <rect x="24" y="148" width="24" height="4" fill="#1e2a52" />
+      <rect x="336" y="148" width="28" height="4" fill="#1e2a52" />
+      <rect x="60" y="168" width="32" height="4" fill="#1e2a52" />
+      <rect x="300" y="168" width="36" height="4" fill="#1e2a52" />
+
+      {/* ===== LEFT FLAGPOLE ROW ===== */}
+      {/* far pole */}
+      <rect x="52" y="84" width="4" height="64" fill="#4a5a8a" />
+      <rect x="52" y="80" width="4" height="4" fill="#e8ecf8" />
+      {/* pennant A — waving frame 1 */}
+      <g>
+        <rect x="56" y="88" width="32" height="16" fill="#4a5a8a" />
+        <rect x="84" y="88" width="4" height="4" fill="#0b1026" />
+        <rect x="84" y="100" width="4" height="4" fill="#0b1026" />
+        <animate
+          attributeName="visibility"
+          values="visible;hidden;visible"
+          keyTimes="0;0.5;1"
+          calcMode="discrete"
+          dur="1.0s"
+          repeatCount="indefinite"
+        />
+      </g>
+      {/* pennant A — waving frame 2 */}
+      <g visibility="hidden">
+        <rect x="56" y="88" width="32" height="16" fill="#4a5a8a" />
+        <rect x="80" y="88" width="8" height="4" fill="#0b1026" />
+        <rect x="84" y="92" width="4" height="4" fill="#0b1026" />
+        <rect x="80" y="100" width="8" height="4" fill="#0b1026" />
+        <animate
+          attributeName="visibility"
+          values="hidden;visible;hidden"
+          keyTimes="0;0.5;1"
+          calcMode="discrete"
+          dur="1.0s"
+          repeatCount="indefinite"
+        />
+      </g>
+      {/* near pole (static amber pennant) */}
+      <rect x="104" y="92" width="4" height="56" fill="#4a5a8a" />
+      <rect x="104" y="88" width="4" height="4" fill="#e8ecf8" />
+      <rect x="108" y="96" width="32" height="16" fill="#f5b84f" />
+      <rect x="136" y="96" width="4" height="4" fill="#0b1026" />
+      <rect x="136" y="108" width="4" height="4" fill="#0b1026" />
+
+      {/* ===== RIGHT FLAGPOLE ROW ===== */}
+      {/* near pole (static steel pennant) */}
+      <rect x="292" y="92" width="4" height="56" fill="#4a5a8a" />
+      <rect x="292" y="88" width="4" height="4" fill="#e8ecf8" />
+      <rect x="260" y="96" width="32" height="16" fill="#4a5a8a" />
+      <rect x="260" y="96" width="4" height="4" fill="#0b1026" />
+      <rect x="260" y="108" width="4" height="4" fill="#0b1026" />
+      {/* far pole */}
+      <rect x="344" y="84" width="4" height="64" fill="#4a5a8a" />
+      <rect x="344" y="80" width="4" height="4" fill="#e8ecf8" />
+      {/* pennant B — waving frame 1 (offset timing) */}
+      <g>
+        <rect x="312" y="88" width="32" height="16" fill="#f5b84f" />
+        <rect x="312" y="88" width="4" height="4" fill="#0b1026" />
+        <rect x="312" y="100" width="4" height="4" fill="#0b1026" />
+        <animate
+          attributeName="visibility"
+          values="hidden;visible;hidden"
+          keyTimes="0;0.45;1"
+          calcMode="discrete"
+          dur="1.3s"
+          repeatCount="indefinite"
+        />
+      </g>
+      {/* pennant B — waving frame 2 */}
+      <g visibility="hidden">
+        <rect x="312" y="88" width="32" height="16" fill="#f5b84f" />
+        <rect x="312" y="88" width="8" height="4" fill="#0b1026" />
+        <rect x="316" y="92" width="4" height="4" fill="#0b1026" />
+        <rect x="312" y="100" width="8" height="4" fill="#0b1026" />
+        <animate
+          attributeName="visibility"
+          values="visible;hidden;visible"
+          keyTimes="0;0.45;1"
+          calcMode="discrete"
+          dur="1.3s"
+          repeatCount="indefinite"
+        />
+      </g>
+
+      {/* ===== LAMPS flanking walkway ===== */}
+      <rect x="160" y="120" width="4" height="28" fill="#08090f" />
+      <rect x="156" y="112" width="12" height="8" fill="#f5b84f" />
+      <rect x="236" y="120" width="4" height="28" fill="#08090f" />
+      <rect x="232" y="112" width="12" height="8" fill="#f5b84f" />
     </svg>
   );
 }
