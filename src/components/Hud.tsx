@@ -15,9 +15,13 @@ const ORB_LABEL: Record<StatKey, string> = {
 export default function Hud({
   game,
   onOpenDashboard,
+  onOpenCabinet,
+  onOpenOrders,
 }: {
   game: GameState;
   onOpenDashboard: () => void;
+  onOpenCabinet: () => void;
+  onOpenOrders: () => void;
 }) {
   const persona = PERSONA_BY_ID[game.president.personaId];
   const termProgress = Math.min(100, (game.termDecisions / DECISIONS_PER_TERM) * 100);
@@ -61,6 +65,22 @@ export default function Hud({
           <span className={`topbar__mood topbar__mood--${moodClass}`} title={`National mood: ${mood.label}`}>
             {mood.emoji} {mood.label}
           </span>
+          <button
+            className="topbar__tool"
+            onClick={onOpenCabinet}
+            title="The Cabinet Room — hire and fire"
+            aria-label="Cabinet"
+          >
+            👥
+          </button>
+          <button
+            className="topbar__tool"
+            onClick={onOpenOrders}
+            title="Executive Orders — spend capital on raw power"
+            aria-label="Executive orders"
+          >
+            📜
+          </button>
           <span className="topbar__capital" title="Political Capital — spend it on bold moves">
             ⚡{game.capital}
           </span>

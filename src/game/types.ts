@@ -199,6 +199,22 @@ export interface MidtermResult {
   effects: Effects;
 }
 
+// ── Cabinet ─────────────────────────────────────────────────────────────────
+
+export type PositionId = "chief" | "treasury" | "state" | "defense" | "justice" | "science";
+
+export type Trait = "steady" | "brilliant" | "loyal" | "media" | "crony" | "hawk";
+
+export interface CabinetMember {
+  name: string;
+  trait: Trait;
+  /** Decision count when they took the seat. */
+  appointedAt: number;
+}
+
+/** Candidates offered after a firing, keyed by the vacant position. */
+export type HiringState = Partial<Record<PositionId, CabinetMember[]>>;
+
 export interface GameState {
   schema: number;
   president: { name: string; personaId: string };
@@ -256,6 +272,12 @@ export interface GameState {
   pendingToasts: string[];
   /** One-off notices (momentum, mood shifts) for the result screen. */
   notices: string[];
+  /** The cabinet: null seat = fired and not yet refilled. */
+  cabinet: Record<PositionId, CabinetMember | null>;
+  /** Open searches: fired seats with their 3 generated candidates. */
+  hiring: HiringState;
+  /** Executive orders spent: order id → term it was used in. */
+  ordersUsed: Record<string, number>;
 }
 
 /** A finished career recorded to a profile's hall of fame / leaderboard. */

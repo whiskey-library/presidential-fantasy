@@ -18,6 +18,9 @@ export const ACHIEVEMENTS: Achievement[] = [
   { id: "comes_around", name: "What Goes Around", desc: "Feel a past decision come back as a consequence.", emoji: "🪃" },
   { id: "deer_in_headlights", name: "Deer in Headlights", desc: "Let the decision clock run out on you.", emoji: "⏰" },
   { id: "daily_donein", name: "Republic of Routine", desc: "Finish a Daily Challenge run.", emoji: "📆" },
+  { id: "clean_house", name: "You're Fired", desc: "Dismiss a cabinet member.", emoji: "🚪" },
+  { id: "fresh_blood", name: "Fresh Blood", desc: "Appoint a new cabinet member.", emoji: "🖋️" },
+  { id: "executive_pen", name: "Stroke of the Pen", desc: "Use an Executive Order.", emoji: "📜" },
 ];
 
 export const ACHIEVEMENT_BY_ID: Record<string, Achievement> = Object.fromEntries(

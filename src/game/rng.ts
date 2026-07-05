@@ -21,6 +21,18 @@ export function nextRandom(state: number): { state: number; value: number } {
   return { state: t, value };
 }
 
+/**
+ * Game-aware draw: free play uses Math.random; daily runs consume the seeded
+ * stream and return the advanced cursor. Shared by the engine and the cabinet.
+ */
+export function drawFrom<T extends { dailySeed: string | null; rngState: number }>(
+  state: T
+): { state: T; value: number } {
+  if (state.dailySeed == null) return { state, value: Math.random() };
+  const { state: rngState, value } = nextRandom(state.rngState);
+  return { state: { ...state, rngState }, value };
+}
+
 /** Today's daily-challenge seed string (local time — "your" day). */
 export function todaySeed(): string {
   const d = new Date();

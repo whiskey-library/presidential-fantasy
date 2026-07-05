@@ -10,6 +10,7 @@ import {
   decisionSeconds,
   resolveElection,
 } from "./game/engine";
+import { appointMember, executeOrder, fireMember } from "./game/cabinet";
 import {
   clearSave,
   loadGame,
@@ -37,6 +38,8 @@ import SignInScreen from "./components/SignInScreen";
 import HomeScreen from "./components/HomeScreen";
 import Hud from "./components/Hud";
 import EventCard from "./components/EventCard";
+import CabinetSheet from "./components/CabinetSheet";
+import OrdersSheet from "./components/OrdersSheet";
 import ResultScreen from "./components/ResultScreen";
 import MidtermScreen from "./components/MidtermScreen";
 import ElectionScreen from "./components/ElectionScreen";
@@ -60,6 +63,8 @@ export default function App() {
   const [savedGame, setSavedGame] = useState<GameState | null>(null);
   const [screen, setScreen] = useState<Screen>("home");
   const [showDash, setShowDash] = useState(false);
+  const [showCabinet, setShowCabinet] = useState(false);
+  const [showOrders, setShowOrders] = useState(false);
   const [showSettings, setShowSettings] = useState(false);
   const recordedRef = useRef(false);
 
@@ -245,10 +250,18 @@ export default function App() {
 
   const isPlaying = game.status === "playing" || game.status === "result";
   const timerSeconds = game.status === "playing" ? decisionSeconds(game, settings.timerOverride) : 0;
+  const menuOpen = showDash || showCabinet || showOrders;
 
   return (
     <div className="app-shell">
-      {isPlaying && <Hud game={game} onOpenDashboard={() => setShowDash(true)} />}
+      {isPlaying && (
+        <Hud
+          game={game}
+          onOpenDashboard={() => setShowDash(true)}
+          onOpenCabinet={() => setShowCabinet(true)}
+          onOpenOrders={() => setShowOrders(true)}
+        />
+      )}
 
       <main className="stage">
         {game.status === "playing" && (
@@ -257,6 +270,7 @@ export default function App() {
             pool={pool}
             timerSeconds={timerSeconds}
             fastBriefings={settings.fastBriefings || settings.reducedMotion}
+            menuOpen={menuOpen}
             onChoose={choose}
           />
         )}
@@ -283,6 +297,21 @@ export default function App() {
       </main>
 
       {showDash && <Dashboard game={game} onClose={() => setShowDash(false)} />}
+      {showCabinet && (
+        <CabinetSheet
+          game={game}
+          onFire={(pos) => setGame((g) => (g ? fireMember(g, pos) : g))}
+          onAppoint={(pos, i) => setGame((g) => (g ? appointMember(g, pos, i) : g))}
+          onClose={() => setShowCabinet(false)}
+        />
+      )}
+      {showOrders && (
+        <OrdersSheet
+          game={game}
+          onExecute={(id) => setGame((g) => (g ? executeOrder(g, id) : g))}
+          onClose={() => setShowOrders(false)}
+        />
+      )}
       <AchievementToasts ids={game.pendingToasts} />
     </div>
   );

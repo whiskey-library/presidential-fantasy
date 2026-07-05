@@ -1,7 +1,8 @@
 import type { GameState, HallOfFameEntry, Settings } from "./types";
 import { SCHEMA, legacyRank } from "./engine";
 import { listProfiles } from "../auth/local";
-import { todaySeed } from "./rng";
+import { hashSeed, todaySeed } from "./rng";
+import { genInitialCabinet } from "./cabinet";
 
 const saveKey = (profileId: string) => `pf:save:v1:${profileId}`;
 const hofKey = (profileId: string) => `pf:hof:v1:${profileId}`;
@@ -25,13 +26,21 @@ export function loadGame(profileId: string): GameState | null {
   try {
     const raw = localStorage.getItem(saveKey(profileId));
     if (!raw) return null;
-    const parsed = JSON.parse(raw) as GameState;
+    let parsed = JSON.parse(raw) as GameState;
+    if (parsed.schema === 2) parsed = migrateV2Save(parsed);
     if (parsed.schema !== SCHEMA) return null;
     if (parsed.status === "gameover" || parsed.status === "victory") return null;
     return parsed;
   } catch {
     return null;
   }
+}
+
+/** Schema 2 → 3: mid-career saves inherit a deterministically generated cabinet. */
+function migrateV2Save(old: GameState): GameState {
+  const seed = hashSeed(`${old.president.name}-cab-${old.day}`);
+  const { cabinet } = genInitialCabinet(seed, 0);
+  return { ...old, schema: 3, cabinet, hiring: {}, ordersUsed: {} };
 }
 
 export function clearSave(profileId: string): void {

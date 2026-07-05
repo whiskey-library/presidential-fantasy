@@ -6,6 +6,7 @@ import { sfxBreaking, sfxDecide } from "../game/sound";
 import TimerRing from "./TimerRing";
 import Portrait from "./Portrait";
 import Scene from "./scenes";
+import { memberForEvent, POSITIONS } from "../game/cabinet";
 
 export const CATEGORY_LABEL: Record<EventCategory, string> = {
   economy: "Economy",
@@ -39,12 +40,14 @@ export default function EventCard({
   pool,
   timerSeconds,
   fastBriefings,
+  menuOpen = false,
   onChoose,
 }: {
   game: GameState;
   pool: GameEvent[];
   timerSeconds: number;
   fastBriefings: boolean;
+  menuOpen?: boolean;
   onChoose: (choiceId: string) => void;
 }) {
   const ev = getEvent(pool, game.currentEventId);
@@ -173,22 +176,36 @@ export default function EventCard({
             <TimerRing
               key={ev.id}
               seconds={timerSeconds}
-              paused={Boolean(signing)}
+              paused={Boolean(signing) || menuOpen}
               onExpire={() => onChoose(DITHER_CHOICE.id)}
               onUrgent={setUrgent}
             />
           </div>
         </div>
 
-        {/* ── Advisor presents the situation ── */}
+        {/* ── The responsible official presents the situation ── */}
         <div className="vcard__body">
           <div className="vcard__brief">
-            {ev.source && (
-              <div className="vcard__advisor">
-                <Portrait name={ev.source} size={54} />
-                <span className="vcard__advisor-name">{ev.source}</span>
-              </div>
-            )}
+            {(() => {
+              const owner = memberForEvent(game, ev.source, ev.category);
+              if (owner) {
+                return (
+                  <div className="vcard__advisor">
+                    <Portrait name={owner.member.name} size={54} />
+                    <span className="vcard__advisor-name">
+                      {owner.member.name}
+                      <em>{POSITIONS[owner.position].short}</em>
+                    </span>
+                  </div>
+                );
+              }
+              return ev.source ? (
+                <div className="vcard__advisor">
+                  <Portrait name={ev.source} size={54} />
+                  <span className="vcard__advisor-name">{ev.source}</span>
+                </div>
+              ) : null;
+            })()}
             <div className="bubble">
               <h1 className="vcard__title">{ev.title}</h1>
               <p className="vcard__short">

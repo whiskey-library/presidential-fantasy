@@ -11,10 +11,11 @@ import type {
   StatKey,
 } from "./types";
 import { PERSONA_BY_ID } from "./personas";
-import { hashSeed, nextRandom } from "./rng";
+import { drawFrom, hashSeed } from "./rng";
+import { genInitialCabinet, memberForEvent, positionForCategory, TRAITS } from "./cabinet";
 
 // ── Tunable constants ──────────────────────────────────────────────────────
-export const SCHEMA = 2;
+export const SCHEMA = 3;
 export const DECISIONS_PER_TERM = 24; // ~4 years of monthly-ish calls
 export const MIDTERM_AT = 12; // halfway through a term
 export const DAYS_PER_DECISION = 61; // 24 * 61 ≈ 1,464 days ≈ a full term
@@ -72,11 +73,7 @@ export const DIFFICULTY_BY_ID: Record<Difficulty, DifficultySpec> = Object.fromE
 export const clamp = (n: number, lo = 0, hi = 100) => Math.max(lo, Math.min(hi, Math.round(n)));
 
 // ── RNG: Math.random for free play, seeded stream for daily runs ───────────
-function draw(state: GameState): { state: GameState; value: number } {
-  if (state.dailySeed == null) return { state, value: Math.random() };
-  const { state: rngState, value } = nextRandom(state.rngState);
-  return { state: { ...state, rngState }, value };
-}
+const draw = drawFrom<GameState>;
 
 // ── Career creation ────────────────────────────────────────────────────────
 export function createCareer(
@@ -95,12 +92,17 @@ export function createCareer(
     world: clamp(base.world),
   };
 
+  // Seed the cabinet: daily runs derive it from the day's seed (same six
+  // officials for everyone), free play from entropy.
+  const seedCursor = dailySeed ? hashSeed(`PF-${dailySeed}`) : hashSeed(`${name}-${Date.now()}`);
+  const { cabinet, rngState: cabCursor } = genInitialCabinet(seedCursor);
+
   const state: GameState = {
     schema: SCHEMA,
     president: { name: name.trim() || "President", personaId: persona.id },
     difficulty,
     dailySeed,
-    rngState: dailySeed ? hashSeed(`PF-${dailySeed}`) : 0,
+    rngState: dailySeed ? cabCursor : 0,
     stats,
     capital: persona.startCapital,
     day: 1,
@@ -128,6 +130,9 @@ export function createCareer(
     dithered: false,
     pendingToasts: [],
     notices: [],
+    cabinet,
+    hiring: {},
+    ordersUsed: {},
   };
 
   return withNextEvent(state, pool, null);
@@ -205,6 +210,10 @@ function scaleEffects(state: GameState, ev: GameEvent, choice: Choice): Effects 
   // Later terms hit harder on the dramatic stuff.
   const termScale = dangerous ? 1 + (state.term - 1) * 0.12 : 1;
 
+  // The seat that owns this event — their trait bends the outcome.
+  const owner = memberForEvent(state, ev.source, ev.category);
+  const trait = owner?.member.trait ?? null;
+
   const out: Effects = {};
   for (const k of Object.keys(choice.effects) as (keyof Effects)[]) {
     let v = choice.effects[k]!;
@@ -215,8 +224,17 @@ function scaleEffects(state: GameState, ev: GameEvent, choice: Choice): Effects 
     if (persona === "tycoon" && k === "economy" && v > 0) v += 1;
     // The General shrugs off crisis/security fallout.
     if (persona === "general" && dangerous && v < 0) v *= 0.75;
+    // ── Cabinet traits (stat keys only — capital/legacy handled elsewhere) ──
+    if (trait && (k === "approval" || k === "economy" || k === "stability" || k === "world")) {
+      if (trait === "steady" && v < 0) v *= 0.75;
+      if (trait === "hawk") v *= 1.2;
+      if (trait === "crony") v *= 0.8;
+      if (trait === "brilliant" && v > 0) v += 2 / countPositive(choice.effects);
+    }
     out[k] = v;
   }
+  // Media Darling: +1 approval on any call in their field.
+  if (trait === "media") out.approval = (out.approval ?? 0) + 1;
 
   // National mood bends approval swings: euphoric crowds amplify wins,
   // furious crowds amplify losses.
@@ -225,6 +243,15 @@ function scaleEffects(state: GameState, ev: GameEvent, choice: Choice): Effects 
     if (state.mood <= -4 && out.approval < 0) out.approval -= 1;
   }
   return out;
+}
+
+/** How many positive stat deltas a choice has (for splitting Brilliant's +2). */
+function countPositive(effects: Effects): number {
+  let n = 0;
+  for (const k of ["approval", "economy", "stability", "world"] as const) {
+    if ((effects[k] ?? 0) > 0) n++;
+  }
+  return Math.max(1, n);
 }
 
 // ── Making a decision ──────────────────────────────────────────────────────
@@ -269,7 +296,8 @@ export function chooseOption(state: GameState, pool: GameEvent[], choiceId: stri
     world: applyDelta(state.stats.world, scaled.world),
   };
 
-  const notices: string[] = [];
+  // Carry notices queued between decisions (firings, appointments, orders).
+  const notices: string[] = [...state.notices];
   const decisions = state.decisions + 1;
 
   // Political capital: passive income, persona bonus, choice delta, minus cost.
@@ -277,6 +305,34 @@ export function chooseOption(state: GameState, pool: GameEvent[], choiceId: stri
   if (state.president.personaId === "professor" && decisions % 4 === 0) {
     capital += 1;
     notices.push("🎓 The Professor's homework pays off: +1 bonus Capital.");
+  }
+
+  // ── Cabinet trait side-effects (the owning seat for this event) ──────────
+  const owner = dithered ? null : memberForEvent(state, ev.source, ev.category);
+  if (owner) {
+    const { member } = owner;
+    if (member.trait === "loyal" && choice.bold) {
+      capital += 1;
+      notices.push(`🤝 ${member.name} covers for the bold call: +1 Capital.`);
+    }
+    if (member.trait === "crony") {
+      capital += 1;
+      notices.push(`🥃 ${member.name} calls in a favor: +1 Capital. (Their work? Sloppy.)`);
+    }
+    if (member.trait === "brilliant") {
+      stats = { ...stats, stability: clamp(stats.stability - 1) };
+      notices.push(`🧠 ${member.name} is right again — and everyone in the room hates it. −1 Stability.`);
+    }
+    if (member.trait === "steady") {
+      notices.push(`🪨 ${member.name} (${TRAITS.steady.name}) kept the worst of it off your desk.`);
+    }
+    if (member.trait === "hawk") {
+      notices.push(`🦅 ${member.name} pushed it further than you asked. Everything hits harder.`);
+    }
+  } else if (!dithered && positionForCategory(ev.category) && !state.cabinet[positionForCategory(ev.category)!]) {
+    // A vacant seat means nobody sanded the edges: small stability tax.
+    stats = { ...stats, stability: clamp(stats.stability - 1) };
+    notices.push("🪑 That portfolio has no secretary right now. The chaos costs 1 Stability.");
   }
 
   // ── Echoes: queue this choice's echo, fire any that are due ─────────────

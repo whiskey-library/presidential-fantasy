@@ -30,6 +30,8 @@ Spend **⚡ Political Capital** on your boldest moves, rack up **achievements**,
 - **Four rival outlets** (The National Beacon, The Liberty Ledger, The People's Tribune, and the gloriously unhinged Daily Buzz) spin *the same decision* four different ways.
 - **A living social feed** of voters, wonks, and trolls reacting in real time.
 - **Escalating stakes:** later terms hit harder, and election night is a genuine nail-biter.
+- **Run your own Cabinet:** six generated officials whose traits bend every outcome in their field — fire anyone, pick replacements from competing nominees, and pay the price for empty seats.
+- **Executive Orders:** spend political capital on raw power — prime-time addresses, emergency stimulus, diplomatic tours, or quietly defusing the next scandal before it lands.
 - **Pick your origin story:** play as the Reformer, the Tycoon, the General, or the Professor — each with a different stat tilt and perk.
 - **Buttery-smooth UI** with animated meters, staggered reveals, and a one-tap career dashboard with an approval sparkline and full timeline.
 
